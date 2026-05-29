@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: App Legal Documents
 description: Privacy Policy and Terms for our mobile app
+show_downloads: false
