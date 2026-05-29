@@ -1,0 +1,3 @@
+# Terms of Use
+
+By using this app, you agree to the following terms...
