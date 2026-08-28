@@ -1,13 +1,15 @@
+```javascript
 (() => {
   const root = document.querySelector("#site");
 
-  const esc = s => String(s ?? "").replace(/[&<>"']/g, ch => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;"
-  }[ch]));
+  const esc = s =>
+    String(s ?? "").replace(/[&<>"']/g, ch => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[ch]));
 
   /*
    * Foreground images only.
@@ -15,20 +17,31 @@
    * Background images such as:
    * - hero
    * - app-highlights
+   * - journey
+   *
    * are deliberately NOT rendered as <img> elements.
    */
-const image = (name, className = "", alt = "") => `
-  <img
-    class="${className}"
-    data-image="${esc(name)}"
-    alt="${esc(alt)}"
-    loading="lazy"
-    decoding="async"
-    draggable="false"
-  >
-`;
+  const image = (
+    name,
+    className = "",
+    alt = ""
+  ) => `
+    <img
+      class="${className}"
+      data-image="${esc(name)}"
+      alt="${esc(alt)}"
+      loading="lazy"
+      decoding="async"
+      draggable="false"
+    >
+  `;
 
-  function renderHeader(nav) {
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+
+  function renderHeader(nav = []) {
     return `
       <header class="site-header">
 
@@ -42,6 +55,7 @@ const image = (name, className = "", alt = "") => `
 
         <button
           class="menu-toggle"
+          type="button"
           aria-label="Open navigation"
           aria-expanded="false"
         >
@@ -53,7 +67,7 @@ const image = (name, className = "", alt = "") => `
           aria-label="Primary navigation"
         >
           ${nav.map(([label, href]) => `
-            <a href="${href}">
+            <a href="${esc(href)}">
               ${esc(label)}
             </a>
           `).join("")}
@@ -63,20 +77,17 @@ const image = (name, className = "", alt = "") => `
     `;
   }
 
+
+  /* ============================================================
+     SECTION RENDERING
+     ============================================================ */
+
   function renderSection(s) {
 
-    /*
-     * ============================================================
-     * HERO
-     * ============================================================
-     *
-     * The hero image is a CSS background.
-     * It is NOT rendered as an <img>.
-     *
-     * The background therefore stretches across the complete
-     * hero section while the device mockups remain foreground
-     * images.
-     */
+    /* ------------------------------------------------------------
+       HERO
+       ------------------------------------------------------------ */
+
     if (s.kind === "hero") {
       return `
         <section
@@ -96,12 +107,21 @@ const image = (name, className = "", alt = "") => `
 
           </div>
 
-          <div class="hero-visual">
+          <!--
+            IMPORTANT:
+            All mockups live inside one bounded composition.
+            CSS must constrain .hero-visual rather than allowing
+            these images to participate in page width calculation.
+          -->
+          <div
+            class="hero-visual"
+            aria-label="MintWave Studio app mockups"
+          >
 
             <div class="device device-ipad">
               ${image(
                 "ipad",
-                "",
+                "hero-device-image",
                 "iPad mockup"
               )}
             </div>
@@ -109,7 +129,7 @@ const image = (name, className = "", alt = "") => `
             <div class="device device-tablet">
               ${image(
                 "tablet",
-                "",
+                "hero-device-image",
                 "Tablet mockup"
               )}
             </div>
@@ -117,7 +137,7 @@ const image = (name, className = "", alt = "") => `
             <div class="device device-phone">
               ${image(
                 "phone",
-                "",
+                "hero-device-image",
                 "Phone mockup"
               )}
             </div>
@@ -125,7 +145,7 @@ const image = (name, className = "", alt = "") => `
             <div class="device device-phone-cart">
               ${image(
                 "phoneCart",
-                "",
+                "hero-device-image",
                 "Phone cart mockup"
               )}
             </div>
@@ -136,11 +156,11 @@ const image = (name, className = "", alt = "") => `
       `;
     }
 
-    /*
-     * ============================================================
-     * ABOUT
-     * ============================================================
-     */
+
+    /* ------------------------------------------------------------
+       ABOUT
+       ------------------------------------------------------------ */
+
     if (s.kind === "about") {
       return `
         <section
@@ -175,11 +195,13 @@ const image = (name, className = "", alt = "") => `
             </h3>
 
             <ul>
-              ${s.list.map(x => `
-                <li>
-                  ${esc(x)}
-                </li>
-              `).join("")}
+              ${(Array.isArray(s.list) ? s.list : [])
+                .map(x => `
+                  <li>
+                    ${esc(x)}
+                  </li>
+                `)
+                .join("")}
             </ul>
 
           </div>
@@ -188,29 +210,11 @@ const image = (name, className = "", alt = "") => `
       `;
     }
 
-    /*
-     * ============================================================
-     * FEATURES / APP HIGHLIGHTS
-     * ============================================================
-     *
-     * app-highlights.jpg is now a CSS background.
-     *
-     * It is deliberately NOT rendered using:
-     *
-     *     <img src="app-highlights.jpg">
-     *
-     * Instead, the section receives:
-     *
-     *     app-highlights-background
-     *
-     * and styles.css supplies the background image.
-     *
-     * The text receives:
-     *
-     *     app-highlights-content
-     *
-     * so its color can be #f2f5ef.
-     */
+
+    /* ------------------------------------------------------------
+       APP HIGHLIGHTS
+       ------------------------------------------------------------ */
+
     if (s.kind === "features") {
       return `
         <section
@@ -239,27 +243,29 @@ const image = (name, className = "", alt = "") => `
 
             <div class="feature-list">
 
-              ${s.items.map((x, i) => `
-                <article>
+              ${(Array.isArray(s.items) ? s.items : [])
+                .map((x, i) => `
+                  <article>
 
-                  <div class="num">
-                    0${i + 1}
-                  </div>
+                    <div class="num">
+                      0${i + 1}
+                    </div>
 
-                  <div>
+                    <div>
 
-                    <h4>
-                      ${esc(x[0])}
-                    </h4>
+                      <h4>
+                        ${esc(x[0])}
+                      </h4>
 
-                    <p>
-                      ${esc(x[1])}
-                    </p>
+                      <p>
+                        ${esc(x[1])}
+                      </p>
 
-                  </div>
+                    </div>
 
-                </article>
-              `).join("")}
+                  </article>
+                `)
+                .join("")}
 
             </div>
 
@@ -269,24 +275,11 @@ const image = (name, className = "", alt = "") => `
       `;
     }
 
-    /*
-     * ============================================================
-     * HOW OUR APPS STAND OUT
-     * ============================================================
-     *
-     * This section gets a dedicated class:
-     *
-     *     standout-white
-     *
-     * so it can have:
-     *
-     * - white background
-     * - black text
-     * - rounded image corners
-     *
-     * The phone mockups remain <img> elements because they are
-     * foreground/device images rather than the section background.
-     */
+
+    /* ------------------------------------------------------------
+       HOW OUR APPS STAND OUT
+       ------------------------------------------------------------ */
+
     if (s.kind === "standout") {
       return `
         <section
@@ -300,29 +293,33 @@ const image = (name, className = "", alt = "") => `
 
           <div class="standout-grid">
 
-            ${s.items.map(x => `
-              <article class="stand-card">
+            ${(Array.isArray(s.items) ? s.items : [])
+              .map(x => `
+                <article class="stand-card">
 
-                <div class="num">
-                  ${esc(x[0])}
-                </div>
+                  <div class="num">
+                    ${esc(x[0])}
+                  </div>
 
-                <h3>
-                  ${esc(x[1])}
-                </h3>
+                  <h3>
+                    ${esc(x[1])}
+                  </h3>
 
-                <p>
-                  ${esc(x[2])}
-                </p>
+                  <p>
+                    ${esc(x[2])}
+                  </p>
 
-                ${image(
-                  x[3],
-                  "stand-device rounded-image",
-                  "Mobile app"
-                )}
+                  <div class="stand-device-wrap">
+                    ${image(
+                      x[3],
+                      "stand-device rounded-image",
+                      "Mobile app"
+                    )}
+                  </div>
 
-              </article>
-            `).join("")}
+                </article>
+              `)
+              .join("")}
 
           </div>
 
@@ -330,13 +327,11 @@ const image = (name, className = "", alt = "") => `
       `;
     }
 
-    /*
-     * ============================================================
-     * OUR JOURNEY
-     * ============================================================
-     *
-     * The hero image remains a CSS background here.
-     */
+
+    /* ------------------------------------------------------------
+       JOURNEY
+       ------------------------------------------------------------ */
+
     if (s.kind === "journey") {
       return `
         <section
@@ -373,18 +368,18 @@ const image = (name, className = "", alt = "") => `
       `;
     }
 
-    /*
-     * ============================================================
-     * CONTACT
-     * ============================================================
-     */
+
+    /* ------------------------------------------------------------
+       CONTACT
+       ------------------------------------------------------------ */
+
     return `
       <section
         id="contact"
         class="contact section"
       >
 
-        <div>
+        <div class="contact-copy">
 
           <h2>
             ${esc(s.title)}
@@ -411,12 +406,16 @@ const image = (name, className = "", alt = "") => `
 
         </div>
 
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          class="contact-form"
+        >
 
           <label>
             First Name*
             <input
               name="firstName"
+              autocomplete="given-name"
               required
             >
           </label>
@@ -425,6 +424,7 @@ const image = (name, className = "", alt = "") => `
             Last Name*
             <input
               name="lastName"
+              autocomplete="family-name"
               required
             >
           </label>
@@ -434,6 +434,7 @@ const image = (name, className = "", alt = "") => `
             <input
               type="email"
               name="email"
+              autocomplete="email"
               required
             >
           </label>
@@ -460,6 +461,11 @@ const image = (name, className = "", alt = "") => `
       </section>
     `;
   }
+
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
 
   function footer() {
     return `
@@ -513,61 +519,19 @@ const image = (name, className = "", alt = "") => `
     `;
   }
 
-  async function load() {
 
-    /*
-     * Load the dynamically generated section data.
-     */
-    const response = await fetch(
-      "./content.json",
+  /* ============================================================
+     IMAGE LOADING
+     ============================================================ */
+
+  async function loadImages() {
+
+    const manifestResponse = await fetch(
+      "./image-manifest.json",
       {
         cache: "no-store"
       }
     );
-
-    if (!response.ok) {
-      throw new Error(
-        "Could not load content.json"
-      );
-    }
-
-    const data =
-      await response.json();
-
-    /*
-     * Render the complete page.
-     */
-    root.innerHTML =
-      renderHeader(data.navigation) +
-      `
-        <main>
-          ${data.sections
-            .map(renderSection)
-            .join("")}
-        </main>
-      ` +
-      footer();
-
-    /*
-     * ============================================================
-     * STATIC FOREGROUND IMAGE LOADING
-     * ============================================================
-     *
-     * Only foreground images are loaded here.
-     *
-     * Background images:
-     *   hero
-     *   app-highlights
-     *
-     * are handled entirely by CSS.
-     */
-    const manifestResponse =
-      await fetch(
-        "./image-manifest.json",
-        {
-          cache: "no-store"
-        }
-      );
 
     if (!manifestResponse.ok) {
       throw new Error(
@@ -589,10 +553,34 @@ const image = (name, className = "", alt = "") => `
           manifest[key];
 
         if (!src) {
+          el.classList.add("missing-image");
+
+          el.alt =
+            `${key} image — add the mapped file to assets/`;
+
           return;
         }
 
+        /*
+         * Explicitly prevent image loading from creating
+         * a width larger than its CSS container.
+         */
+        el.setAttribute(
+          "draggable",
+          "false"
+        );
+
         el.src = src;
+
+        el.addEventListener(
+          "load",
+          () => {
+            el.classList.add("image-loaded");
+          },
+          {
+            once: true
+          }
+        );
 
         el.addEventListener(
           "error",
@@ -612,12 +600,15 @@ const image = (name, className = "", alt = "") => `
         );
 
       });
+  }
 
-    /*
-     * ============================================================
-     * MOBILE NAVIGATION
-     * ============================================================
-     */
+
+  /* ============================================================
+     MOBILE NAVIGATION
+     ============================================================ */
+
+  function setupNavigation() {
+
     const menu =
       document.querySelector(
         ".menu-toggle"
@@ -627,6 +618,10 @@ const image = (name, className = "", alt = "") => `
       document.querySelector(
         ".site-nav"
       );
+
+    if (!menu || !nav) {
+      return;
+    }
 
     menu.addEventListener(
       "click",
@@ -639,7 +634,14 @@ const image = (name, className = "", alt = "") => `
 
         menu.setAttribute(
           "aria-expanded",
+          String(open)
+        );
+
+        menu.setAttribute(
+          "aria-label",
           open
+            ? "Close navigation"
+            : "Open navigation"
         );
 
       }
@@ -652,43 +654,183 @@ const image = (name, className = "", alt = "") => `
         a.addEventListener(
           "click",
           () => {
+
             nav.classList.remove(
               "open"
             );
+
+            menu.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menu.setAttribute(
+              "aria-label",
+              "Open navigation"
+            );
+
           }
         );
 
       });
-
-    /*
-     * ============================================================
-     * CONTACT FORM
-     * ============================================================
-     */
-    document
-      .querySelector(
-        "#contact-form"
-      )
-      .addEventListener(
-        "submit",
-        e => {
-
-          e.preventDefault();
-
-          e.currentTarget
-            .querySelector(
-              ".form-status"
-            )
-            .textContent =
-              "Thanks. Connect this form to your preferred form endpoint to receive messages.";
-
-        }
-      );
   }
 
-  /*
-   * Start the dynamically loaded application.
-   */
+
+  /* ============================================================
+     CONTACT FORM
+     ============================================================ */
+
+  function setupContactForm() {
+
+    const form =
+      document.querySelector(
+        "#contact-form"
+      );
+
+    if (!form) {
+      return;
+    }
+
+    form.addEventListener(
+      "submit",
+      e => {
+
+        e.preventDefault();
+
+        const status =
+          form.querySelector(
+            ".form-status"
+          );
+
+        if (status) {
+          status.textContent =
+            "Thanks. Connect this form to your preferred form endpoint to receive messages.";
+        }
+
+      }
+    );
+  }
+
+
+  /* ============================================================
+     LOAD APPLICATION
+     ============================================================ */
+
+  async function load() {
+
+    const response = await fetch(
+      "./content.json",
+      {
+        cache: "no-store"
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "Could not load content.json"
+      );
+    }
+
+    const data =
+      await response.json();
+
+
+    /*
+     * Add an explicit application wrapper.
+     *
+     * This gives CSS a reliable containment boundary.
+     */
+    root.innerHTML = `
+      <div class="site-content">
+
+        ${renderHeader(
+          Array.isArray(data.navigation)
+            ? data.navigation
+            : []
+        )}
+
+        <main class="site-main">
+          ${
+            Array.isArray(data.sections)
+              ? data.sections
+                  .map(renderSection)
+                  .join("")
+              : ""
+          }
+        </main>
+
+        ${footer()}
+
+      </div>
+    `;
+
+
+    /*
+     * Load foreground images only.
+     */
+    await loadImages();
+
+
+    /*
+     * Initialize interactive components.
+     */
+    setupNavigation();
+    setupContactForm();
+
+
+    /*
+     * Defensive runtime diagnostic.
+     *
+     * This does NOT alter the layout.
+     * It reports the elements that are actually wider
+     * than the viewport, which makes future debugging
+     * much easier.
+     */
+    requestAnimationFrame(() => {
+
+      const viewportWidth =
+        document.documentElement.clientWidth;
+
+      const overflowing = [];
+
+      document
+        .querySelectorAll(
+          "#site *"
+        )
+        .forEach(el => {
+
+          const rect =
+            el.getBoundingClientRect();
+
+          if (
+            rect.right > viewportWidth + 1 ||
+            rect.left < -1
+          ) {
+            overflowing.push({
+              element: el,
+              left: Math.round(rect.left),
+              right: Math.round(rect.right),
+              width: Math.round(rect.width)
+            });
+          }
+
+        });
+
+      if (overflowing.length) {
+        console.warn(
+          "MintWave horizontal overflow candidates:",
+          overflowing
+        );
+      }
+
+    });
+  }
+
+
+  /* ============================================================
+     START
+     ============================================================ */
+
   load().catch(err => {
 
     console.error(err);
@@ -713,3 +855,4 @@ const image = (name, className = "", alt = "") => `
   });
 
 })();
+```
