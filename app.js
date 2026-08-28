@@ -26,8 +26,7 @@
           <h1>${esc(s.title)}</h1>
           <p>${esc(s.subtitle)}</p>
         </div>
-        <div class="hero-visual">
-          ${image(s.image,"hero-image","MintWave Studio")}
+        <div class="hero-visual hero-background">
           <div class="device device-ipad">${image("ipad","","iPad mockup")}</div>
           <div class="device device-tablet">${image("tablet","","Tablet mockup")}</div>
           <div class="device device-phone">${image("phone","","Phone mockup")}</div>
@@ -67,8 +66,8 @@
       </section>`;
 
     if (s.kind === "journey") return `
-      <section id="journey" class="journey section">
-        <div class="journey-art">${image(s.image,"journey-image","Our Journey")}</div>
+      <section id="journey" class="journey section journey-background">
+        <div class="journey-art" aria-hidden="true"></div>
         <div class="journey-copy"><span>${esc(s.eyebrow)}</span><h2>${esc(s.title)}</h2><h3>${esc(s.subtitle)}</h3><p>${esc(s.body)}</p></div>
       </section>`;
 
