@@ -1,8 +1,25 @@
-# MintWave complete dynamic clone
+# MintWave Studio — from-scratch GitHub Pages clone
 
-Add these manually downloaded images under `assets/`:
-hero.jpg, phone-mockup.jpg, phone-mockup-cart.jpg, phone-mockup-2.jpg, phone-mockup-3.jpg, ipad-mockup.jpg, tab-mockup-cart.jpg, app-highlights.jpg.
+The implementation is intentionally independent of Wix's page markup. It recreates the rendered section structure with plain HTML/CSS/JS and loads all sections from `content.json`.
 
-Sections are loaded dynamically from `content.json` and rendered by `app.js`, so the site remains static and GitHub Pages compatible.
+## Dynamic architecture
 
-Deploy: upload to a repository and enable Settings → Pages → main branch → /(root).
+- `content.json` — navigation and section data
+- `image-manifest.json` — image URLs
+- `app.js` — dynamically renders the page
+- `styles.css` — responsive layout
+- `assets/` — optional local image overrides
+
+The current image manifest contains the exact Wix-hosted source images exposed by the live site.
+
+### To make the clone self-contained
+
+Download the eight images from the URLs in `image-manifest.json`, put them in `assets/`, and change the manifest values to relative paths such as `assets/hero.jpg`.
+
+## GitHub Pages
+
+Keep `index.html`, `app.js`, `content.json`, `image-manifest.json`, and `styles.css` together at the published root. Relative `./` paths are used so the site works after a repository rename.
+
+## Form
+
+The contact form is UI-complete but needs a form backend to actually deliver submissions.
