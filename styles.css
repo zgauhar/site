@@ -1552,7 +1552,7 @@ textarea {
     width: 17%;
     max-width: 17%;
 
-    left: 0;
+    left: 10%;
     top: 35%;
 
     z-index: 1000 !important;
