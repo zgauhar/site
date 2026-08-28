@@ -315,20 +315,11 @@ textarea {
 .hero-visual {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
   height: 680px;
-
+  min-width: 0;
   position: relative;
-
   z-index: 20;
-
-  /*
-   * Absolutely positioned mockups are clipped here.
-   * This is important because right/left positioning can
-   * otherwise create a document-wide horizontal overflow.
-   */
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -414,14 +405,10 @@ textarea {
 
 .device-tablet {
   width: 18%;
-  max-width: 18%;
 
-  left: 5%;
+  left: 12%;
   top: 32%;
 
-  /*
-   * Highest z-axis.
-   */
   z-index: 1000 !important;
 }
 
@@ -1615,15 +1602,26 @@ textarea {
     height: 330px;
   }
 
-  .device-ipad {
-    width: 34%;
-    right: 20%;
-  }
+.device-ipad {
+  width: 38%;
 
-  .device-phone {
-    width: 16%;
-    right: 5%;
-  }
+  right: 20%;
+  top: 6%;
+
+  z-index: 20;
+}
+
+.device-phone {
+  width: 18%;
+
+  right: 7%;
+  top: 24%;
+
+  left: auto;
+  bottom: auto;
+
+  z-index: 30;
+}
 
   .device-tablet {
     width: 16%;
