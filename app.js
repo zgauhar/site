@@ -17,14 +17,16 @@
    * - app-highlights
    * are deliberately NOT rendered as <img> elements.
    */
-  const image = (name, className = "", alt = "") => `
-    <img
-      class="${className}"
-      data-image="${esc(name)}"
-      alt="${esc(alt)}"
-      loading="lazy"
-    >
-  `;
+const image = (name, className = "", alt = "") => `
+  <img
+    class="${className}"
+    data-image="${esc(name)}"
+    alt="${esc(alt)}"
+    loading="lazy"
+    decoding="async"
+    draggable="false"
+  >
+`;
 
   function renderHeader(nav) {
     return `
