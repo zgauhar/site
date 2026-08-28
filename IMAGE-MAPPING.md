@@ -6,7 +6,7 @@ Save the downloaded files exactly as shown:
 
 | Key | Save as | Used in |
 |---|---|---|
-| hero | `assets/hero.jpg` | Home hero, Our Journey |
+| hero | `assets/hero.jpg` | **CSS background** for Home hero + Our Journey |
 | ipad | `assets/ipad-mockup.jpg` | Home hero |
 | tablet | `assets/tablet-cart.jpg` | Home hero |
 | phone | `assets/phone-mockup.jpg` | Home hero |
@@ -44,3 +44,8 @@ Save the downloaded files exactly as shown:
 The filenames and section assignments above are based on the image elements exposed by the live rendered page. citeturn1view0
 
 After downloading, the clone uses only the local `assets/` paths from `image-manifest.json`, so GitHub Pages no longer depends on Wix to serve the images.
+
+
+## Background usage
+
+`hero.jpg` is used as a CSS background on `.hero-background` and `.journey-background`, rather than rendered as an `<img>`. After downloading it, replace the two Wix URLs in `styles.css` with `url("assets/hero.jpg")` for a fully local GitHub Pages clone.

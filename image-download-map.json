@@ -6,7 +6,12 @@
       "Home hero",
       "Our Journey"
     ],
-    "notes": "Main large MintWave hero/journey image."
+    "notes": "Main large MintWave hero/journey image.",
+    "render_as": "css-background",
+    "css_selectors": [
+      ".hero-background",
+      ".journey-background"
+    ]
   },
   "ipad": {
     "save_as": "assets/ipad-mockup.jpg",
