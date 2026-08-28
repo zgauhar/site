@@ -1690,3 +1690,105 @@ span,
 a {
   overflow-wrap: anywhere;
 }
+
+/* =========================================================
+   GOOGLE PLAY BUTTON
+   ========================================================= */
+
+.google-play-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-top: 30px;
+  padding: 9px 18px 9px 13px;
+
+  min-height: 58px;
+
+  background: #000000;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.google-play-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.google-play-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.google-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 29px;
+  height: 34px;
+
+  font-size: 22px;
+  line-height: 1;
+
+  transform: scaleX(0.85);
+}
+
+.google-play-label {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+  text-align: left;
+}
+
+.google-play-label small {
+  margin-bottom: 4px;
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.google-play-label strong {
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .google-play-button {
+    margin-top: 24px;
+
+    min-height: 54px;
+    padding: 8px 16px 8px 12px;
+  }
+
+  .google-play-label strong {
+    font-size: 17px;
+  }
+
+  .google-play-icon {
+    width: 27px;
+    height: 31px;
+  }
+}
+
