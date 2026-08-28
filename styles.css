@@ -1160,7 +1160,7 @@ textarea {
     width: 17%;
     max-width: 17%;
 
-    left: 1%;
+    left: 4%;
     top: 32%;
 
     z-index: 1000 !important;
@@ -1692,7 +1692,7 @@ a {
 }
 .google-play-button img {
   display: block;
-  width: 76px;
+  width: 96px;
   max-width: 100%;
   height: auto;
   border: 0;
