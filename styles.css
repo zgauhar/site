@@ -1160,7 +1160,7 @@ textarea {
     width: 17%;
     max-width: 17%;
 
-    left: 4%;
+    left: 1%;
     top: 32%;
 
     z-index: 1000 !important;
@@ -1689,4 +1689,20 @@ li,
 span,
 a {
   overflow-wrap: anywhere;
+}
+.google-play-button img {
+  display: block;
+  width: 76px;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .google-play-button img {
+    width: 70px;
+    max-width: 100%;
+  }
 }
