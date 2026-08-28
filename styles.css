@@ -1,23 +1,32 @@
-```css
 /* =========================================================
    MINTWAVE STUDIO
-   Complete responsive stylesheet
+   Responsive / overflow-safe stylesheet
    ========================================================= */
 
-* {
+/* ---------------------------------------------------------
+   GLOBAL RESET
+   --------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  min-width: 0;
+
+  overflow-x: clip;
 
   background: #f5f7f2;
   color: #172018;
@@ -26,13 +35,51 @@ body {
   line-height: 1.6;
 }
 
+main,
+#site {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+section,
+header,
+footer,
+div,
+article,
+nav,
+form {
+  min-width: 0;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-img {
+button,
+input,
+textarea {
   max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
 }
 
 
@@ -42,6 +89,7 @@ img {
 
 .site-header {
   width: 100%;
+  max-width: 100%;
   height: 82px;
 
   padding: 0 6.7vw;
@@ -61,12 +109,16 @@ img {
 }
 
 .logo {
+  min-width: 0;
+
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.03em;
 }
 
 .site-nav {
+  min-width: 0;
+
   display: flex;
   gap: 30px;
 
@@ -75,6 +127,7 @@ img {
 
 .site-nav a {
   position: relative;
+  white-space: nowrap;
 }
 
 .site-nav a::after {
@@ -108,6 +161,7 @@ img {
   color: #172018;
 
   font-size: 25px;
+  line-height: 1;
 
   cursor: pointer;
 }
@@ -120,8 +174,11 @@ img {
 .section {
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 
   padding: 135px 8vw;
+
+  overflow: clip;
 }
 
 .section h2,
@@ -133,12 +190,24 @@ img {
 
   letter-spacing: -0.07em;
   line-height: 0.92;
+
+  overflow-wrap: anywhere;
 }
 
 .section h2 {
   font-size: clamp(54px, 6.5vw, 94px);
 
   margin: 8px 0 0;
+}
+
+.section-heading,
+.section-copy,
+.feature-copy,
+.journey-copy,
+.contact > div,
+.contact > form {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .section-heading span,
@@ -162,6 +231,7 @@ img {
 .hero {
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 
   min-height: calc(100vh - 82px);
 
@@ -170,16 +240,19 @@ img {
   display: grid;
 
   /*
-   * Prevent the grid columns themselves from forcing
-   * the page wider than the viewport.
+   * The two columns deliberately total 100%.
+   * There is no column gap, so the grid cannot exceed
+   * the available content width.
    */
-  grid-template-columns: minmax(0, 43%) minmax(0, 57%);
+  grid-template-columns:
+    minmax(0, 43%)
+    minmax(0, 57%);
 
   align-items: center;
 
   position: relative;
 
-  overflow: hidden;
+  overflow: clip;
 
   background:
     linear-gradient(
@@ -200,6 +273,8 @@ img {
 }
 
 .hero-copy {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   padding-left: 3vw;
@@ -209,6 +284,7 @@ img {
 }
 
 .hero h1 {
+  width: 100%;
   max-width: 750px;
 
   margin: 0;
@@ -216,11 +292,10 @@ img {
   font-size: clamp(65px, 8.8vw, 135px);
 
   color: #f2f5ef;
-
-  overflow-wrap: break-word;
 }
 
 .hero p {
+  width: 100%;
   max-width: 500px;
 
   margin-top: 30px;
@@ -228,48 +303,48 @@ img {
   font-size: 20px;
 
   color: #f2f5ef;
+
+  overflow-wrap: anywhere;
 }
 
 
 /* =========================================================
-   HERO VISUAL CONTAINER
+   HERO VISUAL
    ========================================================= */
 
 .hero-visual {
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 
   height: 680px;
-
-  min-width: 0;
 
   position: relative;
 
   z-index: 20;
 
   /*
-   * Critical overflow protection.
-   *
-   * Devices are allowed to overlap each other but cannot
-   * extend outside the hero visual area.
+   * Absolutely positioned mockups are clipped here.
+   * This is important because right/left positioning can
+   * otherwise create a document-wide horizontal overflow.
    */
   overflow: hidden;
 }
 
 
-/*
- * All devices are positioned relative to hero-visual.
- */
+/* =========================================================
+   HERO DEVICES
+   ========================================================= */
+
 .hero-visual .device {
   position: absolute;
 
+  min-width: 0;
   max-width: 100%;
+
+  margin: 0;
+  padding: 0;
 }
-
-
-/* =========================================================
-   HERO DEVICE IMAGE BASE
-   ========================================================= */
 
 .hero-visual .device img {
   display: block;
@@ -281,7 +356,6 @@ img {
   object-fit: contain;
 
   border: 5px solid #000000;
-
   border-radius: 26px;
 
   filter:
@@ -295,13 +369,9 @@ img {
    IPAD
    ========================================================= */
 
-/*
- * Smaller than the original design.
- *
- * The right edge is kept safely inside the visual area.
- */
 .device-ipad {
   width: 38%;
+  max-width: 38%;
 
   right: 20%;
   top: 10%;
@@ -319,14 +389,9 @@ img {
    PHONE
    ========================================================= */
 
-/*
- * Phone is immediately beside the iPad.
- *
- * It slightly overlaps the iPad rather than creating
- * a large gap.
- */
 .device-phone {
   width: 18%;
+  max-width: 18%;
 
   right: 7%;
   top: 30%;
@@ -347,23 +412,22 @@ img {
    TABLET
    ========================================================= */
 
-/*
- * Tablet overlaps the left side of the iPad.
- *
- * Tablet is the HIGHEST layer.
- */
 .device-tablet {
   width: 18%;
+  max-width: 18%;
 
   left: 5%;
   top: 32%;
 
+  /*
+   * Highest z-axis.
+   */
   z-index: 1000 !important;
 }
 
 .device-tablet img {
   /*
-   * Tablet has NO border.
+   * No border.
    */
   border: 0 !important;
 
@@ -375,23 +439,22 @@ img {
    PHONE CART
    ========================================================= */
 
-/*
- * PhoneCart overlaps the phone.
- *
- * It stays below the tablet but above the phone.
- */
 .device-phone-cart {
   width: 21%;
+  max-width: 21%;
 
   right: 2%;
   bottom: 9%;
 
+  /*
+   * Above phone, below tablet.
+   */
   z-index: 900;
 }
 
 .device-phone-cart img {
   /*
-   * PhoneCart has NO border.
+   * No border.
    */
   border: 0 !important;
 
@@ -400,33 +463,21 @@ img {
 
 
 /* =========================================================
-   HERO STACKING
+   EXPLICIT HERO STACKING
    ========================================================= */
 
-/*
- * iPad
- */
 .hero-visual .device-ipad {
   z-index: 20;
 }
 
-/*
- * Phone sits above iPad.
- */
 .hero-visual .device-phone {
   z-index: 30;
 }
 
-/*
- * PhoneCart sits above phone.
- */
 .hero-visual .device-phone-cart {
   z-index: 900;
 }
 
-/*
- * Tablet is always the highest layer.
- */
 .hero-visual .device-tablet {
   z-index: 1000 !important;
 }
@@ -439,14 +490,27 @@ img {
 .about {
   display: grid;
 
+  /*
+   * IMPORTANT:
+   *
+   * Do NOT use:
+   *
+   * 1fr 1fr + 12vw
+   *
+   * in a way that lets intrinsic content force the grid.
+   *
+   * minmax(0, 1fr) allows the columns to shrink properly.
+   */
   grid-template-columns:
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: 12vw;
+  gap: clamp(40px, 8vw, 12vw);
 }
 
 .section-copy {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   padding-top: 45px;
@@ -455,25 +519,36 @@ img {
 .section-copy h3,
 .journey-copy h3 {
   font-size: 20px;
+
+  overflow-wrap: anywhere;
 }
 
 .section-copy p,
 .section-copy li,
 .journey-copy p {
   color: #5d695f;
+
+  overflow-wrap: anywhere;
 }
 
 .section-copy ul {
   list-style: none;
+
+  width: 100%;
+  max-width: 100%;
 
   padding: 0;
   margin-top: 28px;
 }
 
 .section-copy li {
+  width: 100%;
+
   border-top: 1px solid #c8d0c5;
 
   padding: 17px 0;
+
+  overflow-wrap: anywhere;
 }
 
 .subhead {
@@ -488,17 +563,18 @@ img {
 .features {
   display: grid;
 
+  /*
+   * The gap is subtracted from the available grid width
+   * because both tracks are flexible minmax() tracks.
+   */
   grid-template-columns:
     minmax(0, 1.05fr)
     minmax(0, 0.95fr);
 
-  gap: 8vw;
+  gap: clamp(40px, 7vw, 8vw);
 
   align-items: center;
 
-  /*
-   * app-highlights.jpg is a background.
-   */
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.18),
@@ -518,12 +594,16 @@ img {
 
 .feature-art {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
   height: 610px;
-  min-height: 610px;
+  min-height: 0;
 }
 
 .app-highlights-content {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   color: #f2f5ef;
@@ -541,16 +621,27 @@ img {
 .feature-copy h3 {
   font-size: 21px;
   font-weight: 500;
+
+  overflow-wrap: anywhere;
 }
 
 .feature-list {
+  width: 100%;
+  max-width: 100%;
+
   margin-top: 35px;
 }
 
 .feature-list article {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   display: grid;
 
-  grid-template-columns: 55px minmax(0, 1fr);
+  grid-template-columns:
+    55px
+    minmax(0, 1fr);
 
   gap: 20px;
 
@@ -564,10 +655,14 @@ img {
   margin: 0;
 
   font-size: 21px;
+
+  overflow-wrap: anywhere;
 }
 
 .feature-list p {
   margin: 8px 0 0;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -577,6 +672,9 @@ img {
 
 .standout,
 .standout-white {
+  width: 100%;
+  max-width: 100%;
+
   background: #ffffff;
   color: #000000;
 }
@@ -598,16 +696,22 @@ img {
 }
 
 .standout-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: 10vw;
+  gap: clamp(40px, 7vw, 10vw);
 }
 
 .stand-card {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   min-height: 620px;
@@ -619,9 +723,13 @@ img {
   padding-top: 22px;
 
   color: #000000;
+
+  overflow: hidden;
 }
 
 .stand-card h3 {
+  max-width: 100%;
+
   font-size: 38px;
 
   letter-spacing: -0.04em;
@@ -629,12 +737,17 @@ img {
   margin: 12px 0;
 
   color: #000000;
+
+  overflow-wrap: anywhere;
 }
 
 .stand-card p {
+  width: 100%;
   max-width: 500px;
 
   color: #000000;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -654,8 +767,7 @@ img {
 
   object-fit: contain;
 
-  border:
-    6px solid #000000;
+  border: 6px solid #000000;
 
   border-radius: 28px;
 
@@ -679,7 +791,7 @@ img {
     minmax(0, 1.1fr)
     minmax(0, 0.9fr);
 
-  gap: 10vw;
+  gap: clamp(40px, 7vw, 10vw);
 
   align-items: center;
 }
@@ -706,12 +818,16 @@ img {
 
 .journey-art {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
   height: 560px;
-  min-height: 560px;
+  min-height: 0;
 }
 
 .journey-copy {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   position: relative;
@@ -722,6 +838,8 @@ img {
   border-radius: 34px;
 
   padding: 55px;
+
+  overflow: hidden;
 }
 
 .journey-copy h2 {
@@ -744,7 +862,7 @@ img {
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: 12vw;
+  gap: clamp(40px, 8vw, 12vw);
 
   background: #e8f1df;
 }
@@ -756,12 +874,19 @@ img {
 }
 
 .contact-details {
+  width: 100%;
+  max-width: 100%;
+
   margin-top: 50px;
 
   color: #536054;
+
+  overflow-wrap: anywhere;
 }
 
 .contact form {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   display: flex;
@@ -771,6 +896,11 @@ img {
 }
 
 .contact label {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
   font-size: 13px;
 
   color: #657065;
@@ -782,6 +912,7 @@ img {
 
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 
   margin-top: 7px;
 
@@ -795,6 +926,10 @@ img {
   font: inherit;
 
   outline: none;
+}
+
+.contact textarea {
+  resize: vertical;
 }
 
 .contact input:focus,
@@ -819,9 +954,13 @@ img {
 }
 
 .form-status {
+  max-width: 100%;
+
   font-size: 13px;
 
   color: #536054;
+
+  overflow-wrap: anywhere;
 }
 
 
@@ -832,14 +971,21 @@ img {
 .footer {
   width: 100%;
   max-width: 100%;
+  min-width: 0;
 
   background: #172018;
   color: #dce6da;
 
   padding: 55px 8vw 25px;
+
+  overflow: hidden;
 }
 
 .footer-top {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   display: grid;
 
   grid-template-columns:
@@ -847,13 +993,20 @@ img {
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: 5vw;
+  gap: clamp(30px, 5vw, 5vw);
 
   padding-bottom: 45px;
 }
 
+.footer-top > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .footer-contact p {
   margin: 0 0 5px;
+
+  overflow-wrap: anywhere;
 }
 
 .footer-links {
@@ -863,11 +1016,18 @@ img {
   gap: 12px;
 }
 
+.footer-links a {
+  overflow-wrap: anywhere;
+}
+
 .footer-links a:hover {
   text-decoration: underline;
 }
 
 .footer-bottom {
+  width: 100%;
+  max-width: 100%;
+
   border-top: 1px solid #4a574c;
 
   padding-top: 20px;
@@ -882,8 +1042,11 @@ img {
 
 .error {
   width: 100%;
+  max-width: 100%;
 
   padding: 15vh 8vw;
+
+  overflow-wrap: anywhere;
 }
 
 .noscript {
@@ -933,6 +1096,7 @@ img {
     right: 0;
 
     width: 100%;
+    max-width: 100%;
 
     padding: 25px 6vw;
 
@@ -965,7 +1129,8 @@ img {
      ------------------------------------------------------- */
 
   .hero {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns:
+      minmax(0, 1fr);
 
     padding-top: 80px;
   }
@@ -975,6 +1140,9 @@ img {
   }
 
   .hero-visual {
+    width: 100%;
+    max-width: 100%;
+
     height: 570px;
 
     margin-top: 30px;
@@ -987,6 +1155,7 @@ img {
 
   .device-ipad {
     width: 34%;
+    max-width: 34%;
 
     right: 19%;
     top: 12%;
@@ -994,6 +1163,7 @@ img {
 
   .device-phone {
     width: 17%;
+    max-width: 17%;
 
     right: 7%;
     top: 29%;
@@ -1001,16 +1171,22 @@ img {
 
   .device-tablet {
     width: 17%;
+    max-width: 17%;
 
     left: 4%;
     top: 32%;
+
+    z-index: 1000 !important;
   }
 
   .device-phone-cart {
     width: 20%;
+    max-width: 20%;
 
     right: 1%;
     bottom: 9%;
+
+    z-index: 900;
   }
 
 
@@ -1034,8 +1210,11 @@ img {
      ------------------------------------------------------- */
 
   .feature-art {
+    width: 100%;
+    max-width: 100%;
+
     height: 500px;
-    min-height: 500px;
+    min-height: 0;
   }
 
 
@@ -1044,6 +1223,10 @@ img {
      ------------------------------------------------------- */
 
   .standout-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
     gap: 6vw;
   }
 
@@ -1063,8 +1246,11 @@ img {
      ------------------------------------------------------- */
 
   .journey-art {
+    width: 100%;
+    max-width: 100%;
+
     height: 360px;
-    min-height: 360px;
+    min-height: 0;
   }
 
   .journey-copy {
@@ -1091,14 +1277,34 @@ img {
 @media (max-width: 600px) {
 
   /* -------------------------------------------------------
+     Header
+     ------------------------------------------------------- */
+
+  .site-header {
+    height: 72px;
+
+    padding: 0 6vw;
+  }
+
+  .site-nav {
+    top: 72px;
+  }
+
+
+  /* -------------------------------------------------------
      Hero
      ------------------------------------------------------- */
 
   .hero {
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 72px);
 
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding:
+      70px
+      6vw
+      65px;
+
+    grid-template-columns:
+      minmax(0, 1fr);
   }
 
   .hero h1 {
@@ -1110,13 +1316,12 @@ img {
   }
 
   .hero-visual {
-    height: 430px;
-
-    /*
-     * Keep composition safely inside the viewport.
-     */
     width: 100%;
     max-width: 100%;
+
+    height: 430px;
+
+    margin-top: 30px;
   }
 
 
@@ -1124,33 +1329,25 @@ img {
      Mobile mockups
      ------------------------------------------------------- */
 
-  /*
-   * iPad.
-   */
   .device-ipad {
     width: 34%;
+    max-width: 34%;
 
     right: 20%;
     top: 16%;
   }
 
-  /*
-   * Phone immediately beside iPad.
-   */
   .device-phone {
     width: 17%;
+    max-width: 17%;
 
     right: 5%;
     top: 30%;
   }
 
-  /*
-   * Tablet overlaps iPad.
-   *
-   * Highest layer.
-   */
   .device-tablet {
     width: 17%;
+    max-width: 17%;
 
     left: 1%;
     top: 34%;
@@ -1158,11 +1355,9 @@ img {
     z-index: 1000 !important;
   }
 
-  /*
-   * PhoneCart overlaps phone.
-   */
   .device-phone-cart {
     width: 20%;
+    max-width: 20%;
 
     right: 0;
     bottom: 8%;
@@ -1193,6 +1388,9 @@ img {
      ------------------------------------------------------- */
 
   .section {
+    width: 100%;
+    max-width: 100%;
+
     padding: 80px 6vw;
   }
 
@@ -1208,8 +1406,19 @@ img {
      ------------------------------------------------------- */
 
   .feature-art {
+    width: 100%;
+    max-width: 100%;
+
     height: 300px;
-    min-height: 300px;
+    min-height: 0;
+  }
+
+  .feature-list article {
+    grid-template-columns:
+      40px
+      minmax(0, 1fr);
+
+    gap: 15px;
   }
 
 
@@ -1220,6 +1429,8 @@ img {
   .standout-grid {
     grid-template-columns:
       minmax(0, 1fr);
+
+    gap: 40px;
   }
 
   .stand-card {
@@ -1244,11 +1455,17 @@ img {
      ------------------------------------------------------- */
 
   .journey-art {
+    width: 100%;
+    max-width: 100%;
+
     height: 390px;
-    min-height: 390px;
+    min-height: 0;
   }
 
   .journey-copy {
+    width: 100%;
+    max-width: 100%;
+
     padding: 30px;
 
     border-radius: 26px;
@@ -1256,8 +1473,26 @@ img {
 
 
   /* -------------------------------------------------------
+     Contact
+     ------------------------------------------------------- */
+
+  .contact {
+    gap: 45px;
+  }
+
+  .contact-details {
+    margin-top: 35px;
+  }
+
+
+  /* -------------------------------------------------------
      Footer
      ------------------------------------------------------- */
+
+  .footer {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 
   .footer-top {
     grid-template-columns:
@@ -1274,6 +1509,16 @@ img {
 
 @media (max-width: 420px) {
 
+  .site-header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .hero {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
   .hero h1 {
     font-size: 54px;
   }
@@ -1283,12 +1528,13 @@ img {
   }
 
 
-  /*
-   * Compact mockup composition.
-   */
+  /* -------------------------------------------------------
+     Compact mockup composition
+     ------------------------------------------------------- */
 
   .device-ipad {
     width: 35%;
+    max-width: 35%;
 
     right: 19%;
     top: 17%;
@@ -1296,6 +1542,7 @@ img {
 
   .device-phone {
     width: 17%;
+    max-width: 17%;
 
     right: 5%;
     top: 31%;
@@ -1303,6 +1550,7 @@ img {
 
   .device-tablet {
     width: 17%;
+    max-width: 17%;
 
     left: 0;
     top: 35%;
@@ -1312,6 +1560,7 @@ img {
 
   .device-phone-cart {
     width: 20%;
+    max-width: 20%;
 
     right: 0;
     bottom: 7%;
@@ -1320,9 +1569,9 @@ img {
   }
 
 
-  /*
-   * Keep requested border behavior.
-   */
+  /* -------------------------------------------------------
+     Requested border behavior
+     ------------------------------------------------------- */
 
   .hero-visual .device-ipad img,
   .hero-visual .device-phone img {
@@ -1336,14 +1585,110 @@ img {
   }
 
 
-  /*
-   * Smaller typography.
-   */
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
 
   .section h2,
   .standout h2,
   .contact h2 {
     font-size: 46px;
   }
+
+  .journey-copy {
+    padding: 25px;
+  }
 }
-```
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-visual {
+    height: 330px;
+  }
+
+  .device-ipad {
+    width: 34%;
+    right: 20%;
+  }
+
+  .device-phone {
+    width: 16%;
+    right: 5%;
+  }
+
+  .device-tablet {
+    width: 16%;
+    left: 0;
+  }
+
+  .device-phone-cart {
+    width: 19%;
+    right: 0;
+  }
+
+  .section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+
+/* =========================================================
+   FINAL OVERFLOW GUARD
+   ========================================================= */
+
+/*
+ * These rules intentionally apply to the layout wrappers
+ * rather than individual content elements.
+ *
+ * They prevent a positioned mockup, long URL, unusually long
+ * word, or intrinsic grid item from creating horizontal
+ * scrolling.
+ */
+
+html,
+body,
+#site,
+main {
+  max-width: 100%;
+}
+
+.hero,
+.features,
+.standout,
+.journey,
+.contact,
+.footer {
+  max-width: 100%;
+}
+
+.hero *,
+.features *,
+.standout *,
+.journey *,
+.contact *,
+.footer * {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span,
+a {
+  overflow-wrap: anywhere;
+}
