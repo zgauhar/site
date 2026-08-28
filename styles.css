@@ -5,3 +5,7 @@
 .journey-background .journey-copy{background:rgba(245,247,242,.92);border-radius:34px;padding:55px}
 .journey-background .journey-art{min-height:560px}
 @media(max-width:900px){.journey-background .journey-art{min-height:360px}.journey-background .journey-copy{padding:35px}}
+.hero-copy h1,
+.hero-copy p {
+  color: #f2f5ef;
+}
