@@ -110,7 +110,13 @@
     document.querySelectorAll("[data-image]").forEach(el => {
       const key = el.dataset.image;
       const src = manifest[key];
-      if (src) el.src = src;
+      if (src) {
+        el.src = src;
+        el.addEventListener("error", () => {
+          el.classList.add("missing-image");
+          el.alt = `${key} image — add the mapped file to assets/`;
+        }, {once:true});
+      }
     });
 
     const menu = document.querySelector(".menu-toggle");

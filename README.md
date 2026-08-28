@@ -23,3 +23,8 @@ Keep `index.html`, `app.js`, `content.json`, `image-manifest.json`, and `styles.
 ## Form
 
 The contact form is UI-complete but needs a form backend to actually deliver submissions.
+
+
+## Static image mapping
+
+See `IMAGE-MAPPING.md` or `image-download-map.json` for every source URL, exact local filename, and section usage. Once downloaded, all images are served from `assets/`; no Wix image request is required.

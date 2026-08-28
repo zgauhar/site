@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "save_as": "assets/hero.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_ff1e47135ac74cf4a604c7add4cfe4cd~mv2.jpg",
+    "used_in": [
+      "Home hero",
+      "Our Journey"
+    ],
+    "notes": "Main large MintWave hero/journey image."
+  },
+  "ipad": {
+    "save_as": "assets/ipad-mockup.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_633ba98fbddf444ca1082d45b198117a~mv2.jpg",
+    "used_in": [
+      "Home hero"
+    ],
+    "notes": "Wix source filename: ipad mockup.jpg"
+  },
+  "tablet": {
+    "save_as": "assets/tablet-cart.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_339cee94e4bf4793b7077e6b59a70893~mv2.jpg",
+    "used_in": [
+      "Home hero"
+    ],
+    "notes": "Wix source filename: tab mock up cart.jpg"
+  },
+  "phone": {
+    "save_as": "assets/phone-mockup.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_c99482b693b744a9aa5f21748a500470~mv2.jpg",
+    "used_in": [
+      "Home hero"
+    ],
+    "notes": "Wix source filename: phone mockup.jpg"
+  },
+  "phoneCart": {
+    "save_as": "assets/phone-mockup-cart.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_8de743e63ae64f0e885146ec017e5ebb~mv2.jpg",
+    "used_in": [
+      "Home hero"
+    ],
+    "notes": "Wix source filename: phone mockup cart.jpg"
+  },
+  "highlights": {
+    "save_as": "assets/app-highlights.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_d33ed5a047724ede9b2f8527834e0dfb~mv2.jpg",
+    "used_in": [
+      "Features / App Highlights",
+      "Contact section image"
+    ],
+    "notes": "The live page exposes this same image in both locations."
+  },
+  "phone2": {
+    "save_as": "assets/phone-mockup-2.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_70a4efc07dc64837827c0ad667525a1a~mv2.jpg",
+    "used_in": [
+      "How Our Apps Stand Out \u2014 /01"
+    ],
+    "notes": "Wix source filename: phone mockup 2.jpg"
+  },
+  "phone3": {
+    "save_as": "assets/phone-mockup-3.jpg",
+    "source": "https://static.wixstatic.com/media/84770f_b7b4c3ce86fc4edc9ed13a024640267f~mv2.jpg",
+    "used_in": [
+      "How Our Apps Stand Out \u2014 /02"
+    ],
+    "notes": "Wix source filename: phone mockup 3.jpg"
+  }
+}

@@ -1,10 +1,10 @@
 {
-  "hero": "https://static.wixstatic.com/media/84770f_ff1e47135ac74cf4a604c7add4cfe4cd~mv2.jpg",
-  "ipad": "https://static.wixstatic.com/media/84770f_633ba98fbddf444ca1082d45b198117a~mv2.jpg",
-  "tablet": "https://static.wixstatic.com/media/84770f_339cee94e4bf4793b7077e6b59a70893~mv2.jpg",
-  "phone": "https://static.wixstatic.com/media/84770f_c99482b693b744a9aa5f21748a500470~mv2.jpg",
-  "phoneCart": "https://static.wixstatic.com/media/84770f_8de743e63ae64f0e885146ec017e5ebb~mv2.jpg",
-  "highlights": "https://static.wixstatic.com/media/84770f_d33ed5a047724ede9b2f8527834e0dfb~mv2.jpg",
-  "phone2": "https://static.wixstatic.com/media/84770f_70a4efc07dc64837827c0ad667525a1a~mv2.jpg",
-  "phone3": "https://static.wixstatic.com/media/84770f_b7b4c3ce86fc4edc9ed13a024640267f~mv2.jpg"
+  "hero": "assets/hero.jpg",
+  "ipad": "assets/ipad-mockup.jpg",
+  "tablet": "assets/tablet-cart.jpg",
+  "phone": "assets/phone-mockup.jpg",
+  "phoneCart": "assets/phone-mockup-cart.jpg",
+  "highlights": "assets/app-highlights.jpg",
+  "phone2": "assets/phone-mockup-2.jpg",
+  "phone3": "assets/phone-mockup-3.jpg"
 }
