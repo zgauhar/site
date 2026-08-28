@@ -1,40 +1,22 @@
 ```css
 /* =========================================================
    MINTWAVE STUDIO
-   COMPLETE RESPONSIVE STYLESHEET
+   Complete responsive stylesheet
    ========================================================= */
 
-/* =========================================================
-   GLOBAL RESET
-   ========================================================= */
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
 html {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-  margin: 0;
-  padding: 0;
-
-  overflow-x: hidden;
-
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  margin: 0;
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
-  margin: 0;
-  padding: 0;
-
   overflow-x: hidden;
 
   background: #f5f7f2;
@@ -44,75 +26,13 @@ body {
   line-height: 1.6;
 }
 
-/*
- * Prevent dynamically generated content from establishing
- * an intrinsic width larger than its parent.
- */
-#site,
-#site > *,
-main,
-main > * {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-}
-
-/*
- * Media can never establish horizontal overflow.
- */
-img,
-picture,
-video,
-canvas,
-svg,
-iframe {
-  display: block;
-  max-width: 100%;
-}
-
-img {
-  height: auto;
-}
-
 a {
   color: inherit;
   text-decoration: none;
-
-  overflow-wrap: anywhere;
 }
 
-button,
-input,
-textarea,
-select {
+img {
   max-width: 100%;
-  min-width: 0;
-
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-li,
-label {
-  max-width: 100%;
-
-  overflow-wrap: anywhere;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  min-width: 0;
 }
 
 
@@ -122,14 +42,9 @@ h6 {
 
 .site-header {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   height: 82px;
 
-  padding:
-    0
-    clamp(20px, 6.7vw, 96px);
+  padding: 0 6.7vw;
 
   display: flex;
   align-items: center;
@@ -137,7 +52,6 @@ h6 {
 
   position: sticky;
   top: 0;
-
   z-index: 100;
 
   background: rgba(245, 247, 242, 0.9);
@@ -147,21 +61,13 @@ h6 {
 }
 
 .logo {
-  min-width: 0;
-
   font-size: 20px;
   font-weight: 700;
-
   letter-spacing: -0.03em;
-
-  white-space: nowrap;
 }
 
 .site-nav {
-  min-width: 0;
-
   display: flex;
-
   gap: 30px;
 
   font-size: 14px;
@@ -169,8 +75,6 @@ h6 {
 
 .site-nav a {
   position: relative;
-
-  white-space: nowrap;
 }
 
 .site-nav a::after {
@@ -196,14 +100,10 @@ h6 {
 .menu-toggle {
   display: none;
 
-  width: auto;
-  max-width: 48px;
-
   padding: 0;
 
+  background: none;
   border: 0;
-
-  background: transparent;
 
   color: #172018;
 
@@ -220,13 +120,8 @@ h6 {
 .section {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
-  padding:
-    clamp(80px, 9vw, 135px)
-    clamp(20px, 8vw, 120px);
-
-  overflow: hidden;
+  padding: 135px 8vw;
 }
 
 .section h2,
@@ -241,28 +136,14 @@ h6 {
 }
 
 .section h2 {
+  font-size: clamp(54px, 6.5vw, 94px);
+
   margin: 8px 0 0;
-
-  font-size: clamp(48px, 6.5vw, 94px);
-}
-
-.section-heading,
-.section-copy,
-.feature-copy,
-.journey-copy,
-.contact-details,
-.stand-card {
-  min-width: 0;
-  max-width: 100%;
 }
 
 .section-heading span,
 .feature-copy > span,
 .journey-copy > span {
-  display: block;
-
-  max-width: 100%;
-
   font-size: 12px;
 
   text-transform: uppercase;
@@ -281,26 +162,18 @@ h6 {
 .hero {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   min-height: calc(100vh - 82px);
 
-  padding:
-    clamp(55px, 6vw, 65px)
-    clamp(20px, 6.5vw, 96px)
-    clamp(65px, 7vw, 75px);
+  padding: 65px 6.5vw 75px;
 
   display: grid;
 
   /*
-   * Both tracks are explicitly shrinkable.
-   * This is important for avoiding intrinsic-width overflow.
+   * Prevent the grid columns themselves from forcing
+   * the page wider than the viewport.
    */
-  grid-template-columns:
-    minmax(0, 43%)
-    minmax(0, 57%);
-
-  gap: 0;
+  grid-template-columns: minmax(0, 43%) minmax(0, 57%);
 
   align-items: center;
 
@@ -317,143 +190,96 @@ h6 {
     url("assets/hero.jpg");
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 .hero-background {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
-  overflow: hidden;
 }
 
 .hero-copy {
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
 
-  padding-left: clamp(0px, 3vw, 45px);
+  padding-left: 3vw;
 
   position: relative;
-
   z-index: 10;
 }
 
 .hero h1 {
-  width: 100%;
   max-width: 750px;
-  min-width: 0;
 
   margin: 0;
 
-  font-size: clamp(52px, 8.8vw, 135px);
+  font-size: clamp(65px, 8.8vw, 135px);
 
   color: #f2f5ef;
 
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .hero p {
-  width: 100%;
   max-width: 500px;
-  min-width: 0;
 
   margin-top: 30px;
 
-  font-size: clamp(17px, 1.5vw, 20px);
+  font-size: 20px;
 
   color: #f2f5ef;
 }
 
 
 /* =========================================================
-   HERO MOCKUP STAGE
+   HERO VISUAL CONTAINER
    ========================================================= */
 
 .hero-visual {
-  /*
-   * The stage can ONLY occupy its grid track.
-   */
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   height: 680px;
 
+  min-width: 0;
+
   position: relative;
 
-  overflow: hidden;
+  z-index: 20;
 
   /*
-   * Prevent positioned children from affecting the
-   * dimensions of surrounding layout.
+   * Critical overflow protection.
+   *
+   * Devices are allowed to overlap each other but cannot
+   * extend outside the hero visual area.
    */
-  contain: layout paint;
-
-  isolation: isolate;
+  overflow: hidden;
 }
 
 
 /*
- * All hero devices are absolutely positioned inside
- * this bounded stage.
+ * All devices are positioned relative to hero-visual.
  */
 .hero-visual .device {
   position: absolute;
 
-  display: block;
-
-  min-width: 0;
   max-width: 100%;
-
-  margin: 0;
-  padding: 0;
-
-  box-sizing: border-box;
 }
 
 
-/*
- * Foreground device images.
- */
+/* =========================================================
+   HERO DEVICE IMAGE BASE
+   ========================================================= */
+
 .hero-visual .device img {
   display: block;
 
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
   height: auto;
 
   object-fit: contain;
 
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-
-/* =========================================================
-   HERO MOCKUP — IPAD
-   ========================================================= */
-
-.device-ipad {
-  width: 32%;
-
-  /*
-   * Bounded horizontal composition.
-   */
-  left: 38%;
-  right: auto;
-
-  top: 10%;
-  bottom: auto;
-
-  z-index: 20;
-}
-
-.device-ipad img {
   border: 5px solid #000000;
 
   border-radius: 26px;
@@ -466,16 +292,46 @@ h6 {
 
 
 /* =========================================================
-   HERO MOCKUP — PHONE
+   IPAD
    ========================================================= */
 
+/*
+ * Smaller than the original design.
+ *
+ * The right edge is kept safely inside the visual area.
+ */
+.device-ipad {
+  width: 38%;
+
+  right: 20%;
+  top: 10%;
+
+  z-index: 20;
+}
+
+.device-ipad img {
+  border: 5px solid #000000;
+  border-radius: 26px;
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+/*
+ * Phone is immediately beside the iPad.
+ *
+ * It slightly overlaps the iPad rather than creating
+ * a large gap.
+ */
 .device-phone {
-  width: 16%;
+  width: 18%;
 
-  left: 67%;
-  right: auto;
-
+  right: 7%;
   top: 30%;
+
+  left: auto;
   bottom: auto;
 
   z-index: 30;
@@ -483,101 +339,94 @@ h6 {
 
 .device-phone img {
   border: 5px solid #000000;
-
   border-radius: 26px;
-
-  filter:
-    drop-shadow(
-      0 22px 32px rgba(0, 0, 0, 0.22)
-    );
 }
 
 
 /* =========================================================
-   HERO MOCKUP — TABLET
+   TABLET
    ========================================================= */
 
 /*
- * Tablet deliberately overlaps the iPad.
+ * Tablet overlaps the left side of the iPad.
  *
- * HIGHEST Z-AXIS.
+ * Tablet is the HIGHEST layer.
  */
 .device-tablet {
-  width: 16%;
+  width: 18%;
 
-  left: 24%;
-  right: auto;
-
+  left: 5%;
   top: 32%;
-  bottom: auto;
 
   z-index: 1000 !important;
 }
 
 .device-tablet img {
   /*
-   * NO BORDER.
+   * Tablet has NO border.
    */
   border: 0 !important;
 
   border-radius: 24px;
-
-  filter:
-    drop-shadow(
-      0 22px 32px rgba(0, 0, 0, 0.22)
-    );
 }
 
 
 /* =========================================================
-   HERO MOCKUP — PHONE CART
+   PHONE CART
    ========================================================= */
 
 /*
  * PhoneCart overlaps the phone.
+ *
+ * It stays below the tablet but above the phone.
  */
 .device-phone-cart {
-  width: 18%;
+  width: 21%;
 
-  left: 76%;
-  right: auto;
-
-  top: 50%;
-  bottom: auto;
+  right: 2%;
+  bottom: 9%;
 
   z-index: 900;
 }
 
 .device-phone-cart img {
   /*
-   * NO BORDER.
+   * PhoneCart has NO border.
    */
   border: 0 !important;
 
   border-radius: 24px;
-
-  filter:
-    drop-shadow(
-      0 22px 32px rgba(0, 0, 0, 0.22)
-    );
 }
 
 
+/* =========================================================
+   HERO STACKING
+   ========================================================= */
+
 /*
- * Explicit stacking order.
+ * iPad
  */
 .hero-visual .device-ipad {
   z-index: 20;
 }
 
+/*
+ * Phone sits above iPad.
+ */
 .hero-visual .device-phone {
   z-index: 30;
 }
 
+/*
+ * PhoneCart sits above phone.
+ */
 .hero-visual .device-phone-cart {
   z-index: 900;
 }
 
+/*
+ * Tablet is always the highest layer.
+ */
 .hero-visual .device-tablet {
   z-index: 1000 !important;
 }
@@ -588,24 +437,16 @@ h6 {
    ========================================================= */
 
 .about {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: clamp(40px, 12vw, 180px);
-
-  overflow: hidden;
+  gap: 12vw;
 }
 
 .section-copy {
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
 
   padding-top: 45px;
@@ -613,34 +454,23 @@ h6 {
 
 .section-copy h3,
 .journey-copy h3 {
-  max-width: 100%;
-
   font-size: 20px;
 }
 
 .section-copy p,
 .section-copy li,
 .journey-copy p {
-  max-width: 100%;
-
   color: #5d695f;
 }
 
 .section-copy ul {
-  width: 100%;
-  max-width: 100%;
-
   list-style: none;
 
   padding: 0;
-
   margin-top: 28px;
 }
 
 .section-copy li {
-  width: 100%;
-  max-width: 100%;
-
   border-top: 1px solid #c8d0c5;
 
   padding: 17px 0;
@@ -656,22 +486,19 @@ h6 {
    ========================================================= */
 
 .features {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
     minmax(0, 1.05fr)
     minmax(0, 0.95fr);
 
-  gap: clamp(35px, 8vw, 120px);
+  gap: 8vw;
 
   align-items: center;
 
-  overflow: hidden;
-
+  /*
+   * app-highlights.jpg is a background.
+   */
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.18),
@@ -680,33 +507,25 @@ h6 {
     url("assets/app-highlights.jpg");
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 .app-highlights-background {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
-  overflow: hidden;
 }
 
 .feature-art {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
 
   height: 610px;
-}
-
-.feature-copy {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  min-height: 610px;
 }
 
 .app-highlights-content {
+  min-width: 0;
+
   color: #f2f5ef;
 }
 
@@ -720,29 +539,18 @@ h6 {
 }
 
 .feature-copy h3 {
-  max-width: 100%;
-
   font-size: 21px;
   font-weight: 500;
 }
 
 .feature-list {
-  width: 100%;
-  max-width: 100%;
-
   margin-top: 35px;
 }
 
 .feature-list article {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
-  grid-template-columns:
-    55px
-    minmax(0, 1fr);
+  grid-template-columns: 55px minmax(0, 1fr);
 
   gap: 20px;
 
@@ -752,11 +560,6 @@ h6 {
     1px solid rgba(242, 245, 239, 0.35);
 }
 
-.feature-list article > * {
-  min-width: 0;
-  max-width: 100%;
-}
-
 .feature-list h4 {
   margin: 0;
 
@@ -764,8 +567,6 @@ h6 {
 }
 
 .feature-list p {
-  max-width: 100%;
-
   margin: 8px 0 0;
 }
 
@@ -776,28 +577,15 @@ h6 {
 
 .standout,
 .standout-white {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   background: #ffffff;
-
   color: #000000;
-
-  overflow: hidden;
 }
 
 .standout h2 {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  font-size: clamp(55px, 7vw, 100px);
 
-  margin:
-    0
-    0
-    clamp(45px, 5vw, 75px);
-
-  font-size: clamp(48px, 7vw, 100px);
+  margin-top: 0;
+  margin-bottom: 75px;
 
   color: #000000;
 }
@@ -810,52 +598,40 @@ h6 {
 }
 
 .standout-grid {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: clamp(35px, 10vw, 150px);
+  gap: 10vw;
 }
 
 .stand-card {
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
 
   min-height: 620px;
-
-  padding-top: 22px;
 
   border-top: 1px solid #000000;
 
   position: relative;
 
-  overflow: hidden;
+  padding-top: 22px;
 
   color: #000000;
 }
 
 .stand-card h3 {
-  width: 100%;
-  max-width: 100%;
-
-  margin: 12px 0;
-
-  font-size: clamp(28px, 2.6vw, 38px);
+  font-size: 38px;
 
   letter-spacing: -0.04em;
+
+  margin: 12px 0;
 
   color: #000000;
 }
 
 .stand-card p {
-  width: 100%;
   max-width: 500px;
 
   color: #000000;
@@ -863,7 +639,7 @@ h6 {
 
 
 /* =========================================================
-   ROUNDED FOREGROUND MOCKUPS
+   STANDOUT IMAGES
    ========================================================= */
 
 .stand-device,
@@ -871,13 +647,10 @@ h6 {
   display: block;
 
   width: auto;
-  max-width: 80%;
+  max-width: 75%;
   max-height: 400px;
 
-  margin:
-    30px
-    auto
-    0;
+  margin: 30px auto 0;
 
   object-fit: contain;
 
@@ -900,27 +673,20 @@ h6 {
    ========================================================= */
 
 .journey {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
     minmax(0, 1.1fr)
     minmax(0, 0.9fr);
 
-  gap: clamp(40px, 10vw, 150px);
+  gap: 10vw;
 
   align-items: center;
-
-  overflow: hidden;
 }
 
 .journey-background {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   position: relative;
 
@@ -934,44 +700,32 @@ h6 {
     url("assets/hero.jpg");
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 .journey-art {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
 
   height: 560px;
+  min-height: 560px;
 }
 
 .journey-copy {
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
 
   position: relative;
-
   z-index: 2;
-
-  padding: clamp(30px, 4vw, 55px);
 
   background: rgba(245, 247, 242, 0.92);
 
   border-radius: 34px;
 
-  overflow: hidden;
+  padding: 55px;
 }
 
 .journey-copy h2 {
-  width: 100%;
-  max-width: 100%;
-
-  margin:
-    8px
-    0
-    20px;
+  margin: 8px 0 20px;
 }
 
 .journey-copy p {
@@ -984,36 +738,21 @@ h6 {
    ========================================================= */
 
 .contact {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: clamp(40px, 12vw, 180px);
+  gap: 12vw;
 
   background: #e8f1df;
-
-  overflow: hidden;
-}
-
-.contact > * {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
 }
 
 .contact h2 {
-  width: 100%;
-  max-width: 100%;
+  font-size: clamp(52px, 6.5vw, 92px);
 
   margin: 0;
-
-  font-size: clamp(48px, 6.5vw, 92px);
 }
 
 .contact-details {
@@ -1023,8 +762,6 @@ h6 {
 }
 
 .contact form {
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
 
   display: flex;
@@ -1034,12 +771,6 @@ h6 {
 }
 
 .contact label {
-  display: block;
-
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   font-size: 13px;
 
   color: #657065;
@@ -1051,27 +782,19 @@ h6 {
 
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   margin-top: 7px;
 
-  padding:
-    11px
-    0;
-
-  border:
-    0;
-
-  border-bottom:
-    1px solid #aeb8ab;
+  border: 0;
+  border-bottom: 1px solid #aeb8ab;
 
   background: transparent;
+
+  padding: 11px 0;
 
   font: inherit;
 
   outline: none;
-
-  resize: vertical;
 }
 
 .contact input:focus,
@@ -1082,19 +805,13 @@ h6 {
 .contact button {
   align-self: flex-start;
 
-  max-width: 100%;
-
   border: 0;
-
   border-radius: 999px;
 
   background: #172018;
-
   color: #ffffff;
 
-  padding:
-    14px
-    30px;
+  padding: 14px 30px;
 
   font: inherit;
 
@@ -1102,8 +819,6 @@ h6 {
 }
 
 .form-status {
-  max-width: 100%;
-
   font-size: 13px;
 
   color: #536054;
@@ -1117,25 +832,14 @@ h6 {
 .footer {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
-  padding:
-    55px
-    clamp(20px, 8vw, 120px)
-    25px;
 
   background: #172018;
-
   color: #dce6da;
 
-  overflow: hidden;
+  padding: 55px 8vw 25px;
 }
 
 .footer-top {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
   display: grid;
 
   grid-template-columns:
@@ -1143,41 +847,20 @@ h6 {
     minmax(0, 1fr)
     minmax(0, 1fr);
 
-  gap: clamp(30px, 5vw, 80px);
+  gap: 5vw;
 
   padding-bottom: 45px;
 }
 
-.footer-top > * {
-  min-width: 0;
-  max-width: 100%;
-}
-
 .footer-contact p {
-  max-width: 100%;
-
-  margin:
-    0
-    0
-    5px;
-
-  overflow-wrap: anywhere;
+  margin: 0 0 5px;
 }
 
 .footer-links {
   display: flex;
-
   flex-direction: column;
 
   gap: 12px;
-
-  min-width: 0;
-}
-
-.footer-links a {
-  max-width: 100%;
-
-  overflow-wrap: anywhere;
 }
 
 .footer-links a:hover {
@@ -1185,11 +868,7 @@ h6 {
 }
 
 .footer-bottom {
-  width: 100%;
-  max-width: 100%;
-
-  border-top:
-    1px solid #4a574c;
+  border-top: 1px solid #4a574c;
 
   padding-top: 20px;
 
@@ -1198,90 +877,36 @@ h6 {
 
 
 /* =========================================================
-   ERROR / MISSING IMAGE STATES
+   ERROR / IMAGE STATES
    ========================================================= */
 
 .error {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
 
-  padding:
-    15vh
-    clamp(20px, 8vw, 120px);
-
-  overflow: hidden;
+  padding: 15vh 8vw;
 }
 
 .noscript {
-  width: 100%;
-  max-width: 100%;
-
   padding: 30px;
-
-  overflow-wrap: anywhere;
 }
 
-.missing,
+.missing {
+  background: #dfe6dd;
+
+  min-height: 120px;
+}
+
 .missing-image {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
+  background: #dfe6dd;
 
   min-height: 120px;
 
-  background: #dfe6dd;
+  object-fit: contain;
 }
 
 
 /* =========================================================
    TABLET / SMALL DESKTOP
-   ========================================================= */
-
-@media (max-width: 1100px) {
-
-  .site-header {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
-  .site-nav {
-    gap: 22px;
-  }
-
-  .hero {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
-  /*
-   * Slightly reduce the desktop composition before
-   * switching to one column.
-   */
-  .device-ipad {
-    width: 30%;
-    left: 39%;
-  }
-
-  .device-phone {
-    width: 15%;
-    left: 68%;
-  }
-
-  .device-tablet {
-    width: 15%;
-    left: 25%;
-  }
-
-  .device-phone-cart {
-    width: 17%;
-    left: 77%;
-  }
-}
-
-
-/* =========================================================
-   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -1291,9 +916,7 @@ h6 {
      ------------------------------------------------------- */
 
   .site-header {
-    padding:
-      0
-      6vw;
+    padding: 0 6vw;
   }
 
   .menu-toggle {
@@ -1307,24 +930,20 @@ h6 {
 
     top: 82px;
     left: 0;
+    right: 0;
 
     width: 100%;
-    max-width: 100%;
 
-    padding:
-      25px
-      6vw;
+    padding: 25px 6vw;
+
+    background: #f5f7f2;
 
     flex-direction: column;
 
     gap: 18px;
 
-    background: #f5f7f2;
-
     border-top:
       1px solid #dbe1d8;
-
-    overflow: hidden;
   }
 
   .site-nav.open {
@@ -1333,13 +952,11 @@ h6 {
 
 
   /* -------------------------------------------------------
-     Generic sections
+     Generic
      ------------------------------------------------------- */
 
   .section {
-    padding:
-      100px
-      7vw;
+    padding: 100px 7vw;
   }
 
 
@@ -1348,75 +965,57 @@ h6 {
      ------------------------------------------------------- */
 
   .hero {
-    width: 100%;
-    max-width: 100%;
-
-    grid-template-columns:
-      minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
 
     padding-top: 80px;
-
-    overflow: hidden;
   }
 
   .hero-copy {
-    width: 100%;
-    max-width: 100%;
-
     padding-left: 0;
   }
 
   .hero-visual {
-    width: 100%;
-    max-width: 100%;
+    height: 570px;
 
-    height: 560px;
-
-    margin-top: 35px;
-
-    overflow: hidden;
-  }
-
-
-  /*
-   * Tablet layout remains a single bounded composition.
-   */
-
-  .device-ipad {
-    width: 32%;
-
-    left: 38%;
-    top: 10%;
-  }
-
-  .device-phone {
-    width: 16%;
-
-    left: 67%;
-    top: 29%;
-  }
-
-  .device-tablet {
-    width: 16%;
-
-    left: 23%;
-    top: 31%;
-
-    z-index: 1000 !important;
-  }
-
-  .device-phone-cart {
-    width: 18%;
-
-    left: 75%;
-    top: 50%;
-
-    z-index: 900;
+    margin-top: 30px;
   }
 
 
   /* -------------------------------------------------------
-     Main layouts
+     Hero mockups
+     ------------------------------------------------------- */
+
+  .device-ipad {
+    width: 34%;
+
+    right: 19%;
+    top: 12%;
+  }
+
+  .device-phone {
+    width: 17%;
+
+    right: 7%;
+    top: 29%;
+  }
+
+  .device-tablet {
+    width: 17%;
+
+    left: 4%;
+    top: 32%;
+  }
+
+  .device-phone-cart {
+    width: 20%;
+
+    right: 1%;
+    bottom: 9%;
+  }
+
+
+  /* -------------------------------------------------------
+     Main sections
      ------------------------------------------------------- */
 
   .about,
@@ -1435,10 +1034,8 @@ h6 {
      ------------------------------------------------------- */
 
   .feature-art {
-    width: 100%;
-    max-width: 100%;
-
     height: 500px;
+    min-height: 500px;
   }
 
 
@@ -1447,7 +1044,7 @@ h6 {
      ------------------------------------------------------- */
 
   .standout-grid {
-    gap: 50px;
+    gap: 6vw;
   }
 
   .stand-card {
@@ -1456,7 +1053,7 @@ h6 {
 
   .stand-device,
   .rounded-image {
-    max-width: 80%;
+    max-width: 75%;
     max-height: 360px;
   }
 
@@ -1466,10 +1063,8 @@ h6 {
      ------------------------------------------------------- */
 
   .journey-art {
-    width: 100%;
-    max-width: 100%;
-
     height: 360px;
+    min-height: 360px;
   }
 
   .journey-copy {
@@ -1485,8 +1080,6 @@ h6 {
     grid-template-columns:
       minmax(0, 1fr)
       minmax(0, 1fr);
-
-    gap: 35px;
   }
 }
 
@@ -1497,138 +1090,94 @@ h6 {
 
 @media (max-width: 600px) {
 
-  /*
-   * Keep every viewport-level element bounded.
-   */
-  html,
-  body,
-  #site,
-  main {
-    width: 100%;
-    max-width: 100%;
-
-    overflow-x: hidden;
-  }
-
-
-  /* -------------------------------------------------------
-     Header
-     ------------------------------------------------------- */
-
-  .site-header {
-    height: 72px;
-
-    padding:
-      0
-      5vw;
-  }
-
-  .site-nav {
-    top: 72px;
-
-    padding:
-      22px
-      5vw;
-  }
-
-
   /* -------------------------------------------------------
      Hero
      ------------------------------------------------------- */
 
   .hero {
-    min-height: 0;
+    min-height: calc(100vh - 82px);
 
-    padding:
-      70px
-      5vw
-      55px;
-
-    overflow: hidden;
+    padding-left: 6vw;
+    padding-right: 6vw;
   }
 
   .hero h1 {
-    width: 100%;
-    max-width: 100%;
-
-    font-size:
-      clamp(46px, 14vw, 62px);
-
-    line-height: 0.94;
+    font-size: 62px;
   }
 
   .hero p {
-    width: 100%;
-    max-width: 100%;
-
     font-size: 17px;
   }
 
-  /*
-   * The mockup stage becomes shorter but remains a
-   * self-contained clipping area.
-   */
   .hero-visual {
+    height: 430px;
+
+    /*
+     * Keep composition safely inside the viewport.
+     */
     width: 100%;
     max-width: 100%;
-
-    height: 410px;
-
-    margin-top: 25px;
-
-    overflow: hidden;
   }
 
 
   /* -------------------------------------------------------
-     Mobile mockup composition
+     Mobile mockups
      ------------------------------------------------------- */
 
+  /*
+   * iPad.
+   */
   .device-ipad {
-    width: 31%;
+    width: 34%;
 
-    left: 37%;
-
-    top: 11%;
+    right: 20%;
+    top: 16%;
   }
 
+  /*
+   * Phone immediately beside iPad.
+   */
   .device-phone {
-    width: 15%;
+    width: 17%;
 
-    left: 65%;
-
-    top: 29%;
+    right: 5%;
+    top: 30%;
   }
 
+  /*
+   * Tablet overlaps iPad.
+   *
+   * Highest layer.
+   */
   .device-tablet {
-    width: 15%;
+    width: 17%;
 
-    left: 21%;
-
-    top: 32%;
+    left: 1%;
+    top: 34%;
 
     z-index: 1000 !important;
   }
 
+  /*
+   * PhoneCart overlaps phone.
+   */
   .device-phone-cart {
-    width: 17%;
+    width: 20%;
 
-    left: 73%;
-
-    top: 50%;
+    right: 0;
+    bottom: 8%;
 
     z-index: 900;
   }
 
 
   /* -------------------------------------------------------
-     Mockup borders
+     Mobile borders
      ------------------------------------------------------- */
 
   .hero-visual .device-ipad img,
   .hero-visual .device-phone img {
-    border:
-      4px solid #000000;
+    border: 4px solid #000000;
 
     border-radius: 21px;
   }
@@ -1640,32 +1189,17 @@ h6 {
 
 
   /* -------------------------------------------------------
-     Generic sections
+     Sections
      ------------------------------------------------------- */
 
   .section {
-    padding:
-      80px
-      6vw;
+    padding: 80px 6vw;
   }
 
   .section h2,
   .standout h2,
   .contact h2 {
-    width: 100%;
-    max-width: 100%;
-
-    font-size:
-      clamp(42px, 13vw, 52px);
-  }
-
-
-  /* -------------------------------------------------------
-     About
-     ------------------------------------------------------- */
-
-  .about {
-    gap: 35px;
+    font-size: 52px;
   }
 
 
@@ -1673,23 +1207,9 @@ h6 {
      App Highlights
      ------------------------------------------------------- */
 
-  .features {
-    gap: 35px;
-  }
-
   .feature-art {
-    width: 100%;
-    max-width: 100%;
-
     height: 300px;
-  }
-
-  .feature-list article {
-    grid-template-columns:
-      42px
-      minmax(0, 1fr);
-
-    gap: 14px;
+    min-height: 300px;
   }
 
 
@@ -1700,29 +1220,18 @@ h6 {
   .standout-grid {
     grid-template-columns:
       minmax(0, 1fr);
-
-    gap: 40px;
   }
 
   .stand-card {
-    width: 100%;
-    max-width: 100%;
-
     min-height: auto;
 
     padding-bottom: 45px;
-
-    overflow: hidden;
   }
 
   .stand-device,
   .rounded-image {
-    width: auto;
-    max-width: 80%;
+    max-width: 85%;
     max-height: 330px;
-
-    margin-left: auto;
-    margin-right: auto;
 
     border-width: 5px;
 
@@ -1734,55 +1243,21 @@ h6 {
      Journey
      ------------------------------------------------------- */
 
-  .journey {
-    gap: 35px;
-  }
-
   .journey-art {
-    width: 100%;
-    max-width: 100%;
-
-    height: 300px;
+    height: 390px;
+    min-height: 390px;
   }
 
   .journey-copy {
-    width: 100%;
-    max-width: 100%;
-
     padding: 30px;
 
     border-radius: 26px;
-  }
-
-  .journey-copy p {
-    font-size: 17px;
-  }
-
-
-  /* -------------------------------------------------------
-     Contact
-     ------------------------------------------------------- */
-
-  .contact {
-    gap: 35px;
-  }
-
-  .contact form {
-    width: 100%;
-    max-width: 100%;
   }
 
 
   /* -------------------------------------------------------
      Footer
      ------------------------------------------------------- */
-
-  .footer {
-    padding:
-      50px
-      6vw
-      25px;
-  }
 
   .footer-top {
     grid-template-columns:
@@ -1794,78 +1269,64 @@ h6 {
 
 
 /* =========================================================
-   SMALL PHONES
+   VERY SMALL PHONES
    ========================================================= */
 
 @media (max-width: 420px) {
 
-  .hero {
-    padding:
-      60px
-      5vw
-      45px;
-  }
-
   .hero h1 {
-    font-size:
-      clamp(42px, 13.5vw, 54px);
+    font-size: 54px;
   }
 
   .hero-visual {
-    height: 340px;
+    height: 360px;
   }
 
 
   /*
-   * Compact bounded mockup composition.
+   * Compact mockup composition.
    */
 
   .device-ipad {
-    width: 30%;
+    width: 35%;
 
-    left: 37%;
-
-    top: 13%;
+    right: 19%;
+    top: 17%;
   }
 
   .device-phone {
-    width: 15%;
+    width: 17%;
 
-    left: 64%;
-
+    right: 5%;
     top: 31%;
   }
 
   .device-tablet {
-    width: 15%;
+    width: 17%;
 
-    left: 20%;
-
-    top: 34%;
+    left: 0;
+    top: 35%;
 
     z-index: 1000 !important;
   }
 
   .device-phone-cart {
-    width: 17%;
+    width: 20%;
 
-    left: 72%;
-
-    top: 52%;
+    right: 0;
+    bottom: 7%;
 
     z-index: 900;
   }
 
 
   /*
-   * Requested border rules.
+   * Keep requested border behavior.
    */
 
   .hero-visual .device-ipad img,
   .hero-visual .device-phone img {
-    border:
-      4px solid #000000;
-
+    border: 4px solid #000000;
     border-radius: 20px;
   }
 
@@ -1876,86 +1337,13 @@ h6 {
 
 
   /*
-   * Prevent extremely long form values from
-   * affecting layout.
-   */
-
-  .contact input,
-  .contact textarea {
-    width: 100%;
-    max-width: 100%;
-  }
-
-
-  /*
-   * Smaller section headings.
+   * Smaller typography.
    */
 
   .section h2,
   .standout h2,
   .contact h2 {
-    font-size:
-      clamp(40px, 12.5vw, 46px);
-  }
-
-  .journey-copy {
-    padding: 25px;
-  }
-}
-
-
-/* =========================================================
-   ULTRA-SMALL DEVICES
-   ========================================================= */
-
-@media (max-width: 340px) {
-
-  .site-header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .section {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .footer {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  /*
-   * Further shrink mockups so their composition cannot
-   * exceed the narrow stage.
-   */
-  .device-ipad {
-    width: 29%;
-    left: 37%;
-  }
-
-  .device-phone {
-    width: 14%;
-    left: 64%;
-  }
-
-  .device-tablet {
-    width: 14%;
-    left: 20%;
-  }
-
-  .device-phone-cart {
-    width: 16%;
-    left: 72%;
+    font-size: 46px;
   }
 }
 ```
