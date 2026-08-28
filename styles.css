@@ -9,3 +9,52 @@
 .hero-copy p {
   color: #f2f5ef;
 }
+/* App Highlights background */
+.app-highlights-background {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.18)
+    ),
+    url("assets/app-highlights.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.app-highlights-content {
+  color: #f2f5ef;
+}
+
+.app-highlights-content h2,
+.app-highlights-content h3,
+.app-highlights-content h4,
+.app-highlights-content p,
+.app-highlights-content span,
+.app-highlights-content .num {
+  color: #f2f5ef;
+}
+
+/* How Our Apps Stand Out */
+.standout-white {
+  background: #ffffff;
+  color: #000000;
+}
+
+.standout-white h2,
+.standout-white h3,
+.standout-white p,
+.standout-white .num {
+  color: #000000;
+}
+
+.standout-white .stand-card {
+  border-color: #d9d9d9;
+}
+
+/* Rounded foreground mockups */
+.standout-white .rounded-image {
+  border-radius: 28px;
+  overflow: hidden;
+}
