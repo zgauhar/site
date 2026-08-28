@@ -1,890 +1,256 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #f5f7f2;
-  color: #172018;
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 /* =========================================================
-   HEADER
+   HERO MOCKUPS
    ========================================================= */
 
-.site-header {
-  height: 82px;
-  padding: 0 6.7vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(245, 247, 242, 0.9);
-  backdrop-filter: blur(16px);
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-
-.site-nav {
-  display: flex;
-  gap: 30px;
-  font-size: 14px;
-}
-
-.site-nav a {
-  position: relative;
-}
-
-.site-nav a::after {
-  content: "";
+/*
+ * All hero mockups share a controlled visual size.
+ * This prevents the iPad/phone from becoming oversized.
+ */
+.hero-visual .device {
   position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: -7px;
-  height: 1px;
-  background: #172018;
-  transition: 0.25s;
-}
-
-.site-nav a:hover::after {
-  right: 0;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: 0;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-/* =========================================================
-   GENERIC SECTIONS
-   ========================================================= */
-
-.section {
-  padding: 135px 8vw;
-}
-
-.section-heading span,
-.feature-copy > span,
-.journey-copy > span {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 700;
-  color: #687768;
-}
-
-.section h2 {
-  font-family: "Space Grotesk", sans-serif;
-  letter-spacing: -0.07em;
-  line-height: 0.92;
-  font-size: clamp(54px, 6.5vw, 94px);
-  margin: 8px 0 0;
-}
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  min-height: calc(100vh - 82px);
-  padding: 65px 6.5vw 75px;
-  display: grid;
-  grid-template-columns: 43% 57%;
-  align-items: center;
-  overflow: hidden;
-
-  /*
-   * The supplied 5451 × 3099 image is used as a
-   * full-width CSS background.
-   */
-  background:
-    linear-gradient(
-      90deg,
-      rgba(232, 241, 223, 0.08),
-      rgba(232, 241, 223, 0.08)
-    ),
-    url("assets/hero.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.hero-background {
-  width: 100%;
-  max-width: none;
-}
-
-.hero-copy {
-  padding-left: 3vw;
-  position: relative;
-  z-index: 10;
-}
-
-.hero h1,
-.hero h2 {
-  font-family: "Space Grotesk", sans-serif;
-  letter-spacing: -0.07em;
-  line-height: 0.92;
-}
-
-.hero h1 {
-  font-size: clamp(65px, 8.8vw, 135px);
-  max-width: 750px;
-  margin: 0;
-  color: #f2f5ef;
-}
-
-.hero p {
-  font-size: 20px;
-  max-width: 500px;
-  margin-top: 30px;
-  color: #f2f5ef;
-}
-
-.hero-visual {
-  height: 680px;
-  position: relative;
-  z-index: 20;
 }
 
 /*
- * IMPORTANT:
- *
- * The old .hero-image rule has intentionally been removed.
- * The hero image is now the section background rather than
- * an <img>.
+ * Default foreground mockup styling.
+ * Rounded + thick black border.
  */
-
-.device {
-  position: absolute;
-  z-index: 20;
-}
-
-.device img {
+.hero-visual .device img {
   display: block;
   width: 100%;
   height: auto;
-
-  /*
-   * Thick black rounded border around foreground images.
-   */
-  border: 6px solid #000000;
-  border-radius: 28px;
-
-  filter:
-    drop-shadow(
-      0 25px 35px rgba(0, 0, 0, 0.22)
-    );
-}
-
-/* Individual device positioning */
-
-.device-ipad {
-  width: 47%;
-  right: 9%;
-  top: 4%;
-  z-index: 20;
-}
-
-.device-tablet {
-  width: 22%;
-  left: 3%;
-  top: 35%;
-  z-index: 21;
-}
-
-.device-phone {
-  width: 22%;
-  left: 11%;
-  bottom: 4%;
-  z-index: 22;
-}
-
-.device-phone-cart {
-  width: 26%;
-  right: 2%;
-  bottom: 9%;
-
-  /*
-   * Cart mockup always sits above every other device.
-   */
-  z-index: 999;
-}
-
-/*
- * Any image whose data-image value contains "cart"
- * is considered a cart image and is always brought
- * above other foreground images.
- *
- * This also covers:
- *
- * phoneCart
- * phone-cart
- * tablet-cart
- * anything-cart
- */
-img[data-image*="cart" i] {
-  position: relative;
-  z-index: 9999 !important;
-}
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12vw;
-}
-
-.section-copy {
-  padding-top: 45px;
-}
-
-.section-copy h3,
-.journey-copy h3 {
-  font-size: 20px;
-}
-
-.section-copy p,
-.section-copy li,
-.journey-copy p {
-  color: #5d695f;
-}
-
-.section-copy ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 28px;
-}
-
-.section-copy li {
-  border-top: 1px solid #c8d0c5;
-  padding: 17px 0;
-}
-
-.subhead {
-  margin-top: 45px;
-}
-
-/* =========================================================
-   APP HIGHLIGHTS
-   ========================================================= */
-
-.features {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 8vw;
-  align-items: center;
-
-  /*
-   * app-highlights.jpg is a section background.
-   */
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.18),
-      rgba(0, 0, 0, 0.18)
-    ),
-    url("assets/app-highlights.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.app-highlights-background {
-  width: 100%;
-  max-width: none;
-}
-
-/*
- * This is deliberately empty because the image is now
- * the section background.
- */
-.feature-art {
-  min-height: 610px;
-  height: 610px;
-}
-
-/*
- * App Highlights text.
- */
-.app-highlights-content {
-  color: #f2f5ef;
-}
-
-.app-highlights-content h2,
-.app-highlights-content h3,
-.app-highlights-content h4,
-.app-highlights-content p,
-.app-highlights-content span,
-.app-highlights-content .num {
-  color: #f2f5ef;
-}
-
-.feature-copy h3 {
-  font-size: 21px;
-  font-weight: 500;
-}
-
-.feature-list {
-  margin-top: 35px;
-}
-
-.feature-list article {
-  display: grid;
-  grid-template-columns: 55px 1fr;
-  gap: 20px;
-  padding: 25px 0;
-  border-top: 1px solid rgba(242, 245, 239, 0.35);
-}
-
-.feature-list h4 {
-  margin: 0;
-  font-size: 21px;
-}
-
-.feature-list p {
-  margin: 8px 0 0;
-}
-
-/* =========================================================
-   HOW OUR APPS STAND OUT
-   ========================================================= */
-
-.standout {
-  /*
-   * Required:
-   * white background + black text.
-   */
-  background: #ffffff;
-  color: #000000;
-}
-
-.standout-white {
-  background: #ffffff;
-  color: #000000;
-}
-
-.standout h2 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(55px, 7vw, 100px);
-  letter-spacing: -0.07em;
-  line-height: 0.92;
-  color: #000000;
-  margin-top: 0;
-  margin-bottom: 75px;
-}
-
-.standout-white h2,
-.standout-white h3,
-.standout-white p,
-.standout-white .num {
-  color: #000000;
-}
-
-.standout-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10vw;
-}
-
-.stand-card {
-  min-height: 620px;
-  border-top: 1px solid #000000;
-  position: relative;
-  padding-top: 22px;
-  color: #000000;
-}
-
-.stand-card h3 {
-  font-size: 38px;
-  letter-spacing: -0.04em;
-  margin: 12px 0;
-  color: #000000;
-}
-
-.stand-card p {
-  color: #000000;
-  max-width: 500px;
-}
-
-/*
- * Rounded images with a thick black border.
- */
-.stand-device,
-.rounded-image {
-  display: block;
-  max-height: 400px;
-  max-width: 75%;
-  margin: 30px auto 0;
-
+  border: 5px solid #000000;
+  border-radius: 24px;
   object-fit: contain;
-
-  border: 6px solid #000000;
-  border-radius: 28px;
-  overflow: hidden;
-
-  filter:
-    drop-shadow(
-      0 25px 35px rgba(0, 0, 0, 0.25)
-    );
-}
-
-/*
- * Cart mockups always appear above other images.
- */
-.stand-card img[data-image*="cart" i] {
-  position: relative;
-  z-index: 9999 !important;
+  filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.22));
 }
 
 /* =========================================================
-   JOURNEY
+   IPAD
    ========================================================= */
 
-.journey {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 10vw;
-  align-items: center;
+/*
+ * Smaller iPad.
+ *
+ * It sits next to the phone and slightly overlaps it.
+ */
+.hero-visual .device-ipad {
+  width: 34%;
+  right: 24%;
+  top: 17%;
+  z-index: 40;
 }
 
-.journey-background {
-  position: relative;
-  width: 100%;
-  max-width: none;
-  overflow: hidden;
+.hero-visual .device-ipad img {
+  border: 5px solid #000000;
+  border-radius: 24px;
+}
 
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+/*
+ * Smaller phone.
+ *
+ * Positioned directly beside the iPad with a small overlap.
+ */
+.hero-visual .device-phone {
+  width: 17%;
+  right: 12%;
+  left: auto;
+  top: 31%;
+  bottom: auto;
+  z-index: 50;
+}
+
+.hero-visual .device-phone img {
+  border: 5px solid #000000;
+  border-radius: 24px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+/*
+ * TABLET HAS THE HIGHEST Z-AXIS.
+ *
+ * This intentionally overrides every other hero mockup.
+ */
+.hero-visual .device-tablet {
+  width: 18%;
+  left: 5%;
+  top: 34%;
+  z-index: 10000 !important;
+}
+
+.hero-visual .device-tablet img {
   /*
-   * Same supplied hero image used as a full section
-   * background.
+   * No border on tablet.
    */
-  background:
-    linear-gradient(
-      rgba(245, 247, 242, 0.08),
-      rgba(245, 247, 242, 0.08)
-    ),
-    url("assets/hero.jpg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  border: 0 !important;
+  border-radius: 22px;
 }
 
-.journey-art {
-  height: 560px;
-  min-height: 560px;
+/* =========================================================
+   PHONE CART
+   ========================================================= */
+
+/*
+ * PhoneCart has no border.
+ *
+ * It remains above the iPad and normal phone, but below
+ * the tablet because tablet was explicitly requested to
+ * have the highest z-axis.
+ */
+.hero-visual .device-phone-cart {
+  width: 20%;
+  right: 4%;
+  bottom: 10%;
+  z-index: 9000;
+}
+
+.hero-visual .device-phone-cart img {
+  border: 0 !important;
+  border-radius: 22px;
+}
+
+/* =========================================================
+   CART LAYERING
+   ========================================================= */
+
+/*
+ * Any cart image gets a very high z-index.
+ *
+ * Tablet is still higher because its z-index is 10000.
+ */
+.hero-visual img[data-image*="cart" i] {
+  position: relative;
+  z-index: 9000 !important;
 }
 
 /*
- * There is no journey <img> anymore because the image
- * is the section background.
+ * Tablet always wins the stacking order.
+ */
+.hero-visual .device-tablet,
+.hero-visual .device-tablet img {
+  z-index: 10000 !important;
+}
+
+/* =========================================================
+   IPAD + PHONE SIDE-BY-SIDE OVERLAP
+   ========================================================= */
+
+.hero-visual .device-ipad {
+  width: 34%;
+  right: 23%;
+  top: 19%;
+}
+
+.hero-visual .device-phone {
+  width: 17%;
+  right: 11%;
+  top: 32%;
+}
+
+/*
+ * Small overlap:
+ *
+ * iPad right edge:
+ * approximately 57%
+ *
+ * Phone starts:
+ * approximately 72%
+ *
+ * The device shadows/borders create a subtle overlap
+ * without making the composition crowded.
  */
 
-.journey-copy {
-  position: relative;
-  z-index: 2;
-  background: rgba(245, 247, 242, 0.92);
-  border-radius: 34px;
-  padding: 55px;
-}
-
-.journey-copy h2 {
-  font-family: "Space Grotesk", sans-serif;
-  margin: 8px 0 20px;
-  color: #172018;
-}
-
-.journey-copy p {
-  font-size: 18px;
-}
-
 /* =========================================================
-   CONTACT
-   ========================================================= */
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12vw;
-  background: #e8f1df;
-}
-
-.contact h2 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(52px, 6.5vw, 92px);
-  margin: 0;
-}
-
-.contact-details {
-  margin-top: 50px;
-  color: #536054;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.contact label {
-  font-size: 13px;
-  color: #657065;
-}
-
-.contact input,
-.contact textarea {
-  display: block;
-  width: 100%;
-  margin-top: 7px;
-
-  border: 0;
-  border-bottom: 1px solid #aeb8ab;
-
-  background: transparent;
-  padding: 11px 0;
-
-  font: inherit;
-  outline: none;
-}
-
-.contact input:focus,
-.contact textarea:focus {
-  border-color: #172018;
-}
-
-.contact button {
-  align-self: flex-start;
-
-  border: 0;
-  border-radius: 999px;
-
-  background: #172018;
-  color: #ffffff;
-
-  padding: 14px 30px;
-  font: inherit;
-  cursor: pointer;
-}
-
-.form-status {
-  font-size: 13px;
-  color: #536054;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer {
-  background: #172018;
-  color: #dce6da;
-  padding: 55px 8vw 25px;
-}
-
-.footer-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5vw;
-  padding-bottom: 45px;
-}
-
-.footer-contact p {
-  margin: 0 0 5px;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  border-top: 1px solid #4a574c;
-  padding-top: 20px;
-  font-size: 12px;
-}
-
-/* =========================================================
-   STATES
-   ========================================================= */
-
-.error {
-  padding: 15vh 8vw;
-}
-
-.noscript {
-  padding: 30px;
-}
-
-.missing {
-  background: #dfe6dd;
-  min-height: 120px;
-}
-
-.missing-image {
-  background: #dfe6dd;
-  min-height: 120px;
-  object-fit: contain;
-}
-
-/* =========================================================
-   TABLET / MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 900px) {
 
-  .site-header {
-    padding: 0 6vw;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-
-    position: absolute;
-    top: 82px;
-    left: 0;
-    right: 0;
-
-    padding: 25px 6vw;
-
-    background: #f5f7f2;
-
-    flex-direction: column;
-    gap: 18px;
-
-    border-top: 1px solid #dbe1d8;
-  }
-
-  .site-nav.open {
-    display: flex;
-  }
-
-  /* HERO */
-
-  .hero {
-    grid-template-columns: 1fr;
-    padding-top: 80px;
-
-    background-position: center center;
-  }
-
-  .hero-copy {
-    padding: 0;
-  }
-
   .hero-visual {
-    height: 570px;
-    margin-top: 30px;
+    height: 520px;
   }
 
-  /* GENERIC */
-
-  .about,
-  .features,
-  .journey,
-  .contact {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .hero-visual .device-ipad {
+    width: 39%;
+    right: 23%;
+    top: 18%;
   }
 
-  .section {
-    padding: 100px 7vw;
+  .hero-visual .device-phone {
+    width: 20%;
+    right: 9%;
+    top: 32%;
   }
 
-  /* APP HIGHLIGHTS */
-
-  .feature-art {
-    height: 500px;
-    min-height: 500px;
+  .hero-visual .device-tablet {
+    width: 21%;
+    left: 3%;
+    top: 35%;
   }
 
-  /* STANDOUT */
-
-  .standout-grid {
-    gap: 6vw;
-  }
-
-  .stand-card {
-    min-height: 520px;
-  }
-
-  .stand-device,
-  .rounded-image {
-    max-height: 360px;
-  }
-
-  /* JOURNEY */
-
-  .journey-background {
-    background-position: center center;
-  }
-
-  .journey-art {
-    min-height: 360px;
-    height: 360px;
-  }
-
-  .journey-copy {
-    padding: 35px;
-  }
-
-  /* FOOTER */
-
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
+  .hero-visual .device-phone-cart {
+    width: 22%;
+    right: 1%;
+    bottom: 8%;
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
 @media (max-width: 600px) {
 
-  /* HERO */
-
-  .hero {
-    min-height: calc(100vh - 82px);
-    padding-left: 6vw;
-    padding-right: 6vw;
-  }
-
-  .hero h1 {
-    font-size: 62px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
   .hero-visual {
-    height: 430px;
+    height: 400px;
   }
 
-  .device-ipad {
-    width: 52%;
-    right: 4%;
+  /*
+   * Smaller iPad.
+   */
+  .hero-visual .device-ipad {
+    width: 43%;
+    right: 21%;
+    top: 18%;
   }
 
-  .device-tablet {
-    width: 25%;
-    left: 0;
+  /*
+   * Smaller phone positioned alongside iPad.
+   */
+  .hero-visual .device-phone {
+    width: 21%;
+    right: 7%;
+    top: 32%;
   }
 
-  .device-phone {
-    width: 25%;
-    left: 8%;
-    bottom: 0;
+  /*
+   * Tablet remains the highest layer.
+   */
+  .hero-visual .device-tablet {
+    width: 22%;
+    left: 1%;
+    top: 35%;
   }
 
-  .device-phone-cart {
+  /*
+   * Cart remains borderless.
+   */
+  .hero-visual .device-phone-cart {
+    width: 24%;
     right: 0;
+    bottom: 7%;
   }
 
-  /*
-   * Keep borders visually thick on mobile.
-   */
-  .device img,
-  .stand-device,
-  .rounded-image {
-    border-width: 5px;
-    border-radius: 22px;
+  .hero-visual .device-ipad img,
+  .hero-visual .device-phone img {
+    border-width: 4px;
+    border-radius: 20px;
   }
 
-  /* SECTIONS */
-
-  .section {
-    padding: 80px 6vw;
-  }
-
-  .section h2,
-  .standout h2,
-  .contact h2 {
-    font-size: 52px;
-  }
-
-  /* APP HIGHLIGHTS */
-
-  .feature-art {
-    height: 390px;
-    min-height: 390px;
-  }
-
-  /*
-   * Since App Highlights is a background, this empty
-   * spacing element should not create an unnecessary
-   * visual image box.
-   */
-  .app-highlights-background .feature-art {
-    min-height: 300px;
-    height: 300px;
-  }
-
-  /* STANDOUT */
-
-  .standout-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stand-card {
-    min-height: auto;
-    padding-bottom: 45px;
-  }
-
-  .stand-device,
-  .rounded-image {
-    max-height: 330px;
-    max-width: 85%;
-  }
-
-  /* JOURNEY */
-
-  .journey-art {
-    height: 390px;
-    min-height: 390px;
-  }
-
-  .journey-copy {
-    padding: 30px;
-    border-radius: 26px;
-  }
-
-  /* FOOTER */
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .hero-visual .device-tablet img,
+  .hero-visual .device-phone-cart img {
+    border: 0 !important;
   }
 }
