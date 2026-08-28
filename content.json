@@ -1,30 +1,49 @@
 {
-  "assets": {
-    "hero": "assets/hero.jpg",
-    "phoneMain": "assets/phone-mockup.jpg",
-    "phoneCart": "assets/phone-mockup-cart.jpg",
-    "phone2": "assets/phone-mockup-2.jpg",
-    "phone3": "assets/phone-mockup-3.jpg",
-    "ipad": "assets/ipad-mockup.jpg",
-    "tablet": "assets/tab-mockup-cart.jpg",
-    "highlights": "assets/app-highlights.jpg"
-  },
+  "navigation": [
+    [
+      "Home",
+      "#home"
+    ],
+    [
+      "About Us",
+      "#about"
+    ],
+    [
+      "Features",
+      "#features"
+    ],
+    [
+      "Our Journey",
+      "#journey"
+    ],
+    [
+      "Contact",
+      "#contact"
+    ]
+  ],
   "sections": [
     {
       "id": "home",
-      "type": "hero",
-      "kicker": "MintWave Studio",
+      "kind": "hero",
+      "eyebrow": "",
       "title": "Explore Innovative Apps",
-      "subtitle": "Bring Fun to Your Fingertips. Download Now."
+      "subtitle": "Bring Fun to Your Fingertips. Download Now.",
+      "image": "hero",
+      "decor": [
+        "ipad",
+        "tablet",
+        "phone",
+        "phoneCart"
+      ]
     },
     {
       "id": "about",
-      "type": "about",
-      "kicker": "The App",
+      "kind": "about",
+      "eyebrow": "The App",
       "title": "Revolutionizing Mobile Apps and Games",
       "lead": "Who We Are",
       "body": "MintWave Studio is an independent mobile app creator focused on building small but meaningful digital experiences. Every app is designed with a balance of creativity, usability, and modern aesthetics.",
-      "items": [
+      "list": [
         "Puzzle Games \u2014 Relaxing, clever, and easy to pick up",
         "Utility Apps \u2014 Simple tools that make life easier",
         "Creative Experiments \u2014 Small ideas brought to life"
@@ -32,10 +51,11 @@
     },
     {
       "id": "features",
-      "type": "features",
-      "kicker": "Features",
+      "kind": "features",
+      "eyebrow": "Features",
       "title": "App Highlights",
-      "lead": "Unleashing Creativity and Fun",
+      "subtitle": "Unleashing Creativity and Fun",
+      "image": "highlights",
       "items": [
         [
           "Swift Gameplay",
@@ -53,33 +73,35 @@
     },
     {
       "id": "standout",
-      "type": "standout",
+      "kind": "standout",
       "title": "How Our Apps Stand Out",
       "items": [
         [
           "/01",
           "Tailored for You",
-          "Every app we design is crafted with user preferences in mind, ensuring a personalized gaming experience that keeps you engaged."
+          "Every app we design is crafted with user preferences in mind, ensuring a personalized gaming experience that keeps you engaged.",
+          "phone2"
         ],
         [
           "/02",
           "Innovative Development",
-          "Our cloud-based technology allows for seamless updates and integration, ensuring you always have the latest features and improvements."
+          "Our cloud-based technology allows for seamless updates and integration, ensuring you always have the latest features and improvements.",
+          "phone3"
         ]
       ]
     },
     {
       "id": "journey",
-      "type": "journey",
-      "kicker": "About Us",
+      "kind": "journey",
+      "eyebrow": "About Us",
       "title": "Our Journey",
-      "lead": "Driven by Passion and Innovation",
-      "body": "At MintWave Studio, we believe in the power of creativity and technology. Our journey began with a vision to make enjoyable and accessible mobile games for everyone."
+      "subtitle": "Driven by Passion and Innovation",
+      "body": "At MintWave Studio, we believe in the power of creativity and technology. Our journey began with a vision to make enjoyable and accessible mobile games for everyone.",
+      "image": "hero"
     },
     {
       "id": "contact",
-      "type": "contact",
-      "kicker": "Get In Touch",
+      "kind": "contact",
       "title": "For Any Assistance Required Please Reach Out"
     }
   ]
