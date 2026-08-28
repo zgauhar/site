@@ -384,25 +384,6 @@
             ${esc(s.title)}
           </h2>
 
-          <div class="contact-details">
-
-            <p>
-              <b>Tel:</b>
-              +358 449193442
-            </p>
-
-            <p>
-              <b>Email:</b>
-              support@mintwavestudio.com
-            </p>
-
-            <p>
-              Gauhar Zaheer Ahmed<br>
-              Postipuuntie 10, A13, 02650, Espoo
-            </p>
-
-          </div>
-
         </div>
 
         <form
