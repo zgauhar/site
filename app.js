@@ -1,4 +1,3 @@
-```javascript
 (() => {
   const root = document.querySelector("#site");
 
@@ -855,4 +854,3 @@
   });
 
 })();
-```
