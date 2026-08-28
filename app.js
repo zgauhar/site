@@ -9,6 +9,14 @@
     "'": "&#39;"
   }[ch]));
 
+  /*
+   * Foreground images only.
+   *
+   * Background images such as:
+   * - hero
+   * - app-highlights
+   * are deliberately NOT rendered as <img> elements.
+   */
   const image = (name, className = "", alt = "") => `
     <img
       class="${className}"
@@ -21,7 +29,12 @@
   function renderHeader(nav) {
     return `
       <header class="site-header">
-        <a class="logo" href="#home" aria-label="MintWave Studio home">
+
+        <a
+          class="logo"
+          href="#home"
+          aria-label="MintWave Studio home"
+        >
           MintWave Studio
         </a>
 
@@ -33,11 +46,17 @@
           ☰
         </button>
 
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav
+          class="site-nav"
+          aria-label="Primary navigation"
+        >
           ${nav.map(([label, href]) => `
-            <a href="${href}">${esc(label)}</a>
+            <a href="${href}">
+              ${esc(label)}
+            </a>
           `).join("")}
         </nav>
+
       </header>
     `;
   }
@@ -45,22 +64,34 @@
   function renderSection(s) {
 
     /*
+     * ============================================================
      * HERO
+     * ============================================================
      *
-     * The hero image is deliberately NOT rendered as an <img>.
-     * The entire hero section gets the background through the
-     * "hero-background" class, exactly like the Journey section.
+     * The hero image is a CSS background.
+     * It is NOT rendered as an <img>.
      *
-     * This allows the image to stretch across the complete width
-     * of the viewport while the device mockups sit above it.
+     * The background therefore stretches across the complete
+     * hero section while the device mockups remain foreground
+     * images.
      */
     if (s.kind === "hero") {
       return `
-        <section id="home" class="hero hero-background">
+        <section
+          id="home"
+          class="hero hero-background"
+        >
 
           <div class="hero-copy">
-            <h1>${esc(s.title)}</h1>
-            <p>${esc(s.subtitle)}</p>
+
+            <h1>
+              ${esc(s.title)}
+            </h1>
+
+            <p>
+              ${esc(s.subtitle)}
+            </p>
+
           </div>
 
           <div class="hero-visual">
@@ -98,25 +129,40 @@
             </div>
 
           </div>
+
         </section>
       `;
     }
 
     /*
+     * ============================================================
      * ABOUT
+     * ============================================================
      */
     if (s.kind === "about") {
       return `
-        <section id="about" class="about section">
+        <section
+          id="about"
+          class="about section"
+        >
 
           <div class="section-heading">
-            <span>${esc(s.eyebrow)}</span>
-            <h2>${esc(s.title)}</h2>
+
+            <span>
+              ${esc(s.eyebrow)}
+            </span>
+
+            <h2>
+              ${esc(s.title)}
+            </h2>
+
           </div>
 
           <div class="section-copy">
 
-            <h3>${esc(s.lead)}</h3>
+            <h3>
+              ${esc(s.lead)}
+            </h3>
 
             <p>
               ${esc(s.body)}
@@ -128,33 +174,58 @@
 
             <ul>
               ${s.list.map(x => `
-                <li>${esc(x)}</li>
+                <li>
+                  ${esc(x)}
+                </li>
               `).join("")}
             </ul>
 
           </div>
+
         </section>
       `;
     }
 
     /*
-     * FEATURES
+     * ============================================================
+     * FEATURES / APP HIGHLIGHTS
+     * ============================================================
+     *
+     * app-highlights.jpg is now a CSS background.
+     *
+     * It is deliberately NOT rendered using:
+     *
+     *     <img src="app-highlights.jpg">
+     *
+     * Instead, the section receives:
+     *
+     *     app-highlights-background
+     *
+     * and styles.css supplies the background image.
+     *
+     * The text receives:
+     *
+     *     app-highlights-content
+     *
+     * so its color can be #f2f5ef.
      */
     if (s.kind === "features") {
       return `
-        <section id="features" class="features section">
+        <section
+          id="features"
+          class="features section app-highlights-background"
+        >
 
-          <div class="feature-art">
-            ${image(
-              s.image,
-              "feature-image",
-              "App Highlights"
-            )}
-          </div>
+          <div
+            class="feature-art"
+            aria-hidden="true"
+          ></div>
 
-          <div class="feature-copy">
+          <div class="feature-copy app-highlights-content">
 
-            <span>${esc(s.eyebrow)}</span>
+            <span>
+              ${esc(s.eyebrow)}
+            </span>
 
             <h2>
               ${esc(s.title)}
@@ -174,6 +245,7 @@
                   </div>
 
                   <div>
+
                     <h4>
                       ${esc(x[0])}
                     </h4>
@@ -181,6 +253,7 @@
                     <p>
                       ${esc(x[1])}
                     </p>
+
                   </div>
 
                 </article>
@@ -189,16 +262,35 @@
             </div>
 
           </div>
+
         </section>
       `;
     }
 
     /*
+     * ============================================================
      * HOW OUR APPS STAND OUT
+     * ============================================================
+     *
+     * This section gets a dedicated class:
+     *
+     *     standout-white
+     *
+     * so it can have:
+     *
+     * - white background
+     * - black text
+     * - rounded image corners
+     *
+     * The phone mockups remain <img> elements because they are
+     * foreground/device images rather than the section background.
      */
     if (s.kind === "standout") {
       return `
-        <section id="standout" class="standout section">
+        <section
+          id="standout"
+          class="standout standout-white section"
+        >
 
           <h2>
             ${esc(s.title)}
@@ -223,7 +315,7 @@
 
                 ${image(
                   x[3],
-                  "stand-device",
+                  "stand-device rounded-image",
                   "Mobile app"
                 )}
 
@@ -231,15 +323,17 @@
             `).join("")}
 
           </div>
+
         </section>
       `;
     }
 
     /*
+     * ============================================================
      * OUR JOURNEY
+     * ============================================================
      *
-     * The hero image is also used as the full-width background here.
-     * There is intentionally no <img> for the background.
+     * The hero image remains a CSS background here.
      */
     if (s.kind === "journey") {
       return `
@@ -278,10 +372,15 @@
     }
 
     /*
+     * ============================================================
      * CONTACT
+     * ============================================================
      */
     return `
-      <section id="contact" class="contact section">
+      <section
+        id="contact"
+        class="contact section"
+      >
 
         <div>
 
@@ -415,7 +514,7 @@
   async function load() {
 
     /*
-     * All content remains dynamically loaded.
+     * Load the dynamically generated section data.
      */
     const response = await fetch(
       "./content.json",
@@ -430,32 +529,43 @@
       );
     }
 
-    const data = await response.json();
+    const data =
+      await response.json();
 
+    /*
+     * Render the complete page.
+     */
     root.innerHTML =
       renderHeader(data.navigation) +
-      `<main>
-        ${data.sections
-          .map(renderSection)
-          .join("")}
-      </main>` +
+      `
+        <main>
+          ${data.sections
+            .map(renderSection)
+            .join("")}
+        </main>
+      ` +
       footer();
 
     /*
-     * Load local/static image mapping.
+     * ============================================================
+     * STATIC FOREGROUND IMAGE LOADING
+     * ============================================================
      *
-     * IMPORTANT:
-     * The hero image is NOT requested here because it is
-     * a CSS background. It is controlled by styles.css.
+     * Only foreground images are loaded here.
      *
-     * Only foreground device/mockup images are loaded here.
+     * Background images:
+     *   hero
+     *   app-highlights
+     *
+     * are handled entirely by CSS.
      */
-    const manifestResponse = await fetch(
-      "./image-manifest.json",
-      {
-        cache: "no-store"
-      }
-    );
+    const manifestResponse =
+      await fetch(
+        "./image-manifest.json",
+        {
+          cache: "no-store"
+        }
+      );
 
     if (!manifestResponse.ok) {
       throw new Error(
@@ -502,7 +612,9 @@
       });
 
     /*
-     * Mobile navigation
+     * ============================================================
+     * MOBILE NAVIGATION
+     * ============================================================
      */
     const menu =
       document.querySelector(
@@ -547,7 +659,9 @@
       });
 
     /*
-     * Contact form UI
+     * ============================================================
+     * CONTACT FORM
+     * ============================================================
      */
     document
       .querySelector(
@@ -571,7 +685,7 @@
   }
 
   /*
-   * Start dynamic page rendering.
+   * Start the dynamically loaded application.
    */
   load().catch(err => {
 
