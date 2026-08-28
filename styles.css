@@ -1329,4 +1329,654 @@ svg {
     font-size: 46px;
   }
 }
+
+/* =========================================================
+   FINAL OVERFLOW + RESPONSIVE SAFETY LAYER
+   ========================================================= */
+
+/*
+ * Never allow the document itself to become wider than
+ * the viewport.
+ */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+}
+
+
+/*
+ * Every major container must be allowed to shrink.
+ */
+body,
+#site,
+#site > *,
+main,
+main > *,
+section,
+header,
+footer,
+div,
+article,
+form {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
+/*
+ * Long emails, URLs, addresses, etc. must wrap rather
+ * than enlarge their parent.
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+label {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+
+/*
+ * Dynamically loaded images can never exceed their
+ * containing element.
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   HERO SAFETY
+   ========================================================= */
+
+.hero {
+  width: 100%;
+  max-width: 100%;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-visual {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  contain: layout paint;
+}
+
+
+/*
+ * Absolutely positioned mockups are constrained to
+ * the hero stage rather than the viewport.
+ */
+.hero-visual .device {
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+.hero-visual .device img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  min-width: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   DESKTOP HERO COMPOSITION
+   ========================================================= */
+
+@media (min-width: 901px) {
+
+  .hero-visual {
+    height: 680px;
+  }
+
+  /*
+   * iPad = base device.
+   */
+  .hero-visual .device-ipad {
+    width: 32%;
+
+    left: 38%;
+    right: auto;
+    top: 10%;
+
+    z-index: 20;
+  }
+
+  /*
+   * Phone sits directly beside iPad with a small overlap.
+   */
+  .hero-visual .device-phone {
+    width: 16%;
+
+    left: 67%;
+    right: auto;
+    top: 30%;
+
+    z-index: 30;
+  }
+
+  /*
+   * Tablet overlaps the left side of iPad.
+   *
+   * HIGHEST Z-INDEX.
+   */
+  .hero-visual .device-tablet {
+    width: 16%;
+
+    left: 24%;
+    right: auto;
+    top: 32%;
+
+    z-index: 1000 !important;
+  }
+
+  /*
+   * PhoneCart overlaps the phone.
+   */
+  .hero-visual .device-phone-cart {
+    width: 18%;
+
+    left: 76%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+
+    z-index: 900;
+  }
+}
+
+
+/* =========================================================
+   DEVICE BORDERS
+   ========================================================= */
+
+/*
+ * iPad + phone:
+ * thick black border.
+ */
+.hero-visual .device-ipad img,
+.hero-visual .device-phone img {
+  border: 5px solid #000;
+  border-radius: 26px;
+}
+
+
+/*
+ * Tablet + phoneCart:
+ * NO BORDER.
+ */
+.hero-visual .device-tablet img,
+.hero-visual .device-phone-cart img {
+  border: 0 !important;
+}
+
+
+/* =========================================================
+   STANDOUT SECTION
+   ========================================================= */
+
+.standout,
+.standout-white {
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  background: #fff;
+  color: #000;
+}
+
+.standout-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.stand-card {
+  min-width: 0;
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+.stand-device,
+.rounded-image {
+  display: block;
+
+  width: auto;
+  max-width: 80%;
+  height: auto;
+
+  max-height: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 6px solid #000;
+  border-radius: 28px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   APP HIGHLIGHTS
+   ========================================================= */
+
+.features {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-art,
+.feature-copy,
+.app-highlights-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.journey,
+.journey-background {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.journey-art,
+.journey-copy {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.contact > *,
+.contact form,
+.contact-details {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 0;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+
+    height: 520px;
+
+    margin-top: 35px;
+
+    overflow: hidden;
+  }
+
+  /*
+   * Smaller mockup composition.
+   *
+   * 80% rendering target.
+   */
+
+  .hero-visual .device-ipad {
+    width: 30%;
+
+    left: 38%;
+    right: auto;
+    top: 10%;
+
+    z-index: 20;
+  }
+
+  .hero-visual .device-phone {
+    width: 15%;
+
+    left: 66%;
+    right: auto;
+    top: 28%;
+
+    z-index: 30;
+  }
+
+  /*
+   * Tablet overlaps iPad and remains highest.
+   */
+  .hero-visual .device-tablet {
+    width: 15%;
+
+    left: 23%;
+    right: auto;
+    top: 31%;
+
+    z-index: 1000 !important;
+  }
+
+  /*
+   * PhoneCart overlaps phone.
+   */
+  .hero-visual .device-phone-cart {
+    width: 17%;
+
+    left: 75%;
+    right: auto;
+    top: 49%;
+    bottom: auto;
+
+    z-index: 900;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .section {
+    width: 100%;
+    max-width: 100%;
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(48px, 14vw, 62px);
+
+    overflow-wrap: anywhere;
+  }
+
+  .hero p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 17px;
+  }
+
+  /*
+   * Give the composition more room vertically while
+   * keeping it horizontally contained.
+   */
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+
+    height: 420px;
+  }
+
+  /*
+   * Compact mobile arrangement.
+   */
+
+  .hero-visual .device-ipad {
+    width: 31%;
+
+    left: 37%;
+    top: 12%;
+  }
+
+  .hero-visual .device-phone {
+    width: 15%;
+
+    left: 65%;
+    top: 30%;
+  }
+
+  .hero-visual .device-tablet {
+    width: 15%;
+
+    left: 22%;
+    top: 33%;
+
+    z-index: 1000 !important;
+  }
+
+  .hero-visual .device-phone-cart {
+    width: 17%;
+
+    left: 74%;
+    top: 51%;
+
+    z-index: 900;
+  }
+
+  /*
+   * Requested borders.
+   */
+  .hero-visual .device-ipad img,
+  .hero-visual .device-phone img {
+    border: 4px solid #000;
+    border-radius: 21px;
+  }
+
+  .hero-visual .device-tablet img,
+  .hero-visual .device-phone-cart img {
+    border: 0 !important;
+  }
+
+
+  /*
+   * Single-column sections.
+   */
+  .about,
+  .features,
+  .journey,
+  .contact,
+  .standout-grid {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 45px;
+  }
+
+  .feature-art {
+    width: 100%;
+    max-width: 100%;
+
+    height: 300px;
+  }
+
+  .journey-art {
+    width: 100%;
+    max-width: 100%;
+
+    height: 390px;
+  }
+
+  .journey-copy {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 30px;
+
+    border-radius: 26px;
+  }
+
+  .stand-card {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+  }
+
+  .stand-device,
+  .rounded-image {
+    max-width: 80%;
+    max-height: 330px;
+
+    border-width: 5px;
+    border-radius: 23px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .hero {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .hero-visual {
+    height: 360px;
+  }
+
+  .hero-visual .device-ipad {
+    width: 31%;
+
+    left: 37%;
+    top: 14%;
+  }
+
+  .hero-visual .device-phone {
+    width: 15%;
+
+    left: 65%;
+    top: 31%;
+  }
+
+  .hero-visual .device-tablet {
+    width: 15%;
+
+    left: 21%;
+    top: 34%;
+
+    z-index: 1000 !important;
+  }
+
+  .hero-visual .device-phone-cart {
+    width: 17%;
+
+    left: 73%;
+    top: 52%;
+
+    z-index: 900;
+  }
+
+  .section h2,
+  .standout h2,
+  .contact h2 {
+    font-size: clamp(42px, 13vw, 48px);
+  }
+
+  .journey-copy {
+    padding: 25px;
+  }
+
+  .footer {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
 ```
