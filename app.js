@@ -94,7 +94,7 @@
           class="hero hero-background"
         >
 
-<div class="hero-copy"> <h1> ${esc(s.title)} </h1> <p> ${esc(s.subtitle)} </p> <a class="google-play-button" href="#" aria-label="Get it on Google Play" > <span class="google-play-icon" aria-hidden="true"> ▶ </span> <span class="google-play-label"> <small>GET IT ON</small> <strong>Google Play</strong> </span> </a> </div>
+<div class="hero-copy"> <h1> ${esc(s.title)} </h1> <p> ${esc(s.subtitle)} </p> <a class="google-play-button" href="https://play.google.com/store/apps/developer?id=MintWave+Studio" aria-label="Get it on Google Play" > <span class="google-play-icon" aria-hidden="true"> ▶ </span> <span class="google-play-label"> <small>GET IT ON</small> <strong>Google Play</strong> </span> </a> </div>
 
           <!--
             IMPORTANT:
