@@ -406,7 +406,7 @@ textarea {
 .device-tablet {
   width: 18%;
 
-  left: 12%;
+  left: 0%;
   top: 32%;
 
   z-index: 1000 !important;
