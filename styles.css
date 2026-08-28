@@ -1,173 +1,185 @@
 /* =========================================================
-   HERO MOCKUPS
+   HERO MOCKUPS — 80% SCALE + OVERLAPPING LAYERS
    ========================================================= */
 
 /*
- * All hero mockups share a controlled visual size.
- * This prevents the iPad/phone from becoming oversized.
- */
-.hero-visual .device {
-  position: absolute;
-}
-
-/*
- * Default foreground mockup styling.
- * Rounded + thick black border.
+ * Base mockup styling.
  */
 .hero-visual .device img {
   display: block;
   width: 100%;
   height: auto;
-  border: 5px solid #000000;
-  border-radius: 24px;
   object-fit: contain;
   filter: drop-shadow(0 20px 28px rgba(0, 0, 0, 0.22));
 }
 
-/* =========================================================
-   IPAD
-   ========================================================= */
-
 /*
- * Smaller iPad.
+ * =========================================================
+ * iPAD — 80%
+ * =========================================================
  *
- * It sits next to the phone and slightly overlaps it.
+ * Base intended width: 34%
+ * Rendered width: 27.2%
  */
 .hero-visual .device-ipad {
-  width: 34%;
-  right: 24%;
-  top: 17%;
-  z-index: 40;
+  width: 27.2%;
+  right: 29%;
+  top: 22%;
+  z-index: 20;
 }
 
 .hero-visual .device-ipad img {
-  border: 5px solid #000000;
+  border: 5px solid #000;
   border-radius: 24px;
 }
 
-/* =========================================================
-   PHONE
-   ========================================================= */
-
 /*
- * Smaller phone.
+ * =========================================================
+ * PHONE — 80%
+ * =========================================================
  *
- * Positioned directly beside the iPad with a small overlap.
+ * Base intended width: 17%
+ * Rendered width: 13.6%
+ *
+ * Positioned immediately beside the iPad.
  */
 .hero-visual .device-phone {
-  width: 17%;
-  right: 12%;
+  width: 13.6%;
+  right: 15.5%;
   left: auto;
   top: 31%;
   bottom: auto;
-  z-index: 50;
+  z-index: 30;
 }
 
 .hero-visual .device-phone img {
-  border: 5px solid #000000;
+  border: 5px solid #000;
   border-radius: 24px;
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 /*
- * TABLET HAS THE HIGHEST Z-AXIS.
+ * =========================================================
+ * TABLET — 80%
+ * =========================================================
  *
- * This intentionally overrides every other hero mockup.
+ * Base intended width: 18%
+ * Rendered width: 14.4%
+ *
+ * Tablet overlaps the iPad and sits ABOVE it.
  */
 .hero-visual .device-tablet {
-  width: 18%;
-  left: 5%;
+  width: 14.4%;
+  left: 11%;
   top: 34%;
-  z-index: 10000 !important;
+  z-index: 1000;
 }
 
 .hero-visual .device-tablet img {
   /*
-   * No border on tablet.
+   * Tablet remains borderless.
    */
   border: 0 !important;
   border-radius: 22px;
 }
 
-/* =========================================================
-   PHONE CART
-   ========================================================= */
-
 /*
- * PhoneCart has no border.
+ * =========================================================
+ * PHONE CART — 80%
+ * =========================================================
  *
- * It remains above the iPad and normal phone, but below
- * the tablet because tablet was explicitly requested to
- * have the highest z-axis.
+ * Base intended width: 20%
+ * Rendered width: 16%
+ *
+ * PhoneCart overlaps the phone and sits ABOVE it.
  */
 .hero-visual .device-phone-cart {
-  width: 20%;
-  right: 4%;
-  bottom: 10%;
-  z-index: 9000;
+  width: 16%;
+  right: 8%;
+  bottom: 15%;
+  z-index: 900;
 }
 
 .hero-visual .device-phone-cart img {
+  /*
+   * PhoneCart remains borderless.
+   */
   border: 0 !important;
   border-radius: 22px;
 }
 
-/* =========================================================
-   CART LAYERING
-   ========================================================= */
-
 /*
- * Any cart image gets a very high z-index.
+ * =========================================================
+ * CART LAYERING
+ * =========================================================
  *
- * Tablet is still higher because its z-index is 10000.
- */
-.hero-visual img[data-image*="cart" i] {
-  position: relative;
-  z-index: 9000 !important;
-}
-
-/*
- * Tablet always wins the stacking order.
+ * Cart images sit above their corresponding normal image.
+ *
+ * Tablet = 1000
+ * PhoneCart = 900
+ * Phone = 30
+ * iPad = 20
  */
 .hero-visual .device-tablet,
 .hero-visual .device-tablet img {
-  z-index: 10000 !important;
+  z-index: 1000 !important;
 }
 
-/* =========================================================
-   IPAD + PHONE SIDE-BY-SIDE OVERLAP
-   ========================================================= */
-
-.hero-visual .device-ipad {
-  width: 34%;
-  right: 23%;
-  top: 19%;
-}
-
-.hero-visual .device-phone {
-  width: 17%;
-  right: 11%;
-  top: 32%;
+.hero-visual .device-phone-cart,
+.hero-visual .device-phone-cart img {
+  z-index: 900 !important;
 }
 
 /*
- * Small overlap:
+ * Do NOT use a generic z-index rule such as:
  *
- * iPad right edge:
- * approximately 57%
+ * img[data-image*="cart"] {
+ *   z-index: 9999;
+ * }
  *
- * Phone starts:
- * approximately 72%
- *
- * The device shadows/borders create a subtle overlap
- * without making the composition crowded.
+ * because that would prevent the tablet from having the
+ * highest requested stacking level.
  */
 
+
 /* =========================================================
-   MOBILE
+   TABLET OVERLAPS IPAD
+   ========================================================= */
+
+/*
+ * The tablet is positioned partially over the left side
+ * of the iPad.
+ */
+.hero-visual .device-tablet {
+  transform: translate(18%, 4%);
+}
+
+
+/* =========================================================
+   PHONE NEXT TO IPAD
+   ========================================================= */
+
+/*
+ * The phone sits immediately to the right of the iPad.
+ *
+ * The slight negative translate creates a small overlap
+ * instead of leaving a large gap between the two devices.
+ */
+.hero-visual .device-phone {
+  transform: translateX(-8%);
+}
+
+
+/* =========================================================
+   PHONE CART OVERLAPS PHONE
+   ========================================================= */
+
+.hero-visual .device-phone-cart {
+  transform: translate(-12%, -5%);
+}
+
+
+/* =========================================================
+   TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -176,30 +188,47 @@
     height: 520px;
   }
 
+  /*
+   * iPad — 80%
+   */
   .hero-visual .device-ipad {
-    width: 39%;
-    right: 23%;
-    top: 18%;
+    width: 27.2%;
+    right: 27%;
+    top: 21%;
   }
 
+  /*
+   * Phone — immediately beside iPad.
+   */
   .hero-visual .device-phone {
-    width: 20%;
-    right: 9%;
-    top: 32%;
+    width: 13.6%;
+    right: 14%;
+    top: 31%;
   }
 
+  /*
+   * Tablet overlaps iPad.
+   */
   .hero-visual .device-tablet {
-    width: 21%;
-    left: 3%;
-    top: 35%;
+    width: 14.4%;
+    left: 8%;
+    top: 34%;
   }
 
+  /*
+   * PhoneCart overlaps phone.
+   */
   .hero-visual .device-phone-cart {
-    width: 22%;
-    right: 1%;
-    bottom: 8%;
+    width: 16%;
+    right: 6%;
+    bottom: 13%;
   }
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -208,49 +237,71 @@
   }
 
   /*
-   * Smaller iPad.
+   * iPad — 80% of previous 43% mobile size.
    */
   .hero-visual .device-ipad {
-    width: 43%;
-    right: 21%;
-    top: 18%;
+    width: 34.4%;
+    right: 23%;
+    top: 19%;
   }
 
   /*
-   * Smaller phone positioned alongside iPad.
+   * Phone — directly beside iPad.
    */
   .hero-visual .device-phone {
-    width: 21%;
+    width: 16.8%;
     right: 7%;
-    top: 32%;
+    top: 31%;
   }
 
   /*
-   * Tablet remains the highest layer.
+   * Tablet — overlaps iPad and remains highest.
    */
   .hero-visual .device-tablet {
-    width: 22%;
+    width: 17.6%;
     left: 1%;
-    top: 35%;
+    top: 34%;
   }
 
   /*
-   * Cart remains borderless.
+   * PhoneCart — overlaps phone.
    */
   .hero-visual .device-phone-cart {
-    width: 24%;
+    width: 19.2%;
     right: 0;
-    bottom: 7%;
+    bottom: 8%;
   }
 
+  /*
+   * Keep requested border behavior.
+   */
   .hero-visual .device-ipad img,
   .hero-visual .device-phone img {
-    border-width: 4px;
+    border: 4px solid #000;
     border-radius: 20px;
   }
 
   .hero-visual .device-tablet img,
   .hero-visual .device-phone-cart img {
     border: 0 !important;
+  }
+
+  /*
+   * Explicit stacking order on mobile as well.
+   */
+  .hero-visual .device-ipad {
+    z-index: 20;
+  }
+
+  .hero-visual .device-phone {
+    z-index: 30;
+  }
+
+  .hero-visual .device-phone-cart {
+    z-index: 900;
+  }
+
+  .hero-visual .device-tablet {
+    z-index: 1000 !important;
   }
 }
