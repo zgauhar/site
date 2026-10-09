@@ -50,3 +50,9 @@ See `IMAGE-MAPPING.md` or `image-download-map.json` for every source URL, exact 
 
 Species values in `hatch-calc.js` and the tables mirror `hatch_day/lib/domain/species.dart`; change both together.
 Add new pages to `sitemap.xml`. Store links carry `utm_campaign` values so Play Console shows which page sent installs.
+
+## Cache busting
+
+GitHub Pages caches files for 10 minutes. Every page loads CSS/JS with a version tag (`styles.css?v=20261009`).
+**When you change any `.css` or `.js` file, bump the `?v=` value on every page** (search and replace the old date),
+otherwise visitors can get a mix of old and new files for a while.
