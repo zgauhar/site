@@ -678,3 +678,8 @@
 #site-header {
   height: 82px;
 }
+
+/* Anchored headings (privacy-policy.html#endly) clear the sticky header. */
+.page [id] {
+  scroll-margin-top: 96px;
+}
