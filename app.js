@@ -11,6 +11,11 @@
     }[ch]));
 
   /*
+   * Header, footer and mobile navigation come from site-chrome.js,
+   * shared with every other page.
+   */
+
+  /*
    * Foreground images only.
    *
    * Background images such as:
@@ -34,47 +39,6 @@
       draggable="false"
     >
   `;
-
-
-  /* ============================================================
-     HEADER
-     ============================================================ */
-
-  function renderHeader(nav = []) {
-    return `
-      <header class="site-header">
-
-        <a
-          class="logo"
-          href="#home"
-          aria-label="MintWave Studio home"
-        >
-          MintWave Studio
-        </a>
-
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Open navigation"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
-
-        <nav
-          class="site-nav"
-          aria-label="Primary navigation"
-        >
-          ${nav.map(([label, href]) => `
-            <a href="${esc(href)}">
-              ${esc(label)}
-            </a>
-          `).join("")}
-        </nav>
-
-      </header>
-    `;
-  }
 
 
   /* ============================================================
@@ -456,63 +420,6 @@
 
 
   /* ============================================================
-     FOOTER
-     ============================================================ */
-
-  function footer() {
-    return `
-      <footer class="footer">
-
-        <div class="footer-top">
-
-          <a
-            class="logo"
-            href="#home"
-          >
-            MintWave Studio
-          </a>
-
-          <div class="footer-contact">
-
-            <p>
-              Tel: +358 449193442
-            </p>
-
-            <p>
-              Email: support@mintwavestudio.com
-            </p>
-
-            <p>
-              Gauhar Zaheer Ahmed<br>
-              Postipuuntie 10, A13, 02650, Espoo
-            </p>
-
-          </div>
-
-          <div class="footer-links">
-
-            <a href="privacy-policy.html">
-              Privacy Policy
-            </a>
-
-            <a href="terms-and-conditions.html">
-              Terms &amp; Conditions
-            </a>
-
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          © 2006 by MintWave Studio
-        </div>
-
-      </footer>
-    `;
-  }
-
-
-  /* ============================================================
      IMAGE LOADING
      ============================================================ */
 
@@ -596,79 +503,6 @@
 
 
   /* ============================================================
-     MOBILE NAVIGATION
-     ============================================================ */
-
-  function setupNavigation() {
-
-    const menu =
-      document.querySelector(
-        ".menu-toggle"
-      );
-
-    const nav =
-      document.querySelector(
-        ".site-nav"
-      );
-
-    if (!menu || !nav) {
-      return;
-    }
-
-    menu.addEventListener(
-      "click",
-      () => {
-
-        const open =
-          nav.classList.toggle(
-            "open"
-          );
-
-        menu.setAttribute(
-          "aria-expanded",
-          String(open)
-        );
-
-        menu.setAttribute(
-          "aria-label",
-          open
-            ? "Close navigation"
-            : "Open navigation"
-        );
-
-      }
-    );
-
-    nav
-      .querySelectorAll("a")
-      .forEach(a => {
-
-        a.addEventListener(
-          "click",
-          () => {
-
-            nav.classList.remove(
-              "open"
-            );
-
-            menu.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-            menu.setAttribute(
-              "aria-label",
-              "Open navigation"
-            );
-
-          }
-        );
-
-      });
-  }
-
-
-  /* ============================================================
      CONTACT FORM
      ============================================================ */
 
@@ -735,11 +569,7 @@
     root.innerHTML = `
       <div class="site-content">
 
-        ${renderHeader(
-          Array.isArray(data.navigation)
-            ? data.navigation
-            : []
-        )}
+        ${MintWaveChrome.header()}
 
         <main class="site-main">
           ${
@@ -751,7 +581,7 @@
           }
         </main>
 
-        ${footer()}
+        ${MintWaveChrome.footer()}
 
       </div>
     `;
@@ -766,7 +596,7 @@
     /*
      * Initialize interactive components.
      */
-    setupNavigation();
+    MintWaveChrome.setupNavigation();
     setupContactForm();
 
 
