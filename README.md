@@ -53,6 +53,6 @@ Add new pages to `sitemap.xml`. Store links carry `utm_campaign` values so Play 
 
 ## Cache busting
 
-GitHub Pages caches files for 10 minutes. Every page loads CSS/JS with a version tag (`styles.css?v=20261009`).
+GitHub Pages caches files for 10 minutes. Every page loads CSS/JS with a version tag (`styles.css?v=20261009b`).
 **When you change any `.css` or `.js` file, bump the `?v=` value on every page** (search and replace the old date),
 otherwise visitors can get a mix of old and new files for a while.
