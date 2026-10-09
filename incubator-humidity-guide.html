@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incubator Humidity Guide: Air Cells, Egg Weight Loss &amp; Dry Hatch | Hatch Day</title>
+<meta name="description" content="What humidity to use in an egg incubator, how to read the air cell, the 13 % weight-loss rule with a free calculator, the dry hatch method and how to calibrate your hygrometer.">
+<link rel="canonical" href="https://www.mintwavestudio.com/incubator-humidity-guide.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Incubator Humidity Guide: Air Cells, Egg Weight Loss &amp; Dry Hatch | Hatch Day">
+<meta property="og:description" content="What humidity to use in an egg incubator, how to read the air cell, the 13 % weight-loss rule with a free calculator, the dry hatch method and how to calibrate your hygrometer.">
+<meta property="og:url" content="https://www.mintwavestudio.com/incubator-humidity-guide.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/hatch/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/hatch/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+<script src="site-chrome.js" defer></script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="page">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="hatch-day.html">Hatch Day</a> › Humidity guide</nav>
+<h1>Incubator humidity guide</h1>
+<p class="lead">Humidity is the setting people worry about most and get wrong most often. The good news: you don't
+have to hit a magic number. You have to let the eggs lose the right amount of water.</p>
+<h2>The rule: eggs must lose about 13 % of their weight</h2>
+<p>An egg loses water through its shell for the whole incubation. A chicken egg should lose roughly
+<strong>11–14 % of its starting weight by lockdown</strong>, about 13 % on average. That loss is what creates the air
+cell the chick breathes from before it hatches.</p>
+<ul>
+<li><strong>Too humid</strong> (too little loss): small air cell, large and soft chicks that struggle to turn and pip,
+some drown in the shell, and mushy, smelly navels.</li>
+<li><strong>Too dry</strong> (too much loss): large air cell, small weak chicks, membranes that dry onto the chick
+("shrink-wrapped"), more so if the lid is opened during the hatch.</li>
+</ul>
+<p>Humidity is just the tool to steer that weight loss. Shell thickness, egg age and your climate all change how
+much humidity a particular batch needs.</p>
+<h2>Starting values by species</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Bird</th><th scope="col">Day 0 to lockdown</th><th scope="col">Lockdown to hatch</th></tr></thead>
+<tbody>
+<tr><td>Chicken</td><td>45–50 %</td><td>65–70 %</td></tr><tr><td>Duck</td><td>50–55 %</td><td>65–75 %</td></tr><tr><td>Muscovy duck</td><td>50–55 %</td><td>65–75 %</td></tr><tr><td>Goose</td><td>50–55 %</td><td>70–75 %</td></tr><tr><td>Turkey</td><td>50–55 %</td><td>65–70 %</td></tr><tr><td>Coturnix quail</td><td>45–50 %</td><td>65–70 %</td></tr><tr><td>Bobwhite quail</td><td>45–50 %</td><td>65–70 %</td></tr><tr><td>Guinea fowl</td><td>45–55 %</td><td>65–70 %</td></tr><tr><td>Pheasant</td><td>45–50 %</td><td>65–70 %</td></tr><tr><td>Partridge (chukar)</td><td>45–50 %</td><td>65–70 %</td></tr><tr><td>Peafowl</td><td>50–55 %</td><td>65–70 %</td></tr>
+</tbody></table></div>
+<p class="note">Relative humidity in a forced-air incubator. Full chart with temperature and days:
+<a href="incubation-chart.html">incubation chart</a>.</p>
+<h2>Check it: egg weight-loss calculator</h2>
+<p>Weigh a few marked eggs (or the whole tray) on a kitchen scale on day 0, then again on a later day. Enter both
+weights and the calculator compares the loss with the 13 % target.</p>
+<div class="calc" id="weight-calc">
+  <div class="calc-fields">
+    <label class="field">Weight on day 0 (g)<input type="number" inputmode="decimal" min="1" step="0.1" name="w0" value="600"></label>
+    <label class="field">Weight today (g)<input type="number" inputmode="decimal" min="1" step="0.1" name="w1" value="560"></label>
+    <label class="field">Today is day<input type="number" inputmode="numeric" min="1" max="40" step="1" name="day" value="10"></label>
+  </div>
+  <label class="field" style="margin-top:14px">Species
+    <select name="sp">
+      <option value="18">Chicken (lockdown day 18)</option><option value="25">Duck (lockdown day 25)</option><option value="32">Muscovy duck (lockdown day 32)</option><option value="27">Goose (lockdown day 27)</option><option value="25">Turkey (lockdown day 25)</option><option value="14">Coturnix quail (lockdown day 14)</option><option value="20">Bobwhite quail (lockdown day 20)</option><option value="24">Guinea fowl (lockdown day 24)</option><option value="21">Pheasant (lockdown day 21)</option><option value="20">Partridge (chukar) (lockdown day 20)</option><option value="25">Peafowl (lockdown day 25)</option>
+    </select>
+  </label>
+  <div class="calc-result" aria-live="polite"></div>
+</div>
+<script>
+(() => {
+  const box = document.getElementById("weight-calc");
+  const q = n => box.querySelector(`[name="${n}"]`);
+  const out = box.querySelector(".calc-result");
+  function run() {
+    const w0 = parseFloat(q("w0").value), w1 = parseFloat(q("w1").value);
+    const day = parseInt(q("day").value, 10), lock = parseInt(q("sp").value, 10);
+    if (!(w0 > 0 && w1 > 0 && day > 0)) { out.textContent = ""; return; }
+    const loss = (w0 - w1) / w0 * 100;
+    const target = 13 * Math.min(day, lock) / lock;
+    const diff = loss - target;
+    let verdict;
+    if (Math.abs(diff) <= 1.5) verdict = "On track. Keep the humidity where it is.";
+    else if (diff < 0) verdict = "Losing too little water. Lower the humidity a little (about 5 %) and check again in 3–4 days.";
+    else verdict = "Losing too much water. Raise the humidity a little (about 5 %) and check again in 3–4 days.";
+    out.innerHTML = `<div class="targets">
+      <div class="target"><div class="k">Weight lost so far</div><div class="v">${loss.toFixed(1)} %</div></div>
+      <div class="target"><div class="k">Target for day ${day}</div><div class="v">${target.toFixed(1)} %</div></div>
+      <div class="target"><div class="k">Per day now</div><div class="v">${(loss / day).toFixed(2)} %</div></div>
+    </div><p><strong>${verdict}</strong></p>`;
+  }
+  box.addEventListener("input", run);
+  box.addEventListener("change", run);
+  run();
+})();
+</script>
+<h2>Check it without a scale: the air cell</h2>
+<p>Candle the eggs on the usual days and draw the air cell outline in pencil. A healthy chicken egg's air cell is
+small on day 7, about a quarter of the egg on day 14 and around a third at lockdown, with the edge dipping to one
+side just before the hatch. If the cells are smaller than that, lower the humidity; if larger, raise it. See the
+<a href="candling-guide.html">candling guide</a> for pictures.</p>
+<h2>The dry hatch</h2>
+<p>A "dry hatch" means running the incubator with no added water (or very little) until lockdown, often
+25–40 % relative humidity depending on the room. It works well for many keepers in humid climates or with
+thick-shelled eggs, because the room's own humidity is already high. In a dry climate or a heated room in winter,
+it can dry the eggs out. Treat it like any other setting: watch the air cells or the weight loss and adjust.
+Humidity still goes up at lockdown.</p>
+<h2>Calibrate your hygrometer (salt test)</h2>
+<p>Cheap hygrometers are often 5–10 % out. To check yours for free:</p>
+<ol>
+<li>Put a tablespoon of table salt in a bottle cap and add a few drops of water so it becomes a damp paste, not a liquid.</li>
+<li>Seal it in a zip bag with the hygrometer, away from sun and heat, for 8–12 hours.</li>
+<li>Saturated salt holds the air at about <strong>75 %</strong>. Note how far off your reading is and correct for it.</li>
+</ol>
+<h2>Common fixes</h2>
+<ul>
+<li><strong>Humidity too low:</strong> add water surface area (a wider tray or a sponge), not just more water.</li>
+<li><strong>Humidity too high:</strong> remove water, open the vents a little, or move the incubator to a drier room.</li>
+<li><strong>Humidity drops at hatch:</strong> fill the channels before lockdown, use warm water, and keep the lid shut.</li>
+</ul>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/hatch/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Track every hatch with Hatch Day</h2>
+    <p>Day-by-day targets, turning and lockdown reminders, a candling log and hatch-rate stats. Free on Android and works offline.</p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.hatchday&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dhumidity_guide"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

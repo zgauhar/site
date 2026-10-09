@@ -1,26 +1,4 @@
 {
-  "navigation": [
-    [
-      "Home",
-      "#home"
-    ],
-    [
-      "About Us",
-      "#about"
-    ],
-    [
-      "Features",
-      "#features"
-    ],
-    [
-      "Our Journey",
-      "#journey"
-    ],
-    [
-      "Contact",
-      "#contact"
-    ]
-  ],
   "sections": [
     {
       "id": "home",
@@ -44,9 +22,9 @@
       "lead": "Who We Are",
       "body": "MintWave Studio is an independent mobile app creator focused on building small but meaningful digital experiences. Every app is designed with a balance of creativity, usability, and modern aesthetics.",
       "list": [
-        "Puzzle Games \u2014 Relaxing, clever, and easy to pick up",
-        "Utility Apps \u2014 Simple tools that make life easier",
-        "Creative Experiments \u2014 Small ideas brought to life"
+        "Puzzle Games — Relaxing, clever, and easy to pick up",
+        "Utility Apps — Simple tools that make life easier",
+        "Creative Experiments — Small ideas brought to life"
       ]
     },
     {
