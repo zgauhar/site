@@ -1,0 +1,2 @@
+# Release keystores live only in the releases repo (E:\apps\releases, see KEYSTORE_DIR)
+*.jks
