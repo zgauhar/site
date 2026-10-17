@@ -41,7 +41,10 @@ See `IMAGE-MAPPING.md` or `image-download-map.json` for every source URL, exact 
 
 | Page | Purpose |
 |---|---|
-| `hatch-day.html` | Hatch Day app page |
+| `apps.html` | Apps hub: every app grouped by category (header "Apps" link) |
+| `hatch-day.html`, `cable-calc.html`, `multitimer.html`, `days-until.html`, `daily-budget.html`, `rhythm-trainer.html`, `shadow-match.html`, `smart-quiz.html`, `zero-margin.html`, `steady-hand.html` | One page per app (assets in `assets/<app>/`) |
+| `voltage-drop-calculator.html`, `daily-budget-calculator.html`, `days-until-calculator.html`, `stop-the-timer-game.html`, `odd-time-signatures.html` | Free web tools that link to Cable Calc, Daily Budget, Days Until, ZeroMargin and Rhythm Trainer |
+| `llms.txt` | Plain-text site summary for AI crawlers; update it when an app is added |
 | `hatch-date-calculator.html`, `pt/calculadora-chocadeira.html`, `de/brutrechner.html` | Hatch date calculator (EN/PT/DE), script `assets/hatch/hatch-calc.js` |
 | `incubation-chart.html` | Printable chart for 11 species |
 | `candling-guide.html`, `incubator-humidity-guide.html`, `quail-incubation.html` | Guides |
@@ -56,3 +59,11 @@ Add new pages to `sitemap.xml`. Store links carry `utm_campaign` values so Play 
 GitHub Pages caches files for 10 minutes. Every page loads CSS/JS with a version tag (`styles.css?v=20261009b`).
 **When you change any `.css` or `.js` file, bump the `?v=` value on every page** (search and replace the old date),
 otherwise visitors can get a mix of old and new files for a while.
+
+## App Store badges
+
+Every app page has an App Store badge that is hidden until the iOS app is live:
+`<a class="app-store-badge" href="#" hidden>`. When an iOS app is published, set that link's `href`
+to the App Store URL and remove `hidden` (two places per app page: top and bottom), and add
+`"iOS"` to `operatingSystem` in the page's JSON-LD. Adding a new app: also add it to `apps.html`,
+the home section in `content.json`, `llms.txt` and `sitemap.xml`.

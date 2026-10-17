@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cable Calc: Cable Size &amp; Voltage Drop Calculator (IEC 60364)</title>
+<meta name="description" content="Cable sizing app for electricians working to IEC 60364: current-carrying capacity, derating for temperature and grouping, breaker selection and voltage drop in mm². Free on Android, works offline.">
+<link rel="canonical" href="https://www.mintwavestudio.com/cable-calc.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Cable Calc: Cable Size &amp; Voltage Drop Calculator (IEC 60364)">
+<meta property="og:description" content="Cable sizing app for electricians working to IEC 60364: current-carrying capacity, derating for temperature and grouping, breaker selection and voltage drop in mm². Free on Android, works offline.">
+<meta property="og:url" content="https://www.mintwavestudio.com/cable-calc.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MobileApplication","@id":"https://www.mintwavestudio.com/cable-calc.html#app","name":"Cable Calc","alternateName":"Cable Size & Voltage Drop IEC","description":"Cable sizing and voltage drop calculator for electricians working to IEC 60364 (Europe, Middle East, Africa, India, metric cables): current-carrying capacity per IEC 60364-5-52 Annex B, installation methods A1–E, PVC and XLPE, ambient temperature and grouping derating, breaker selection (Ib ≤ In ≤ Iz), voltage drop per Annex G, Ohm's law. Pro adds earth-fault loop / maximum length checks for TN systems, motor circuits, projects and PDF reports. 9 languages, offline.","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Electrical engineering calculator","url":"https://www.mintwavestudio.com/cable-calc.html","installUrl":"https://play.google.com/store/apps/details?id=com.mintwave.cablecalc","downloadUrl":"https://play.google.com/store/apps/details?id=com.mintwave.cablecalc","image":"https://www.mintwavestudio.com/assets/cable-calc/icon-192.png","screenshot":["https://www.mintwavestudio.com/assets/cable-calc/screen-01.webp","https://www.mintwavestudio.com/assets/cable-calc/screen-02.webp","https://www.mintwavestudio.com/assets/cable-calc/screen-03.webp","https://www.mintwavestudio.com/assets/cable-calc/screen-04.webp"],"featureList":["Cable size to IEC 60364-5-52","Derating built in","Voltage drop check","Ohm's law and power","Every step shown","Made for site work"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Apps","item":"https://www.mintwavestudio.com/apps.html"},{"@type":"ListItem","position":3,"name":"Cable Calc","item":"https://www.mintwavestudio.com/cable-calc.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which standard does Cable Calc use?","acceptedAnswer":{"@type":"Answer","text":"IEC 60364-5-52: Annex B for current-carrying capacity and the Annex G method for voltage drop. It suits countries that use metric cable sizes, including most of Europe, the Middle East, Africa and India. It is not built for the US NEC (AWG)."}},{"@type":"Question","name":"Can I rely on the result without checking?","acceptedAnswer":{"@type":"Answer","text":"No. Cable Calc gives guidance based on IEC 60364. Always verify against the standard, the cable manufacturer's data and your national wiring regulations. The installer remains responsible for the design."}},{"@type":"Question","name":"Does it work without internet?","acceptedAnswer":{"@type":"Answer","text":"Yes. All tables and calculations are in the app, so it works offline on site."}},{"@type":"Question","name":"Is aluminium cable supported?","acceptedAnswer":{"@type":"Answer","text":"The capacity tables cover copper conductors from 1.5 to 120 mm²."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="apps.html#tools">Tools &amp; productivity</a> › Cable Calc</nav>
+<section class="app-hero">
+  <div>
+    <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="84" height="84">
+    <h1>Cable Calc: cable size and voltage drop calculator</h1>
+    <p class="lead">Enter the load, the length and how the cable is installed. Cable Calc picks the breaker, applies the derating factors, checks the voltage drop and shows the cable cross-section you need in mm², to IEC 60364.</p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable-calc_page"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><a class="app-store-badge" href="#" hidden><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download Cable Calc on the App Store" width="150" height="50" loading="lazy"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+  <div class="hero-shot">
+    <img src="assets/cable-calc/screen-01.webp" alt="Cable Calc result screen recommending a 6 mm² copper cable with breaker, capacity and voltage drop" width="480" height="854">
+  </div>
+</section>
+<h2>What Cable Calc does</h2>
+<div class="grid-3">
+  <div class="card"><h3>Cable size to IEC 60364-5-52</h3><p>Current-carrying capacity from Annex B for copper cables from 1.5 to 120 mm², PVC (70 °C) or XLPE/EPR (90 °C), installation methods A1, A2, B1, B2, C and E.</p></div>
+  <div class="card"><h3>Derating built in</h3><p>Ambient temperature and grouping correction factors are applied for you, and the breaker is chosen so that Ib ≤ In ≤ Iz.</p></div>
+  <div class="card"><h3>Voltage drop check</h3><p>The Annex G method with reactance and power factor: drop in volts and %, voltage at the load, pass or fail against your limit, and the minimum size that meets it.</p></div>
+  <div class="card"><h3>Ohm&#x27;s law and power</h3><p>Enter any two of voltage, current, resistance and power to get the other two. Power to current for single-phase, three-phase and DC.</p></div>
+  <div class="card"><h3>Every step shown</h3><p>Intermediate values (Ib, In, Iz, correction factors) are on screen, so you can check the working before you sign off.</p></div>
+  <div class="card"><h3>Made for site work</h3><p>Works offline, remembers your last inputs and runs in English, German, French, Spanish, Italian, Polish, Portuguese, Turkish and Dutch.</p></div>
+</div>
+<h2>Screenshots</h2>
+<div class="shots">
+  <img src="assets/cable-calc/screen-01.webp" alt="Recommended cable size with breaker, capacity and voltage drop" width="480" height="854" loading="lazy">
+  <img src="assets/cable-calc/screen-02.webp" alt="Voltage drop calculation with pass or fail against the limit" width="480" height="854" loading="lazy">
+  <img src="assets/cable-calc/screen-03.webp" alt="Earth-fault check with maximum cable length for B, C and D curve breakers" width="480" height="854" loading="lazy">
+  <img src="assets/cable-calc/screen-04.webp" alt="Motor circuit with full-load current and starting voltage drop" width="480" height="854" loading="lazy">
+</div>
+<h2>Free and Cable Calc Pro</h2>
+<div class="grid-2">
+  <div class="card">
+    <h3>Free</h3>
+    <ul><li>Cable size with derating and breaker selection</li><li>Voltage drop calculator</li><li>Ohm&#x27;s law and power</li></ul>
+  </div>
+  <div class="card">
+    <h3>Cable Calc Pro</h3>
+    <ul><li>Earth-fault disconnection check for TN systems: maximum cable length for B, C and D curve breakers, fault current with a known Ze</li><li>Motor circuits: full-load current, starting current and starting voltage drop (DOL, star-delta, soft starter, drive)</li><li>Projects: save calculations per job or customer</li><li>PDF calculation reports to send to clients</li><li>No ads</li></ul>
+    <p class="note">Yearly subscription or one-time lifetime purchase. Prices are shown in the app in your local currency.</p>
+  </div>
+</div>
+<h2>Free online tools</h2>
+<ul class="link-list">
+<li><a href="voltage-drop-calculator.html">Free online voltage drop calculator (IEC 60364 Annex G)</a></li>
+</ul>
+<h2>Questions</h2>
+<h3>Which standard does Cable Calc use?</h3>
+<p>IEC 60364-5-52: Annex B for current-carrying capacity and the Annex G method for voltage drop. It suits countries that use metric cable sizes, including most of Europe, the Middle East, Africa and India. It is not built for the US NEC (AWG).</p>
+<h3>Can I rely on the result without checking?</h3>
+<p>No. Cable Calc gives guidance based on IEC 60364. Always verify against the standard, the cable manufacturer&#x27;s data and your national wiring regulations. The installer remains responsible for the design.</p>
+<h3>Does it work without internet?</h3>
+<p>Yes. All tables and calculations are in the app, so it works offline on site.</p>
+<h3>Is aluminium cable supported?</h3>
+<p>The capacity tables cover copper conductors from 1.5 to 120 mm².</p>
+<h3>Privacy and support</h3>
+<p>Read the <a href="privacy-policy.html">privacy policy</a> and <a href="terms-and-conditions.html">Terms &amp; Conditions</a>.
+Questions or feedback: <a href="mailto:support@mintwavestudio.com">support@mintwavestudio.com</a>.</p>
+<h2>More apps from MintWave Studio</h2>
+<div class="app-grid">
+<article class="app-tile">
+  <a class="app-tile-link" href="multitimer.html">
+    <img src="assets/multitimer/icon-192.png" alt="" width="64" height="64" loading="lazy">
+    <span><h3>MultiTimer</h3><span class="app-tile-sub">MultiTimer: Multiple Timers</span></span>
+  </a>
+  <p>Run many countdown timers at once, plus stopwatches, Pomodoro and interval timers. No ads.</p>
+  <p class="app-tile-actions"><a href="multitimer.html">About MultiTimer</a> · <a href="https://play.google.com/store/apps/details?id=com.mintwave.multitimer&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable-calc_related">Google Play</a></p>
+</article>
+<article class="app-tile">
+  <a class="app-tile-link" href="days-until.html">
+    <img src="assets/days-until/icon-192.png" alt="" width="64" height="64" loading="lazy">
+    <span><h3>Days Until</h3><span class="app-tile-sub">Days Until: Expiry Tracker</span></span>
+  </a>
+  <p>Expiration date tracker: scan best-before dates, get reminders before food, medicine and documents expire.</p>
+  <p class="app-tile-actions"><a href="days-until.html">About Days Until</a> · <a href="https://play.google.com/store/apps/details?id=com.mintwave.daysuntil&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable-calc_related">Google Play</a></p>
+</article>
+<article class="app-tile">
+  <a class="app-tile-link" href="hatch-day.html">
+    <img src="assets/hatch/icon-192.png" alt="" width="64" height="64" loading="lazy">
+    <span><h3>Hatch Day</h3><span class="app-tile-sub">Hatch Day: Egg Incubator App</span></span>
+  </a>
+  <p>Egg incubator tracker: hatch countdown, temperature and humidity targets, turning and lockdown reminders.</p>
+  <p class="app-tile-actions"><a href="hatch-day.html">About Hatch Day</a> · <a href="https://play.google.com/store/apps/details?id=com.mintwave.hatchday&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable-calc_related">Google Play</a></p>
+</article>
+</div>
+<p><a href="apps.html">See all apps</a></p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Size cables to IEC 60364 in seconds</h2>
+    <p>Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline.</p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable-calc_page_bottom"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><a class="app-store-badge" href="#" hidden><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download Cable Calc on the App Store" width="150" height="50" loading="lazy"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

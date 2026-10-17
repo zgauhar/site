@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Days Until Calculator: How Many Days Until a Date?</title>
+<meta name="description" content="Free days until calculator: count the days, weeks, working days and hours until any date, such as Christmas, New Year, a passport expiry or a deadline.">
+<link rel="canonical" href="https://www.mintwavestudio.com/days-until-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Days Until Calculator: How Many Days Until a Date?">
+<meta property="og:description" content="Free days until calculator: count the days, weeks, working days and hours until any date, such as Christmas, New Year, a passport expiry or a deadline.">
+<meta property="og:url" content="https://www.mintwavestudio.com/days-until-calculator.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/days-until/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/days-until/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Days until calculator","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","url":"https://www.mintwavestudio.com/days-until-calculator.html","publisher":{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/"},"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Apps","item":"https://www.mintwavestudio.com/apps.html"},{"@type":"ListItem","position":3,"name":"Days Until","item":"https://www.mintwavestudio.com/days-until.html"},{"@type":"ListItem","position":4,"name":"Days until calculator","item":"https://www.mintwavestudio.com/days-until-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How are the days counted?","acceptedAnswer":{"@type":"Answer","text":"The result is the number of calendar days from the start date to the target date, not counting the start day. Tomorrow is 1 day away."}},{"@type":"Question","name":"What are working days?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday between the two dates, counting the target date but not the start date. Public holidays aren't removed because they differ by country."}},{"@type":"Question","name":"Can I get reminded before a date?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Days Until app counts down to expiry and renewal dates (food, medicine, passports, licences) and reminds you 30 days, 1 week and 1 day before."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="days-until.html">Days Until</a> › Days until calculator</nav>
+<h1>Days until calculator</h1>
+<p class="lead">How many days until a date? Pick a date to see the days, weeks and working days left, and the day of the week it falls on.</p>
+<form class="calc" id="du" novalidate>
+  <div class="calc-fields">
+    <label class="field">Count to<input type="date" name="to"></label>
+    <label class="field">Starting from<input type="date" name="from"></label>
+    <label class="field">Quick pick<select name="quick">
+      <option value="">Choose…</option>
+      <option value="newyear">New Year's Day</option>
+      <option value="christmas">Christmas Day</option>
+      <option value="halloween">Halloween</option>
+      <option value="valentine">Valentine's Day</option>
+      <option value="summer">Summer (21 June)</option>
+    </select></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Days until</span><span class="date" id="du-days">–</span></div>
+    <p class="result-sub" id="du-sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Weeks and days</div><div class="v" id="du-weeks">–</div></div>
+      <div class="target"><div class="k">Working days (Mon–Fri)</div><div class="v" id="du-work">–</div></div>
+      <div class="target"><div class="k">Hours</div><div class="v" id="du-hours">–</div></div>
+    </div>
+  </div>
+</form>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/days-until/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Never miss an expiry date</h2>
+    <p>Days Until scans best-before dates and reminds you before food, medicine, passports or licences expire. Private, no ads. <a class="cta-link" href="days-until.html">About Days Until</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.daysuntil&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Ddays_until_calculator"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Days Until on Google Play" width="180" height="70"></a><a class="app-store-badge" href="#" hidden><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download Days Until on the App Store" width="150" height="50" loading="lazy"></a></div>
+  </div>
+</aside>
+<h2>Dates people count down to</h2>
+<ul>
+<li><strong>Expiry and renewal dates</strong>: passport, ID card, driver's licence, visa, insurance, warranties.</li>
+<li><strong>Best-before and use-by dates</strong> on food and medicine.</li>
+<li><strong>Holidays and events</strong>: Christmas, New Year, birthdays, weddings, exams, due dates.</li>
+<li><strong>Deadlines</strong>: tax returns, contract notice periods, subscription renewals.</li>
+</ul>
+<h2>Questions</h2>
+<h3>How are the days counted?</h3>
+<p>The result is the number of calendar days from the start date to the target date, not counting the start day. Tomorrow is 1 day away.</p>
+<h3>What are working days?</h3>
+<p>Monday to Friday between the two dates, counting the target date but not the start date. Public holidays aren't removed because they differ by country.</p>
+<h3>Can I get reminded before a date?</h3>
+<p>Yes. The <a href="days-until.html">Days Until app</a> counts down to expiry and renewal dates (food, medicine, passports, licences) and reminds you 30 days, 1 week and 1 day before.</p>
+</main>
+<script>
+(() => {
+  const f = document.getElementById("du");
+  const $ = id => document.getElementById(id);
+  const iso = d => new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().slice(0, 10);
+  const utc = s => { const [y, m, d] = s.split("-").map(Number); return Date.UTC(y, m - 1, d); };
+  const today = new Date();
+  f.elements.from.value = iso(today);
+  const next = (m, d) => {
+    let y = today.getFullYear();
+    if (Date.UTC(y, m, d) <= utc(iso(today))) y++;
+    return iso(new Date(y, m, d));
+  };
+  const QUICK = { newyear: [0, 1], christmas: [11, 25], halloween: [9, 31], valentine: [1, 14], summer: [5, 21] };
+  f.elements.to.value = next(11, 25);
+
+  function update() {
+    const a = f.elements.from.value, b = f.elements.to.value;
+    if (!a || !b) return;
+    const days = Math.round((utc(b) - utc(a)) / 86400000);
+    const abs = Math.abs(days);
+    let work = 0;
+    for (let i = 1; i <= Math.min(abs, 366 * 50); i++) {
+      const wd = new Date(utc(days >= 0 ? a : b) + i * 86400000).getUTCDay();
+      if (wd !== 0 && wd !== 6) work++;
+    }
+    const target = new Date(utc(b));
+    const label = target.toLocaleDateString(undefined, { weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+    $("du-days").textContent = abs.toLocaleString() + (abs === 1 ? " day" : " days");
+    $("du-sub").textContent = days > 0 ? label + "." : days === 0 ? "That's today: " + label + "." : label + " was " + abs.toLocaleString() + " days ago.";
+    $("du-weeks").textContent = Math.floor(abs / 7) + " w " + (abs % 7) + " d";
+    $("du-work").textContent = work.toLocaleString();
+    $("du-hours").textContent = (abs * 24).toLocaleString();
+  }
+  f.elements.quick.addEventListener("change", () => {
+    const q = QUICK[f.elements.quick.value];
+    if (q) { f.elements.to.value = next(q[0], q[1]); update(); }
+  });
+  f.addEventListener("input", update);
+  f.addEventListener("submit", ev => ev.preventDefault());
+  update();
+})();
+</script>
+<div id="site-footer"></div>
+</body>
+</html>

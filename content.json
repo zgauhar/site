@@ -28,6 +28,76 @@
       ]
     },
     {
+      "id": "apps",
+      "kind": "apps",
+      "eyebrow": "Our Apps",
+      "title": "Apps That Do One Job Well",
+      "subtitle": "Offline-first tools and quick games for Android. Free to download.",
+      "cta": "See all apps by category →",
+      "items": [
+        [
+          "Hatch Day",
+          "Egg incubator tracker",
+          "assets/hatch/icon-192.png",
+          "hatch-day.html"
+        ],
+        [
+          "Cable Calc",
+          "Cable size & voltage drop (IEC)",
+          "assets/cable-calc/icon-192.png",
+          "cable-calc.html"
+        ],
+        [
+          "MultiTimer",
+          "Multiple timers at once",
+          "assets/multitimer/icon-192.png",
+          "multitimer.html"
+        ],
+        [
+          "Days Until",
+          "Expiry date tracker",
+          "assets/days-until/icon-192.png",
+          "days-until.html"
+        ],
+        [
+          "Daily Budget",
+          "Private budget planner",
+          "assets/daily-budget/icon-192.png",
+          "daily-budget.html"
+        ],
+        [
+          "Rhythm Trainer",
+          "Timing & tempo practice",
+          "assets/rhythm-trainer/icon-192.png",
+          "rhythm-trainer.html"
+        ],
+        [
+          "Shadow Match",
+          "3D shadow puzzle",
+          "assets/shadow-match/icon-192.png",
+          "shadow-match.html"
+        ],
+        [
+          "Smart Quiz",
+          "Daily trivia challenge",
+          "assets/smart-quiz/icon-192.png",
+          "smart-quiz.html"
+        ],
+        [
+          "ZeroMargin",
+          "Stop the timer at 1.000 s",
+          "assets/zero-margin/icon-192.png",
+          "zero-margin.html"
+        ],
+        [
+          "Steady Hand",
+          "Hold-still challenge",
+          "assets/steady-hand/icon-192.png",
+          "steady-hand.html"
+        ]
+      ]
+    },
+    {
       "id": "features",
       "kind": "features",
       "eyebrow": "Features",
