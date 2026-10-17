@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltage Drop Calculator (IEC 60364): Volts, % and Cable Size</title>
+<meta name="description" content="Free voltage drop calculator for copper cables to IEC 60364-5-52 Annex G: single-phase, three-phase and DC. Get the drop in volts and %, voltage at the load and the smallest cable size in mm² within your limit.">
+<link rel="canonical" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Voltage Drop Calculator (IEC 60364): Volts, % and Cable Size">
+<meta property="og:description" content="Free voltage drop calculator for copper cables to IEC 60364-5-52 Annex G: single-phase, three-phase and DC. Get the drop in volts and %, voltage at the load and the smallest cable size in mm² within your limit.">
+<meta property="og:url" content="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Voltage drop calculator (IEC 60364)","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","url":"https://www.mintwavestudio.com/voltage-drop-calculator.html","publisher":{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/"},"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Apps","item":"https://www.mintwavestudio.com/apps.html"},{"@type":"ListItem","position":3,"name":"Cable Calc","item":"https://www.mintwavestudio.com/cable-calc.html"},{"@type":"ListItem","position":4,"name":"Voltage drop calculator","item":"https://www.mintwavestudio.com/voltage-drop-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate voltage drop?","acceptedAnswer":{"@type":"Answer","text":"IEC 60364-5-52 Annex G uses ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, where b is 1 for three-phase and 2 for single-phase, ρ₁ is the conductor resistivity in service (0.0225 Ω·mm²/m for copper), L the length in metres, S the cross-section in mm², λ the reactance (0.08 mΩ/m) and IB the design current. The percentage is ΔU divided by the phase-to-neutral voltage."}},{"@type":"Question","name":"What is the maximum voltage drop allowed?","acceptedAnswer":{"@type":"Answer","text":"IEC 60364-5-52 Table G.52.1 recommends 3% for lighting and 5% for other uses when the installation is supplied directly from a public low-voltage network, and 6% / 8% when it has its own LV supply. National rules can be stricter, so check yours."}},{"@type":"Question","name":"Why is three-phase voltage drop lower than single-phase?","acceptedAnswer":{"@type":"Answer","text":"In a balanced three-phase circuit no current returns in the neutral, so the drop is counted on one conductor (b = 1) instead of out and back (b = 2), and it is compared with the phase-to-neutral voltage."}},{"@type":"Question","name":"Is this calculator suitable for AWG cables?","acceptedAnswer":{"@type":"Answer","text":"No. It uses metric cross-sections in mm² and IEC values. For North American installations use the NEC method and AWG sizes."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="cable-calc.html">Cable Calc</a> › Voltage drop calculator</nav>
+<h1>Voltage drop calculator (IEC 60364)</h1>
+<p class="lead">Work out the voltage drop of a copper cable in volts and %, the voltage at the load and the smallest
+cable size that stays within your limit. Uses the IEC 60364-5-52 Annex G method, the same as the
+<a href="cable-calc.html">Cable Calc app</a>.</p>
+<form class="calc" id="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Supply system">
+    <label><input type="radio" name="sys" value="1" checked><span>Single-phase</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Three-phase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field">Voltage (V)<input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field">Load current I<sub>B</sub> (A)<input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Cable length (m)<input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Cable size (mm²)<select name="s"><option>1.5</option><option selected>2.5</option><option>4</option><option>6</option><option>10</option><option>16</option><option>25</option><option>35</option><option>50</option><option>70</option><option>95</option><option>120</option></select></label>
+    <label class="field">Power factor cos φ<input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field">Voltage drop limit (%)<input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Voltage drop</span><span class="date" id="vd-pct">–</span></div>
+    <p class="result-sub" id="vd-sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Drop</div><div class="v" id="vd-v">–</div></div>
+      <div class="target"><div class="k">Voltage at load</div><div class="v" id="vd-load">–</div></div>
+      <div class="target"><div class="k">Smallest size within limit</div><div class="v" id="vd-min">–</div></div>
+    </div>
+  </div>
+</form>
+<p class="note">Copper conductors, ρ₁ = 0.0225 Ω·mm²/m (1.25 × ρ at 20 °C) and λ = 0.08 mΩ/m, as in Annex G. For three-phase
+enter the line-to-line voltage (e.g. 400 V); the % is referred to the phase-to-neutral voltage. Guidance only: check the standard,
+the cable maker's data and your national wiring rules. Voltage drop is only one check: the cable must also carry the current after derating.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Need the full cable size?</h2>
+    <p>Cable Calc adds current-carrying capacity, temperature and grouping derating and breaker selection, offline on site. <a class="cta-link" href="cable-calc.html">About Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><a class="app-store-badge" href="#" hidden><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download Cable Calc on the App Store" width="150" height="50" loading="lazy"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<h2>Recommended limits (IEC 60364-5-52, Table G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Supply</th><th>Lighting</th><th>Other uses</th></tr></thead>
+<tbody>
+<tr><td>A: supplied directly from a public LV network</td><td>3%</td><td>5%</td></tr>
+<tr><td>B: own LV supply (private transformer or generator)</td><td>6%</td><td>8%</td></tr>
+</tbody></table></div>
+<h2>Worked example</h2>
+<p>A 230 V single-phase circuit carries 16 A over 30 m of 2.5 mm² copper at cos φ = 0.95:
+ΔU = 2 × (0.0225 × 30 / 2.5 × 0.95 + 0.00008 × 30 × 0.31) × 16 ≈ 8.2 V, which is 3.6% of 230 V.
+That is over a 3% lighting limit, so the next size up, 4 mm², brings it down to about 5.2 V (2.2%).</p>
+<h2>Questions</h2>
+<h3>How do you calculate voltage drop?</h3>
+<p>IEC 60364-5-52 Annex G uses ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, where b is 1 for three-phase and 2 for single-phase, ρ₁ is the conductor resistivity in service (0.0225 Ω·mm²/m for copper), L the length in metres, S the cross-section in mm², λ the reactance (0.08 mΩ/m) and I<sub>B</sub> the design current. The percentage is ΔU divided by the phase-to-neutral voltage.</p>
+<h3>What is the maximum voltage drop allowed?</h3>
+<p>IEC 60364-5-52 Table G.52.1 recommends 3% for lighting and 5% for other uses when the installation is supplied directly from a public low-voltage network, and 6% / 8% when it has its own LV supply. National rules can be stricter, so check yours.</p>
+<h3>Why is three-phase voltage drop lower than single-phase?</h3>
+<p>In a balanced three-phase circuit no current returns in the neutral, so the drop is counted on one conductor (b = 1) instead of out and back (b = 2), and it is compared with the phase-to-neutral voltage.</p>
+<h3>Is this calculator suitable for AWG cables?</h3>
+<p>No. It uses metric cross-sections in mm² and IEC values. For North American installations use the NEC method and AWG sizes.</p>
+</main>
+<script>
+(() => {
+  const SIZES = [1.5, 2.5, 4, 6, 10, 16, 25, 35, 50, 70, 95, 120];
+  const RHO = 0.0225, LAMBDA = 0.08e-3;
+  const f = document.getElementById("vd");
+  const $ = id => document.getElementById(id);
+  const num = n => parseFloat(String(f.elements[n].value).replace(",", "."));
+  const fmt = (x, d) => x.toLocaleString(undefined, { minimumFractionDigits: d, maximumFractionDigits: d });
+  let lastSys = "1";
+
+  function drop(sys, i, l, s, pf) {
+    const b = sys === "3" ? 1 : 2;
+    const cos = sys === "dc" ? 1 : Math.min(Math.max(pf, 0), 1);
+    const sin = sys === "dc" ? 0 : Math.sqrt(1 - cos * cos);
+    return b * (RHO * l / s * cos + LAMBDA * l * sin) * i;
+  }
+
+  function update() {
+    const sys = f.elements.sys.value;
+    if (sys !== lastSys) {
+      if (sys === "3" && num("u") === 230) f.elements.u.value = 400;
+      if (sys !== "3" && num("u") === 400) f.elements.u.value = 230;
+      lastSys = sys;
+    }
+    f.elements.pf.disabled = sys === "dc";
+    const u = num("u"), i = num("i"), l = num("l"), s = num("s"), pf = num("pf"), lim = num("lim");
+    if (!(u > 0 && i >= 0 && l >= 0 && s > 0 && (sys === "dc" || pf > 0) && lim > 0)) {
+      $("vd-pct").textContent = "–"; $("vd-sub").textContent = "Enter positive numbers in every field.";
+      ["vd-v", "vd-load", "vd-min"].forEach(id => $(id).textContent = "–");
+      return;
+    }
+    const ref = sys === "3" ? u / Math.sqrt(3) : u;
+    const v = drop(sys, i, l, s, pf);
+    const pct = v / ref * 100;
+    const atLoad = sys === "3" ? u * (1 - pct / 100) : u - v;
+    const ok = pct <= lim + 1e-9;
+    const min = SIZES.find(x => drop(sys, i, l, x, pf) / ref * 100 <= lim + 1e-9);
+    $("vd-pct").textContent = fmt(pct, 2) + " %";
+    $("vd-sub").textContent = (ok ? "✓ Within" : "✗ Over") + " the " + fmt(lim, 1) + " % limit for " + s + " mm² over " + fmt(l, 0) + " m.";
+    $("vd-v").textContent = fmt(v, 2) + " V";
+    $("vd-load").textContent = fmt(atLoad, 1) + " V";
+    $("vd-min").textContent = min ? min + " mm²" : "> 120 mm²";
+  }
+  f.addEventListener("input", update);
+  f.addEventListener("change", update);
+  f.addEventListener("submit", ev => ev.preventDefault());
+  update();
+})();
+</script>
+<div id="site-footer"></div>
+</body>
+</html>

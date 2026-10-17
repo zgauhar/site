@@ -345,6 +345,44 @@
 
 
     /* ------------------------------------------------------------
+       OUR APPS (cards link to each app page; full list on apps.html)
+       ------------------------------------------------------------ */
+
+    if (s.kind === "apps") {
+      return `
+        <section
+          id="apps"
+          class="apps section"
+        >
+
+          <div class="section-heading">
+            <span>${esc(s.eyebrow)}</span>
+            <h2>${esc(s.title)}</h2>
+            <p class="apps-intro">${esc(s.subtitle)}</p>
+          </div>
+
+          <div class="apps-grid">
+            ${(Array.isArray(s.items) ? s.items : [])
+              .map(([name, sub, icon, link]) => `
+                <a class="apps-card" href="${esc(link)}">
+                  <img src="${esc(icon)}" alt="" width="56" height="56" loading="lazy">
+                  <span>
+                    <strong>${esc(name)}</strong>
+                    <small>${esc(sub)}</small>
+                  </span>
+                </a>
+              `)
+              .join("")}
+          </div>
+
+          <a class="apps-all" href="apps.html">${esc(s.cta)}</a>
+
+        </section>
+      `;
+    }
+
+
+    /* ------------------------------------------------------------
        CONTACT
        ------------------------------------------------------------ */
 

@@ -14,17 +14,20 @@
 
   const NAV = [
     ["Home", "#home"],
+    ["Apps", "apps.html"],
     ["About Us", "#about"],
     ["Features", "#features"],
     ["Our Journey", "#journey"],
-    ["Hatch Day", "hatch-day.html"],
     ["Contact", "#contact"]
   ];
 
   const FOOTER_LINKS = [
+    ["All apps", "apps.html"],
     ["Hatch Day app", "hatch-day.html"],
     ["Hatch date calculator", "hatch-date-calculator.html"],
     ["Incubation chart", "incubation-chart.html"],
+    ["Voltage drop calculator", "voltage-drop-calculator.html"],
+    ["Daily budget calculator", "daily-budget-calculator.html"],
     ["Privacy Policy", "privacy-policy.html"],
     ["Terms & Conditions", "terms-and-conditions.html"]
   ];

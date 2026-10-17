@@ -1706,3 +1706,76 @@ a {
     max-width: 100%;
   }
 }
+
+
+/* =========================================================
+   OUR APPS (home page)
+   ========================================================= */
+
+.apps {
+  background: #ffffff;
+}
+
+.apps-intro {
+  color: #5d695f;
+  margin: 18px 0 0;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+  margin: 48px 0 32px;
+}
+
+.apps-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #d8ddd5;
+  border-radius: 18px;
+  background: #f5f7f2;
+  color: #172018;
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.apps-card:hover,
+.apps-card:focus-visible {
+  border-color: #236a63;
+  transform: translateY(-2px);
+}
+
+.apps-card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  flex: none;
+}
+
+.apps-card span {
+  min-width: 0;
+}
+
+.apps-card strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.apps-card small {
+  display: block;
+  color: #5d695f;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.apps-all {
+  display: inline-block;
+  color: #236a63;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

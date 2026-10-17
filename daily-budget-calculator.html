@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Budget Calculator: How Much Can I Spend Per Day?</title>
+<meta name="description" content="Free daily budget calculator: enter your income, bills and savings and see how much you can spend per day and per week until your next payday. Nothing is stored or sent.">
+<link rel="canonical" href="https://www.mintwavestudio.com/daily-budget-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Daily Budget Calculator: How Much Can I Spend Per Day?">
+<meta property="og:description" content="Free daily budget calculator: enter your income, bills and savings and see how much you can spend per day and per week until your next payday. Nothing is stored or sent.">
+<meta property="og:url" content="https://www.mintwavestudio.com/daily-budget-calculator.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/daily-budget/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/daily-budget/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Daily budget calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","url":"https://www.mintwavestudio.com/daily-budget-calculator.html","publisher":{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/"},"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Apps","item":"https://www.mintwavestudio.com/apps.html"},{"@type":"ListItem","position":3,"name":"Daily Budget","item":"https://www.mintwavestudio.com/daily-budget.html"},{"@type":"ListItem","position":4,"name":"Daily budget calculator","item":"https://www.mintwavestudio.com/daily-budget-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate a daily budget?","acceptedAnswer":{"@type":"Answer","text":"Take the money you have for the period, subtract bills, fixed costs and what you want to save, subtract what you've already spent, then divide by the number of days left until your next payday (today included)."}},{"@type":"Question","name":"What if I overspend one day?","acceptedAnswer":{"@type":"Answer","text":"Recalculate tomorrow: what's left is spread over fewer days, so your daily amount drops a little. Spend less than the allowance and it rises. The Daily Budget app does this for you every day."}},{"@type":"Question","name":"Should savings come out before or after the daily budget?","acceptedAnswer":{"@type":"Answer","text":"Before. Set savings aside first, like a bill, so the daily number is money you can actually spend."}},{"@type":"Question","name":"Does this calculator store my numbers?","acceptedAnswer":{"@type":"Answer","text":"No. Everything is calculated in your browser and nothing is sent anywhere."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="daily-budget.html">Daily Budget</a> › Daily budget calculator</nav>
+<h1>Daily budget calculator</h1>
+<p class="lead">How much can I spend per day? Enter your money for this pay period, your bills and savings,
+and see what you can spend today and each week until payday.</p>
+<form class="calc" id="db" novalidate>
+  <div class="calc-fields">
+    <label class="field">Money for this period (income)<input type="number" name="inc" value="2000" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Bills and fixed costs<input type="number" name="bills" value="1100" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Savings to set aside<input type="number" name="save" value="200" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Already spent this period<input type="number" name="spent" value="0" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Today<input type="date" name="today"></label>
+    <label class="field">Next payday<input type="date" name="pay"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">You can spend</span><span class="date" id="db-day">–</span></div>
+    <p class="result-sub" id="db-sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Per week</div><div class="v" id="db-week">–</div></div>
+      <div class="target"><div class="k">Left to spend</div><div class="v" id="db-left">–</div></div>
+      <div class="target"><div class="k">Days until payday</div><div class="v" id="db-days">–</div></div>
+    </div>
+  </div>
+</form>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/daily-budget/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Get this number every morning</h2>
+    <p>Daily Budget recalculates your allowance as you log spending, carries leftovers forward and keeps a streak. No bank login, no ads. <a class="cta-link" href="daily-budget.html">About Daily Budget</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.dailybudget&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Ddaily_budget_calculator"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Daily Budget on Google Play" width="180" height="70"></a><a class="app-store-badge" href="#" hidden><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download Daily Budget on the App Store" width="150" height="50" loading="lazy"></a></div>
+  </div>
+</aside>
+<h2>How the daily budget works</h2>
+<ol>
+<li><strong>Start with your money for the period</strong>: salary, benefits or any income until the next payday.</li>
+<li><strong>Take out bills and fixed costs</strong>: rent, utilities, phone, loan payments, subscriptions.</li>
+<li><strong>Pay yourself first</strong>: set aside savings before you spend.</li>
+<li><strong>Divide the rest by the days left</strong>. That's your daily budget. Tomorrow, recalculate with what's left.</li>
+</ol>
+<p>The daily view works because it's a number you can act on at the checkout. A monthly budget of 700 says little on day 12;
+"you have 23 left today" does.</p>
+<h2>Questions</h2>
+<h3>How do I calculate a daily budget?</h3>
+<p>Take the money you have for the period, subtract bills, fixed costs and what you want to save, subtract what you've already spent, then divide by the number of days left until your next payday (today included).</p>
+<h3>What if I overspend one day?</h3>
+<p>Recalculate tomorrow: what's left is spread over fewer days, so your daily amount drops a little. Spend less than the allowance and it rises. The Daily Budget app does this for you every day.</p>
+<h3>Should savings come out before or after the daily budget?</h3>
+<p>Before. Set savings aside first, like a bill, so the daily number is money you can actually spend.</p>
+<h3>Does this calculator store my numbers?</h3>
+<p>No. Everything is calculated in your browser and nothing is sent anywhere.</p>
+</main>
+<script>
+(() => {
+  const f = document.getElementById("db");
+  const $ = id => document.getElementById(id);
+  const iso = d => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  const now = new Date();
+  f.elements.today.value = iso(now);
+  f.elements.pay.value = iso(new Date(now.getFullYear(), now.getMonth() + 1, 1));
+  const num = n => parseFloat(String(f.elements[n].value).replace(",", ".")) || 0;
+  const money = x => x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const day = s => { const [y, m, d] = s.split("-").map(Number); return Date.UTC(y, m - 1, d); };
+
+  function update() {
+    const t = f.elements.today.value, p = f.elements.pay.value;
+    const days = t && p ? Math.round((day(p) - day(t)) / 86400000) : NaN;
+    const left = num("inc") - num("bills") - num("save") - num("spent");
+    if (!(days > 0)) {
+      $("db-day").textContent = "–"; $("db-sub").textContent = "Next payday must be after today.";
+      ["db-week", "db-left", "db-days"].forEach(id => $(id).textContent = "–");
+      return;
+    }
+    const daily = left / days;
+    $("db-day").textContent = money(Math.max(daily, 0)) + " / day";
+    $("db-sub").textContent = left < 0
+      ? "You're " + money(-left) + " over for this period. Cut back or move money from savings."
+      : "Today included, until the day before payday.";
+    $("db-week").textContent = money(Math.max(daily * 7, 0));
+    $("db-left").textContent = money(left);
+    $("db-days").textContent = days;
+  }
+  f.addEventListener("input", update);
+  f.addEventListener("submit", ev => ev.preventDefault());
+  update();
+})();
+</script>
+<div id="site-footer"></div>
+</body>
+</html>
