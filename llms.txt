@@ -1,0 +1,46 @@
+# MintWave Studio
+
+> Independent studio making small, focused mobile apps: offline-first calculators and trackers, and short puzzle, trivia and reflex games. Android apps are on Google Play; iPhone versions of some apps are in progress. Support: support@mintwavestudio.com
+
+All apps: https://www.mintwavestudio.com/apps.html
+
+## Tools & productivity
+
+- [Cable Calc](https://www.mintwavestudio.com/cable-calc.html): Cable sizing and voltage drop calculator for electricians working to IEC 60364 (Europe, Middle East, Africa, India, metric cables): current-carrying capacity per IEC 60364-5-52 Annex B, installation methods A1–E, PVC and XLPE, ambient temperature and grouping derating, breaker selection (Ib ≤ In ≤ Iz), voltage drop per Annex G, Ohm's law. Pro adds earth-fault loop / maximum length checks for TN systems, motor circuits, projects and PDF reports. 9 languages, offline. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.cablecalc
+- [MultiTimer](https://www.mintwavestudio.com/multitimer.html): Multiple timer app: run many countdown timers, stopwatches and Pomodoro timers at the same time, group them in cards (Kitchen, Workout, Study), exact alarms that work in Doze mode, live notification countdown, presets and history. Pro adds interval/HIIT/Tabata sequences, a home-screen widget, custom alarm sounds, focus stats and backup. No ads, no account, 14 languages. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.multitimer
+- [Days Until](https://www.mintwavestudio.com/days-until.html): Expiration date tracker and expiry reminder app: scan best-before and use-by dates with on-device text recognition (custom keywords for any language), countdowns sorted by what expires first, reminders 30 days, 1 week and 1 day before, used/tossed log. Tracks food, medicine, cosmetics and documents such as passports, ID cards, driver's licences, visas, insurance and warranties. Pro adds unlimited items, custom reminders, storage locations, waste tracker, widget, backup and CSV export. Private, no ads. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.daysuntil
+
+## Money & budgeting
+
+- [Daily Budget](https://www.mintwavestudio.com/daily-budget.html): Private daily budget planner and expense tracker: shows a daily spending allowance from income minus bills, carries unspent money forward, budget cycle starting on payday, under-budget streak, categories and subcategories, recurring income and bills, charts, home-screen widget, daily reminder, backup and CSV import. No bank connection, no ads, data stays on the phone. Pro adds multiple budgets with their own currency, category limits with alerts, savings goals, cycle insights, PIN/fingerprint lock and CSV export. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.dailybudget
+
+## Home, garden & hobby
+
+- [Hatch Day](https://www.mintwavestudio.com/hatch-day.html): Egg incubation tracker for backyard poultry keepers: hatch countdown for 11 species (chicken, duck, goose, quail, turkey and more), daily temperature and humidity targets, turning, candling and lockdown reminders, candling log and hatch-rate statistics. Free with optional Pro. Offline, no account. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.hatchday
+
+## Music practice
+
+- [Rhythm Trainer](https://www.mintwavestudio.com/rhythm-trainer.html): Rhythm and timing practice app for musicians: tap along with the beat, every tap rated with its offset in milliseconds, 40–240 BPM with count-in, patterns (4/4, 3/4 waltz, shuffle, poly-beat, gallop), odd time signatures 5/4, 7/4, 5/8, 6/8, 7/8, Balkan 9/8 (Pro), practice routines and tempo ladders, accuracy grades, streaks, Bluetooth latency calibration, challenge friends with a share code. Free with ads; Pro removes ads. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.rhythmchallenge
+
+## Games & challenges
+
+- [Shadow Match](https://www.mintwavestudio.com/shadow-match.html): Relaxing 3D perspective puzzle game: rotate a 3D shape until its shadow matches a target silhouette, live alignment meter (95% to solve), daily shadow puzzle with streak, three-star rating by moves, six handcrafted shapes plus endless generated levels, slider mode, hints, no timers, works offline. Free with occasional ads; one-time Premium removes ads. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.shadowmatch
+- [Smart Quiz](https://www.mintwavestudio.com/smart-quiz.html): Daily trivia and general knowledge quiz game: one daily multiple-choice quiz with streak and reminder, XP, levels and achievements, shareable score grid, custom quizzes by category (science, history, geography, art, sports, film, music, video games, nature, mythology) with 5–50 questions, offline question bank. Smart Quiz Plus adds unlimited rounds, streak freezes, timed and survival modes, stats, no ads. Questions from the Open Trivia Database (CC BY-SA 4.0). Google Play: https://play.google.com/store/apps/details?id=com.mintwave.dailyquiz
+- [ZeroMargin](https://www.mintwavestudio.com/zero-margin.html): Perfect-timing stopwatch game: stop the timer at exactly 1, 2 or 3 seconds, error shown in milliseconds, daily target the same for every player, rank tiers from Rookie to Zero, achievements, streak and continuous modes, Easy/Medium/Hard bots, 2-player duels on one device. One-time Pro adds Blind mode, moving targets, the Gauntlet, ghost of your best and neon themes, and removes ads. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.zeromargin
+- [Steady Hand](https://www.mintwavestudio.com/steady-hand.html): Steady hand test and hold-still challenge game: hold the phone still for 5, 10 or 15 seconds, the motion sensor scores steadiness 0–100 with ranks S to D, daily challenge with streak, achievements, calm-focus breathing warm-up, share score. One-time Pro adds party mode for 2–6 players, Balance Ball, 30/60-second endurance tests, progress chart and grip comparison, no ads. For entertainment only, not a medical device. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.steadyhand
+
+## Free tools and guides
+
+- [Voltage drop calculator](https://www.mintwavestudio.com/voltage-drop-calculator.html): IEC 60364-5-52 Annex G voltage drop for single-phase, three-phase and DC copper circuits.
+- [Daily budget calculator](https://www.mintwavestudio.com/daily-budget-calculator.html): how much you can spend per day until payday.
+- [Days until calculator](https://www.mintwavestudio.com/days-until-calculator.html): days, weeks and working days until a date.
+- [Stop the timer game](https://www.mintwavestudio.com/stop-the-timer-game.html): try to stop a stopwatch at exactly 1.000 seconds.
+- [Odd time signatures](https://www.mintwavestudio.com/odd-time-signatures.html): how to count 5/4, 7/4, 5/8, 6/8, 7/8 and 9/8, with a click track.
+- [Hatch date calculator](https://www.mintwavestudio.com/hatch-date-calculator.html): hatch, candling and lockdown dates for 11 bird species.
+- [Incubation chart](https://www.mintwavestudio.com/incubation-chart.html): incubation temperature, humidity and days for 11 species.
+- [Candling guide](https://www.mintwavestudio.com/candling-guide.html), [Incubator humidity guide](https://www.mintwavestudio.com/incubator-humidity-guide.html), [Quail incubation](https://www.mintwavestudio.com/quail-incubation.html)
+
+## Policies
+
+- [Privacy policy](https://www.mintwavestudio.com/privacy-policy.html)
+- [Terms & Conditions](https://www.mintwavestudio.com/terms-and-conditions.html)
