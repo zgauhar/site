@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator spadku napięcia (IEC 60364): wolty, % i przekrój</title>
+<meta name="description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych wg IEC 60364-5-52 załącznik G: jednofazowy, trójfazowy i DC. Spadek w woltach i %, napięcie na odbiorniku i najmniejszy przekrój w mm².">
+<link rel="canonical" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Kalkulator spadku napięcia (IEC 60364): wolty, % i przekrój">
+<meta property="og:description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych wg IEC 60364-5-52 załącznik G: jednofazowy, trójfazowy i DC. Spadek w woltach i %, napięcie na odbiorniku i najmniejszy przekrój w mm².">
+<meta property="og:url" content="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Kalkulator spadku napięcia (IEC 60364)", "inLanguage": "pl", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Kalkulator spadku napięcia", "item": "https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jak obliczyć spadek napięcia?", "acceptedAnswer": {"@type": "Answer", "text": "Załącznik G normy IEC 60364-5-52 stosuje wzór ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, gdzie b = 1 dla obwodu trójfazowego i 2 dla jednofazowego, ρ₁ to rezystywność w warunkach pracy (0,0225 Ω·mm²/m dla miedzi), L długość w metrach, S przekrój w mm², λ reaktancja jednostkowa (0,08 mΩ/m), a IB prąd obliczeniowy. Wartość procentowa to ΔU podzielone przez napięcie fazowe."}}, {"@type": "Question", "name": "Jaki jest dopuszczalny spadek napięcia?", "acceptedAnswer": {"@type": "Answer", "text": "Tabela G.52.1 normy IEC 60364-5-52 zaleca 3 % dla oświetlenia i 5 % dla innych odbiorników przy zasilaniu bezpośrednio z publicznej sieci niskiego napięcia oraz 6 % / 8 % przy własnym zasilaniu nn. Przepisy krajowe mogą być surowsze, więc sprawdź swoje."}}, {"@type": "Question", "name": "Dlaczego spadek napięcia w obwodzie trójfazowym jest mniejszy?", "acceptedAnswer": {"@type": "Answer", "text": "W symetrycznym obwodzie trójfazowym przez przewód neutralny nie płynie prąd, więc spadek liczy się dla jednego przewodu (b = 1) zamiast tam i z powrotem (b = 2) i porównuje z napięciem fazowym."}}, {"@type": "Question", "name": "Czy kalkulator nadaje się do przewodów AWG?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Używa przekrojów metrycznych w mm² i wartości IEC. Dla instalacji w Ameryce Północnej stosuj metodę NEC i rozmiary AWG."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Strona główna</a> › <a href="../cable-calc.html">Cable Calc</a> › Kalkulator spadku napięcia</nav>
+<h1>Kalkulator spadku napięcia (IEC 60364)</h1>
+<p class="lead">Oblicz spadek napięcia na przewodzie miedzianym w woltach i %, napięcie na odbiorniku i najmniejszy przekrój,
+który mieści się w limicie. Metoda z załącznika G normy IEC 60364-5-52, ta sama co w
+<a href="../cable-calc.html">aplikacji Cable Calc</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Rodzaj zasilania">
+    <label><input type="radio" name="sys" value="1" checked><span>Jednofazowy</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Trójfazowy</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Napięcie (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Prąd obciążenia I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Długość przewodu (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Przekrój (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Współczynnik mocy cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Dopuszczalny spadek napięcia (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Spadek napięcia</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Spadek</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Napięcie na odbiorniku</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Najmniejszy przekrój w limicie</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Wpisz liczbę dodatnią w każdym polu.", "within": "✓ W granicach limitu {lim} dla {s} na {l} m.", "over": "✗ Powyżej limitu {lim} dla {s} na {l} m.", "pct": "{n} %"}</script>
+<p class="note">Przewody miedziane, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ w 20 °C) i λ = 0,08 mΩ/m, jak w załączniku G. Dla obwodu
+trójfazowego podaj napięcie międzyprzewodowe (np. 400 V); % odnosi się do napięcia fazowego. Tylko orientacyjnie: sprawdź normę,
+dane producenta przewodu i przepisy krajowe. Spadek napięcia to tylko jedno sprawdzenie: przewód musi też przenieść prąd po uwzględnieniu współczynników poprawkowych.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Potrzebujesz pełnego doboru przekroju?</h2>
+    <p>Cable Calc dodaje obciążalność prądową, współczynniki poprawkowe dla temperatury i grupowania oraz dobór wyłącznika, offline na budowie. <a class="cta-link" href="../cable-calc.html">O aplikacji Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=pl&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_pl"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" alt="Pobierz z Google Play" width="180" height="70"></a><span class="soon">Wersja na iPhone już wkrótce.</span></div>
+  </div>
+</aside>
+<h2>Zalecane limity (IEC 60364-5-52, tabela G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Zasilanie</th><th>Oświetlenie</th><th>Inne odbiorniki</th></tr></thead>
+<tbody>
+<tr><td>A: zasilanie bezpośrednio z publicznej sieci nn</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B: własne zasilanie nn (własny transformator lub agregat)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">Przepisy krajowe mogą wymagać mniejszych wartości; zawsze sprawdź obowiązujące u Ciebie wymagania.</p>
+<h2>Przykład obliczeń</h2>
+<p>Obwód jednofazowy 230 V z prądem 16 A, 30 m przewodu miedzianego 2,5 mm², cos φ = 0,95:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, czyli 3,6 % z 230 V.
+To powyżej limitu 3 % dla oświetlenia; następny przekrój, 4 mm², daje około 5,2 V (2,2 %).</p>
+<h2>Pytania</h2>
+<h3>Jak obliczyć spadek napięcia?</h3>
+<p>Załącznik G normy IEC 60364-5-52 stosuje wzór ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, gdzie b = 1 dla obwodu trójfazowego i 2 dla jednofazowego, ρ₁ to rezystywność w warunkach pracy (0,0225 Ω·mm²/m dla miedzi), L długość w metrach, S przekrój w mm², λ reaktancja jednostkowa (0,08 mΩ/m), a I<sub>B</sub> prąd obliczeniowy. Wartość procentowa to ΔU podzielone przez napięcie fazowe.</p>
+<h3>Jaki jest dopuszczalny spadek napięcia?</h3>
+<p>Tabela G.52.1 normy IEC 60364-5-52 zaleca 3 % dla oświetlenia i 5 % dla innych odbiorników przy zasilaniu bezpośrednio z publicznej sieci niskiego napięcia oraz 6 % / 8 % przy własnym zasilaniu nn. Przepisy krajowe mogą być surowsze, więc sprawdź swoje.</p>
+<h3>Dlaczego spadek napięcia w obwodzie trójfazowym jest mniejszy?</h3>
+<p>W symetrycznym obwodzie trójfazowym przez przewód neutralny nie płynie prąd, więc spadek liczy się dla jednego przewodu (b = 1) zamiast tam i z powrotem (b = 2) i porównuje z napięciem fazowym.</p>
+<h3>Czy kalkulator nadaje się do przewodów AWG?</h3>
+<p>Nie. Używa przekrojów metrycznych w mm² i wartości IEC. Dla instalacji w Ameryce Północnej stosuj metodę NEC i rozmiary AWG.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

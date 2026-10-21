@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EV Charger Cable Size Calculator: 7.4 kW, 11 kW &amp; 22 kW (IEC)</title>
+<meta name="description" content="What size cable for a 7.4 kW, 11 kW or 22 kW EV charger? Free calculator and table to IEC 60364: breaker, cable size in mm² and voltage drop for single-phase and three-phase home chargers.">
+<link rel="canonical" href="https://www.mintwavestudio.com/ev-charger-cable-size.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="EV Charger Cable Size Calculator: 7.4 kW, 11 kW &amp; 22 kW (IEC)">
+<meta property="og:description" content="What size cable for a 7.4 kW, 11 kW or 22 kW EV charger? Free calculator and table to IEC 60364: breaker, cable size in mm² and voltage drop for single-phase and three-phase home chargers.">
+<meta property="og:url" content="https://www.mintwavestudio.com/ev-charger-cable-size.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script src="assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "EV charger cable size calculator", "inLanguage": "en", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/ev-charger-cable-size.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://www.mintwavestudio.com/apps.html"}, {"@type": "ListItem", "position": 3, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 4, "name": "EV charger cable size", "item": "https://www.mintwavestudio.com/ev-charger-cable-size.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What size cable do I need for a 7 kW EV charger?", "acceptedAnswer": {"@type": "Answer", "text": "A 7.4 kW charger draws 32 A on 230 V. Clipped direct over 15 m that is 4 mm², and at 30 m the voltage drop pushes it to 10 mm² (3% limit). Run through an insulated wall it needs 6 mm² even on a short run. Check your own length and installation in the calculator above."}}, {"@type": "Question", "name": "What size cable for an 11 kW charger?", "acceptedAnswer": {"@type": "Answer", "text": "11 kW is 16 A per phase on 400 V three-phase. Clipped direct it needs 1.5 mm² at 15 m and 4 mm² at 50 m."}}, {"@type": "Question", "name": "What size cable for a 22 kW charger?", "acceptedAnswer": {"@type": "Answer", "text": "22 kW is 32 A per phase on 400 V three-phase. Clipped direct it needs 4 mm² at 15 m and 6 mm² at 50 m; in an insulated wall 10 mm² at 15 m."}}, {"@type": "Question", "name": "Can I rely on the result without checking?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is guidance based on IEC 60364. Follow the charger's installation manual and your national wiring rules, which may add requirements. The installer remains responsible for the design."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="cable-calc.html">Cable Calc</a> › EV charger cable size</nav>
+<h1>EV charger cable size calculator</h1>
+<p class="lead">Work out the cable size for a home EV charger from its rated current, the length of the run and how the cable is installed. The calculator below starts with a 7.4 kW single-phase charger (32 A) on a 20 m run; change it to match yours.</p>
+<form class="calc" data-calc="size" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Supply system">
+    <label><input type="radio" name="sys" value="1" checked><span>Single-phase</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Three-phase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field">Load<input type="number" name="load" value="32" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Load is given in<select name="unit"><option value="a" selected>Amps (A)</option><option value="kw">Kilowatts (kW)</option></select></label>
+    <label class="field">Voltage (V)<input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field">Power factor cos φ<input type="number" name="pf" value="1" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field">Cable length (m)<input type="number" name="l" value="20" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Insulation<select name="ins"><option value="pvc" selected>PVC (70 °C)</option><option value="xlpe">XLPE / EPR (90 °C)</option></select></label>
+    <label class="field">Installation method<select name="method"><option value="A1">A1: single cores in conduit in an insulated wall</option><option value="A2">A2: multi-core cable in conduit in an insulated wall</option><option value="B1">B1: single cores in conduit on a wall</option><option value="B2">B2: multi-core cable in conduit on a wall</option><option value="C" selected>C: cable clipped direct to a wall</option><option value="E">E: multi-core cable in free air or on a perforated tray</option></select></label>
+    <label class="field">Ambient temperature (°C)<input type="number" name="amb" value="30" step="any" inputmode="decimal"></label>
+    <label class="field">Circuits grouped together<input type="number" name="grp" value="1" min="1" max="20" step="1" inputmode="numeric"></label>
+    <label class="field">Voltage drop limit (%)<input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Cable size (copper)</span><span class="date" data-out="size">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Breaker rating In</div><div class="v" data-out="breaker">–</div></div>
+      <div class="target"><div class="k">Capacity after derating Iz</div><div class="v" data-out="iz">–</div></div>
+      <div class="target"><div class="k">Voltage drop</div><div class="v" data-out="drop">–</div></div>
+      <div class="target"><div class="k">Size set by</div><div class="v" data-out="rule">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Enter positive numbers in every field.", "errTemp": "This insulation can't be used at that ambient temperature.", "errGroup": "The grouping table stops at 20 circuits.", "errLarge": "Beyond 120 mm² or a 250 A breaker: use parallel cables or a detailed design.", "sub": "Load current Ib = {ib} A · temperature factor {kt} · grouping factor {kg}", "ruleDrop": "Voltage drop (current alone: {cap})", "ruleCap": "Current capacity", "pct": "{n} %"}</script>
+<p class="note">Copper conductors, IEC 60364-5-52 Annex B current-carrying capacities at 30 °C, temperature factors from Table B.52.14 (rounded up to the next 5 °C step) and grouping factors for bunched circuits from Table B.52.17. The breaker is the smallest standard rating at or above the load current, and the cable must carry at least that rating after derating (Ib ≤ In ≤ Iz). Not covered here: buried cables (method D), aluminium, fault-loop disconnection times and short-circuit checks. Guidance only: check the standard, the cable maker's data and your national wiring rules. The installer remains responsible for the design.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Size every circuit on site</h2>
+    <p>Cable Calc works offline and adds earth-fault loop checks, saved projects and PDF reports for your customer. <a class="cta-link" href="cable-calc.html">About Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dev_charger_cable_size"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<h2>Typical sizes for home chargers</h2>
+<p>Copper PVC cable at 30 °C, not grouped with other circuits, sized for a 3% voltage drop on the charger circuit.
+The breaker equals the charger's rated current.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Charger</th><th scope="col">Installation</th><th scope="col">15 m</th><th scope="col">30 m</th><th scope="col">50 m</th></tr></thead><tbody><tr><td>7.4 kW (32 A, 1-phase 230 V)</td><td>C (clipped direct)</td><td>4 mm²</td><td>10 mm²</td><td>16 mm²</td></tr><tr><td>7.4 kW (32 A, 1-phase 230 V)</td><td>A1 (insulated wall)</td><td>6 mm²</td><td>10 mm²</td><td>16 mm²</td></tr><tr><td>11 kW (16 A, 3-phase 400 V)</td><td>C (clipped direct)</td><td>1.5 mm²</td><td>2.5 mm²</td><td>4 mm²</td></tr><tr><td>11 kW (16 A, 3-phase 400 V)</td><td>A1 (insulated wall)</td><td>2.5 mm²</td><td>2.5 mm²</td><td>4 mm²</td></tr><tr><td>22 kW (32 A, 3-phase 400 V)</td><td>C (clipped direct)</td><td>4 mm²</td><td>4 mm²</td><td>6 mm²</td></tr><tr><td>22 kW (32 A, 3-phase 400 V)</td><td>A1 (insulated wall)</td><td>10 mm²</td><td>10 mm²</td><td>10 mm²</td></tr></tbody></table></div>
+<h2>Why the rated current, not the power</h2>
+<p>A charger draws its full rated current for hours at a time, so IEC 60364-7-722 treats it as a continuous load:
+size the circuit for the charger's rated current, with no diversity. A 7.4 kW charger is a 32 A load. If the charger
+lets you set a lower current (for example 16 A), size the cable for the setting you will actually use, and remember it may be raised later.</p>
+<h2>Also check</h2>
+<ul>
+<li><strong>A dedicated circuit</strong> for each charging point.</li>
+<li><strong>RCD protection.</strong> Each charging point needs its own RCD, and the charger or the RCD must handle DC fault current (often a type A RCD plus 6 mA DC detection in the charger, or a type B RCD). The charger's installation manual says which.</li>
+<li><strong>Outdoor and buried runs.</strong> Buried cables (method D) and cables in direct sun need other factors than this calculator covers.</li>
+<li><strong>Your supply.</strong> The main fuse and the rest of the house load must have room for the charger. Many chargers can limit their current to protect the main fuse.</li>
+</ul>
+<h2>Questions</h2>
+<h3>What size cable do I need for a 7 kW EV charger?</h3>
+<p>A 7.4 kW charger draws 32 A on 230 V. Clipped direct over 15 m that is 4 mm², and at 30 m the voltage drop pushes it to 10 mm² (3% limit). Run through an insulated wall it needs 6 mm² even on a short run. Check your own length and installation in the calculator above.</p>
+<h3>What size cable for an 11 kW charger?</h3>
+<p>11 kW is 16 A per phase on 400 V three-phase. Clipped direct it needs 1.5 mm² at 15 m and 4 mm² at 50 m.</p>
+<h3>What size cable for a 22 kW charger?</h3>
+<p>22 kW is 32 A per phase on 400 V three-phase. Clipped direct it needs 4 mm² at 15 m and 6 mm² at 50 m; in an insulated wall 10 mm² at 15 m.</p>
+<h3>Can I rely on the result without checking?</h3>
+<p>No. It is guidance based on IEC 60364. Follow the charger's installation manual and your national wiring rules, which may add requirements. The installer remains responsible for the design.</p>
+<h2>More free tools</h2>
+<ul class="link-list">
+<li><a href="cable-size-calculator.html">Cable size calculator</a>: current capacity, derating, breaker and voltage drop</li>
+<li><a href="voltage-drop-calculator.html">Voltage drop calculator</a>: volts, % and the smallest size within your limit</li>
+<li><a href="sauna-heater-cable-size.html">Sauna heater cable size</a>: 4.5 to 10.5 kW three-phase heaters</li>
+<li><a href="heat-pump-cable-size.html">Heat pump cable size</a>: sizing the cable to the breaker in the manual</li>
+</ul>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

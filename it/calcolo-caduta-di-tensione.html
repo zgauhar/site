@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcolo caduta di tensione (IEC 60364): volt, % e sezione</title>
+<meta name="description" content="Calcolatore gratuito della caduta di tensione per cavi in rame secondo IEC 60364-5-52 allegato G: monofase, trifase e corrente continua. Caduta in volt e %, tensione al carico e sezione minima in mm².">
+<link rel="canonical" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Calcolo caduta di tensione (IEC 60364): volt, % e sezione">
+<meta property="og:description" content="Calcolatore gratuito della caduta di tensione per cavi in rame secondo IEC 60364-5-52 allegato G: monofase, trifase e corrente continua. Caduta in volt e %, tensione al carico e sezione minima in mm².">
+<meta property="og:url" content="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calcolo della caduta di tensione (IEC 60364)", "inLanguage": "it", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Calcolo caduta di tensione", "item": "https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Come si calcola la caduta di tensione?", "acceptedAnswer": {"@type": "Answer", "text": "L'allegato G della IEC 60364-5-52 usa ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, dove b vale 1 in trifase e 2 in monofase, ρ₁ è la resistività in servizio (0,0225 Ω·mm²/m per il rame), L la lunghezza in metri, S la sezione in mm², λ la reattanza (0,08 mΩ/m) e IB la corrente di impiego. La percentuale è ΔU diviso la tensione di fase."}}, {"@type": "Question", "name": "Qual è la caduta di tensione massima ammessa?", "acceptedAnswer": {"@type": "Answer", "text": "La tabella G.52.1 della IEC 60364-5-52 raccomanda il 3 % per l'illuminazione e il 5 % per gli altri usi quando l'impianto è alimentato direttamente dalla rete pubblica BT, e il 6 % / 8 % con alimentazione BT propria. Le norme nazionali possono essere più severe: verifica le tue."}}, {"@type": "Question", "name": "Perché in trifase la caduta di tensione è minore che in monofase?", "acceptedAnswer": {"@type": "Answer", "text": "In un circuito trifase equilibrato nel neutro non circola corrente, quindi la caduta si conta su un solo conduttore (b = 1) invece che su andata e ritorno (b = 2) e si confronta con la tensione di fase."}}, {"@type": "Question", "name": "Il calcolatore va bene per i cavi AWG?", "acceptedAnswer": {"@type": "Answer", "text": "No. Usa sezioni metriche in mm² e valori IEC. Per gli impianti nordamericani usa il metodo NEC e le misure AWG."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> › <a href="../cable-calc.html">Cable Calc</a> › Calcolo caduta di tensione</nav>
+<h1>Calcolo della caduta di tensione (IEC 60364)</h1>
+<p class="lead">Calcola la caduta di tensione di un cavo in rame in volt e %, la tensione al carico e la sezione più piccola
+che rispetta il tuo limite. Metodo dell'allegato G della IEC 60364-5-52, lo stesso
+dell'<a href="../cable-calc.html">app Cable Calc</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Sistema di alimentazione">
+    <label><input type="radio" name="sys" value="1" checked><span>Monofase</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Trifase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>Continua</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Tensione (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Corrente di impiego I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Lunghezza del cavo (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Sezione (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Fattore di potenza cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Limite di caduta di tensione (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Caduta di tensione</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Caduta</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Tensione al carico</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Sezione minima entro il limite</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Inserisci un numero positivo in ogni campo.", "within": "✓ Entro il limite del {lim} per {s} su {l} m.", "over": "✗ Oltre il limite del {lim} per {s} su {l} m.", "pct": "{n} %"}</script>
+<p class="note">Conduttori in rame, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ a 20 °C) e λ = 0,08 mΩ/m, come nell'allegato G. In trifase inserisci
+la tensione concatenata (es. 400 V); la % è riferita alla tensione di fase. Solo indicativo: verifica la norma, i dati del
+costruttore e le regole nazionali. La caduta di tensione è solo una verifica: il cavo deve anche portare la corrente dopo i fattori di correzione.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Ti serve la sezione completa?</h2>
+    <p>Cable Calc aggiunge portata, fattori di correzione per temperatura e raggruppamento e scelta dell'interruttore, offline in cantiere. <a class="cta-link" href="../cable-calc.html">Informazioni su Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=it&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_it"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/it_badge_web_generic.png" alt="Disponibile su Google Play" width="180" height="70"></a><span class="soon">Versione per iPhone in arrivo.</span></div>
+  </div>
+</aside>
+<h2>Limiti raccomandati (IEC 60364-5-52, tabella G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Alimentazione</th><th>Illuminazione</th><th>Altri usi</th></tr></thead>
+<tbody>
+<tr><td>A: alimentazione diretta dalla rete pubblica BT</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B: alimentazione BT propria (trasformatore o generatore)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">In Italia la CEI 64-8 raccomanda in genere di non superare il 4 %; verifica sempre le regole del tuo Paese.</p>
+<h2>Esempio di calcolo</h2>
+<p>Un circuito monofase a 230 V porta 16 A su 30 m di cavo in rame da 2,5 mm² con cos φ = 0,95:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, cioè il 3,6 % di 230 V.
+È oltre il limite del 3 % per l'illuminazione; la sezione successiva, 4 mm², la porta a circa 5,2 V (2,2 %).</p>
+<h2>Domande</h2>
+<h3>Come si calcola la caduta di tensione?</h3>
+<p>L'allegato G della IEC 60364-5-52 usa ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, dove b vale 1 in trifase e 2 in monofase, ρ₁ è la resistività in servizio (0,0225 Ω·mm²/m per il rame), L la lunghezza in metri, S la sezione in mm², λ la reattanza (0,08 mΩ/m) e I<sub>B</sub> la corrente di impiego. La percentuale è ΔU diviso la tensione di fase.</p>
+<h3>Qual è la caduta di tensione massima ammessa?</h3>
+<p>La tabella G.52.1 della IEC 60364-5-52 raccomanda il 3 % per l'illuminazione e il 5 % per gli altri usi quando l'impianto è alimentato direttamente dalla rete pubblica BT, e il 6 % / 8 % con alimentazione BT propria. Le norme nazionali possono essere più severe: verifica le tue.</p>
+<h3>Perché in trifase la caduta di tensione è minore che in monofase?</h3>
+<p>In un circuito trifase equilibrato nel neutro non circola corrente, quindi la caduta si conta su un solo conduttore (b = 1) invece che su andata e ritorno (b = 2) e si confronta con la tensione di fase.</p>
+<h3>Il calcolatore va bene per i cavi AWG?</h3>
+<p>No. Usa sezioni metriche in mm² e valori IEC. Per gli impianti nordamericani usa il metodo NEC e le misure AWG.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
