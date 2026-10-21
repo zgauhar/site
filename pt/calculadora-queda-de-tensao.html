@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de queda de tensão (IEC 60364): volts, % e bitola</title>
+<meta name="description" content="Calculadora gratuita de queda de tensão para cabos de cobre pela IEC 60364-5-52 anexo G: monofásica, trifásica e CC. Queda em volts e %, tensão na carga e a menor seção em mm² dentro do seu limite.">
+<link rel="canonical" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Calculadora de queda de tensão (IEC 60364): volts, % e bitola">
+<meta property="og:description" content="Calculadora gratuita de queda de tensão para cabos de cobre pela IEC 60364-5-52 anexo G: monofásica, trifásica e CC. Queda em volts e %, tensão na carga e a menor seção em mm² dentro do seu limite.">
+<meta property="og:url" content="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de queda de tensão (IEC 60364)", "inLanguage": "pt-BR", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de queda de tensão", "item": "https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como se calcula a queda de tensão?", "acceptedAnswer": {"@type": "Answer", "text": "O anexo G da IEC 60364-5-52 usa ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, em que b é 1 no trifásico e 2 no monofásico, ρ₁ é a resistividade em serviço (0,0225 Ω·mm²/m para o cobre), L o comprimento em metros, S a seção em mm², λ a reatância (0,08 mΩ/m) e IB a corrente de projeto. A porcentagem é ΔU dividido pela tensão fase-neutro."}}, {"@type": "Question", "name": "Qual é a queda de tensão máxima permitida?", "acceptedAnswer": {"@type": "Answer", "text": "A tabela G.52.1 da IEC 60364-5-52 recomenda 3 % para iluminação e 5 % para outros usos quando a instalação é alimentada diretamente pela rede pública de baixa tensão, e 6 % / 8 % com alimentação de BT própria. As normas nacionais podem ser mais rígidas, então confira as suas."}}, {"@type": "Question", "name": "Por que a queda de tensão no trifásico é menor que no monofásico?", "acceptedAnswer": {"@type": "Answer", "text": "Num circuito trifásico equilibrado não retorna corrente pelo neutro, então a queda é contada em um só condutor (b = 1) em vez de ida e volta (b = 2) e comparada com a tensão fase-neutro."}}, {"@type": "Question", "name": "A calculadora serve para cabos AWG?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Ela usa seções métricas em mm² e valores IEC. Para instalações na América do Norte, use o método do NEC e as bitolas AWG."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Início</a> › <a href="../cable-calc.html">Cable Calc</a> › Calculadora de queda de tensão</nav>
+<h1>Calculadora de queda de tensão (IEC 60364)</h1>
+<p class="lead">Calcule a queda de tensão de um cabo de cobre em volts e %, a tensão na carga e a menor seção que fica
+dentro do seu limite. Usa o método do anexo G da IEC 60364-5-52, o mesmo do
+<a href="../cable-calc.html">app Cable Calc</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Sistema de alimentação">
+    <label><input type="radio" name="sys" value="1" checked><span>Monofásica</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Trifásica</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>CC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Tensão (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Corrente de projeto I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Comprimento do cabo (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Seção (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Fator de potência cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Limite de queda de tensão (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Queda de tensão</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Queda</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Tensão na carga</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Menor seção dentro do limite</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Informe um número positivo em todos os campos.", "within": "✓ Dentro do limite de {lim} para {s} em {l} m.", "over": "✗ Acima do limite de {lim} para {s} em {l} m.", "pct": "{n} %"}</script>
+<p class="note">Condutores de cobre, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ a 20 °C) e λ = 0,08 mΩ/m, como no anexo G. Em trifásico, informe
+a tensão entre fases (ex.: 380 ou 400 V); a % é referida à tensão fase-neutro. Apenas orientativo: confira a norma, os dados do
+fabricante e a regulamentação nacional. A queda de tensão é só uma verificação: o cabo também precisa conduzir a corrente depois dos fatores de correção.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Precisa da bitola completa?</h2>
+    <p>O Cable Calc adiciona capacidade de condução de corrente, fatores de correção de temperatura e agrupamento e a escolha do disjuntor, offline na obra. <a class="cta-link" href="../cable-calc.html">Sobre o Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=pt-BR&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_pt"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play" width="180" height="70"></a><span class="soon">Versão para iPhone em breve.</span></div>
+  </div>
+</aside>
+<h2>Limites recomendados (IEC 60364-5-52, tabela G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Alimentação</th><th>Iluminação</th><th>Outros usos</th></tr></thead>
+<tbody>
+<tr><td>A: alimentação direta da rede pública de BT</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B: alimentação de BT própria (transformador ou gerador próprio)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">No Brasil, a NBR 5410 tem limites próprios; confira sempre a norma do seu país.</p>
+<h2>Exemplo de cálculo</h2>
+<p>Um circuito monofásico de 230 V com 16 A em 30 m de cabo de cobre de 2,5 mm² e cos φ = 0,95:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, ou 3,6 % de 230 V.
+Isso passa do limite de 3 % para iluminação; a seção seguinte, 4 mm², reduz para cerca de 5,2 V (2,2 %).</p>
+<h2>Perguntas</h2>
+<h3>Como se calcula a queda de tensão?</h3>
+<p>O anexo G da IEC 60364-5-52 usa ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, em que b é 1 no trifásico e 2 no monofásico, ρ₁ é a resistividade em serviço (0,0225 Ω·mm²/m para o cobre), L o comprimento em metros, S a seção em mm², λ a reatância (0,08 mΩ/m) e I<sub>B</sub> a corrente de projeto. A porcentagem é ΔU dividido pela tensão fase-neutro.</p>
+<h3>Qual é a queda de tensão máxima permitida?</h3>
+<p>A tabela G.52.1 da IEC 60364-5-52 recomenda 3 % para iluminação e 5 % para outros usos quando a instalação é alimentada diretamente pela rede pública de baixa tensão, e 6 % / 8 % com alimentação de BT própria. As normas nacionais podem ser mais rígidas, então confira as suas.</p>
+<h3>Por que a queda de tensão no trifásico é menor que no monofásico?</h3>
+<p>Num circuito trifásico equilibrado não retorna corrente pelo neutro, então a queda é contada em um só condutor (b = 1) em vez de ida e volta (b = 2) e comparada com a tensão fase-neutro.</p>
+<h3>A calculadora serve para cabos AWG?</h3>
+<p>Não. Ela usa seções métricas em mm² e valores IEC. Para instalações na América do Norte, use o método do NEC e as bitolas AWG.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcul de chute de tension (IEC 60364) : volts, % et section</title>
+<meta name="description" content="Calculateur gratuit de chute de tension pour câbles cuivre selon l&#x27;IEC 60364-5-52 annexe G : monophasé, triphasé et continu. Chute en volts et en %, tension à la charge et plus petite section en mm².">
+<link rel="canonical" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Calcul de chute de tension (IEC 60364) : volts, % et section">
+<meta property="og:description" content="Calculateur gratuit de chute de tension pour câbles cuivre selon l&#x27;IEC 60364-5-52 annexe G : monophasé, triphasé et continu. Chute en volts et en %, tension à la charge et plus petite section en mm².">
+<meta property="og:url" content="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calcul de la chute de tension (IEC 60364)", "inLanguage": "fr", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Calcul de chute de tension", "item": "https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comment calculer la chute de tension ?", "acceptedAnswer": {"@type": "Answer", "text": "L'annexe G de l'IEC 60364-5-52 utilise ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, où b vaut 1 en triphasé et 2 en monophasé, ρ₁ est la résistivité en service (0,0225 Ω·mm²/m pour le cuivre), L la longueur en mètres, S la section en mm², λ la réactance linéique (0,08 mΩ/m) et IB le courant d'emploi. Le pourcentage est ΔU divisé par la tension simple."}}, {"@type": "Question", "name": "Quelle est la chute de tension maximale admise ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tableau G.52.1 de l'IEC 60364-5-52 recommande 3 % pour l'éclairage et 5 % pour les autres usages quand l'installation est alimentée directement par le réseau public basse tension, et 6 % / 8 % avec une alimentation BT privée. Les règles nationales peuvent être plus strictes : vérifiez les vôtres."}}, {"@type": "Question", "name": "Pourquoi la chute de tension est-elle plus faible en triphasé ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un circuit triphasé équilibré, aucun courant ne revient par le neutre : la chute est comptée sur un seul conducteur (b = 1) au lieu de l'aller-retour (b = 2), et comparée à la tension simple."}}, {"@type": "Question", "name": "Ce calculateur convient-il aux câbles AWG ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il utilise des sections métriques en mm² et les valeurs IEC. Pour l'Amérique du Nord, utilisez la méthode du NEC et les calibres AWG."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Accueil</a> › <a href="../cable-calc.html">Cable Calc</a> › Calcul de chute de tension</nav>
+<h1>Calcul de la chute de tension (IEC 60364)</h1>
+<p class="lead">Calculez la chute de tension d'un câble cuivre en volts et en %, la tension à la charge et la plus petite
+section qui reste dans votre limite. Méthode de l'IEC 60364-5-52 annexe G, la même que dans
+<a href="../cable-calc.html">l'application Cable Calc</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Type de réseau">
+    <label><input type="radio" name="sys" value="1" checked><span>Monophasé</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Triphasé</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>Continu</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Tension (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Courant d'emploi I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Longueur du câble (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Section (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Facteur de puissance cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Limite de chute de tension (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Chute de tension</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Chute</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Tension à la charge</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Plus petite section conforme</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Saisissez un nombre positif dans chaque champ.", "within": "✓ Dans la limite de {lim} pour {s} sur {l} m.", "over": "✗ Au-dessus de la limite de {lim} pour {s} sur {l} m.", "pct": "{n} %"}</script>
+<p class="note">Conducteurs en cuivre, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ à 20 °C) et λ = 0,08 mΩ/m, comme dans l'annexe G. En triphasé,
+saisissez la tension entre phases (ex. 400 V) ; le % est rapporté à la tension simple. À titre indicatif : vérifiez la norme,
+les données du fabricant et la réglementation nationale. La chute de tension n'est qu'une vérification : le câble doit aussi supporter le courant après les facteurs de correction.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Besoin de la section complète ?</h2>
+    <p>Cable Calc ajoute le courant admissible, les facteurs de correction de température et de groupement et le choix du disjoncteur, hors ligne sur le chantier. <a class="cta-link" href="../cable-calc.html">À propos de Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=fr&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_fr"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="Disponible sur Google Play" width="180" height="70"></a><span class="soon">Version iPhone bientôt disponible.</span></div>
+  </div>
+</aside>
+<h2>Limites recommandées (IEC 60364-5-52, tableau G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Alimentation</th><th>Éclairage</th><th>Autres usages</th></tr></thead>
+<tbody>
+<tr><td>A : alimentation directe par le réseau public BT</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B : alimentation BT privée (transformateur ou groupe propre)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">En France, la NF C 15-100 reprend ces valeurs ; vérifiez toujours la réglementation de votre pays.</p>
+<h2>Exemple de calcul</h2>
+<p>Un circuit monophasé 230 V de 16 A sur 30 m de câble cuivre 2,5 mm² avec cos φ = 0,95 :
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, soit 3,6 % de 230 V.
+C'est au-dessus de la limite de 3 % pour l'éclairage ; la section suivante, 4 mm², ramène la chute à environ 5,2 V (2,2 %).</p>
+<h2>Questions</h2>
+<h3>Comment calculer la chute de tension ?</h3>
+<p>L'annexe G de l'IEC 60364-5-52 utilise ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, où b vaut 1 en triphasé et 2 en monophasé, ρ₁ est la résistivité en service (0,0225 Ω·mm²/m pour le cuivre), L la longueur en mètres, S la section en mm², λ la réactance linéique (0,08 mΩ/m) et I<sub>B</sub> le courant d'emploi. Le pourcentage est ΔU divisé par la tension simple.</p>
+<h3>Quelle est la chute de tension maximale admise ?</h3>
+<p>Le tableau G.52.1 de l'IEC 60364-5-52 recommande 3 % pour l'éclairage et 5 % pour les autres usages quand l'installation est alimentée directement par le réseau public basse tension, et 6 % / 8 % avec une alimentation BT privée. Les règles nationales peuvent être plus strictes : vérifiez les vôtres.</p>
+<h3>Pourquoi la chute de tension est-elle plus faible en triphasé ?</h3>
+<p>Dans un circuit triphasé équilibré, aucun courant ne revient par le neutre : la chute est comptée sur un seul conducteur (b = 1) au lieu de l'aller-retour (b = 2), et comparée à la tension simple.</p>
+<h3>Ce calculateur convient-il aux câbles AWG ?</h3>
+<p>Non. Il utilise des sections métriques en mm² et les valeurs IEC. Pour l'Amérique du Nord, utilisez la méthode du NEC et les calibres AWG.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerilim düşümü hesaplama (IEC 60364): volt, % ve kablo kesiti</title>
+<meta name="description" content="Bakır kablolar için IEC 60364-5-52 Ek G&#x27;ye göre ücretsiz gerilim düşümü hesaplayıcı: tek faz, üç faz ve DC. Volt ve % olarak düşüm, yükteki gerilim ve sınırınızı aşmayan en küçük kesit (mm²).">
+<link rel="canonical" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Gerilim düşümü hesaplama (IEC 60364): volt, % ve kablo kesiti">
+<meta property="og:description" content="Bakır kablolar için IEC 60364-5-52 Ek G&#x27;ye göre ücretsiz gerilim düşümü hesaplayıcı: tek faz, üç faz ve DC. Volt ve % olarak düşüm, yükteki gerilim ve sınırınızı aşmayan en küçük kesit (mm²).">
+<meta property="og:url" content="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Gerilim düşümü hesaplama (IEC 60364)", "inLanguage": "tr", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Gerilim düşümü hesaplama", "item": "https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Gerilim düşümü nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 Ek G şu formülü kullanır: ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB. Burada b üç fazda 1, tek fazda 2'dir; ρ₁ çalışma sıcaklığındaki özdirenç (bakır için 0,0225 Ω·mm²/m), L metre cinsinden uzunluk, S mm² cinsinden kesit, λ reaktans (0,08 mΩ/m) ve IB tasarım akımıdır. Yüzde, ΔU'nun faz-nötr gerilimine bölünmesiyle bulunur."}}, {"@type": "Question", "name": "İzin verilen en yüksek gerilim düşümü nedir?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 Tablo G.52.1, tesis doğrudan kamu alçak gerilim şebekesinden besleniyorsa aydınlatma için %3, diğer kullanımlar için %5; kendi AG beslemesi varsa %6 / %8 önerir. Ulusal kurallar daha sıkı olabilir, kendi kurallarınızı kontrol edin."}}, {"@type": "Question", "name": "Üç fazda gerilim düşümü neden tek fazdan düşük?", "acceptedAnswer": {"@type": "Answer", "text": "Dengeli bir üç fazlı devrede nötrden akım dönmez; bu yüzden düşüm gidiş-dönüş (b = 2) yerine tek iletken için (b = 1) hesaplanır ve faz-nötr gerilimiyle karşılaştırılır."}}, {"@type": "Question", "name": "Bu hesaplayıcı AWG kablolar için uygun mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Metrik mm² kesitleri ve IEC değerlerini kullanır. Kuzey Amerika tesisleri için NEC yöntemini ve AWG ölçülerini kullanın."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Ana sayfa</a> › <a href="../cable-calc.html">Cable Calc</a> › Gerilim düşümü hesaplama</nav>
+<h1>Gerilim düşümü hesaplama (IEC 60364)</h1>
+<p class="lead">Bir bakır kablonun gerilim düşümünü volt ve % olarak, yükteki gerilimi ve sınırınızın içinde kalan en küçük
+kesiti hesaplayın. IEC 60364-5-52 Ek G yöntemini kullanır;
+<a href="../cable-calc.html">Cable Calc uygulamasıyla</a> aynı yöntem.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Besleme sistemi">
+    <label><input type="radio" name="sys" value="1" checked><span>Tek faz</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Üç faz</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Gerilim (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Yük akımı I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Kablo uzunluğu (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Kablo kesiti (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Güç faktörü cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Gerilim düşümü sınırı (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Gerilim düşümü</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Düşüm</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Yükteki gerilim</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Sınır içindeki en küçük kesit</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Her alana pozitif bir sayı girin.", "within": "✓ {s}, {l} m'de {lim} sınırının içinde.", "over": "✗ {s}, {l} m'de {lim} sınırının üzerinde.", "pct": "%{n}"}</script>
+<p class="note">Bakır iletkenler, Ek G'deki gibi ρ₁ = 0,0225 Ω·mm²/m (20 °C'deki ρ'nun 1,25 katı) ve λ = 0,08 mΩ/m. Üç fazda fazlar arası
+gerilimi girin (ör. 400 V); yüzde, faz-nötr gerilimine göre verilir. Yalnızca yol göstericidir: standardı, kablo üreticisinin
+verilerini ve ulusal yönetmelikleri kontrol edin. Gerilim düşümü tek kontroldür: kablo, düzeltme faktörlerinden sonra akımı da taşıyabilmelidir.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Tam kablo kesiti mi lazım?</h2>
+    <p>Cable Calc akım taşıma kapasitesi, sıcaklık ve gruplama düzeltme faktörleri ve sigorta seçimini ekler; sahada çevrimdışı çalışır. <a class="cta-link" href="../cable-calc.html">Cable Calc hakkında</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=tr&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_tr"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png" alt="Google Play&#x27;den edinin" width="180" height="70"></a><span class="soon">iPhone sürümü yakında.</span></div>
+  </div>
+</aside>
+<h2>Önerilen sınırlar (IEC 60364-5-52, Tablo G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Besleme</th><th>Aydınlatma</th><th>Diğer kullanımlar</th></tr></thead>
+<tbody>
+<tr><td>A: doğrudan kamu AG şebekesinden besleme</td><td>%3</td><td>%5</td></tr>
+<tr><td>B: kendi AG beslemesi (kendi trafosu veya jeneratörü)</td><td>%6</td><td>%8</td></tr>
+</tbody></table></div>
+<p class="note">Ulusal yönetmelikler daha sıkı sınırlar koyabilir; ülkenizdeki kuralları her zaman kontrol edin.</p>
+<h2>Hesap örneği</h2>
+<p>230 V tek fazlı bir devre, cos φ = 0,95 ile 30 m 2,5 mm² bakır kablodan 16 A çekiyor:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, yani 230 V'un %3,6'sı.
+Bu, aydınlatma için %3 sınırının üzerinde; bir üst kesit olan 4 mm² ile düşüm yaklaşık 5,2 V'a (%2,2) iner.</p>
+<h2>Sorular</h2>
+<h3>Gerilim düşümü nasıl hesaplanır?</h3>
+<p>IEC 60364-5-52 Ek G şu formülü kullanır: ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>. Burada b üç fazda 1, tek fazda 2'dir; ρ₁ çalışma sıcaklığındaki özdirenç (bakır için 0,0225 Ω·mm²/m), L metre cinsinden uzunluk, S mm² cinsinden kesit, λ reaktans (0,08 mΩ/m) ve I<sub>B</sub> tasarım akımıdır. Yüzde, ΔU'nun faz-nötr gerilimine bölünmesiyle bulunur.</p>
+<h3>İzin verilen en yüksek gerilim düşümü nedir?</h3>
+<p>IEC 60364-5-52 Tablo G.52.1, tesis doğrudan kamu alçak gerilim şebekesinden besleniyorsa aydınlatma için %3, diğer kullanımlar için %5; kendi AG beslemesi varsa %6 / %8 önerir. Ulusal kurallar daha sıkı olabilir, kendi kurallarınızı kontrol edin.</p>
+<h3>Üç fazda gerilim düşümü neden tek fazdan düşük?</h3>
+<p>Dengeli bir üç fazlı devrede nötrden akım dönmez; bu yüzden düşüm gidiş-dönüş (b = 2) yerine tek iletken için (b = 1) hesaplanır ve faz-nötr gerilimiyle karşılaştırılır.</p>
+<h3>Bu hesaplayıcı AWG kablolar için uygun mu?</h3>
+<p>Hayır. Metrik mm² kesitleri ve IEC değerlerini kullanır. Kuzey Amerika tesisleri için NEC yöntemini ve AWG ölçülerini kullanın.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

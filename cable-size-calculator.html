@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cable Size Calculator (IEC 60364): mm², Derating &amp; Breaker</title>
+<meta name="description" content="Free cable size calculator for copper cables to IEC 60364-5-52: current-carrying capacity, temperature and grouping derating, breaker rating and voltage drop. Get the cable size in mm² for single-phase, three-phase and DC.">
+<link rel="canonical" href="https://www.mintwavestudio.com/cable-size-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Cable Size Calculator (IEC 60364): mm², Derating &amp; Breaker">
+<meta property="og:description" content="Free cable size calculator for copper cables to IEC 60364-5-52: current-carrying capacity, temperature and grouping derating, breaker rating and voltage drop. Get the cable size in mm² for single-phase, three-phase and DC.">
+<meta property="og:url" content="https://www.mintwavestudio.com/cable-size-calculator.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script src="assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Cable size calculator (IEC 60364)", "inLanguage": "en", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/cable-size-calculator.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://www.mintwavestudio.com/apps.html"}, {"@type": "ListItem", "position": 3, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 4, "name": "Cable size calculator", "item": "https://www.mintwavestudio.com/cable-size-calculator.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does derating mean?", "acceptedAnswer": {"@type": "Answer", "text": "The tabulated capacity assumes 30 °C air and one circuit on its own. Hotter air or several loaded circuits bunched together stop the cable losing heat, so the capacity is multiplied by correction factors below 1 and a bigger size may be needed."}}, {"@type": "Question", "name": "Why is the breaker bigger than my load?", "acceptedAnswer": {"@type": "Answer", "text": "Breakers come in standard ratings, so a 14 A load gets a 16 A breaker. The cable is then sized to carry the breaker rating, not just the load, so the breaker protects it against overload (Ib ≤ In ≤ Iz)."}}, {"@type": "Question", "name": "Which standard does the calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52: Annex B for current-carrying capacity and Annex G for voltage drop, for copper conductors from 1.5 to 120 mm². It is not built for the US NEC or AWG sizes."}}, {"@type": "Question", "name": "Can I rely on the result without checking?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is guidance based on IEC 60364. Always check against the standard, the cable manufacturer's data and your national wiring rules. The installer remains responsible for the design."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="cable-calc.html">Cable Calc</a> › Cable size calculator</nav>
+<h1>Cable size calculator (IEC 60364)</h1>
+<p class="lead">Enter the load, the length and how the cable is installed. The calculator picks the breaker, applies the temperature and grouping factors, checks the voltage drop and shows the copper cable size you need in mm². It uses the same method as the <a href="cable-calc.html">Cable Calc app</a>.</p>
+<form class="calc" data-calc="size" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Supply system">
+    <label><input type="radio" name="sys" value="1" checked><span>Single-phase</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Three-phase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field">Load<input type="number" name="load" value="20" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Load is given in<select name="unit"><option value="a" selected>Amps (A)</option><option value="kw">Kilowatts (kW)</option></select></label>
+    <label class="field">Voltage (V)<input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field">Power factor cos φ<input type="number" name="pf" value="1" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field">Cable length (m)<input type="number" name="l" value="15" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Insulation<select name="ins"><option value="pvc" selected>PVC (70 °C)</option><option value="xlpe">XLPE / EPR (90 °C)</option></select></label>
+    <label class="field">Installation method<select name="method"><option value="A1">A1: single cores in conduit in an insulated wall</option><option value="A2">A2: multi-core cable in conduit in an insulated wall</option><option value="B1">B1: single cores in conduit on a wall</option><option value="B2">B2: multi-core cable in conduit on a wall</option><option value="C" selected>C: cable clipped direct to a wall</option><option value="E">E: multi-core cable in free air or on a perforated tray</option></select></label>
+    <label class="field">Ambient temperature (°C)<input type="number" name="amb" value="30" step="any" inputmode="decimal"></label>
+    <label class="field">Circuits grouped together<input type="number" name="grp" value="1" min="1" max="20" step="1" inputmode="numeric"></label>
+    <label class="field">Voltage drop limit (%)<input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Cable size (copper)</span><span class="date" data-out="size">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Breaker rating In</div><div class="v" data-out="breaker">–</div></div>
+      <div class="target"><div class="k">Capacity after derating Iz</div><div class="v" data-out="iz">–</div></div>
+      <div class="target"><div class="k">Voltage drop</div><div class="v" data-out="drop">–</div></div>
+      <div class="target"><div class="k">Size set by</div><div class="v" data-out="rule">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Enter positive numbers in every field.", "errTemp": "This insulation can't be used at that ambient temperature.", "errGroup": "The grouping table stops at 20 circuits.", "errLarge": "Beyond 120 mm² or a 250 A breaker: use parallel cables or a detailed design.", "sub": "Load current Ib = {ib} A · temperature factor {kt} · grouping factor {kg}", "ruleDrop": "Voltage drop (current alone: {cap})", "ruleCap": "Current capacity", "pct": "{n} %"}</script>
+<p class="note">Copper conductors, IEC 60364-5-52 Annex B current-carrying capacities at 30 °C, temperature factors from Table B.52.14 (rounded up to the next 5 °C step) and grouping factors for bunched circuits from Table B.52.17. The breaker is the smallest standard rating at or above the load current, and the cable must carry at least that rating after derating (Ib ≤ In ≤ Iz). Not covered here: buried cables (method D), aluminium, fault-loop disconnection times and short-circuit checks. Guidance only: check the standard, the cable maker's data and your national wiring rules. The installer remains responsible for the design.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Take it to site</h2>
+    <p>Cable Calc has the same calculator offline, plus earth-fault loop checks, motor circuits, saved projects and PDF reports. <a class="cta-link" href="cable-calc.html">About Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dcable_size_calculator"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<h2>How the size is chosen</h2>
+<ol>
+<li><strong>Breaker.</strong> The smallest standard rating In at or above the load current Ib (6, 10, 13, 16, 20, 25, 32, 40, 50, 63 A …).</li>
+<li><strong>Current capacity.</strong> The smallest cable whose tabulated capacity, multiplied by the temperature and grouping factors, is at least In. That gives Ib ≤ In ≤ Iz.</li>
+<li><strong>Voltage drop.</strong> The smallest cable whose drop over the length stays within your limit (IEC 60364-5-52 Annex G).</li>
+</ol>
+<p>The recommended size is the larger of steps 2 and 3, and the calculator tells you which one decided it.</p>
+<h2>Worked example</h2>
+<p>A 20 A single-phase circuit, 15 m of PVC cable clipped direct (method C), 30 °C, on its own: the breaker is
+20 A and 2.5 mm² carries 27 A, which is enough. Its drop over 15 m is 2.3%,
+inside a 3% limit, so the answer is <strong>2.5 mm²</strong>. Bunch it with three other circuits at 35 °C and the factors
+(0.94 × 0.65) cut the capacity, so it needs <strong>4 mm²</strong>. Leave it on its own but make the run
+45 m and the voltage drop decides instead: <strong>6 mm²</strong> (current alone would need 2.5 mm²).</p>
+<h2>What size cable for 16, 20, 32 or 40 amps?</h2>
+<p>Smallest copper size that carries the breaker rating, for PVC cable at 30 °C with no other circuits grouped.
+These are current capacity only: long runs need a bigger size for voltage drop, and heat or grouping change them, so use the calculator for your case.</p>
+<h3>Single-phase or DC (2 loaded conductors)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Breaker</th><th scope="col">A1 (insulated wall)</th><th scope="col">B1 (conduit on wall)</th><th scope="col">C (clipped direct)</th><th scope="col">E (free air / tray)</th></tr></thead><tbody><tr><td>10 A</td><td>1.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>16 A</td><td>2.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>20 A</td><td>4 mm²</td><td>2.5 mm²</td><td>2.5 mm²</td><td>1.5 mm²</td></tr><tr><td>25 A</td><td>4 mm²</td><td>4 mm²</td><td>2.5 mm²</td><td>2.5 mm²</td></tr><tr><td>32 A</td><td>6 mm²</td><td>4 mm²</td><td>4 mm²</td><td>4 mm²</td></tr><tr><td>40 A</td><td>10 mm²</td><td>6 mm²</td><td>6 mm²</td><td>4 mm²</td></tr><tr><td>50 A</td><td>16 mm²</td><td>10 mm²</td><td>10 mm²</td><td>6 mm²</td></tr><tr><td>63 A</td><td>25 mm²</td><td>16 mm²</td><td>10 mm²</td><td>10 mm²</td></tr></tbody></table></div>
+<h3>Three-phase (3 loaded conductors)</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Breaker</th><th scope="col">A1 (insulated wall)</th><th scope="col">B1 (conduit on wall)</th><th scope="col">C (clipped direct)</th><th scope="col">E (free air / tray)</th></tr></thead><tbody><tr><td>10 A</td><td>1.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>16 A</td><td>2.5 mm²</td><td>2.5 mm²</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>20 A</td><td>4 mm²</td><td>2.5 mm²</td><td>2.5 mm²</td><td>2.5 mm²</td></tr><tr><td>25 A</td><td>6 mm²</td><td>4 mm²</td><td>4 mm²</td><td>2.5 mm²</td></tr><tr><td>32 A</td><td>10 mm²</td><td>6 mm²</td><td>4 mm²</td><td>4 mm²</td></tr><tr><td>40 A</td><td>10 mm²</td><td>10 mm²</td><td>6 mm²</td><td>6 mm²</td></tr><tr><td>50 A</td><td>16 mm²</td><td>10 mm²</td><td>10 mm²</td><td>10 mm²</td></tr><tr><td>63 A</td><td>25 mm²</td><td>16 mm²</td><td>16 mm²</td><td>16 mm²</td></tr></tbody></table></div>
+<h2>Installation methods</h2>
+<ul>
+<li>A1: single cores in conduit in an insulated wall</li>
+<li>A2: multi-core cable in conduit in an insulated wall</li>
+<li>B1: single cores in conduit on a wall</li>
+<li>B2: multi-core cable in conduit on a wall</li>
+<li>C: cable clipped direct to a wall</li>
+<li>E: multi-core cable in free air or on a perforated tray</li>
+</ul>
+<p>A cable surrounded by thermal insulation (A1, A2) can't shed heat, so it carries the least. In free air (E) it carries the most.</p>
+<h2>Questions</h2>
+<h3>What does derating mean?</h3>
+<p>The tabulated capacity assumes 30 °C air and one circuit on its own. Hotter air or several loaded circuits bunched together stop the cable losing heat, so the capacity is multiplied by correction factors below 1 and a bigger size may be needed.</p>
+<h3>Why is the breaker bigger than my load?</h3>
+<p>Breakers come in standard ratings, so a 14 A load gets a 16 A breaker. The cable is then sized to carry the breaker rating, not just the load, so the breaker protects it against overload (Ib ≤ In ≤ Iz).</p>
+<h3>Which standard does the calculator use?</h3>
+<p>IEC 60364-5-52: Annex B for current-carrying capacity and Annex G for voltage drop, for copper conductors from 1.5 to 120 mm². It is not built for the US NEC or AWG sizes.</p>
+<h3>Can I rely on the result without checking?</h3>
+<p>No. It is guidance based on IEC 60364. Always check against the standard, the cable manufacturer's data and your national wiring rules. The installer remains responsible for the design.</p>
+<h2>More free tools</h2>
+<ul class="link-list">
+<li><a href="voltage-drop-calculator.html">Voltage drop calculator</a>: volts, % and the smallest size within your limit</li>
+<li><a href="ev-charger-cable-size.html">EV charger cable size</a>: 7.4 kW, 11 kW and 22 kW chargers</li>
+<li><a href="sauna-heater-cable-size.html">Sauna heater cable size</a>: 4.5 to 10.5 kW three-phase heaters</li>
+<li><a href="heat-pump-cable-size.html">Heat pump cable size</a>: sizing the cable to the breaker in the manual</li>
+</ul>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

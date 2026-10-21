@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spanningsval berekenen (IEC 60364): volt, % en kabeldoorsnede</title>
+<meta name="description" content="Gratis spanningsvalcalculator voor koperen kabels volgens IEC 60364-5-52 bijlage G: eenfase, driefase en gelijkstroom. Spanningsval in volt en %, spanning bij de belasting en de kleinste doorsnede in mm².">
+<link rel="canonical" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Spanningsval berekenen (IEC 60364): volt, % en kabeldoorsnede">
+<meta property="og:description" content="Gratis spanningsvalcalculator voor koperen kabels volgens IEC 60364-5-52 bijlage G: eenfase, driefase en gelijkstroom. Spanningsval in volt en %, spanning bij de belasting en de kleinste doorsnede in mm².">
+<meta property="og:url" content="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Spanningsval berekenen (IEC 60364)", "inLanguage": "nl", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/nl/spanningsval-berekenen.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Spanningsval berekenen", "item": "https://www.mintwavestudio.com/nl/spanningsval-berekenen.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe bereken je de spanningsval?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 bijlage G gebruikt ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, waarbij b = 1 voor driefase en 2 voor eenfase, ρ₁ de soortelijke weerstand in bedrijf (0,0225 Ω·mm²/m voor koper), L de lengte in meters, S de doorsnede in mm², λ de reactantie (0,08 mΩ/m) en IB de ontwerpstroom. Het percentage is ΔU gedeeld door de fasespanning."}}, {"@type": "Question", "name": "Hoeveel spanningsval is toegestaan?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 tabel G.52.1 adviseert 3 % voor verlichting en 5 % voor overig gebruik als de installatie rechtstreeks uit het openbare laagspanningsnet wordt gevoed, en 6 % / 8 % bij een eigen laagspanningsvoeding. Nationale regels kunnen strenger zijn, dus controleer de jouwe."}}, {"@type": "Question", "name": "Waarom is de spanningsval bij driefase lager dan bij eenfase?", "acceptedAnswer": {"@type": "Answer", "text": "In een symmetrisch belaste driefase groep loopt er geen stroom terug via de nul, dus telt de spanningsval voor één geleider (b = 1) in plaats van heen en terug (b = 2), en wordt die vergeleken met de fasespanning."}}, {"@type": "Question", "name": "Is deze calculator geschikt voor AWG-kabels?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Hij gebruikt metrische doorsneden in mm² en IEC-waarden. Gebruik voor Noord-Amerikaanse installaties de NEC-methode en AWG-maten."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> › <a href="../cable-calc.html">Cable Calc</a> › Spanningsval berekenen</nav>
+<h1>Spanningsval berekenen (IEC 60364)</h1>
+<p class="lead">Bereken de spanningsval van een koperen kabel in volt en %, de spanning bij de belasting en de kleinste
+doorsnede die binnen je limiet blijft. Met de methode van IEC 60364-5-52 bijlage G, dezelfde als in de
+<a href="../cable-calc.html">Cable Calc-app</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Voedingssysteem">
+    <label><input type="radio" name="sys" value="1" checked><span>Eenfase</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Driefase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>Gelijkstroom</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Spanning (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Belastingsstroom I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Kabellengte (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Doorsnede (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Arbeidsfactor cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Limiet spanningsval (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Spanningsval</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Spanningsval</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Spanning bij belasting</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Kleinste doorsnede binnen limiet</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Vul in elk veld een positief getal in.", "within": "✓ Binnen de limiet van {lim} voor {s} over {l} m.", "over": "✗ Boven de limiet van {lim} voor {s} over {l} m.", "pct": "{n} %"}</script>
+<p class="note">Koperen geleiders, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ bij 20 °C) en λ = 0,08 mΩ/m, zoals in bijlage G. Voer bij driefase
+de spanning tussen de fasen in (bijv. 400 V); het % is ten opzichte van de fasespanning. Alleen ter indicatie: controleer de norm,
+de gegevens van de kabelfabrikant en de nationale voorschriften. Spanningsval is maar één controle: de kabel moet na de correctiefactoren ook de stroom kunnen voeren.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>De complete kabeldoorsnede nodig?</h2>
+    <p>Cable Calc voegt stroombelastbaarheid, correctiefactoren voor temperatuur en groepering en de keuze van de automaat toe, offline op de bouwplaats. <a class="cta-link" href="../cable-calc.html">Over Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=nl&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_nl"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/nl_badge_web_generic.png" alt="Ontdek het op Google Play" width="180" height="70"></a><span class="soon">iPhone-versie komt binnenkort.</span></div>
+  </div>
+</aside>
+<h2>Aanbevolen limieten (IEC 60364-5-52, tabel G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Voeding</th><th>Verlichting</th><th>Overig gebruik</th></tr></thead>
+<tbody>
+<tr><td>A: rechtstreeks gevoed uit het openbare laagspanningsnet</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B: eigen laagspanningsvoeding (eigen transformator of aggregaat)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">Nationale voorschriften (zoals NEN 1010) kunnen strengere waarden geven; controleer altijd de regels in je land.</p>
+<h2>Rekenvoorbeeld</h2>
+<p>Een eenfase groep van 230 V voert 16 A over 30 m koperen kabel van 2,5 mm² bij cos φ = 0,95:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, dus 3,6 % van 230 V.
+Dat is boven de limiet van 3 % voor verlichting; de volgende doorsnede, 4 mm², brengt het terug naar ongeveer 5,2 V (2,2 %).</p>
+<h2>Vragen</h2>
+<h3>Hoe bereken je de spanningsval?</h3>
+<p>IEC 60364-5-52 bijlage G gebruikt ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>, waarbij b = 1 voor driefase en 2 voor eenfase, ρ₁ de soortelijke weerstand in bedrijf (0,0225 Ω·mm²/m voor koper), L de lengte in meters, S de doorsnede in mm², λ de reactantie (0,08 mΩ/m) en I<sub>B</sub> de ontwerpstroom. Het percentage is ΔU gedeeld door de fasespanning.</p>
+<h3>Hoeveel spanningsval is toegestaan?</h3>
+<p>IEC 60364-5-52 tabel G.52.1 adviseert 3 % voor verlichting en 5 % voor overig gebruik als de installatie rechtstreeks uit het openbare laagspanningsnet wordt gevoed, en 6 % / 8 % bij een eigen laagspanningsvoeding. Nationale regels kunnen strenger zijn, dus controleer de jouwe.</p>
+<h3>Waarom is de spanningsval bij driefase lager dan bij eenfase?</h3>
+<p>In een symmetrisch belaste driefase groep loopt er geen stroom terug via de nul, dus telt de spanningsval voor één geleider (b = 1) in plaats van heen en terug (b = 2), en wordt die vergeleken met de fasespanning.</p>
+<h3>Is deze calculator geschikt voor AWG-kabels?</h3>
+<p>Nee. Hij gebruikt metrische doorsneden in mm² en IEC-waarden. Gebruik voor Noord-Amerikaanse installaties de NEC-methode en AWG-maten.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
