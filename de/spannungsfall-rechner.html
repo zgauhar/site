@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spannungsfall-Rechner (IEC 60364): Volt, % und Querschnitt</title>
+<meta name="description" content="Kostenloser Spannungsfall-Rechner für Kupferleitungen nach IEC 60364-5-52 Anhang G: Wechselstrom, Drehstrom und Gleichstrom. Spannungsfall in Volt und %, Spannung am Verbraucher und kleinster Querschnitt in mm².">
+<link rel="canonical" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<link rel="alternate" hreflang="fr" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
+<link rel="alternate" hreflang="es" href="https://www.mintwavestudio.com/es/calculadora-caida-de-tension.html">
+<link rel="alternate" hreflang="it" href="https://www.mintwavestudio.com/it/calcolo-caduta-di-tensione.html">
+<link rel="alternate" hreflang="pl" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
+<link rel="alternate" hreflang="pt-BR" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
+<link rel="alternate" hreflang="tr" href="https://www.mintwavestudio.com/tr/gerilim-dusumu-hesaplama.html">
+<link rel="alternate" hreflang="nl" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Spannungsfall-Rechner (IEC 60364): Volt, % und Querschnitt">
+<meta property="og:description" content="Kostenloser Spannungsfall-Rechner für Kupferleitungen nach IEC 60364-5-52 Anhang G: Wechselstrom, Drehstrom und Gleichstrom. Spannungsfall in Volt und %, Spannung am Verbraucher und kleinster Querschnitt in mm².">
+<meta property="og:url" content="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261017a">
+<link rel="stylesheet" href="../pages.css?v=20261017a">
+<script src="../site-chrome.js?v=20261017a" defer></script>
+<script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Spannungsfall-Rechner (IEC 60364)", "inLanguage": "de", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/de/spannungsfall-rechner.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Spannungsfall-Rechner", "item": "https://www.mintwavestudio.com/de/spannungsfall-rechner.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wie berechnet man den Spannungsfall?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 Anhang G verwendet ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB. Dabei ist b = 1 für Drehstrom und 2 für Wechselstrom, ρ₁ der spezifische Widerstand im Betrieb (0,0225 Ω·mm²/m für Kupfer), L die Länge in Metern, S der Querschnitt in mm², λ der Blindwiderstandsbelag (0,08 mΩ/m) und IB der Betriebsstrom. Der Prozentwert ist ΔU geteilt durch die Strangspannung."}}, {"@type": "Question", "name": "Wie hoch darf der Spannungsfall sein?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 Tabelle G.52.1 empfiehlt 3 % für Beleuchtung und 5 % für andere Verbraucher bei Versorgung direkt aus dem öffentlichen Niederspannungsnetz und 6 % / 8 % bei eigener Niederspannungsversorgung. Nationale Vorschriften können strenger sein, also prüfe deine."}}, {"@type": "Question", "name": "Warum ist der Spannungsfall bei Drehstrom kleiner als bei Wechselstrom?", "acceptedAnswer": {"@type": "Answer", "text": "Bei symmetrischer Belastung fließt im Neutralleiter kein Strom. Der Spannungsfall wird deshalb nur für einen Leiter gezählt (b = 1) statt für Hin- und Rückleiter (b = 2) und auf die Strangspannung bezogen."}}, {"@type": "Question", "name": "Eignet sich der Rechner für AWG-Leitungen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Er verwendet metrische Querschnitte in mm² und IEC-Werte. Für Nordamerika gelten das NEC-Verfahren und AWG-Größen."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Start</a> › <a href="../cable-calc.html">Cable Calc</a> › Spannungsfall-Rechner</nav>
+<h1>Spannungsfall-Rechner (IEC 60364)</h1>
+<p class="lead">Berechne den Spannungsfall einer Kupferleitung in Volt und %, die Spannung am Verbraucher und den kleinsten
+Querschnitt, der deinen Grenzwert einhält. Mit dem Verfahren aus IEC 60364-5-52 Anhang G, wie in der
+<a href="../cable-calc.html">App Cable Calc</a>.</p>
+<form class="calc" data-calc="vd" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Netzart">
+    <label><input type="radio" name="sys" value="1" checked><span>Wechselstrom</span></label>
+    <label><input type="radio" name="sys" value="3"><span>Drehstrom</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>Gleichstrom</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field"><span>Spannung (V)</span><input type="number" name="u" value="230" min="1" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Laststrom I<sub>B</sub> (A)</span><input type="number" name="i" value="16" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Leitungslänge (m)</span><input type="number" name="l" value="30" min="0" step="any" inputmode="decimal"></label>
+    <label class="field"><span>Querschnitt (mm²)</span><select name="s"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option><option value="16">16</option><option value="25">25</option><option value="35">35</option><option value="50">50</option><option value="70">70</option><option value="95">95</option><option value="120">120</option></select></label>
+    <label class="field"><span>Leistungsfaktor cos φ</span><input type="number" name="pf" value="0.95" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field"><span>Grenzwert Spannungsfall (%)</span><input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Spannungsfall</span><span class="date" data-out="pct">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Spannungsfall</div><div class="v" data-out="v">–</div></div>
+      <div class="target"><div class="k">Spannung am Verbraucher</div><div class="v" data-out="load">–</div></div>
+      <div class="target"><div class="k">Kleinster Querschnitt im Grenzwert</div><div class="v" data-out="min">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Gib in jedes Feld eine positive Zahl ein.", "within": "✓ Innerhalb des Grenzwerts von {lim} für {s} auf {l} m.", "over": "✗ Über dem Grenzwert von {lim} für {s} auf {l} m.", "pct": "{n} %"}</script>
+<p class="note">Kupferleiter, ρ₁ = 0,0225 Ω·mm²/m (1,25 × ρ bei 20 °C) und λ = 0,08 mΩ/m wie in Anhang G. Bei Drehstrom die
+Außenleiterspannung eingeben (z. B. 400 V); die % beziehen sich auf die Strangspannung. Nur zur Orientierung: Prüfe die Norm,
+die Herstellerangaben und die nationalen Vorschriften. Der Spannungsfall ist nur eine Prüfung: Die Leitung muss nach den Umrechnungsfaktoren auch den Strom tragen.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Den kompletten Querschnitt berechnen?</h2>
+    <p>Cable Calc ergänzt Strombelastbarkeit, Umrechnungsfaktoren für Temperatur und Häufung und die Wahl der Sicherung, offline auf der Baustelle. <a class="cta-link" href="../cable-calc.html">Über Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=de&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dvoltage_drop_calculator_de"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" width="180" height="70"></a><span class="soon">iPhone-Version folgt bald.</span></div>
+  </div>
+</aside>
+<h2>Empfohlene Grenzwerte (IEC 60364-5-52, Tabelle G.52.1)</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Versorgung</th><th>Beleuchtung</th><th>Andere Verbraucher</th></tr></thead>
+<tbody>
+<tr><td>A: direkt aus dem öffentlichen Niederspannungsnetz</td><td>3 %</td><td>5 %</td></tr>
+<tr><td>B: eigene Niederspannungsversorgung (eigener Trafo oder Generator)</td><td>6 %</td><td>8 %</td></tr>
+</tbody></table></div>
+<p class="note">Nationale Vorschriften (z. B. DIN VDE 0100-520) können strengere Werte verlangen.</p>
+<h2>Rechenbeispiel</h2>
+<p>Ein 230-V-Wechselstromkreis führt 16 A über 30 m Kupferleitung 2,5 mm² bei cos φ = 0,95:
+ΔU = 2 × (0,0225 × 30 / 2,5 × 0,95 + 0,00008 × 30 × 0,31) × 16 ≈ 8,2 V, also 3,6 % von 230 V.
+Das liegt über dem Grenzwert von 3 % für Beleuchtung; mit dem nächsten Querschnitt, 4 mm², sind es etwa 5,2 V (2,2 %).</p>
+<h2>Fragen</h2>
+<h3>Wie berechnet man den Spannungsfall?</h3>
+<p>IEC 60364-5-52 Anhang G verwendet ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub>. Dabei ist b = 1 für Drehstrom und 2 für Wechselstrom, ρ₁ der spezifische Widerstand im Betrieb (0,0225 Ω·mm²/m für Kupfer), L die Länge in Metern, S der Querschnitt in mm², λ der Blindwiderstandsbelag (0,08 mΩ/m) und I<sub>B</sub> der Betriebsstrom. Der Prozentwert ist ΔU geteilt durch die Strangspannung.</p>
+<h3>Wie hoch darf der Spannungsfall sein?</h3>
+<p>IEC 60364-5-52 Tabelle G.52.1 empfiehlt 3 % für Beleuchtung und 5 % für andere Verbraucher bei Versorgung direkt aus dem öffentlichen Niederspannungsnetz und 6 % / 8 % bei eigener Niederspannungsversorgung. Nationale Vorschriften können strenger sein, also prüfe deine.</p>
+<h3>Warum ist der Spannungsfall bei Drehstrom kleiner als bei Wechselstrom?</h3>
+<p>Bei symmetrischer Belastung fließt im Neutralleiter kein Strom. Der Spannungsfall wird deshalb nur für einen Leiter gezählt (b = 1) statt für Hin- und Rückleiter (b = 2) und auf die Strangspannung bezogen.</p>
+<h3>Eignet sich der Rechner für AWG-Leitungen?</h3>
+<p>Nein. Er verwendet metrische Querschnitte in mm² und IEC-Werte. Für Nordamerika gelten das NEC-Verfahren und AWG-Größen.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

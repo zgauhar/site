@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sauna Heater Cable Size Calculator: 6, 8, 9 &amp; 10.5 kW (IEC)</title>
+<meta name="description" content="What size cable for a 6 kW, 9 kW or 10.5 kW sauna heater? Free calculator and table to IEC 60364: current per phase, breaker and cable size in mm² for three-phase sauna heaters.">
+<link rel="canonical" href="https://www.mintwavestudio.com/sauna-heater-cable-size.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Sauna Heater Cable Size Calculator: 6, 8, 9 &amp; 10.5 kW (IEC)">
+<meta property="og:description" content="What size cable for a 6 kW, 9 kW or 10.5 kW sauna heater? Free calculator and table to IEC 60364: current per phase, breaker and cable size in mm² for three-phase sauna heaters.">
+<meta property="og:url" content="https://www.mintwavestudio.com/sauna-heater-cable-size.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cable-calc/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261017a">
+<link rel="stylesheet" href="pages.css?v=20261017a">
+<script src="site-chrome.js?v=20261017a" defer></script>
+<script src="assets/cable-calc/calc.js?v=20261021a" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Sauna heater cable size calculator", "inLanguage": "en", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/sauna-heater-cable-size.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://www.mintwavestudio.com/apps.html"}, {"@type": "ListItem", "position": 3, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 4, "name": "Sauna heater cable size", "item": "https://www.mintwavestudio.com/sauna-heater-cable-size.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What size cable for a 9 kW sauna heater?", "acceptedAnswer": {"@type": "Answer", "text": "A 9 kW heater on 400 V three-phase draws about 13.0 A per phase. Over 15 m that is 1.5 mm² clipped direct and 1.5 mm² in an insulated wall, on a 13 A breaker. If the manual asks for a 16 A fuse, size for 16 A instead."}}, {"@type": "Question", "name": "How do I work out the current of a sauna heater?", "acceptedAnswer": {"@type": "Answer", "text": "For a three-phase heater, divide the power in watts by √3 × 400 V. A 9 kW heater: 9000 / (1.732 × 400) ≈ 13 A per phase. For single-phase, divide by 230 V."}}, {"@type": "Question", "name": "Can a sauna heater run on single-phase?", "acceptedAnswer": {"@type": "Answer", "text": "Some small heaters can, but most heaters above about 6 kW are designed for three-phase. The heater manual lists the supplies it accepts and the cable for each."}}, {"@type": "Question", "name": "Can I rely on the result without checking?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is guidance based on IEC 60364. The heater manufacturer's instructions and your national wiring rules come first. The installer remains responsible for the design."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="cable-calc.html">Cable Calc</a> › Sauna heater cable size</nav>
+<h1>Sauna heater cable size calculator</h1>
+<p class="lead">Find the supply cable size for an electric sauna heater from its power, the length of the run and how the cable is installed. The calculator below starts with a 9 kW three-phase heater on a 15 m run.</p>
+<form class="calc" data-calc="size" novalidate>
+  <div class="calc-mode" role="radiogroup" aria-label="Supply system">
+    <label><input type="radio" name="sys" value="1"><span>Single-phase</span></label>
+    <label><input type="radio" name="sys" value="3" checked><span>Three-phase</span></label>
+    <label><input type="radio" name="sys" value="dc"><span>DC</span></label>
+  </div>
+  <div class="calc-fields">
+    <label class="field">Load<input type="number" name="load" value="9" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Load is given in<select name="unit"><option value="a">Amps (A)</option><option value="kw" selected>Kilowatts (kW)</option></select></label>
+    <label class="field">Voltage (V)<input type="number" name="u" value="400" min="1" step="any" inputmode="decimal"></label>
+    <label class="field">Power factor cos φ<input type="number" name="pf" value="1" min="0" max="1" step="0.01" inputmode="decimal"></label>
+    <label class="field">Cable length (m)<input type="number" name="l" value="15" min="0" step="any" inputmode="decimal"></label>
+    <label class="field">Insulation<select name="ins"><option value="pvc" selected>PVC (70 °C)</option><option value="xlpe">XLPE / EPR (90 °C)</option></select></label>
+    <label class="field">Installation method<select name="method"><option value="A1">A1: single cores in conduit in an insulated wall</option><option value="A2">A2: multi-core cable in conduit in an insulated wall</option><option value="B1">B1: single cores in conduit on a wall</option><option value="B2">B2: multi-core cable in conduit on a wall</option><option value="C" selected>C: cable clipped direct to a wall</option><option value="E">E: multi-core cable in free air or on a perforated tray</option></select></label>
+    <label class="field">Ambient temperature (°C)<input type="number" name="amb" value="30" step="any" inputmode="decimal"></label>
+    <label class="field">Circuits grouped together<input type="number" name="grp" value="1" min="1" max="20" step="1" inputmode="numeric"></label>
+    <label class="field">Voltage drop limit (%)<input type="number" name="lim" value="3" min="0.1" step="any" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Cable size (copper)</span><span class="date" data-out="size">–</span></div>
+    <p class="result-sub" data-out="sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Breaker rating In</div><div class="v" data-out="breaker">–</div></div>
+      <div class="target"><div class="k">Capacity after derating Iz</div><div class="v" data-out="iz">–</div></div>
+      <div class="target"><div class="k">Voltage drop</div><div class="v" data-out="drop">–</div></div>
+      <div class="target"><div class="k">Size set by</div><div class="v" data-out="rule">–</div></div>
+    </div>
+  </div>
+</form>
+<script type="application/json" id="calc-i18n">{"invalid": "Enter positive numbers in every field.", "errTemp": "This insulation can't be used at that ambient temperature.", "errGroup": "The grouping table stops at 20 circuits.", "errLarge": "Beyond 120 mm² or a 250 A breaker: use parallel cables or a detailed design.", "sub": "Load current Ib = {ib} A · temperature factor {kt} · grouping factor {kg}", "ruleDrop": "Voltage drop (current alone: {cap})", "ruleCap": "Current capacity", "pct": "{n} %"}</script>
+<p class="note">Copper conductors, IEC 60364-5-52 Annex B current-carrying capacities at 30 °C, temperature factors from Table B.52.14 (rounded up to the next 5 °C step) and grouping factors for bunched circuits from Table B.52.17. The breaker is the smallest standard rating at or above the load current, and the cable must carry at least that rating after derating (Ib ≤ In ≤ Iz). Not covered here: buried cables (method D), aluminium, fault-loop disconnection times and short-circuit checks. Guidance only: check the standard, the cable maker's data and your national wiring rules. The installer remains responsible for the design.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <div>
+    <h2>Size every circuit on site</h2>
+    <p>Cable Calc works offline and adds earth-fault loop checks, saved projects and PDF reports for your customer. <a class="cta-link" href="cable-calc.html">About Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dweb%26utm_campaign%3Dsauna_heater_cable_size"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<h2>Typical sizes for three-phase sauna heaters</h2>
+<p>400 V three-phase, resistive load (cos φ = 1), 15 m of copper PVC cable at 30 °C on its own, 3% voltage drop. The breaker is the smallest standard rating at or above the heater current.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Heater</th><th scope="col">Current per phase</th><th scope="col">Breaker</th><th scope="col">Clipped direct (C)</th><th scope="col">In an insulated wall (A1)</th></tr></thead><tbody><tr><td>4.5 kW</td><td>6.5 A</td><td>10 A</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>6 kW</td><td>8.7 A</td><td>10 A</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>8 kW</td><td>11.5 A</td><td>13 A</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>9 kW</td><td>13.0 A</td><td>13 A</td><td>1.5 mm²</td><td>1.5 mm²</td></tr><tr><td>10.5 kW</td><td>15.2 A</td><td>16 A</td><td>1.5 mm²</td><td>2.5 mm²</td></tr></tbody></table></div>
+<h2>The heater manual comes first</h2>
+<p>Sauna heater manuals list the supply cable and fuse for each model, and some ask for a bigger fuse than the
+smallest standard rating, for example 16 A for a 9 kW heater. If yours does, enter the fuse rating as the load in amps:
+the cable is then sized to carry the fuse. With 16 A, 15 m in an insulated wall needs 2.5 mm²; clipped direct
+1.5 mm².</p>
+<h2>Inside the hot room</h2>
+<p>This calculator sizes the supply cable up to the sauna, at normal room temperature. The cable from the junction box to
+the heater runs inside the hot room and must be the heat-resistant type the heater manual specifies. Saunas are a special
+location in IEC 60364-7-703, with extra rules for where equipment may go, and many countries add their own.</p>
+<h2>Questions</h2>
+<h3>What size cable for a 9 kW sauna heater?</h3>
+<p>A 9 kW heater on 400 V three-phase draws about 13.0 A per phase. Over 15 m that is 1.5 mm² clipped direct and 1.5 mm² in an insulated wall, on a 13 A breaker. If the manual asks for a 16 A fuse, size for 16 A instead.</p>
+<h3>How do I work out the current of a sauna heater?</h3>
+<p>For a three-phase heater, divide the power in watts by √3 × 400 V. A 9 kW heater: 9000 / (1.732 × 400) ≈ 13 A per phase. For single-phase, divide by 230 V.</p>
+<h3>Can a sauna heater run on single-phase?</h3>
+<p>Some small heaters can, but most heaters above about 6 kW are designed for three-phase. The heater manual lists the supplies it accepts and the cable for each.</p>
+<h3>Can I rely on the result without checking?</h3>
+<p>No. It is guidance based on IEC 60364. The heater manufacturer's instructions and your national wiring rules come first. The installer remains responsible for the design.</p>
+<h2>More free tools</h2>
+<ul class="link-list">
+<li><a href="cable-size-calculator.html">Cable size calculator</a>: current capacity, derating, breaker and voltage drop</li>
+<li><a href="voltage-drop-calculator.html">Voltage drop calculator</a>: volts, % and the smallest size within your limit</li>
+<li><a href="ev-charger-cable-size.html">EV charger cable size</a>: 7.4 kW, 11 kW and 22 kW chargers</li>
+<li><a href="heat-pump-cable-size.html">Heat pump cable size</a>: sizing the cable to the breaker in the manual</li>
+</ul>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
