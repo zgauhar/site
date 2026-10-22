@@ -21,6 +21,9 @@ All apps: https://www.mintwavestudio.com/apps.html
 ## Home, garden & hobby
 
 - [Hatch Day](https://www.mintwavestudio.com/hatch-day.html): Egg incubation tracker for backyard poultry keepers: hatch countdown for 11 species (chicken, duck, goose, quail, turkey and more), daily temperature and humidity targets, turning, candling and lockdown reminders, candling log and hatch-rate statistics. Free with optional Pro. Offline, no account. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.hatchday
+<!-- sire-dam app -->
+- [Sire & Dam](https://www.mintwavestudio.com/sire-dam.html): Dog breeding app for hobby and professional breeders: heat cycles and next-heat prediction, progesterone stages (ng/mL or nmol/L) and estimated ovulation, best breeding days by semen type, due date from ovulation (63 days) or mating (58–68 days), whelping countdown and temperature log, puppy weights with alerts, buyers and puppy packs. Free for up to 3 dogs, optional Pro. Offline, no account, 8 languages. Coming soon to Google Play and the App Store.
+<!-- /sire-dam app -->
 
 ## Music practice
 
@@ -43,6 +46,13 @@ All apps: https://www.mintwavestudio.com/apps.html
 - [Hatch date calculator](https://www.mintwavestudio.com/hatch-date-calculator.html): hatch, candling and lockdown dates for 11 bird species.
 - [Incubation chart](https://www.mintwavestudio.com/incubation-chart.html): incubation temperature, humidity and days for 11 species.
 - [Candling guide](https://www.mintwavestudio.com/candling-guide.html), [Incubator humidity guide](https://www.mintwavestudio.com/incubator-humidity-guide.html), [Quail incubation](https://www.mintwavestudio.com/quail-incubation.html)
+<!-- sire-dam tools -->
+- [Dog pregnancy calculator](https://www.mintwavestudio.com/dog-pregnancy-calculator.html): whelping date and a day-by-day pregnancy timeline.
+- [Progesterone levels chart and ovulation calculator](https://www.mintwavestudio.com/dog-progesterone-levels-chart.html): ovulation day and best days to breed.
+- [Dog heat cycle calculator](https://www.mintwavestudio.com/dog-heat-cycle-calculator.html): when the next heat is due.
+- [Puppy weight gain calculator](https://www.mintwavestudio.com/puppy-weight-gain-calculator.html): checks whether a newborn puppy is gaining enough.
+- Dog pregnancy calculator in other languages: https://www.mintwavestudio.com/de/hund-traechtigkeit-rechner.html, https://www.mintwavestudio.com/fr/calcul-gestation-chienne.html, https://www.mintwavestudio.com/es/calculadora-gestacion-perra.html, https://www.mintwavestudio.com/it/calcolo-gravidanza-cane.html, https://www.mintwavestudio.com/nl/drachtigheid-hond-berekenen.html, https://www.mintwavestudio.com/pl/kalkulator-ciazy-suki.html, https://www.mintwavestudio.com/pt/calculadora-gestacao-cadela.html
+<!-- /sire-dam tools -->
 
 ## Policies
 
