@@ -67,7 +67,7 @@
         ],
         [
           "Rhythm Trainer",
-          "Timing & tempo practice",
+          "Timing trainer for rhythm gamers",
           "assets/rhythm-trainer/icon-192.png",
           "rhythm-trainer.html"
         ],
@@ -78,8 +78,8 @@
           "shadow-match.html"
         ],
         [
-          "Smart Quiz",
-          "Daily trivia challenge",
+          "Trivia Showtime",
+          "Game-show trivia quiz",
           "assets/smart-quiz/icon-192.png",
           "smart-quiz.html"
         ],
