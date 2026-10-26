@@ -1779,3 +1779,53 @@ a {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+
+/* =========================================================
+   FAQ (home page)
+   ========================================================= */
+
+.faq {
+  background: #f5f7f2;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.faq-item {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #d8ddd5;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.faq-item h3 {
+  margin: 0 0 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #172018;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #536054;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.contact-details a {
+  color: #172018;
+  text-underline-offset: 3px;
+}
+
+.contact-email {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+}

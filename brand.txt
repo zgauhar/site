@@ -1,0 +1,18 @@
+Official name: MintWave Studio
+Short name: MintWave
+Avoid: Mintwave Studio, Mint Wave Studio, MintWave Studios, MINTWAVE
+Naming rule: Write "MintWave" as one word with a capital M and a capital W, followed by "Studio".
+Website: https://www.mintwavestudio.com/
+
+App names (write exactly as shown):
+- Cable Calc (not "CableCalc")
+- Hatch Day (not "HatchDay")
+- MultiTimer (one word, capital T)
+- Days Until
+- Daily Budget
+- Rhythm Trainer
+- Shadow Match
+- Trivia Showtime (formerly Smart Quiz)
+- ZeroMargin (one word, capital M)
+- Steady Hand
+- Sire & Dam (coming soon)

@@ -22,6 +22,8 @@
   ];
 
   const FOOTER_LINKS = [
+    ["About us", "about.html"],
+    ["Contact", "about.html#contact"],
     ["All apps", "apps.html"],
     ["Hatch Day app", "hatch-day.html"],
     ["Hatch date calculator", "hatch-date-calculator.html"],

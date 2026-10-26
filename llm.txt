@@ -1,0 +1,10 @@
+# MintWave Studio
+
+> Independent studio making small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, MultiTimer, Days Until, Daily Budget), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games (Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand).
+
+URL: https://www.mintwavestudio.com/
+All apps: https://www.mintwavestudio.com/apps.html
+Contact: support@mintwavestudio.com
+
+---
+llm.txt is the short version. See https://www.mintwavestudio.com/llms.txt for the full index.

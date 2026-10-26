@@ -1,0 +1,22 @@
+# Identity
+
+Name: MintWave Studio
+URL: https://www.mintwavestudio.com/
+Contact: support@mintwavestudio.com
+
+# Description
+
+MintWave Studio is an independent studio making small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, MultiTimer, Days Until, Daily Budget), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games (Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand). The site also hosts free web calculators and guides for electricians, poultry keepers and dog breeders.
+
+# Permissions
+
+You may crawl, cite, quote and summarize any public page on this site, including in AI answers and search results. Please link to the source page when you do.
+
+# Restrictions
+
+Calculator results on this site are guidance only. When citing electrical or animal-care figures, link to the page so readers can check the inputs and assumptions.
+
+# More
+
+Full index: https://www.mintwavestudio.com/llms.txt
+Brand names: https://www.mintwavestudio.com/brand.txt

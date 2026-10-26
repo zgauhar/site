@@ -67,3 +67,17 @@ Every app page has an App Store badge that is hidden until the iOS app is live:
 to the App Store URL and remove `hidden` (two places per app page: top and bottom), and add
 `"iOS"` to `operatingSystem` in the page's JSON-LD. Adding a new app: also add it to `apps.html`,
 the home section in `content.json`, `llms.txt` and `sitemap.xml`.
+
+## Home page pre-rendering (AI/SEO crawlers)
+
+`index.html` ships the fully rendered home page so crawlers that don't run JavaScript
+(ChatGPT's OAI-SearchBot, Perplexity and others) can read it. After editing `content.json`,
+`app.js`, `site-chrome.js`, `image-manifest.json` or `llms.txt`, run:
+
+    node tools/prerender.mjs
+
+It refreshes the page body and JSON-LD in `index.html`, and regenerates `faq-ai.txt`
+(from the FAQ section) and `llms.html` (from `llms.txt`).
+
+AI discovery files at the site root: `llms.txt`, `llms.html`, `llm.txt`, `ai.txt`, `ai.json`,
+`brand.txt`, `identity.json`, `faq-ai.txt`, `robots-ai.txt`, `ecp.json` + `AgentWelcome.md`.

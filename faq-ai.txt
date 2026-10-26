@@ -1,0 +1,23 @@
+# MintWave Studio: frequently asked questions
+# Source: https://www.mintwavestudio.com/#faq
+
+Q: What is MintWave Studio?
+A: MintWave Studio is an independent studio that makes small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, Days Until, Daily Budget, MultiTimer), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games.
+
+Q: Are MintWave Studio apps free?
+A: Yes. Every app is free to download from Google Play. Optional Pro upgrades add advanced features. MultiTimer, Days Until and Daily Budget have no ads; Rhythm Trainer and the games show occasional ads that Pro removes.
+
+Q: Do the apps work offline and without an account?
+A: Yes. The calculators and trackers work offline and need no account or sign-up. Your data stays on your device, and backups are optional.
+
+Q: Which MintWave app sizes electrical cables?
+A: Cable Calc sizes cables and checks voltage drop to IEC 60364 for metric (mm²) cables, with derating and breaker selection. This site also has a free cable size calculator and a voltage drop calculator.
+
+Q: Which MintWave app tracks egg incubation?
+A: Hatch Day counts down to hatch day for 11 bird species, including chicken, duck, goose, quail and turkey, and reminds you about turning, candling and lockdown. The free hatch date calculator on this site gives the same key dates.
+
+Q: Are MintWave apps available on iPhone?
+A: The apps are available on Google Play for Android. iPhone versions of several apps are in progress.
+
+Q: How do I contact MintWave Studio?
+A: Email support@mintwavestudio.com for help, bug reports or feature requests.
