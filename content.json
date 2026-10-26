@@ -4,8 +4,8 @@
       "id": "home",
       "kind": "hero",
       "eyebrow": "",
-      "title": "Explore Innovative Apps",
-      "subtitle": "Bring Fun to Your Fingertips. Download Now.",
+      "title": "Tools, Trackers & Games",
+      "subtitle": "Small Android apps that each do one job well. Free to download.",
       "image": "hero",
       "decor": [
         "ipad",
@@ -17,14 +17,14 @@
     {
       "id": "about",
       "kind": "about",
-      "eyebrow": "The App",
-      "title": "Revolutionizing Mobile Apps and Games",
+      "eyebrow": "About",
+      "title": "An Independent App Studio",
       "lead": "Who We Are",
-      "body": "MintWave Studio is an independent mobile app creator focused on building small but meaningful digital experiences. Every app is designed with a balance of creativity, usability, and modern aesthetics.",
+      "body": "MintWave Studio is an independent developer of small Android apps. Each app does one job: size a cable, count down to hatch day, track expiry dates, plan a daily budget or train rhythm-game timing. The calculators and trackers work offline without an account, and iPhone versions of several apps are in progress.",
       "list": [
-        "Puzzle Games — Relaxing, clever, and easy to pick up",
-        "Utility Apps — Simple tools that make life easier",
-        "Creative Experiments — Small ideas brought to life"
+        "Calculators and trackers — Cable Calc, Hatch Day, Days Until, Daily Budget, MultiTimer",
+        "Music practice — Rhythm Trainer for rhythm gamers and drummers",
+        "Quick games — Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand"
       ]
     },
     {
@@ -102,20 +102,20 @@
       "kind": "features",
       "eyebrow": "Features",
       "title": "App Highlights",
-      "subtitle": "Unleashing Creativity and Fun",
+      "subtitle": "What Every App Has in Common",
       "image": "highlights",
       "items": [
         [
-          "Swift Gameplay",
-          "Experience lightning-fast performance while playing our games. Our apps are optimized for smooth operation, ensuring you never miss a moment of fun."
+          "Offline First",
+          "The calculators and trackers keep working without a connection. Your data stays on your phone unless you choose to make a backup."
         ],
         [
-          "Always Here for You",
-          "We offer round-the-clock support for our users. Whether you have questions or need assistance, our team is here to help you enjoy our apps to the fullest."
+          "No Account Needed",
+          "Open the app and start. There is no sign-up, and the budget and tracking apps never connect to your bank or a cloud service."
         ],
         [
-          "Safe and Secure",
-          "Your safety is our priority. Our applications are built with robust security measures to keep your information and gaming experience secure."
+          "Free to Try",
+          "Every app is free to download. Pro upgrades are optional. MultiTimer, Days Until and Daily Budget have no ads; the games show occasional ads that Pro removes."
         ]
       ]
     },
@@ -126,14 +126,14 @@
       "items": [
         [
           "/01",
-          "Tailored for You",
-          "Every app we design is crafted with user preferences in mind, ensuring a personalized gaming experience that keeps you engaged.",
+          "Built From User Feedback",
+          "Features are picked by reading store reviews of our apps and of competing apps, then fixing what users complain about most.",
           "phone2"
         ],
         [
           "/02",
-          "Innovative Development",
-          "Our cloud-based technology allows for seamless updates and integration, ensuring you always have the latest features and improvements.",
+          "Checked Against Real References",
+          "Cable Calc follows IEC 60364-5-52, Hatch Day uses incubation data for 11 bird species, and Rhythm Trainer judges every tap to the millisecond.",
           "phone3"
         ]
       ]
@@ -143,14 +143,52 @@
       "kind": "journey",
       "eyebrow": "About Us",
       "title": "Our Journey",
-      "subtitle": "Driven by Passion and Innovation",
-      "body": "At MintWave Studio, we believe in the power of creativity and technology. Our journey began with a vision to make enjoyable and accessible mobile games for everyone.",
+      "subtitle": "Small Apps, Steady Updates",
+      "body": "MintWave Studio started with simple Android utilities and games. The apps have since been rebuilt in Flutter, translated into up to 14 languages and paired with free web tools on this site, from a voltage drop calculator to a hatch date calculator.",
       "image": "hero"
+    },
+    {
+      "id": "faq",
+      "kind": "faq",
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "items": [
+        [
+          "What is MintWave Studio?",
+          "MintWave Studio is an independent studio that makes small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, Days Until, Daily Budget, MultiTimer), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games."
+        ],
+        [
+          "Are MintWave Studio apps free?",
+          "Yes. Every app is free to download from Google Play. Optional Pro upgrades add advanced features. MultiTimer, Days Until and Daily Budget have no ads; Rhythm Trainer and the games show occasional ads that Pro removes."
+        ],
+        [
+          "Do the apps work offline and without an account?",
+          "Yes. The calculators and trackers work offline and need no account or sign-up. Your data stays on your device, and backups are optional."
+        ],
+        [
+          "Which MintWave app sizes electrical cables?",
+          "Cable Calc sizes cables and checks voltage drop to IEC 60364 for metric (mm²) cables, with derating and breaker selection. This site also has a free cable size calculator and a voltage drop calculator."
+        ],
+        [
+          "Which MintWave app tracks egg incubation?",
+          "Hatch Day counts down to hatch day for 11 bird species, including chicken, duck, goose, quail and turkey, and reminds you about turning, candling and lockdown. The free hatch date calculator on this site gives the same key dates."
+        ],
+        [
+          "Are MintWave apps available on iPhone?",
+          "The apps are available on Google Play for Android. iPhone versions of several apps are in progress."
+        ],
+        [
+          "How do I contact MintWave Studio?",
+          "Email support@mintwavestudio.com for help, bug reports or feature requests."
+        ]
+      ]
     },
     {
       "id": "contact",
       "kind": "contact",
-      "title": "For Any Assistance Required Please Reach Out"
+      "title": "Questions or Feedback? Get in Touch",
+      "body": "Email us about bugs, feature ideas or anything else. Every message gets a reply.",
+      "email": "support@mintwavestudio.com"
     }
   ]
 }
