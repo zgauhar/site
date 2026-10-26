@@ -1,0 +1,12 @@
+{
+  "ecp_version": "1.0",
+  "name": "MintWave Studio",
+  "publisher": "MintWave Studio",
+  "homepage": "https://www.mintwavestudio.com/",
+  "description": "Independent studio making small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, MultiTimer, Days Until, Daily Budget), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games, plus free web calculators.",
+  "welcome": "/AgentWelcome.md",
+  "contact": "mailto:support@mintwavestudio.com",
+  "policy": "/ai.txt",
+  "sitemap": "/llms.txt",
+  "languages": ["en"]
+}

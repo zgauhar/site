@@ -383,6 +383,40 @@
 
 
     /* ------------------------------------------------------------
+       FAQ (answer-style headings, mirrored as FAQPage JSON-LD by
+       tools/prerender.mjs)
+       ------------------------------------------------------------ */
+
+    if (s.kind === "faq") {
+      return `
+        <section
+          id="faq"
+          class="faq section"
+          aria-labelledby="faq-title"
+        >
+
+          <div class="section-heading">
+            <span>${esc(s.eyebrow)}</span>
+            <h2 id="faq-title">${esc(s.title)}</h2>
+          </div>
+
+          <div class="faq-list">
+            ${(Array.isArray(s.items) ? s.items : [])
+              .map(([q, a]) => `
+                <article class="faq-item">
+                  <h3>${esc(q)}</h3>
+                  <p>${esc(a)}</p>
+                </article>
+              `)
+              .join("")}
+          </div>
+
+        </section>
+      `;
+    }
+
+
+    /* ------------------------------------------------------------
        CONTACT
        ------------------------------------------------------------ */
 
@@ -400,57 +434,20 @@
 
         </div>
 
-        <form
-          id="contact-form"
-          class="contact-form"
-        >
+        <div class="contact-details">
 
-          <label>
-            First Name*
-            <input
-              name="firstName"
-              autocomplete="given-name"
-              required
-            >
-          </label>
+          <p>${esc(s.body)}</p>
 
-          <label>
-            Last Name*
-            <input
-              name="lastName"
-              autocomplete="family-name"
-              required
-            >
-          </label>
+          <p>
+            <a class="contact-email" href="mailto:${esc(s.email)}">${esc(s.email)}</a>
+          </p>
 
-          <label>
-            Email*
-            <input
-              type="email"
-              name="email"
-              autocomplete="email"
-              required
-            >
-          </label>
+          <p>
+            <a href="about.html">About MintWave Studio</a> ·
+            <a href="https://play.google.com/store/apps/developer?id=MintWave+Studio">Google Play developer page</a>
+          </p>
 
-          <label>
-            Leave us a message
-            <textarea
-              name="message"
-              rows="4"
-            ></textarea>
-          </label>
-
-          <button type="submit">
-            Submit
-          </button>
-
-          <p
-            class="form-status"
-            aria-live="polite"
-          ></p>
-
-        </form>
+        </div>
 
       </section>
     `;
@@ -541,70 +538,11 @@
 
 
   /* ============================================================
-     CONTACT FORM
-     ============================================================ */
-
-  function setupContactForm() {
-
-    const form =
-      document.querySelector(
-        "#contact-form"
-      );
-
-    if (!form) {
-      return;
-    }
-
-    form.addEventListener(
-      "submit",
-      e => {
-
-        e.preventDefault();
-
-        const status =
-          form.querySelector(
-            ".form-status"
-          );
-
-        if (status) {
-          status.textContent =
-            "Thanks. Connect this form to your preferred form endpoint to receive messages.";
-        }
-
-      }
-    );
-  }
-
-
-  /* ============================================================
      LOAD APPLICATION
      ============================================================ */
 
-  async function load() {
-
-    const response = await fetch(
-      "./content.json",
-      {
-        cache: "no-store"
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(
-        "Could not load content.json"
-      );
-    }
-
-    const data =
-      await response.json();
-
-
-    /*
-     * Add an explicit application wrapper.
-     *
-     * This gives CSS a reliable containment boundary.
-     */
-    root.innerHTML = `
+  function renderPage(data) {
+    return `
       <div class="site-content">
 
         ${MintWaveChrome.header()}
@@ -623,6 +561,40 @@
 
       </div>
     `;
+  }
+
+  /* Used by tools/prerender.mjs to bake the page into index.html. */
+  window.MintWaveHome = { renderPage };
+
+  if (!root) {
+    return;
+  }
+
+  async function load() {
+
+    /*
+     * index.html ships pre-rendered HTML (tools/prerender.mjs) so
+     * crawlers that don't run JavaScript still see the page. In that
+     * case only images and navigation need wiring up.
+     */
+    if (!root.hasAttribute("data-prerendered")) {
+
+      const response = await fetch(
+        "./content.json",
+        {
+          cache: "no-store"
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "Could not load content.json"
+        );
+      }
+
+      root.innerHTML =
+        renderPage(await response.json());
+    }
 
 
     /*
@@ -635,7 +607,6 @@
      * Initialize interactive components.
      */
     MintWaveChrome.setupNavigation();
-    setupContactForm();
 
 
     /*
@@ -694,6 +665,11 @@
   load().catch(err => {
 
     console.error(err);
+
+    /* Keep the pre-rendered page if only images failed to load. */
+    if (root.hasAttribute("data-prerendered")) {
+      return;
+    }
 
     root.innerHTML = `
       <main class="error">

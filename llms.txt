@@ -3,6 +3,8 @@
 > Independent studio making small, focused mobile apps: offline-first calculators and trackers, and short puzzle, trivia and reflex games. Android apps are on Google Play; iPhone versions of some apps are in progress. Support: support@mintwavestudio.com
 
 All apps: https://www.mintwavestudio.com/apps.html
+About the studio: https://www.mintwavestudio.com/about.html
+FAQ: https://www.mintwavestudio.com/faq-ai.txt
 
 ## Tools & productivity
 
@@ -56,5 +58,8 @@ All apps: https://www.mintwavestudio.com/apps.html
 
 ## Policies
 
+- [About MintWave Studio](https://www.mintwavestudio.com/about.html)
+- [Brand and app names](https://www.mintwavestudio.com/brand.txt)
+- [AI usage policy](https://www.mintwavestudio.com/ai.txt)
 - [Privacy policy](https://www.mintwavestudio.com/privacy-policy.html)
 - [Terms & Conditions](https://www.mintwavestudio.com/terms-and-conditions.html)

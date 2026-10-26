@@ -1,0 +1,33 @@
+{
+  "name": "MintWave Studio",
+  "url": "https://www.mintwavestudio.com/",
+  "description": "Independent studio making small, focused Android apps: offline calculators and trackers, a rhythm timing trainer, and quick puzzle, trivia and reflex games, plus free web calculators.",
+  "contact": "mailto:support@mintwavestudio.com",
+  "about": "https://www.mintwavestudio.com/about.html",
+  "languages": ["en"],
+  "default_language": "en",
+  "store": "https://play.google.com/store/apps/developer?id=MintWave+Studio",
+  "apps": [
+    { "name": "Cable Calc", "url": "https://www.mintwavestudio.com/cable-calc.html", "category": "Tools" },
+    { "name": "MultiTimer", "url": "https://www.mintwavestudio.com/multitimer.html", "category": "Tools" },
+    { "name": "Days Until", "url": "https://www.mintwavestudio.com/days-until.html", "category": "Tools" },
+    { "name": "Daily Budget", "url": "https://www.mintwavestudio.com/daily-budget.html", "category": "Finance" },
+    { "name": "Hatch Day", "url": "https://www.mintwavestudio.com/hatch-day.html", "category": "Hobby" },
+    { "name": "Rhythm Trainer", "url": "https://www.mintwavestudio.com/rhythm-trainer.html", "category": "Music" },
+    { "name": "Shadow Match", "url": "https://www.mintwavestudio.com/shadow-match.html", "category": "Games" },
+    { "name": "Trivia Showtime", "url": "https://www.mintwavestudio.com/smart-quiz.html", "category": "Games" },
+    { "name": "ZeroMargin", "url": "https://www.mintwavestudio.com/zero-margin.html", "category": "Games" },
+    { "name": "Steady Hand", "url": "https://www.mintwavestudio.com/steady-hand.html", "category": "Games" }
+  ],
+  "discovery": {
+    "llms_txt": "https://www.mintwavestudio.com/llms.txt",
+    "llms_html": "https://www.mintwavestudio.com/llms.html",
+    "ai_txt": "https://www.mintwavestudio.com/ai.txt",
+    "brand_txt": "https://www.mintwavestudio.com/brand.txt",
+    "faq_ai_txt": "https://www.mintwavestudio.com/faq-ai.txt",
+    "identity_json": "https://www.mintwavestudio.com/identity.json",
+    "ecp_json": "https://www.mintwavestudio.com/ecp.json",
+    "robots_txt": "https://www.mintwavestudio.com/robots.txt",
+    "sitemap_xml": "https://www.mintwavestudio.com/sitemap.xml"
+  }
+}
