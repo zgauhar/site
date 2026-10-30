@@ -144,8 +144,11 @@
 <li><strong>No ads, no analytics, no crash reporting:</strong> Endly contains no advertising and does not use Firebase Analytics or Crashlytics. The only network connections it makes are for purchases (Google Play or the App Store, and RevenueCat, which receive only the purchase information described under Purchases, never your health entries).</li>
 <li><strong>Backups:</strong> on Android, Endly's data is excluded from device and cloud backup, so it stays on the phone. On iPhone, it may be included in your own iCloud or computer backup, which Apple encrypts; you can turn iCloud Backup off for Endly in your iPhone settings.</li>
 <li><strong>PIN lock:</strong> you can set a PIN that is required to open the Application. The PIN is stored on your device only.</li>
-<li><strong>Doctor report:</strong> the PDF report is created on your device and shared only when you choose to share it, with the apps and people you select.</li>
-<li><strong>Reminders</strong> are scheduled locally on your device.</li>
+<li><strong>Encrypted backup (optional):</strong> you can save an encrypted copy of your Endly data to a location you choose (for example phone storage, Google Drive or iCloud Drive), once or automatically on a schedule you set. The copy is encrypted on your device (AES-256) with a password only you know; the Service Provider never receives the copy or the password. For automatic backups, a key derived from your password is kept in your device's secure storage (Keychain or Android Keystore), never the password itself. Where the copy is stored, and whether it syncs to a cloud service, is controlled by you and the storage provider you pick. You can turn automatic backup off at any time.</li>
+<li><strong>Reports and exports:</strong> the doctor report, the impact report, the emergency card and CSV exports are files created on your device and saved only where you choose.</li>
+<li><strong>Medical records (optional):</strong> photos or PDFs of documents you add (for example scan reports or letters) are copied into Endly's own storage on your device. They are included in your encrypted backup if you make one, and are deleted with "Delete all data".</li>
+<li><strong>Home-screen widget (optional):</strong> shows only whether you logged today's pain and the number. On iPhone this number is shared with the widget through an app group on your device.</li>
+<li><strong>Reminders</strong> (daily check-in and medication reminders) are scheduled locally on your device. Medication reminders show the medication name only after the phone is unlocked on Android; on iPhone, notification previews follow your iPhone settings.</li>
 <li>Endly is a tracking tool, not a medical device, and does not give a diagnosis.</li>
 </ul>
 
