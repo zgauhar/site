@@ -6,7 +6,7 @@ Contact: support@mintwavestudio.com
 
 # Description
 
-MintWave Studio is an independent studio making small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, MultiTimer, Days Until, Daily Budget), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games (Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand). The site also hosts free web calculators and guides for electricians, poultry keepers and dog breeders.
+MintWave Studio is an independent studio making small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, Sire & Dam, MultiTimer, Days Until, Daily Budget), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games (Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand). The site also hosts free web calculators and guides for electricians, poultry keepers and dog breeders.
 
 # Permissions
 

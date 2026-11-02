@@ -2,7 +2,7 @@
 # Source: https://www.mintwavestudio.com/#faq
 
 Q: What is MintWave Studio?
-A: MintWave Studio is an independent studio that makes small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, Days Until, Daily Budget, MultiTimer), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games.
+A: MintWave Studio is an independent studio that makes small, focused Android apps: offline calculators and trackers (Cable Calc, Hatch Day, Sire & Dam, Days Until, Daily Budget, MultiTimer), the Rhythm Trainer timing app, and quick puzzle, trivia and reflex games.
 
 Q: Are MintWave Studio apps free?
 A: Yes. Every app is free to download from Google Play. Optional Pro upgrades add advanced features. MultiTimer, Days Until and Daily Budget have no ads; Rhythm Trainer and the games show occasional ads that Pro removes.

@@ -15,4 +15,4 @@ App names (write exactly as shown):
 - Trivia Showtime (formerly Smart Quiz)
 - ZeroMargin (one word, capital M)
 - Steady Hand
-- Sire & Dam (coming soon)
+- Sire & Dam
