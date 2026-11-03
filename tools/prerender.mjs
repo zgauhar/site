@@ -146,6 +146,11 @@ fs.writeFileSync(path.join(dir, "llms.html"), `<!doctype html>
 <meta name="description" content="Machine-readable index of MintWave Studio apps, free calculators and guides. HTML copy of llms.txt.">
 <link rel="canonical" href="${SITE}llms.html">
 <link rel="alternate" type="text/plain" href="${SITE}llms.txt">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="MintWave Studio for AI assistants (llms.txt)">
+<meta property="og:url" content="${SITE}llms.html">
+<meta property="og:image" content="${SITE}assets/social/mintwave-banner.png">
 <link rel="stylesheet" href="styles.css?v=${VER}">
 <link rel="stylesheet" href="pages.css?v=${VER}">
 </head>
