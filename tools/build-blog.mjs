@@ -19,6 +19,8 @@ const out = path.join(dir, "blog");
 const VER = fs.readFileSync(path.join(dir, "index.html"), "utf8").match(/styles\.css\?v=(\w+)/)[1];
 
 const APPS = {
+  endly: { name: "Endly", page: "endly.html", icon: "assets/endly/icon-192.png", soon: true,
+    cta: "A private endometriosis symptom diary", text: "Endly is coming soon to Google Play and the App Store: log pain in 10 seconds, see your patterns and bring a clear report to your doctor. No ads, no analytics." },
   "cable-calc": { name: "Cable Calc", page: "cable-calc.html", icon: "assets/cable-calc/icon-192.png", id: "com.mintwave.cablecalc",
     cta: "Size cables to IEC 60364 in seconds", text: "Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline." }
 };
@@ -148,7 +150,7 @@ ${a ? `<aside class="app-cta">
   <div>
     <h2>${esc(a.cta)}</h2>
     <p>${esc(a.text)} <a class="cta-link" href="../${a.page}">About ${esc(a.name)}</a></p>
-    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=${a.id}&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3D${p.slug}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get ${esc(a.name)} on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+    ${a.soon ? `<p class="soon">Coming soon to Google Play and the App Store.</p>` : `<div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=${a.id}&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3D${p.slug}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get ${esc(a.name)} on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>`}
   </div>
 </aside>` : ""}
 <p class="note updated">Published: <time datetime="${p.date}">${fmt(p.date)}</time></p>`

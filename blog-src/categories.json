@@ -1,8 +1,51 @@
 [
-  {"slug":"electrical","name":"Electrical & cables","blurb":"Cable sizing, voltage drop, breakers and wiring maths for electricians and careful DIYers.","app":"Cable Calc","appUrl":"cable-calc.html"},
-  {"slug":"timers-focus","name":"Timers & focus","blurb":"Running several timers at once for cooking, workouts, study blocks and work.","app":"MultiTimer","appUrl":"multitimer.html"},
-  {"slug":"home-organization","name":"Home & expiry tracking","blurb":"Keeping on top of best-before dates, medicines, documents and other things that run out.","app":"Days Until","appUrl":"days-until.html"},
-  {"slug":"money-budgeting","name":"Money & budgeting","blurb":"Simple, private budgeting without bank logins or spreadsheets.","app":"Daily Budget","appUrl":"daily-budget.html"},
-  {"slug":"egg-incubation","name":"Egg incubation","blurb":"Hatch dates, temperature, humidity, turning and lockdown for chickens, quail and more.","app":"Hatch Day","appUrl":"hatch-day.html"},
-  {"slug":"dog-breeding","name":"Dog breeding","blurb":"Heat cycles, progesterone timing, whelping dates and puppy records.","app":"Sire & Dam","appUrl":"sire-dam.html"}
+ {
+  "slug": "electrical",
+  "name": "Electrical & cables",
+  "blurb": "Cable sizing, voltage drop, breakers and wiring maths for electricians and careful DIYers.",
+  "app": "Cable Calc",
+  "appUrl": "cable-calc.html"
+ },
+ {
+  "slug": "timers-focus",
+  "name": "Timers & focus",
+  "blurb": "Running several timers at once for cooking, workouts, study blocks and work.",
+  "app": "MultiTimer",
+  "appUrl": "multitimer.html"
+ },
+ {
+  "slug": "home-organization",
+  "name": "Home & expiry tracking",
+  "blurb": "Keeping on top of best-before dates, medicines, documents and other things that run out.",
+  "app": "Days Until",
+  "appUrl": "days-until.html"
+ },
+ {
+  "slug": "money-budgeting",
+  "name": "Money & budgeting",
+  "blurb": "Simple, private budgeting without bank logins or spreadsheets.",
+  "app": "Daily Budget",
+  "appUrl": "daily-budget.html"
+ },
+ {
+  "slug": "egg-incubation",
+  "name": "Egg incubation",
+  "blurb": "Hatch dates, temperature, humidity, turning and lockdown for chickens, quail and more.",
+  "app": "Hatch Day",
+  "appUrl": "hatch-day.html"
+ },
+ {
+  "slug": "dog-breeding",
+  "name": "Dog breeding",
+  "blurb": "Heat cycles, progesterone timing, whelping dates and puppy records.",
+  "app": "Sire & Dam",
+  "appUrl": "sire-dam.html"
+ },
+ {
+  "slug": "health-tracking",
+  "name": "Health & symptom tracking",
+  "blurb": "Keeping a useful, private symptom diary and getting more from medical appointments.",
+  "app": "Endly",
+  "appUrl": "endly.html"
+ }
 ]
