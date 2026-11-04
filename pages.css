@@ -845,3 +845,13 @@
 .beat.a1 { border-color: var(--teal); }
 .beat.a2 { border-color: var(--teal-dark); border-width: 4px; }
 .beat.on { background: var(--amber); }
+
+/* Blog */
+.post-list { display: grid; gap: 16px; margin: 0 0 32px; }
+.post-card { border: 1px solid var(--line); border-radius: 14px; background: var(--paper); padding: 18px 20px; }
+.post-card h3 { margin: 4px 0 8px; }
+.post-card p { margin: 0 0 8px; }
+.page .post-card h3 a { text-decoration: none; color: var(--ink); }
+.page .post-card h3 a:hover { text-decoration: underline; }
+.post-meta { font-size: 14px; color: var(--muted); margin: 0 0 6px; }
+.page .chip-nav a[aria-current="page"] { background: var(--teal); color: #fff; }

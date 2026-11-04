@@ -216,4 +216,38 @@
     <loc>https://www.mintwavestudio.com/sire-dam.html</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
+  <!-- blog -->
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/electrical/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/timers-focus/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/home-organization/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/money-budgeting/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/egg-incubation/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/dog-breeding/</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/voltage-drop-cable-too-long.html</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <!-- /blog -->
 </urlset>

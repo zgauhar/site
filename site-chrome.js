@@ -15,6 +15,7 @@
   const NAV = [
     ["Home", "#home"],
     ["Apps", "apps.html"],
+    ["Blog", "blog/"],
     ["About Us", "#about"],
     ["Features", "#features"],
     ["Our Journey", "#journey"],
@@ -25,6 +26,7 @@
     ["About us", "about.html"],
     ["Contact", "about.html#contact"],
     ["All apps", "apps.html"],
+    ["Blog", "blog/"],
     ["Hatch Day app", "hatch-day.html"],
     ["Hatch date calculator", "hatch-date-calculator.html"],
     ["Incubation chart", "incubation-chart.html"],

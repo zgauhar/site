@@ -1,0 +1,62 @@
+<!--meta
+{"slug":"voltage-drop-cable-too-long","title":"Voltage drop: why a cable that carries the current can still be too long","description":"A cable can be safe for the current and still drop too much voltage over distance. See the IEC 60364 formula, a table of maximum lengths for 1.5 to 16 mm² copper, and four ways to fix a long run.","category":"electrical","date":"2026-11-04","app":"cable-calc","excerpt":"Choosing a cable by its current rating is only half the job. Over a long run, voltage drop usually decides the size."}
+-->
+<p class="lead">Most cable sizing starts with the current: pick a cable whose rating covers the load, add a breaker, done. But on a long run the cable that carries the current safely can still waste enough voltage that lights dim, motors struggle and chargers fault out. That is voltage drop, and over distance it often decides the size.</p>
+
+<h2>What voltage drop is</h2>
+<p>Every conductor has resistance, so a current flowing through it loses some voltage on the way. What arrives at the load is lower than what left the board. The loss grows with current and length and shrinks as the cross-section gets bigger. It is also a loss in a literal sense: the missing volts turn into heat in the cable.</p>
+
+<h2>The formula (IEC 60364-5-52, Annex G)</h2>
+<p>For copper cables the standard gives:</p>
+<p class="callout">ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub></p>
+<ul>
+<li><strong>b</strong>: 2 for single-phase and DC (current goes out and back), 1 for balanced three-phase.</li>
+<li><strong>ρ₁</strong>: resistivity of copper in service, 0.0225 Ω·mm²/m (1.25 × the value at 20 °C).</li>
+<li><strong>L</strong>: one-way length in metres. <strong>S</strong>: cross-section in mm².</li>
+<li><strong>λ</strong>: reactance, 0.08 mΩ/m. <strong>cos φ</strong>: power factor of the load.</li>
+<li><strong>I<sub>B</sub></strong>: the design current in amps.</li>
+</ul>
+<p>The percentage is ΔU divided by the nominal voltage (for three-phase, the phase-to-neutral voltage).</p>
+
+<h2>How much is too much?</h2>
+<p>IEC 60364-5-52 Table G.52.1 recommends at most 3% for lighting and 5% for other uses when the installation is fed from a public low-voltage network. With a private supply the figures are 6% and 8%. National rules can be stricter, so check the ones that apply to you.</p>
+
+<h2>How long can a run be?</h2>
+<p>This table shows the longest one-way run for a single-phase 230 V, 16 A load at cos φ = 0.95 on copper cable, calculated with the formula above.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Cable size</th><th>Max length at 3% (lighting)</th><th>Max length at 5% (other)</th></tr></thead>
+<tbody>
+<tr><td>1.5 mm²</td><td>15 m</td><td>25 m</td></tr>
+<tr><td>2.5 mm²</td><td>25 m</td><td>42 m</td></tr>
+<tr><td>4 mm²</td><td>40 m</td><td>67 m</td></tr>
+<tr><td>6 mm²</td><td>60 m</td><td>100 m</td></tr>
+<tr><td>10 mm²</td><td>100 m</td><td>166 m</td></tr>
+<tr><td>16 mm²</td><td>158 m</td><td>264 m</td></tr>
+</tbody></table></div>
+<p>A 2.5 mm² cable is fine for 16 A as far as current goes in many installation methods, yet it only reaches about 25 m before it breaks a 3% limit at that load. The table is for 16 A: halve the current and the length doubles, because the drop is proportional to both.</p>
+
+<h2>A worked example</h2>
+<p>A 230 V single-phase circuit carries 16 A over 30 m of 2.5 mm² copper at cos φ = 0.95:</p>
+<p>ΔU = 2 × (0.0225 × 30 / 2.5 × 0.95 + 0.00008 × 30 × 0.31) × 16 ≈ <strong>8.2 V</strong>, or 3.6% of 230 V.</p>
+<p>That fails a 3% limit. Moving up to 4 mm² gives ΔU ≈ 5.2 V (2.2%), which passes.</p>
+
+<h2>Four ways to fix a run that drops too much</h2>
+<ol>
+<li><strong>Go up a cable size.</strong> Doubling the cross-section halves the resistive part of the drop. It is the usual answer, at the cost of more copper and a harder pull.</li>
+<li><strong>Shorten the route.</strong> Measure the real cable path, not the straight line. A tidier route or a closer sub-board can save more than a bigger cable.</li>
+<li><strong>Raise the voltage.</strong> A three-phase feed has b = 1 instead of 2 and is compared with a higher base voltage, so the percentage falls sharply for the same load.</li>
+<li><strong>Reduce the current.</strong> Split one heavy circuit into two, or move large loads closer to the source.</li>
+</ol>
+
+<h2>Voltage drop is one of several checks</h2>
+<p>A cable has to pass all of these, and the largest result wins:</p>
+<ul>
+<li>carry the design current after derating for ambient temperature, grouping and installation method;</li>
+<li>be protected by a breaker rated so that I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>z</sub>;</li>
+<li>stay within the voltage drop limit at the far end;</li>
+<li>where required, trip the protection quickly enough in an earth fault.</li>
+</ul>
+<p>This article is a guide, not a design. Check the standard, the cable maker's data and your national wiring rules, and remember the installer remains responsible for the design.</p>
+
+<h2>Doing the sums on site</h2>
+<p>You can try the numbers above in the free <a href="../voltage-drop-calculator.html">voltage drop calculator</a>, which also shows the smallest size that fits your limit. <a href="../cable-calc.html">Cable Calc</a> puts the whole chain in one place on Android: derating, breaker selection, voltage drop and cable size, with every intermediate value on screen so you can check the working. It runs offline and covers copper cables from 1.5 to 120 mm².</p>
