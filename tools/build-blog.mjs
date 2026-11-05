@@ -21,6 +21,8 @@ const VER = fs.readFileSync(path.join(dir, "index.html"), "utf8").match(/styles\
 const APPS = {
   endly: { name: "Endly", page: "endly.html", icon: "assets/endly/icon-192.png", soon: true,
     cta: "A private endometriosis symptom diary", text: "Endly is coming soon to Google Play and the App Store: log pain in 10 seconds, see your patterns and bring a clear report to your doctor. No ads, no analytics." },
+  multitimer: { name: "MultiTimer", page: "multitimer.html", icon: "assets/multitimer/icon-192.png", id: "com.mintwave.multitimer",
+    cta: "Run several timers at once", text: "Countdowns, stopwatches and Pomodoro timers side by side, with exact alarms that ring even when the phone is asleep. Free on Android, no ads, no account." },
   "cable-calc": { name: "Cable Calc", page: "cable-calc.html", icon: "assets/cable-calc/icon-192.png", id: "com.mintwave.cablecalc",
     cta: "Size cables to IEC 60364 in seconds", text: "Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline." }
 };

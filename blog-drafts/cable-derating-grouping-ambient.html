@@ -1,0 +1,68 @@
+<!--meta
+{"slug":"cable-derating-grouping-ambient","title":"Cable derating: how grouping and ambient temperature shrink a cable's current rating","description":"A cable's tabulated current rating assumes ideal conditions. See the IEC 60364 ambient and grouping correction factors, a worked example where 2.5 mm² becomes 4 mm², and a checklist for sizing bunched cables.","category":"electrical","date":"2026-11-05","app":"cable-calc","excerpt":"The current rating in the table is a best case. Warm rooms and cables bundled together cut it, and often push the size up a step."}
+-->
+<p class="lead">The current rating printed in a cable table is a best case: one circuit, a mild ambient temperature, heat free to escape. Real installs are rarely that kind. Put several circuits in one conduit or run cables through a hot loft and the same cable carries less. That reduction is called derating, and skipping it is one of the commonest ways to under-size a cable.</p>
+
+<h2>Why heat sets the limit</h2>
+<p>A cable's rating is really a temperature limit. Current heats the conductor, and the insulation can only take so much: 70 °C for PVC, 90 °C for XLPE. The tabulated current is the value at which the conductor reaches that limit in the reference conditions. If the surroundings are warmer, or neighbouring cables add their own heat, there is less margin left for the current to use, so the allowed current falls.</p>
+
+<h2>The two corrections that matter most</h2>
+<p>IEC 60364-5-52 gives correction factors you multiply together. The two that change results most often are ambient temperature and grouping.</p>
+
+<h3>Ambient temperature</h3>
+<p>The reference is 30 °C in air. Above that, the factor for PVC insulation drops quickly:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Ambient</th><th>PVC (70 °C)</th></tr></thead>
+<tbody>
+<tr><td>30 °C</td><td>1.00</td></tr>
+<tr><td>35 °C</td><td>0.94</td></tr>
+<tr><td>40 °C</td><td>0.87</td></tr>
+<tr><td>45 °C</td><td>0.79</td></tr>
+<tr><td>50 °C</td><td>0.71</td></tr>
+</tbody></table></div>
+<p>Roof spaces, boiler rooms, plant rooms and cables in direct sun can easily reach 40 °C or more. XLPE cable tolerates more heat, so its factors are gentler at the same ambient.</p>
+
+<h3>Grouping</h3>
+<p>Cables carrying load heat each other. The more circuits that share a route, the lower the factor. For circuits bunched in air, on a surface or enclosed, the standard gives:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Circuits grouped</th><th>Factor</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1.00</td></tr>
+<tr><td>2</td><td>0.80</td></tr>
+<tr><td>3</td><td>0.70</td></tr>
+<tr><td>4</td><td>0.65</td></tr>
+<tr><td>5</td><td>0.60</td></tr>
+<tr><td>6</td><td>0.57</td></tr>
+</tbody></table></div>
+<p>Spacing the cables out in a single layer on a wall improves these figures (0.85 for two circuits, 0.79 for three), which is one reason a tidy tray beats a crowded conduit.</p>
+
+<h2>A worked example</h2>
+<p>Four 20 A circuits share one trunking in a 35 °C space, PVC-insulated copper, installation method C. Take the tabulated currents for two loaded conductors: 2.5 mm² is 27 A, 4 mm² is 36 A.</p>
+<p>Combined factor = 0.94 (ambient) × 0.65 (four circuits) = <strong>0.61</strong>.</p>
+<p>The cable must satisfy I<sub>z</sub> ≥ I<sub>n</sub>, so the tabulated rating has to be at least 20 / 0.61 ≈ <strong>32.7 A</strong>.</p>
+<ul>
+<li>2.5 mm²: 27 A is below 32.7 A, so it fails, even though 27 A comfortably covers a 20 A breaker on its own.</li>
+<li>4 mm²: 36 A is above 32.7 A, so it passes.</li>
+</ul>
+<p>The derating alone moved this installation up one size. Voltage drop is checked separately and can push it higher again.</p>
+
+<h2>Other conditions that change the rating</h2>
+<ul>
+<li><strong>Installation method.</strong> Clipped direct, in conduit in insulation and buried in ground all have different base ratings, and some methods have their own factors.</li>
+<li><strong>Soil thermal resistivity</strong> for buried cables. Dry, sandy ground carries heat away poorly.</li>
+<li><strong>Harmonics.</strong> Large non-linear loads add current in the neutral, which can force a bigger neutral or a larger phase conductor.</li>
+<li><strong>Thermal insulation.</strong> A cable surrounded by insulation for even a short stretch is rated by that worst stretch.</li>
+</ul>
+
+<h2>A quick checklist</h2>
+<ol>
+<li>Find the worst point on the route for temperature and grouping, not the average.</li>
+<li>Pick the base rating for your insulation and installation method.</li>
+<li>Multiply all applicable factors together.</li>
+<li>Divide the breaker rating (or design current) by that combined factor and choose a cable whose tabulated rating covers the result.</li>
+<li>Check voltage drop and, where required, fault-loop disconnection time.</li>
+</ol>
+<p>This article is a guide, not a design. Check the standard, the cable maker's data and your national wiring rules, and remember the installer remains responsible for the design. Factors differ between cable types and editions, so confirm yours before relying on any table.</p>
+
+<h2>Letting the tool carry the factors</h2>
+<p>Applying several tables by hand is where mistakes creep in. <a href="../cable-calc.html">Cable Calc</a> takes ambient temperature, grouping and installation method as inputs and shows the combined derating factor next to the final size, so you can see why a cable went up. To check the voltage side of the same run, use the free <a href="../voltage-drop-calculator.html">voltage drop calculator</a>.</p>
