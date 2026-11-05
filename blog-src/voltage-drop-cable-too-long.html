@@ -1,12 +1,12 @@
 <!--meta
-{"slug":"voltage-drop-cable-too-long","title":"Voltage drop: why a cable that carries the current can still be too long","description":"A cable can be safe for the current and still drop too much voltage over distance. See the IEC 60364 formula, a table of maximum lengths for 1.5 to 16 mm² copper, and four ways to fix a long run.","category":"electrical","date":"2026-11-04","app":"cable-calc","excerpt":"Choosing a cable by its current rating is only half the job. Over a long run, voltage drop usually decides the size."}
+{"slug": "voltage-drop-cable-too-long", "title": "Voltage drop: why a cable that carries the current can still be too long", "description": "A cable can be safe for the current and still drop too much voltage over distance. See the IEC 60364 formula, a table of maximum lengths for 1.5 to 16 mm² copper, and four ways to fix a long run.", "category": "electrical", "date": "2026-11-04", "app": "cable-calc", "excerpt": "Choosing a cable by its current rating is only half the job. Over a long run, voltage drop usually decides the size.", "imageAlt": "Illustration of a long cable run where the voltage falls from 230 V at the source to 214 V at the far end", "keywords": ["voltage drop", "cable too long", "voltage drop calculator", "cable size", "IEC 60364 voltage drop"]}
 -->
-<p class="lead">Most cable sizing starts with the current: pick a cable whose rating covers the load, add a breaker, done. But on a long run the cable that carries the current safely can still waste enough voltage that lights dim, motors struggle and chargers fault out. That is voltage drop, and over distance it often decides the size.</p>
+<p class="lead"><strong>Voltage drop is the voltage a cable loses between the board and the load, and on a long run it often decides the cable size.</strong> A cable can carry the current safely and still be too long: the usual limits are 3% for lighting and 5% for other circuits (IEC 60364-5-52), and past that lights dim, motors struggle and chargers fault out. Below you will find the formula, a table of maximum cable lengths by cable size, a worked example and four ways to fix a run that drops too much.</p>
 
-<h2>What voltage drop is</h2>
+<h2>What is voltage drop in a cable?</h2>
 <p>Every conductor has resistance, so a current flowing through it loses some voltage on the way. What arrives at the load is lower than what left the board. The loss grows with current and length and shrinks as the cross-section gets bigger. It is also a loss in a literal sense: the missing volts turn into heat in the cable.</p>
 
-<h2>The formula (IEC 60364-5-52, Annex G)</h2>
+<h2>Voltage drop formula (IEC 60364-5-52, Annex G)</h2>
 <p>For copper cables the standard gives:</p>
 <p class="callout">ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × I<sub>B</sub></p>
 <ul>
@@ -18,11 +18,11 @@
 </ul>
 <p>The percentage is ΔU divided by the nominal voltage (for three-phase, the phase-to-neutral voltage).</p>
 
-<h2>How much is too much?</h2>
+<h2>How much voltage drop is acceptable?</h2>
 <p>IEC 60364-5-52 Table G.52.1 recommends at most 3% for lighting and 5% for other uses when the installation is fed from a public low-voltage network. With a private supply the figures are 6% and 8%. National rules can be stricter, so check the ones that apply to you.</p>
 
-<h2>How long can a run be?</h2>
-<p>This table shows the longest one-way run for a single-phase 230 V, 16 A load at cos φ = 0.95 on copper cable, calculated with the formula above.</p>
+<h2>Maximum cable length by cable size</h2>
+<p>This table shows the maximum cable length, meaning the longest one-way run, for a single-phase 230 V, 16 A load at cos φ = 0.95 on copper cable, calculated with the formula above.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Cable size</th><th>Max length at 3% (lighting)</th><th>Max length at 5% (other)</th></tr></thead>
 <tbody>
@@ -35,12 +35,12 @@
 </tbody></table></div>
 <p>A 2.5 mm² cable is fine for 16 A as far as current goes in many installation methods, yet it only reaches about 25 m before it breaks a 3% limit at that load. The table is for 16 A: halve the current and the length doubles, because the drop is proportional to both.</p>
 
-<h2>A worked example</h2>
+<h2>Voltage drop calculation: a worked example</h2>
 <p>A 230 V single-phase circuit carries 16 A over 30 m of 2.5 mm² copper at cos φ = 0.95:</p>
 <p>ΔU = 2 × (0.0225 × 30 / 2.5 × 0.95 + 0.00008 × 30 × 0.31) × 16 ≈ <strong>8.2 V</strong>, or 3.6% of 230 V.</p>
 <p>That fails a 3% limit. Moving up to 4 mm² gives ΔU ≈ 5.2 V (2.2%), which passes.</p>
 
-<h2>Four ways to fix a run that drops too much</h2>
+<h2>How to reduce voltage drop: four fixes</h2>
 <ol>
 <li><strong>Go up a cable size.</strong> Doubling the cross-section halves the resistive part of the drop. It is the usual answer, at the cost of more copper and a harder pull.</li>
 <li><strong>Shorten the route.</strong> Measure the real cable path, not the straight line. A tidier route or a closer sub-board can save more than a bigger cable.</li>
@@ -48,7 +48,7 @@
 <li><strong>Reduce the current.</strong> Split one heavy circuit into two, or move large loads closer to the source.</li>
 </ol>
 
-<h2>Voltage drop is one of several checks</h2>
+<h2>Voltage drop is one of several cable sizing checks</h2>
 <p>A cable has to pass all of these, and the largest result wins:</p>
 <ul>
 <li>carry the design current after derating for ambient temperature, grouping and installation method;</li>
@@ -58,5 +58,5 @@
 </ul>
 <p>This article is a guide, not a design. Check the standard, the cable maker's data and your national wiring rules, and remember the installer remains responsible for the design.</p>
 
-<h2>Doing the sums on site</h2>
-<p>You can try the numbers above in the free <a href="../voltage-drop-calculator.html">voltage drop calculator</a>, which also shows the smallest size that fits your limit. <a href="../cable-calc.html">Cable Calc</a> puts the whole chain in one place on Android: derating, breaker selection, voltage drop and cable size, with every intermediate value on screen so you can check the working. It runs offline and covers copper cables from 1.5 to 120 mm².</p>
+<h2>Check voltage drop with a calculator</h2>
+<p>You can try the numbers above in the free <a href="../voltage-drop-calculator.html">voltage drop calculator</a>, which also shows the smallest cable size that fits your limit. Long runs are most common for chargers, heaters and outbuildings, so there are ready-made pages for an <a href="../ev-charger-cable-size.html">EV charger cable size</a>, a <a href="../sauna-heater-cable-size.html">sauna heater cable size</a> and a <a href="../heat-pump-cable-size.html">heat pump cable size</a>, and a general <a href="../cable-size-calculator.html">cable size calculator</a>. <a href="../cable-calc.html">Cable Calc</a> puts the whole chain in one place on Android: derating, breaker selection, voltage drop and cable size, with every intermediate value on screen so you can check the working. It runs offline and covers copper cables from 1.5 to 120 mm².</p>

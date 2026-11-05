@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A calendar of daily pain scores with a notebook">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d9d4"/><stop offset="1" stop-color="#eaa99f"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1080" cy="80" r="190" fill="#fff" opacity=".18"/><circle cx="90" cy="600" r="150" fill="#fff" opacity=".18"/>
+<g transform="translate(120 95)">
+<rect width="560" height="440" rx="30" fill="#fff"/><path d="M0 30a30 30 0 0 1 30-30h500a30 30 0 0 1 30 30v70H0z" fill="#9b3d52"/>
+<g fill="#fff" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="34"><text x="36" y="66">November</text></g>
+<g font-family="DM Sans,Arial,sans-serif" font-size="20" fill="#9b8a8c" text-anchor="middle"><text x="70" y="140">M</text><text x="150" y="140">T</text><text x="230" y="140">W</text><text x="310" y="140">T</text><text x="390" y="140">F</text><text x="470" y="140">S</text></g>
+<g>
+<circle cx="70" cy="190" r="26" fill="#e9f0e6"/><circle cx="150" cy="190" r="26" fill="#f6d28b"/><circle cx="230" cy="190" r="26" fill="#e9857d"/><circle cx="310" cy="190" r="26" fill="#9b3d52"/><circle cx="390" cy="190" r="26" fill="#e9857d"/><circle cx="470" cy="190" r="26" fill="#f6d28b"/>
+<circle cx="70" cy="262" r="26" fill="#e9f0e6"/><circle cx="150" cy="262" r="26" fill="#e9f0e6"/><circle cx="230" cy="262" r="26" fill="#f6d28b"/><circle cx="310" cy="262" r="26" fill="#e9857d"/><circle cx="390" cy="262" r="26" fill="#9b3d52"/><circle cx="470" cy="262" r="26" fill="#9b3d52"/>
+<circle cx="70" cy="334" r="26" fill="#e9857d"/><circle cx="150" cy="334" r="26" fill="#f6d28b"/><circle cx="230" cy="334" r="26" fill="#e9f0e6"/><circle cx="310" cy="334" r="26" fill="#e9f0e6"/><circle cx="390" cy="334" r="26" fill="#f6d28b"/><circle cx="470" cy="334" r="26" fill="none" stroke="#9b3d52" stroke-width="4" stroke-dasharray="6 6"/>
+</g></g>
+<g transform="translate(740 150) rotate(5)"><rect width="320" height="400" rx="22" fill="#fff"/><rect width="34" height="400" rx="17" fill="#236a63"/>
+<g fill="#e5d3d0"><rect x="76" y="70" width="190" height="14" rx="7"/><rect x="76" y="120" width="220" height="14" rx="7"/><rect x="76" y="170" width="150" height="14" rx="7"/><rect x="76" y="220" width="210" height="14" rx="7"/></g>
+<g fill="#9b3d52" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="64"><text x="76" y="335">7/10</text></g></g>
+</svg>

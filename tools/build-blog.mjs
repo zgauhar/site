@@ -39,9 +39,11 @@ const posts = fs.readdirSync(src).filter(f => f.endsWith(".html")).map(f => {
   return { ...meta, body: raw.slice(m[0].length) };
 }).sort((a, b) => b.date.localeCompare(a.date));
 
+const thumb = p => `assets/blog/${p.slug}.svg`;
+const ogImg = p => `assets/blog/${p.slug}.png`;
 const fmt = d => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 
-function page({ depth, title, desc, canonical, jsonld, crumbs, main, image }) {
+function page({ depth, title, desc, canonical, jsonld, crumbs, main, image, keywords, article }) {
   const up = "../".repeat(depth);
   return `<!doctype html>
 <html lang="en">
@@ -50,6 +52,9 @@ function page({ depth, title, desc, canonical, jsonld, crumbs, main, image }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
+${keywords ? `<meta name="keywords" content="${esc(keywords.join(", "))}">
+` : ""}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="alternate" type="application/rss+xml" title="MintWave Studio Blog" href="${up}blog/feed.xml">
 <link rel="canonical" href="${SITE}${canonical}">
 <meta property="og:type" content="${canonical.endsWith("/") ? "website" : "article"}">
 <meta property="og:site_name" content="MintWave Studio">
@@ -57,7 +62,15 @@ function page({ depth, title, desc, canonical, jsonld, crumbs, main, image }) {
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${SITE}${canonical}">
 <meta property="og:image" content="${SITE}${image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${SITE}${image}">
+${article ? `<meta property="article:published_time" content="${article.date}">
+<meta property="article:section" content="${esc(article.section)}">
+` : ""}
 <link rel="icon" href="${up}assets/brand/logo-400.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,11 +101,19 @@ const chips = (depth, active) => `<nav class="chip-nav" aria-label="Blog categor
 ${cats.map(c => `<a href="${"../".repeat(depth)}blog/${c.slug}/"${c.slug === active ? ' aria-current="page"' : ""}>${esc(c.name)}</a>`).join("\n")}
 </nav>`;
 
-const card = (p, up) => `<article class="post-card">
-<p class="post-meta"><a href="${up}blog/${p.category}/">${esc(catBy[p.category].name)}</a> · <time datetime="${p.date}">${fmt(p.date)}</time></p>
+const card = (p, up, featured) => `<article class="post-card${featured ? " featured" : ""}">
+<a class="thumb" href="${up}blog/${p.slug}.html" tabindex="-1" aria-hidden="true"><img src="${up}${thumb(p)}" alt="${esc(p.imageAlt)}" width="1200" height="630" loading="${featured ? "eager" : "lazy"}"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="${up}blog/${p.category}/">${esc(catBy[p.category].name)}</a> <time datetime="${p.date}">${fmt(p.date)}</time></p>
 <h3><a href="${up}blog/${p.slug}.html">${esc(p.title)}</a></h3>
 <p>${esc(p.excerpt)}</p>
+<a class="read-more" href="${up}blog/${p.slug}.html">Read article <span aria-hidden="true">→</span></a>
+</div>
 </article>`;
+
+const ICON_DIR = { "hatch-day": "hatch" };
+const catIcon = c => { const k = c.appUrl.replace(".html", ""); return `assets/${ICON_DIR[k] ?? k}/icon-192.png`; };
+const catCard = (c, up) => `<a class="cat-card" href="${up}blog/${c.slug}/"><img src="${up}${catIcon(c)}" alt="${esc(c.app)} app icon" width="56" height="56" loading="lazy"><span><strong>${esc(c.name)}</strong><span>${esc(c.blurb)}</span><em>${posts.filter(p => p.category === c.slug).length || "No"} post${posts.filter(p => p.category === c.slug).length === 1 ? "" : "s"} · ${esc(c.app)}</em></span></a>`;
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
@@ -111,11 +132,11 @@ write("index.html", page({
 ${chips(1, null)}
 <h2>Latest posts</h2>
 <div class="post-list">
-${posts.map(p => card(p, "../")).join("\n")}
+${posts.map((p, i) => card(p, "../", i === 0)).join("\n")}
 </div>
-<h2>Categories</h2>
-<div class="post-list">
-${cats.map(c => `<article class="post-card"><h3><a href="../blog/${c.slug}/">${esc(c.name)}</a></h3><p>${esc(c.blurb)}</p><p class="post-meta">Related app: <a href="../${c.appUrl}">${esc(c.app)}</a></p></article>`).join("\n")}
+<h2>Browse by topic</h2>
+<div class="cat-grid">
+${cats.map(c => catCard(c, "../")).join("\n")}
 </div>`
 }));
 
@@ -137,27 +158,57 @@ ${ps.length ? `<div class="post-list">\n${ps.map(p => card(p, "../../")).join("\
 }
 
 // Posts
-for (const p of posts) {
+const words = html => html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+const appLd = a => ({ "@type": "SoftwareApplication", name: a.name, url: SITE + a.page, applicationCategory: "UtilitiesApplication", operatingSystem: "Android" });
+posts.forEach((p, idx) => {
   const c = catBy[p.category], a = APPS[p.app];
   const url = `blog/${p.slug}.html`;
+  const newer = posts[idx - 1], older = posts[idx + 1];
+  const related = [...posts.filter(q => q.slug !== p.slug && q.category === p.category), ...posts.filter(q => q.slug !== p.slug && q.category !== p.category)].slice(0, 3);
   write(`${p.slug}.html`, page({
-    depth: 1, title: `${p.title} | MintWave Studio Blog`, desc: p.description, canonical: url, image: ogDefault,
-    jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, inLanguage: "en", mainEntityOfPage: SITE + url, image: SITE + ogDefault, author: { "@id": SITE + "#org" }, publisher: { "@id": SITE + "#org" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`], [p.title, url]])] },
-    crumbs: `<a href="../">Home</a> › <a href="./">Blog</a> › <a href="${c.slug}/">${esc(c.name)}</a> › Article`,
-    main: `<p class="post-meta"><a href="${c.slug}/">${esc(c.name)}</a> · <time datetime="${p.date}">${fmt(p.date)}</time></p>
+    depth: 1, title: `${p.title} | MintWave Studio Blog`, desc: p.description, canonical: url, image: ogImg(p),
+    keywords: p.keywords, article: { date: p.date, section: c.name },
+    jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, inLanguage: "en", articleSection: c.name, keywords: (p.keywords || []).join(", "), wordCount: words(p.body), mainEntityOfPage: SITE + url, image: { "@type": "ImageObject", url: SITE + ogImg(p), width: 1200, height: 630, caption: p.imageAlt }, author: { "@id": SITE + "#org" }, publisher: { "@id": SITE + "#org" }, ...(a ? { about: appLd(a) } : {}), isPartOf: { "@type": "Blog", url: SITE + "blog/" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`], [p.title, url]])] },
+    crumbs: `<a href="../">Home</a> › <a href="./">Blog</a> › <a href="${c.slug}/">${esc(c.name)}</a> › ${esc(p.title)}`,
+    main: `<p class="post-meta"><a class="tag" href="${c.slug}/">${esc(c.name)}</a> · <time datetime="${p.date}">${fmt(p.date)}</time></p>
 <h1>${esc(p.title)}</h1>
+<figure class="post-hero"><img src="../${thumb(p)}" alt="${esc(p.imageAlt)}" width="1200" height="630"></figure>
 ${p.body}
 ${a ? `<aside class="app-cta">
-  <img class="app-icon" src="../${a.icon}" alt="" width="72" height="72">
+  <img class="app-icon" src="../${a.icon}" alt="${esc(a.name)} app icon" width="72" height="72">
   <div>
     <h2>${esc(a.cta)}</h2>
     <p>${esc(a.text)} <a class="cta-link" href="../${a.page}">About ${esc(a.name)}</a></p>
     ${a.soon ? `<p class="soon">Coming soon to Google Play and the App Store.</p>` : `<div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=${a.id}&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3D${p.slug}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get ${esc(a.name)} on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>`}
   </div>
 </aside>` : ""}
-<p class="note updated">Published: <time datetime="${p.date}">${fmt(p.date)}</time></p>`
+${related.length ? `<section class="related" aria-labelledby="related-h"><h2 id="related-h">Keep reading</h2>
+<div class="post-list">
+${related.map(q => card(q, "../")).join("\n")}
+</div></section>` : ""}
+<nav class="post-nav" aria-label="Previous and next articles">
+${older ? `<a rel="prev" href="${older.slug}.html"><span>← Older</span>${esc(older.title)}</a>` : "<span></span>"}
+${newer ? `<a rel="next" href="${newer.slug}.html"><span>Newer →</span>${esc(newer.title)}</a>` : "<span></span>"}
+</nav>
+<p class="note updated">Published: <time datetime="${p.date}">${fmt(p.date)}</time>. More in <a href="${c.slug}/">${esc(c.name)}</a> or <a href="./">all articles</a>.</p>`
   }));
-}
+});
+
+// RSS feed
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>MintWave Studio Blog</title><link>${SITE}blog/</link><description>Practical guides from the makers of Cable Calc, MultiTimer, Days Until, Daily Budget, Hatch Day, Sire &amp; Dam and Endly.</description><language>en</language>
+${posts.map(p => `<item><title>${esc(p.title)}</title><link>${SITE}blog/${p.slug}.html</link><guid>${SITE}blog/${p.slug}.html</guid><pubDate>${new Date(p.date + "T08:00:00Z").toUTCString()}</pubDate><category>${esc(catBy[p.category].name)}</category><description>${esc(p.description)}</description></item>`).join("\n")}
+</channel></rss>
+`;
+write("feed.xml", rss);
+
+// llms.txt: keep the blog list between markers.
+const llmsPath = path.join(dir, "llms.txt");
+let llms = fs.readFileSync(llmsPath, "utf8");
+const llmsBlock = `<!-- blog -->\n- [Blog](${SITE}blog/): practical guides for the MintWave tools and trackers (RSS: ${SITE}blog/feed.xml).\n${posts.map(p => `  - [${p.title}](${SITE}blog/${p.slug}.html): ${p.excerpt}`).join("\n")}\n<!-- /blog -->`;
+llms = /<!-- blog -->[\s\S]*?<!-- \/blog -->/.test(llms) ? llms.replace(/<!-- blog -->[\s\S]*?<!-- \/blog -->/, llmsBlock) : llms.replace(/- \[Blog\]\([^\n]*\n/, llmsBlock + "\n");
+fs.writeFileSync(llmsPath, llms);
 
 // Sitemap: replace the region between the blog markers (or append once).
 const urls = [["blog/", posts[0]?.date], ...cats.map(c => [`blog/${c.slug}/`, posts.find(p => p.category === c.slug)?.date ?? posts[0].date]), ...posts.map(p => [`blog/${p.slug}.html`, p.date])];
