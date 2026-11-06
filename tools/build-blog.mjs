@@ -170,12 +170,15 @@ posts.forEach((p, idx) => {
   write(`${p.slug}.html`, page({
     depth: 1, title: `${p.title} | MintWave Studio Blog`, desc: p.description, canonical: url, image: ogImg(p),
     keywords: p.keywords, article: { date: p.date, section: c.name },
-    jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, inLanguage: "en", articleSection: c.name, keywords: (p.keywords || []).join(", "), wordCount: words(p.body), mainEntityOfPage: SITE + url, image: { "@type": "ImageObject", url: SITE + ogImg(p), width: 1200, height: 630, caption: p.imageAlt }, author: { "@id": SITE + "#org" }, publisher: { "@id": SITE + "#org" }, ...(a ? { about: appLd(a) } : {}), isPartOf: { "@type": "Blog", url: SITE + "blog/" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`], [p.title, url]])] },
+    jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, inLanguage: "en", articleSection: c.name, keywords: (p.keywords || []).join(", "), wordCount: words(p.body), mainEntityOfPage: SITE + url, image: { "@type": "ImageObject", url: SITE + ogImg(p), width: 1200, height: 630, caption: p.imageAlt }, author: { "@id": SITE + "#org" }, publisher: { "@id": SITE + "#org" }, ...(a ? { about: appLd(a) } : {}), isPartOf: { "@type": "Blog", url: SITE + "blog/" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`], [p.title, url]]), ...(p.faq?.length ? [{ "@type": "FAQPage", mainEntity: p.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }] : [])] },
     crumbs: `<a href="../">Home</a> › <a href="./">Blog</a> › <a href="${c.slug}/">${esc(c.name)}</a> › ${esc(p.title)}`,
     main: `<p class="post-meta"><a class="tag" href="${c.slug}/">${esc(c.name)}</a> · <time datetime="${p.date}">${fmt(p.date)}</time></p>
 <h1>${esc(p.title)}</h1>
 <figure class="post-hero"><img src="../${thumb(p)}" alt="${esc(p.imageAlt)}" width="1200" height="630"></figure>
 ${p.body}
+${p.faq?.length ? `<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>
+${p.faq.map(f => `<h3>${esc(f.q)}</h3>\n<p>${esc(f.a)}</p>`).join("\n")}
+</section>` : ""}
 ${a ? `<aside class="app-cta">
   <img class="app-icon" src="../${a.icon}" alt="${esc(a.name)} app icon" width="72" height="72">
   <div>
