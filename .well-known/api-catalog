@@ -1,0 +1,20 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.mintwavestudio.com/",
+      "service-doc": [
+        { "href": "https://www.mintwavestudio.com/llms.txt", "type": "text/plain", "title": "MintWave Studio apps and guides for AI assistants (llms.txt)" },
+        { "href": "https://www.mintwavestudio.com/AgentWelcome.md", "type": "text/markdown", "title": "Notes for AI agents" },
+        { "href": "https://www.mintwavestudio.com/faq-ai.txt", "type": "text/plain", "title": "Frequently asked questions" }
+      ],
+      "describedby": [
+        { "href": "https://www.mintwavestudio.com/ai.json", "type": "application/json", "title": "Studio and app index" },
+        { "href": "https://www.mintwavestudio.com/identity.json", "type": "application/json", "title": "Organization identity" }
+      ],
+      "alternate": [
+        { "href": "https://www.mintwavestudio.com/blog/feed.xml", "type": "application/rss+xml", "title": "MintWave Studio Blog feed" },
+        { "href": "https://www.mintwavestudio.com/sitemap.xml", "type": "application/xml", "title": "Sitemap" }
+      ]
+    }
+  ]
+}
