@@ -1,6 +1,6 @@
 # MintWave Studio
 
-> Independent studio making small, focused mobile apps: offline-first calculators and trackers, and short puzzle, trivia and reflex games. Android apps are on Google Play; iPhone versions of some apps are in progress. Support: support@mintwavestudio.com
+> Independent studio making small, focused mobile apps: offline-first calculators and trackers, and short puzzle, trivia and reflex games. Android apps are on Google Play; Hatch Day is also on the App Store, and iPhone versions of other apps are in progress. Support: support@mintwavestudio.com
 
 All apps: https://www.mintwavestudio.com/apps.html
 About the studio: https://www.mintwavestudio.com/about.html
@@ -30,7 +30,7 @@ FAQ: https://www.mintwavestudio.com/faq-ai.txt
 
 ## Hobby & breeding
 
-- [Hatch Day](https://www.mintwavestudio.com/hatch-day.html): Egg incubation tracker for backyard poultry keepers: hatch countdown for 11 species (chicken, duck, goose, quail, turkey and more), daily temperature and humidity targets, turning, candling and lockdown reminders, and a species incubation chart are free (one hatch at a time); Pro adds the candling log, temperature and humidity log, hatch-rate statistics and unlimited hatches. Offline, no account. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.hatchday
+- [Hatch Day](https://www.mintwavestudio.com/hatch-day.html): Egg incubation tracker for backyard poultry keepers on Android and iOS (App Store: https://apps.apple.com/app/id6823774178): hatch countdown for 11 species (chicken, duck, goose, quail, turkey and more), daily temperature and humidity targets, turning, candling and lockdown reminders, and a species incubation chart are free (one hatch at a time); Pro adds the candling log, temperature and humidity log, hatch-rate statistics and unlimited hatches. Offline, no account. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.hatchday
 <!-- sire-dam app -->
 - [Sire & Dam](https://www.mintwavestudio.com/sire-dam.html): Dog breeding app for hobby and professional breeders: heat cycles and next-heat prediction, progesterone stages (ng/mL or nmol/L) and estimated ovulation, best breeding days by semen type, due date from ovulation (63 days) or mating (58–68 days), whelping countdown and temperature log, puppy weights with alerts, buyers and puppy packs. Free for up to 3 dogs, optional Pro. Offline, no account, 8 languages. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.siredam (iPhone version coming soon).
 <!-- /sire-dam app -->

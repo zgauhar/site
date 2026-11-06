@@ -17,7 +17,7 @@ Q: Which MintWave app tracks egg incubation?
 A: Hatch Day counts down to hatch day for 11 bird species, including chicken, duck, goose, quail and turkey, and reminds you about turning, candling and lockdown. The free hatch date calculator on this site gives the same key dates.
 
 Q: Are MintWave apps available on iPhone?
-A: The apps are available on Google Play for Android. iPhone versions of several apps are in progress.
+A: The apps are available on Google Play for Android. Hatch Day is also on the App Store, and iPhone versions of other apps are in progress.
 
 Q: How do I contact MintWave Studio?
 A: Email support@mintwavestudio.com for help, bug reports or feature requests.

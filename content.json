@@ -20,7 +20,7 @@
       "eyebrow": "About",
       "title": "An Independent App Studio",
       "lead": "Who We Are",
-      "body": "MintWave Studio is an independent developer of small Android apps. Each app does one job: size a cable, count down to hatch day, track expiry dates, plan a daily budget or train rhythm-game timing. The calculators and trackers work offline without an account, and iPhone versions of several apps are in progress.",
+      "body": "MintWave Studio is an independent developer of small Android apps. Each app does one job: size a cable, count down to hatch day, track expiry dates, plan a daily budget or train rhythm-game timing. The calculators and trackers work offline without an account, and Hatch Day is also on the App Store, and iPhone versions of other apps are in progress.",
       "list": [
         "Calculators and trackers — Cable Calc, Hatch Day, Sire & Dam, Days Until, Daily Budget, MultiTimer",
         "Music practice — Rhythm Trainer for rhythm gamers and drummers",
@@ -181,7 +181,7 @@
         ],
         [
           "Are MintWave apps available on iPhone?",
-          "The apps are available on Google Play for Android. iPhone versions of several apps are in progress."
+          "The apps are available on Google Play for Android. Hatch Day is also on the App Store, and iPhone versions of other apps are in progress."
         ],
         [
           "How do I contact MintWave Studio?",
