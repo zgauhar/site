@@ -190,7 +190,7 @@ ${a ? `<aside class="app-cta">
   <div>
     <h2>${esc(a.cta)}</h2>
     <p>${esc(a.text)} <a class="cta-link" href="../${a.page}">About ${esc(a.name)}</a></p>
-    ${a.soon ? `<p class="soon">Coming soon to Google Play and the App Store.</p>` : `<div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=${a.id}&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3D${p.slug}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get ${esc(a.name)} on Google Play" width="180" height="70"></a>${a.ios ? `<a class="app-store-badge" href="${a.ios}"><img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/black/en-us" alt="Download ${esc(a.name)} on the App Store" width="150" height="50" loading="lazy"></a>` : `<span class="soon">iPhone version coming soon.</span>`}</div>`}
+    ${a.soon ? `<p class="soon">Coming soon to Google Play and the App Store.</p>` : `<div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=${a.id}&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3D${p.slug}"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get ${esc(a.name)} on Google Play" width="180" height="70"></a>${a.ios ? `<a class="app-store-badge" href="${a.ios}"><img src="/assets/badges/app-store-black.svg" alt="Download ${esc(a.name)} on the App Store" width="150" height="50" loading="lazy"></a>` : `<span class="soon">iPhone version coming soon.</span>`}</div>`}
   </div>
 </aside>` : ""}
 ${related.length ? `<section class="related" aria-labelledby="related-h"><h2 id="related-h">Keep reading</h2>

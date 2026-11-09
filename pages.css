@@ -896,4 +896,5 @@
 .page .app-tile-link::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
 .app-tile-badges { position: relative; z-index: 1; margin-top: auto; gap: 8px; }
 .app-tile-badges .play-badge img { height: 54px; width: auto; margin: -8px -4px; }
-.app-tile-badges .app-store-badge img { height: 40px; width: auto; }
+.app-tile-badges .app-store-badge img {
+  aspect-ratio: 3 / 1; height: 40px; width: auto; }
