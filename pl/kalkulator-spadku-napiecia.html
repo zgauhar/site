@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kalkulator spadku napięcia (IEC 60364): wolty, % i przekrój</title>
-<meta name="description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych wg IEC 60364-5-52 załącznik G: jednofazowy, trójfazowy i DC. Spadek w woltach i %, napięcie na odbiorniku i najmniejszy przekrój w mm².">
+<meta name="description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych (IEC 60364-5-52): 1-fazowy, 3-fazowy i DC. Spadek w V i % oraz najmniejszy przekrój.">
 <link rel="canonical" href="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
 <link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
 <link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MintWave Studio">
 <meta property="og:title" content="Kalkulator spadku napięcia (IEC 60364): wolty, % i przekrój">
-<meta property="og:description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych wg IEC 60364-5-52 załącznik G: jednofazowy, trójfazowy i DC. Spadek w woltach i %, napięcie na odbiorniku i najmniejszy przekrój w mm².">
+<meta property="og:description" content="Darmowy kalkulator spadku napięcia dla przewodów miedzianych (IEC 60364-5-52): 1-fazowy, 3-fazowy i DC. Spadek w V i % oraz najmniejszy przekrój.">
 <meta property="og:url" content="https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html">
 <meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261108a">
-<link rel="stylesheet" href="../pages.css?v=20261108a">
-<script src="../site-chrome.js?v=20261108a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261109c">
+<link rel="stylesheet" href="../pages.css?v=20261109c">
+<script src="../site-chrome.js?v=20261109c" defer></script>
 <script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Kalkulator spadku napięcia (IEC 60364)", "inLanguage": "pl", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Kalkulator spadku napięcia", "item": "https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Jak obliczyć spadek napięcia?", "acceptedAnswer": {"@type": "Answer", "text": "Załącznik G normy IEC 60364-5-52 stosuje wzór ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, gdzie b = 1 dla obwodu trójfazowego i 2 dla jednofazowego, ρ₁ to rezystywność w warunkach pracy (0,0225 Ω·mm²/m dla miedzi), L długość w metrach, S przekrój w mm², λ reaktancja jednostkowa (0,08 mΩ/m), a IB prąd obliczeniowy. Wartość procentowa to ΔU podzielone przez napięcie fazowe."}}, {"@type": "Question", "name": "Jaki jest dopuszczalny spadek napięcia?", "acceptedAnswer": {"@type": "Answer", "text": "Tabela G.52.1 normy IEC 60364-5-52 zaleca 3 % dla oświetlenia i 5 % dla innych odbiorników przy zasilaniu bezpośrednio z publicznej sieci niskiego napięcia oraz 6 % / 8 % przy własnym zasilaniu nn. Przepisy krajowe mogą być surowsze, więc sprawdź swoje."}}, {"@type": "Question", "name": "Dlaczego spadek napięcia w obwodzie trójfazowym jest mniejszy?", "acceptedAnswer": {"@type": "Answer", "text": "W symetrycznym obwodzie trójfazowym przez przewód neutralny nie płynie prąd, więc spadek liczy się dla jednego przewodu (b = 1) zamiast tam i z powrotem (b = 2) i porównuje z napięciem fazowym."}}, {"@type": "Question", "name": "Czy kalkulator nadaje się do przewodów AWG?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Używa przekrojów metrycznych w mm² i wartości IEC. Dla instalacji w Ameryce Północnej stosuj metodę NEC i rozmiary AWG."}}]}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html#webpage","url":"https://www.mintwavestudio.com/pl/kalkulator-spadku-napiecia.html","dateModified":"2026-10-26","inLanguage":"pl","isPartOf":{"@id":"https://www.mintwavestudio.com/#org"}}</script>
@@ -72,7 +72,7 @@ który mieści się w limicie. Metoda z załącznika G normy IEC 60364-5-52, ta 
 trójfazowego podaj napięcie międzyprzewodowe (np. 400 V); % odnosi się do napięcia fazowego. Tylko orientacyjnie: sprawdź normę,
 dane producenta przewodu i przepisy krajowe. Spadek napięcia to tylko jedno sprawdzenie: przewód musi też przenieść prąd po uwzględnieniu współczynników poprawkowych.</p>
 <aside class="app-cta">
-  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
   <div>
     <h2>Potrzebujesz pełnego doboru przekroju?</h2>
     <p>Cable Calc dodaje obciążalność prądową, współczynniki poprawkowe dla temperatury i grupowania oraz dobór wyłącznika, offline na budowie. <a class="cta-link" href="../cable-calc.html">O aplikacji Cable Calc</a></p>

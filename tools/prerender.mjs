@@ -93,6 +93,35 @@ if (faq) {
   });
 }
 
+
+// One SoftwareApplication per app card, so AI engines and Google can tie
+// each app to its page, category and publisher.
+const CATEGORY = {
+  "Hatch Day": "LifestyleApplication", "Sire & Dam": "LifestyleApplication",
+  "Cable Calc": "UtilitiesApplication", "MultiTimer": "UtilitiesApplication",
+  "Days Until": "UtilitiesApplication", "Daily Budget": "FinanceApplication",
+  "Endly": "HealthApplication", "Rhythm Trainer": "GameApplication",
+  "Shadow Match": "GameApplication", "Trivia Showtime": "GameApplication",
+  "ZeroMargin": "GameApplication", "Steady Hand": "GameApplication"
+};
+const appsSection = data.sections.find(s => s.kind === "apps");
+if (appsSection) {
+  for (const [name, sub, icon, link] of appsSection.items) {
+    graph.push({
+      "@type": "SoftwareApplication",
+      "@id": SITE + link + "#app",
+      name,
+      description: sub,
+      url: SITE + link,
+      image: SITE + icon,
+      applicationCategory: CATEGORY[name] || "UtilitiesApplication",
+      operatingSystem: name === "Hatch Day" ? "Android, iOS" : "Android",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      publisher: { "@id": SITE + "#org" }
+    });
+  }
+}
+
 // "<" can't appear raw inside a script block.
 const jsonld = JSON.stringify({ "@context": "https://schema.org", "@graph": graph })
   .replaceAll("<", "\\u003c");

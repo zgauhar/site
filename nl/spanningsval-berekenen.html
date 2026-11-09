@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spanningsval berekenen (IEC 60364): volt, % en kabeldoorsnede</title>
-<meta name="description" content="Gratis spanningsvalcalculator voor koperen kabels volgens IEC 60364-5-52 bijlage G: eenfase, driefase en gelijkstroom. Spanningsval in volt en %, spanning bij de belasting en de kleinste doorsnede in mm².">
+<meta name="description" content="Gratis spanningsvalcalculator voor koperen kabels (IEC 60364-5-52): eenfase, driefase en gelijkstroom. Spanningsval in V en % en kleinste doorsnede.">
 <link rel="canonical" href="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
 <link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
 <link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MintWave Studio">
 <meta property="og:title" content="Spanningsval berekenen (IEC 60364): volt, % en kabeldoorsnede">
-<meta property="og:description" content="Gratis spanningsvalcalculator voor koperen kabels volgens IEC 60364-5-52 bijlage G: eenfase, driefase en gelijkstroom. Spanningsval in volt en %, spanning bij de belasting en de kleinste doorsnede in mm².">
+<meta property="og:description" content="Gratis spanningsvalcalculator voor koperen kabels (IEC 60364-5-52): eenfase, driefase en gelijkstroom. Spanningsval in V en % en kleinste doorsnede.">
 <meta property="og:url" content="https://www.mintwavestudio.com/nl/spanningsval-berekenen.html">
 <meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261108a">
-<link rel="stylesheet" href="../pages.css?v=20261108a">
-<script src="../site-chrome.js?v=20261108a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261109c">
+<link rel="stylesheet" href="../pages.css?v=20261109c">
+<script src="../site-chrome.js?v=20261109c" defer></script>
 <script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Spanningsval berekenen (IEC 60364)", "inLanguage": "nl", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/nl/spanningsval-berekenen.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Spanningsval berekenen", "item": "https://www.mintwavestudio.com/nl/spanningsval-berekenen.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe bereken je de spanningsval?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 bijlage G gebruikt ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, waarbij b = 1 voor driefase en 2 voor eenfase, ρ₁ de soortelijke weerstand in bedrijf (0,0225 Ω·mm²/m voor koper), L de lengte in meters, S de doorsnede in mm², λ de reactantie (0,08 mΩ/m) en IB de ontwerpstroom. Het percentage is ΔU gedeeld door de fasespanning."}}, {"@type": "Question", "name": "Hoeveel spanningsval is toegestaan?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52 tabel G.52.1 adviseert 3 % voor verlichting en 5 % voor overig gebruik als de installatie rechtstreeks uit het openbare laagspanningsnet wordt gevoed, en 6 % / 8 % bij een eigen laagspanningsvoeding. Nationale regels kunnen strenger zijn, dus controleer de jouwe."}}, {"@type": "Question", "name": "Waarom is de spanningsval bij driefase lager dan bij eenfase?", "acceptedAnswer": {"@type": "Answer", "text": "In een symmetrisch belaste driefase groep loopt er geen stroom terug via de nul, dus telt de spanningsval voor één geleider (b = 1) in plaats van heen en terug (b = 2), en wordt die vergeleken met de fasespanning."}}, {"@type": "Question", "name": "Is deze calculator geschikt voor AWG-kabels?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Hij gebruikt metrische doorsneden in mm² en IEC-waarden. Gebruik voor Noord-Amerikaanse installaties de NEC-methode en AWG-maten."}}]}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.mintwavestudio.com/nl/spanningsval-berekenen.html#webpage","url":"https://www.mintwavestudio.com/nl/spanningsval-berekenen.html","dateModified":"2026-10-26","inLanguage":"nl","isPartOf":{"@id":"https://www.mintwavestudio.com/#org"}}</script>
@@ -72,7 +72,7 @@ doorsnede die binnen je limiet blijft. Met de methode van IEC 60364-5-52 bijlage
 de spanning tussen de fasen in (bijv. 400 V); het % is ten opzichte van de fasespanning. Alleen ter indicatie: controleer de norm,
 de gegevens van de kabelfabrikant en de nationale voorschriften. Spanningsval is maar één controle: de kabel moet na de correctiefactoren ook de stroom kunnen voeren.</p>
 <aside class="app-cta">
-  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
   <div>
     <h2>De complete kabeldoorsnede nodig?</h2>
     <p>Cable Calc voegt stroombelastbaarheid, correctiefactoren voor temperatuur en groepering en de keuze van de automaat toe, offline op de bouwplaats. <a class="cta-link" href="../cable-calc.html">Over Cable Calc</a></p>

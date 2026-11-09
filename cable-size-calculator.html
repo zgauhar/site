@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cable Size Calculator (IEC 60364): mm², Derating &amp; Breaker</title>
-<meta name="description" content="Free cable size calculator for copper cables to IEC 60364-5-52: current-carrying capacity, temperature and grouping derating, breaker rating and voltage drop. Get the cable size in mm² for single-phase, three-phase and DC.">
+<meta name="description" content="Free cable size calculator for copper cables to IEC 60364-5-52: derating, breaker rating and voltage drop. Get the size in mm² for 1-phase, 3-phase and DC.">
 <link rel="canonical" href="https://www.mintwavestudio.com/cable-size-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MintWave Studio">
 <meta property="og:title" content="Cable Size Calculator (IEC 60364): mm², Derating &amp; Breaker">
-<meta property="og:description" content="Free cable size calculator for copper cables to IEC 60364-5-52: current-carrying capacity, temperature and grouping derating, breaker rating and voltage drop. Get the cable size in mm² for single-phase, three-phase and DC.">
+<meta property="og:description" content="Free cable size calculator for copper cables to IEC 60364-5-52: derating, breaker rating and voltage drop. Get the size in mm² for 1-phase, 3-phase and DC.">
 <meta property="og:url" content="https://www.mintwavestudio.com/cable-size-calculator.html">
 <meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,9 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261108a">
-<link rel="stylesheet" href="pages.css?v=20261108a">
-<script src="site-chrome.js?v=20261108a" defer></script>
+<link rel="stylesheet" href="styles.css?v=20261109c">
+<link rel="stylesheet" href="pages.css?v=20261109c">
+<script src="site-chrome.js?v=20261109c" defer></script>
 <script src="assets/cable-calc/calc.js?v=20261021a" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Cable size calculator (IEC 60364)", "inLanguage": "en", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/cable-size-calculator.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://www.mintwavestudio.com/apps.html"}, {"@type": "ListItem", "position": 3, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 4, "name": "Cable size calculator", "item": "https://www.mintwavestudio.com/cable-size-calculator.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does derating mean?", "acceptedAnswer": {"@type": "Answer", "text": "The tabulated capacity assumes 30 °C air and one circuit on its own. Hotter air or several loaded circuits bunched together stop the cable losing heat, so the capacity is multiplied by correction factors below 1 and a bigger size may be needed."}}, {"@type": "Question", "name": "Why is the breaker bigger than my load?", "acceptedAnswer": {"@type": "Answer", "text": "Breakers come in standard ratings, so a 14 A load gets a 16 A breaker. The cable is then sized to carry the breaker rating, not just the load, so the breaker protects it against overload (Ib ≤ In ≤ Iz)."}}, {"@type": "Question", "name": "Which standard does the calculator use?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 60364-5-52: Annex B for current-carrying capacity and Annex G for voltage drop, for copper conductors from 1.5 to 120 mm². It is not built for the US NEC or AWG sizes."}}, {"@type": "Question", "name": "Can I rely on the result without checking?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is guidance based on IEC 60364. Always check against the standard, the cable manufacturer's data and your national wiring rules. The installer remains responsible for the design."}}]}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.mintwavestudio.com/cable-size-calculator.html#webpage","url":"https://www.mintwavestudio.com/cable-size-calculator.html","dateModified":"2026-10-26","inLanguage":"en","isPartOf":{"@id":"https://www.mintwavestudio.com/#org"}}</script>
@@ -63,7 +63,7 @@
 <script type="application/json" id="calc-i18n">{"invalid": "Enter positive numbers in every field.", "errTemp": "This insulation can't be used at that ambient temperature.", "errGroup": "The grouping table stops at 20 circuits.", "errLarge": "Beyond 120 mm² or a 250 A breaker: use parallel cables or a detailed design.", "sub": "Load current Ib = {ib} A · temperature factor {kt} · grouping factor {kg}", "ruleDrop": "Voltage drop (current alone: {cap})", "ruleCap": "Current capacity", "pct": "{n} %"}</script>
 <p class="note">Copper conductors, IEC 60364-5-52 Annex B current-carrying capacities at 30 °C, temperature factors from Table B.52.14 (rounded up to the next 5 °C step) and grouping factors for bunched circuits from Table B.52.17. The breaker is the smallest standard rating at or above the load current, and the cable must carry at least that rating after derating (Ib ≤ In ≤ Iz). Not covered here: buried cables (method D), aluminium, fault-loop disconnection times and short-circuit checks. Guidance only: check the standard, the cable maker's data and your national wiring rules. The installer remains responsible for the design.</p>
 <aside class="app-cta">
-  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <img class="app-icon" src="assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
   <div>
     <h2>Take it to site</h2>
     <p>Cable Calc has the same calculator offline, plus earth-fault loop checks, motor circuits, saved projects and PDF reports. <a class="cta-link" href="cable-calc.html">About Cable Calc</a></p>

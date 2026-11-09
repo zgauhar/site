@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calculadora de queda de tensão (IEC 60364): volts, % e bitola</title>
-<meta name="description" content="Calculadora gratuita de queda de tensão para cabos de cobre pela IEC 60364-5-52 anexo G: monofásica, trifásica e CC. Queda em volts e %, tensão na carga e a menor seção em mm² dentro do seu limite.">
+<meta name="description" content="Calculadora gratuita de queda de tensão para cabos de cobre (IEC 60364-5-52): monofásica, trifásica e CC. Queda em V e % e menor seção em mm².">
 <link rel="canonical" href="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
 <link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
 <link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MintWave Studio">
 <meta property="og:title" content="Calculadora de queda de tensão (IEC 60364): volts, % e bitola">
-<meta property="og:description" content="Calculadora gratuita de queda de tensão para cabos de cobre pela IEC 60364-5-52 anexo G: monofásica, trifásica e CC. Queda em volts e %, tensão na carga e a menor seção em mm² dentro do seu limite.">
+<meta property="og:description" content="Calculadora gratuita de queda de tensão para cabos de cobre (IEC 60364-5-52): monofásica, trifásica e CC. Queda em V e % e menor seção em mm².">
 <meta property="og:url" content="https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html">
 <meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261108a">
-<link rel="stylesheet" href="../pages.css?v=20261108a">
-<script src="../site-chrome.js?v=20261108a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261109c">
+<link rel="stylesheet" href="../pages.css?v=20261109c">
+<script src="../site-chrome.js?v=20261109c" defer></script>
 <script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de queda de tensão (IEC 60364)", "inLanguage": "pt-BR", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Calculadora de queda de tensão", "item": "https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como se calcula a queda de tensão?", "acceptedAnswer": {"@type": "Answer", "text": "O anexo G da IEC 60364-5-52 usa ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, em que b é 1 no trifásico e 2 no monofásico, ρ₁ é a resistividade em serviço (0,0225 Ω·mm²/m para o cobre), L o comprimento em metros, S a seção em mm², λ a reatância (0,08 mΩ/m) e IB a corrente de projeto. A porcentagem é ΔU dividido pela tensão fase-neutro."}}, {"@type": "Question", "name": "Qual é a queda de tensão máxima permitida?", "acceptedAnswer": {"@type": "Answer", "text": "A tabela G.52.1 da IEC 60364-5-52 recomenda 3 % para iluminação e 5 % para outros usos quando a instalação é alimentada diretamente pela rede pública de baixa tensão, e 6 % / 8 % com alimentação de BT própria. As normas nacionais podem ser mais rígidas, então confira as suas."}}, {"@type": "Question", "name": "Por que a queda de tensão no trifásico é menor que no monofásico?", "acceptedAnswer": {"@type": "Answer", "text": "Num circuito trifásico equilibrado não retorna corrente pelo neutro, então a queda é contada em um só condutor (b = 1) em vez de ida e volta (b = 2) e comparada com a tensão fase-neutro."}}, {"@type": "Question", "name": "A calculadora serve para cabos AWG?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Ela usa seções métricas em mm² e valores IEC. Para instalações na América do Norte, use o método do NEC e as bitolas AWG."}}]}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html#webpage","url":"https://www.mintwavestudio.com/pt/calculadora-queda-de-tensao.html","dateModified":"2026-10-26","inLanguage":"pt","isPartOf":{"@id":"https://www.mintwavestudio.com/#org"}}</script>
@@ -72,7 +72,7 @@ dentro do seu limite. Usa o método do anexo G da IEC 60364-5-52, o mesmo do
 a tensão entre fases (ex.: 380 ou 400 V); a % é referida à tensão fase-neutro. Apenas orientativo: confira a norma, os dados do
 fabricante e a regulamentação nacional. A queda de tensão é só uma verificação: o cabo também precisa conduzir a corrente depois dos fatores de correção.</p>
 <aside class="app-cta">
-  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
   <div>
     <h2>Precisa da bitola completa?</h2>
     <p>O Cable Calc adiciona capacidade de condução de corrente, fatores de correção de temperatura e agrupamento e a escolha do disjuntor, offline na obra. <a class="cta-link" href="../cable-calc.html">Sobre o Cable Calc</a></p>

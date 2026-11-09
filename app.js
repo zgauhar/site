@@ -365,7 +365,7 @@
             ${(Array.isArray(s.items) ? s.items : [])
               .map(([name, sub, icon, link]) => `
                 <a class="apps-card" href="${esc(link)}">
-                  <img src="${esc(icon)}" alt="" width="56" height="56" loading="lazy">
+                  <img src="${esc(icon)}" alt="${esc(name)} app icon" width="56" height="56" loading="lazy">
                   <span>
                     <strong>${esc(name)}</strong>
                     <small>${esc(sub)}</small>

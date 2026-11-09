@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calcul de chute de tension (IEC 60364) : volts, % et section</title>
-<meta name="description" content="Calculateur gratuit de chute de tension pour câbles cuivre selon l&#x27;IEC 60364-5-52 annexe G : monophasé, triphasé et continu. Chute en volts et en %, tension à la charge et plus petite section en mm².">
+<meta name="description" content="Calculateur gratuit de chute de tension pour câbles cuivre (IEC 60364-5-52) : mono, triphasé et continu. Chute en V et % et section minimale.">
 <link rel="canonical" href="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
 <link rel="alternate" hreflang="en" href="https://www.mintwavestudio.com/voltage-drop-calculator.html">
 <link rel="alternate" hreflang="de" href="https://www.mintwavestudio.com/de/spannungsfall-rechner.html">
@@ -19,7 +19,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MintWave Studio">
 <meta property="og:title" content="Calcul de chute de tension (IEC 60364) : volts, % et section">
-<meta property="og:description" content="Calculateur gratuit de chute de tension pour câbles cuivre selon l&#x27;IEC 60364-5-52 annexe G : monophasé, triphasé et continu. Chute en volts et en %, tension à la charge et plus petite section en mm².">
+<meta property="og:description" content="Calculateur gratuit de chute de tension pour câbles cuivre (IEC 60364-5-52) : mono, triphasé et continu. Chute en V et % et section minimale.">
 <meta property="og:url" content="https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html">
 <meta property="og:image" content="https://www.mintwavestudio.com/assets/cable-calc/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261108a">
-<link rel="stylesheet" href="../pages.css?v=20261108a">
-<script src="../site-chrome.js?v=20261108a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261109c">
+<link rel="stylesheet" href="../pages.css?v=20261109c">
+<script src="../site-chrome.js?v=20261109c" defer></script>
 <script src="../assets/cable-calc/calc.js?v=20261021a" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calcul de la chute de tension (IEC 60364)", "inLanguage": "fr", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any (web browser)", "url": "https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Cable Calc", "item": "https://www.mintwavestudio.com/cable-calc.html"}, {"@type": "ListItem", "position": 3, "name": "Calcul de chute de tension", "item": "https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Comment calculer la chute de tension ?", "acceptedAnswer": {"@type": "Answer", "text": "L'annexe G de l'IEC 60364-5-52 utilise ΔU = b × (ρ₁ × L / S × cos φ + λ × L × sin φ) × IB, où b vaut 1 en triphasé et 2 en monophasé, ρ₁ est la résistivité en service (0,0225 Ω·mm²/m pour le cuivre), L la longueur en mètres, S la section en mm², λ la réactance linéique (0,08 mΩ/m) et IB le courant d'emploi. Le pourcentage est ΔU divisé par la tension simple."}}, {"@type": "Question", "name": "Quelle est la chute de tension maximale admise ?", "acceptedAnswer": {"@type": "Answer", "text": "Le tableau G.52.1 de l'IEC 60364-5-52 recommande 3 % pour l'éclairage et 5 % pour les autres usages quand l'installation est alimentée directement par le réseau public basse tension, et 6 % / 8 % avec une alimentation BT privée. Les règles nationales peuvent être plus strictes : vérifiez les vôtres."}}, {"@type": "Question", "name": "Pourquoi la chute de tension est-elle plus faible en triphasé ?", "acceptedAnswer": {"@type": "Answer", "text": "Dans un circuit triphasé équilibré, aucun courant ne revient par le neutre : la chute est comptée sur un seul conducteur (b = 1) au lieu de l'aller-retour (b = 2), et comparée à la tension simple."}}, {"@type": "Question", "name": "Ce calculateur convient-il aux câbles AWG ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Il utilise des sections métriques en mm² et les valeurs IEC. Pour l'Amérique du Nord, utilisez la méthode du NEC et les calibres AWG."}}]}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html#webpage","url":"https://www.mintwavestudio.com/fr/calcul-chute-de-tension.html","dateModified":"2026-10-26","inLanguage":"fr","isPartOf":{"@id":"https://www.mintwavestudio.com/#org"}}</script>
@@ -72,7 +72,7 @@ section qui reste dans votre limite. Méthode de l'IEC 60364-5-52 annexe G, la m
 saisissez la tension entre phases (ex. 400 V) ; le % est rapporté à la tension simple. À titre indicatif : vérifiez la norme,
 les données du fabricant et la réglementation nationale. La chute de tension n'est qu'une vérification : le câble doit aussi supporter le courant après les facteurs de correction.</p>
 <aside class="app-cta">
-  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="" width="72" height="72">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
   <div>
     <h2>Besoin de la section complète ?</h2>
     <p>Cable Calc ajoute le courant admissible, les facteurs de correction de température et de groupement et le choix du disjoncteur, hors ligne sur le chantier. <a class="cta-link" href="../cable-calc.html">À propos de Cable Calc</a></p>

@@ -130,8 +130,8 @@ const ogDefault = "assets/cable-calc/og.jpg";
 
 // Index
 write("index.html", page({
-  depth: 1, title: "MintWave Studio Blog: Practical Guides for Tools and Utilities",
-  desc: "Practical guides from the makers of Cable Calc, MultiTimer, Days Until, Daily Budget, Hatch Day and Sire & Dam: cable sizing, timers, expiry tracking, budgeting, egg incubation and dog breeding.",
+  depth: 1, title: "MintWave Blog: Practical Guides for Tools and Utilities",
+  desc: "Practical guides on cable sizing, timers, expiry dates, budgeting, egg incubation, dog breeding and symptom tracking, from the makers of MintWave apps.",
   canonical: "blog/", image: ogDefault,
   jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "Blog", name: "MintWave Studio Blog", url: SITE + "blog/", publisher: { "@id": SITE + "#org" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"]])] },
   crumbs: `<a href="../">Home</a> › Blog`,
@@ -152,7 +152,7 @@ ${cats.map(c => catCard(c, "../")).join("\n")}
 for (const c of cats) {
   const ps = posts.filter(p => p.category === c.slug);
   write(`${c.slug}/index.html`, page({
-    depth: 2, title: `${c.name}: Guides and Articles | MintWave Studio Blog`,
+    depth: 2, title: `${c.name}: Guides | MintWave Blog`,
     desc: `${c.blurb} Articles from the makers of ${c.app}.`,
     canonical: `blog/${c.slug}/`, image: ogDefault,
     jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "CollectionPage", name: c.name, url: `${SITE}blog/${c.slug}/`, isPartOf: { "@type": "Blog", url: SITE + "blog/" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`]])] },
@@ -174,7 +174,7 @@ posts.forEach((p, idx) => {
   const newer = posts[idx - 1], older = posts[idx + 1];
   const related = [...posts.filter(q => q.slug !== p.slug && q.category === p.category), ...posts.filter(q => q.slug !== p.slug && q.category !== p.category)].slice(0, 3);
   write(`${p.slug}.html`, page({
-    depth: 1, title: `${p.title} | MintWave Studio Blog`, desc: p.description, canonical: url, image: ogImg(p),
+    depth: 1, title: p.seoTitle || p.title, desc: p.description, canonical: url, image: ogImg(p),
     keywords: p.keywords, article: { date: p.date, section: c.name },
     jsonld: { "@context": "https://schema.org", "@graph": [{ "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.date, inLanguage: "en", articleSection: c.name, keywords: (p.keywords || []).join(", "), wordCount: words(p.body), mainEntityOfPage: SITE + url, image: { "@type": "ImageObject", url: SITE + ogImg(p), width: 1200, height: 630, caption: p.imageAlt }, author: { "@id": SITE + "#org" }, publisher: { "@id": SITE + "#org" }, ...(a ? { about: appLd(a) } : {}), isPartOf: { "@type": "Blog", url: SITE + "blog/" } }, org, crumbLd([["Home", ""], ["Blog", "blog/"], [c.name, `blog/${c.slug}/`], [p.title, url]]), ...(p.faq?.length ? [{ "@type": "FAQPage", mainEntity: p.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }] : [])] },
     crumbs: `<a href="../">Home</a> › <a href="./">Blog</a> › <a href="${c.slug}/">${esc(c.name)}</a> › ${esc(p.title)}`,

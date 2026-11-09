@@ -15,19 +15,6 @@
       ]
     },
     {
-      "id": "about",
-      "kind": "about",
-      "eyebrow": "About",
-      "title": "An Independent App Studio",
-      "lead": "Who We Are",
-      "body": "MintWave Studio is an independent developer of small Android apps. Each app does one job: size a cable, count down to hatch day, track expiry dates, plan a daily budget or train rhythm-game timing. The calculators and trackers work offline without an account, and Hatch Day is also on the App Store, and iPhone versions of other apps are in progress.",
-      "list": [
-        "Calculators and trackers — Cable Calc, Hatch Day, Sire & Dam, Days Until, Daily Budget, MultiTimer",
-        "Music practice — Rhythm Trainer for rhythm gamers and drummers",
-        "Quick games — Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand"
-      ]
-    },
-    {
       "id": "apps",
       "kind": "apps",
       "eyebrow": "Our Apps",
@@ -46,6 +33,12 @@
           "Dog breeding app",
           "assets/sire-dam/icon-192.png",
           "sire-dam.html"
+        ],
+        [
+          "Endly",
+          "Endometriosis symptom diary",
+          "assets/endly/icon-192.png",
+          "endly.html"
         ],
         [
           "Cable Calc",
@@ -101,6 +94,19 @@
           "assets/steady-hand/icon-192.png",
           "steady-hand.html"
         ]
+      ]
+    },
+    {
+      "id": "about",
+      "kind": "about",
+      "eyebrow": "About",
+      "title": "An Independent App Studio",
+      "lead": "Who We Are",
+      "body": "MintWave Studio is an independent developer of small Android apps. Each app does one job: size a cable, count down to hatch day, track expiry dates, plan a daily budget or train rhythm-game timing. The calculators and trackers work offline without an account, and Hatch Day is also on the App Store, and iPhone versions of other apps are in progress.",
+      "list": [
+        "Calculators and trackers — Cable Calc, Hatch Day, Sire & Dam, Days Until, Daily Budget, MultiTimer",
+        "Music practice — Rhythm Trainer for rhythm gamers and drummers",
+        "Quick games — Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand"
       ]
     },
     {
