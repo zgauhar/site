@@ -1,0 +1,50 @@
+<!--meta
+{"slug": "circuit-breaker-size-for-cable", "title": "What size breaker for a cable? Match the breaker to the cable (IEC 60364)", "description": "How to choose a circuit breaker for a cable: the Ib ≤ In ≤ Iz rule with worked examples for 2.5, 4 and 6 mm² copper, why a bigger breaker is dangerous, and when to size the cable up.", "category": "electrical", "date": "2026-11-08", "app": "cable-calc", "excerpt": "The breaker protects the cable, not the other way round. Pick a breaker at or above the load but never above what the cable can carry.", "imageAlt": "A circuit breaker rated 25 A between a load of 20 A and a cable rated 27 A, showing Ib ≤ In ≤ Iz", "keywords": ["what size breaker for cable", "circuit breaker size", "Ib In Iz rule", "cable current rating", "IEC 60364 overload protection", "breaker and cable matching"], "faq": [{"q": "What size breaker do I need for 2.5 mm² cable?", "a": "For two-conductor PVC copper cable clipped direct (installation method C), 2.5 mm² carries about 27 A, so a 20 A breaker is the usual choice for socket circuits. After derating for heat and grouping the usable current can be lower, so check it."}, {"q": "Can I fit a bigger breaker than the cable rating?", "a": "No. The breaker must trip before the cable overheats, so its rating In must not exceed the cable's corrected current-carrying capacity Iz."}, {"q": "What does Ib, In and Iz mean?", "a": "Ib is the design current of the load, In is the rated current of the protective device, and Iz is the current-carrying capacity of the cable after correction factors. The rule is Ib ≤ In ≤ Iz."}, {"q": "Does voltage drop affect the breaker choice?", "a": "Not directly, but a long run can force a larger cable to keep voltage drop within limits. The breaker still must not exceed the cable's Iz, and short-circuit trip times matter on long runs."}]}
+-->
+<p class="lead"><strong>To choose a breaker for a cable, follow Ib ≤ In ≤ Iz: the breaker rating In must be at least the load current Ib and no higher than the cable's current-carrying capacity Iz.</strong> The breaker protects the cable, so a breaker bigger than the cable can carry lets the cable overheat before anything trips. This is the core overload rule in IEC 60364, and it is easy to apply once you have the corrected cable rating.</p>
+
+<h2>What Ib, In and Iz mean</h2>
+<ul>
+<li><strong>Ib</strong>: the design current of the circuit, the most the load will draw in normal use.</li>
+<li><strong>In</strong>: the rated current of the breaker or fuse, for example 16, 20 or 25 A.</li>
+<li><strong>Iz</strong>: the current the cable can carry continuously, <em>after</em> correction for ambient temperature, grouping and installation method.</li>
+</ul>
+<p>If a load draws 18 A, any breaker from 20 A up can carry it, but only if Iz is at least that breaker rating too. The best choice is the smallest standard breaker above Ib that the cable also covers.</p>
+
+<h2>Typical breaker sizes for copper PVC cable</h2>
+<p>Using tabulated currents for two loaded conductors, PVC insulation, installation method C (clipped direct) before any derating:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Cable</th><th>Tabulated Iz</th><th>Common maximum breaker</th><th>Typical use</th></tr></thead>
+<tbody>
+<tr><td>1.5 mm²</td><td>19.5 A</td><td>10 A</td><td>Lighting circuits</td></tr>
+<tr><td>2.5 mm²</td><td>27 A</td><td>20 A</td><td>Socket circuits</td></tr>
+<tr><td>4 mm²</td><td>36 A</td><td>32 A</td><td>Cookers, showers, EV chargers</td></tr>
+<tr><td>6 mm²</td><td>46 A</td><td>40 A</td><td>Larger showers, sub-mains</td></tr>
+<tr><td>10 mm²</td><td>63 A</td><td>50 A</td><td>Sub-mains, heat pumps</td></tr>
+</tbody></table></div>
+<p>The "common maximum" is lower than Iz on purpose: it leaves a margin for derating, and breakers come in fixed steps. Your national wiring rules may set different limits, so check them for the final design.</p>
+
+<h2>Worked example: an electric shower</h2>
+<p>An 8.5 kW shower on 230 V draws about 37 A, so Ib = 37 A.</p>
+<ol>
+<li>The next standard breaker above 37 A is 40 A, so In = 40 A.</li>
+<li>6 mm² has Iz = 46 A in method C. That is at least 40 A, so it passes. 4 mm² (36 A) does not.</li>
+<li>If the cable is buried in warm insulation, apply a correction factor. At 0.8, Iz drops from 46 A to 36.8 A and the 6 mm² no longer covers a 40 A breaker. You would move up to 10 mm².</li>
+</ol>
+<p>The check is simple, but the derating step is where many installs go wrong. The related guides on <a href="voltage-drop-cable-too-long.html">voltage drop on long cable runs</a> show the next check you need.</p>
+
+<h2>Why a bigger breaker is dangerous</h2>
+<p>A breaker rated above Iz can let a sustained overload run through the cable. The cable heats beyond its insulation limit, 70 °C for PVC, with no trip. The fix is never "a bigger breaker": it is a bigger cable, or a lower-rated breaker, or a smaller load.</p>
+
+<h2>Checklist before you pick a breaker</h2>
+<ul>
+<li>Work out the design current Ib from power and voltage.</li>
+<li>Choose the smallest standard In at or above Ib.</li>
+<li>Take Iz from the table for your cable, insulation and installation method.</li>
+<li>Apply correction factors for temperature and grouping to get the corrected Iz.</li>
+<li>Check In ≤ corrected Iz. If not, step the cable up a size.</li>
+<li>Check voltage drop and, where required, fault-loop impedance and trip time.</li>
+</ul>
+
+<h2>Check it in seconds</h2>
+<p><a href="../cable-calc.html">Cable Calc</a> runs all of these checks on one screen: cable size to IEC 60364, temperature and grouping derating, breaker rating and voltage drop. It works offline, so you can use it on site. If you prefer the browser, the free <a href="../cable-size-calculator.html">cable size calculator</a> does the same sums. More guides are in our <a href="electrical/">electrical and cables section</a>.</p>

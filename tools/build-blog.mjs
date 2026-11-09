@@ -23,12 +23,14 @@ const APPS = {
     cta: "See what you can spend today", text: "Add income and bills once and Daily Budget shows a daily allowance, carries unspent money forward and explains every step. No bank login, no ads. Free on Android." },
   "hatch-day": { name: "Hatch Day", page: "hatch-day.html", icon: "assets/hatch/icon-192.png", id: "com.mintwave.hatchday", ios: "https://apps.apple.com/app/id6823774178",
     cta: "Track every hatch from set to lockdown", text: "Hatch countdown for 11 species, daily temperature and humidity targets, and turning, candling and lockdown reminders. Free on Android and iPhone, works offline." },
-  endly: { name: "Endly", page: "endly.html", icon: "assets/endly/icon-192.png", soon: true,
-    cta: "A private endometriosis symptom diary", text: "Endly is coming soon to Google Play and the App Store: log pain in 10 seconds, see your patterns and bring a clear report to your doctor. No ads, no analytics." },
+  endly: { name: "Endly", page: "endly.html", icon: "assets/endly/icon-192.png", id: "com.mintwave.endly",
+    cta: "A private endometriosis symptom diary", text: "Endly is on Google Play: log pain in 10 seconds, see your patterns and bring a clear report to your doctor. No ads, no analytics." },
   multitimer: { name: "MultiTimer", page: "multitimer.html", icon: "assets/multitimer/icon-192.png", id: "com.mintwave.multitimer",
     cta: "Run several timers at once", text: "Countdowns, stopwatches and Pomodoro timers side by side, with exact alarms that ring even when the phone is asleep. Free on Android, no ads, no account." },
   "days-until": { name: "Days Until", page: "days-until.html", icon: "assets/days-until/icon-192.png", id: "com.mintwave.daysuntil",
     cta: "Track expiry dates and get reminded in time", text: "Scan best-before dates, track food, medicine and documents with no item limit, and get reminders before they expire. Free on Android, no ads, no account." },
+  "sire-dam": { name: "Sire & Dam", page: "sire-dam.html", icon: "assets/sire-dam/icon-192.png", id: "com.mintwave.siredam",
+    cta: "Track heats, progesterone and litters", text: "Heat and next-heat prediction, progesterone stages with an ovulation estimate, whelping countdown and puppy weights. Free on Android, works offline." },
   "cable-calc": { name: "Cable Calc", page: "cable-calc.html", icon: "assets/cable-calc/icon-192.png", id: "com.mintwave.cablecalc",
     cta: "Size cables to IEC 60364 in seconds", text: "Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline." }
 };

@@ -889,3 +889,11 @@
 .post-nav a[rel="next"] { text-align: right; }
 .post-nav a span { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 600; color: var(--teal); }
 @media (max-width: 720px) { .post-nav { grid-template-columns: 1fr; } }
+
+/* ---------- app tiles: whole card is one link (stretched title link), badges stay clickable ---------- */
+.app-tile { position: relative; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.app-tile:hover, .app-tile:focus-within { border-color: var(--mint, #1f9e8f); box-shadow: 0 6px 20px rgba(0,0,0,.08); transform: translateY(-2px); }
+.page .app-tile-link::after { content: ""; position: absolute; inset: 0; border-radius: 18px; }
+.app-tile-badges { position: relative; z-index: 1; margin-top: auto; gap: 8px; }
+.app-tile-badges .play-badge img { height: 54px; width: auto; margin: -8px -4px; }
+.app-tile-badges .app-store-badge img { height: 40px; width: auto; }

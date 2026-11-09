@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A 25 A circuit breaker between a 20 A load and a 27 A cable rating showing Ib less than or equal to In less than or equal to Iz">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9f4ef"/><stop offset="1" stop-color="#a9d6c9"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="70" r="190" fill="#fff" opacity=".3"/><circle cx="80" cy="590" r="150" fill="#fff" opacity=".3"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<rect x="90" y="150" width="280" height="330" rx="30" fill="#fff"/><text x="230" y="240" font-size="34" fill="#55604f" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Load Ib</text><text x="230" y="360" font-size="96" fill="#174a45" text-anchor="middle">20 A</text>
+<rect x="460" y="120" width="280" height="390" rx="30" fill="#174a45"/><text x="600" y="210" font-size="34" fill="#cfe3df" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Breaker In</text><text x="600" y="340" font-size="96" fill="#fff" text-anchor="middle">25 A</text><rect x="560" y="390" width="80" height="60" rx="14" fill="#f2b33d"/>
+<rect x="830" y="150" width="280" height="330" rx="30" fill="#fff"/><text x="970" y="240" font-size="34" fill="#55604f" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Cable Iz</text><text x="970" y="360" font-size="96" fill="#174a45" text-anchor="middle">27 A</text>
+<text x="415" y="330" font-size="64" fill="#174a45" text-anchor="middle">&#8804;</text><text x="785" y="330" font-size="64" fill="#174a45" text-anchor="middle">&#8804;</text></g>
+</svg>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What size breaker for a cable? Match the breaker to the cable (IEC 60364) | MintWave Studio Blog</title>
+<meta name="description" content="How to choose a circuit breaker for a cable: the Ib ≤ In ≤ Iz rule with worked examples for 2.5, 4 and 6 mm² copper, why a bigger breaker is dangerous, and when to size the cable up.">
+<meta name="keywords" content="what size breaker for cable, circuit breaker size, Ib In Iz rule, cable current rating, IEC 60364 overload protection, breaker and cable matching">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="alternate" type="application/rss+xml" title="MintWave Studio Blog" href="../blog/feed.xml">
+<link rel="canonical" href="https://www.mintwavestudio.com/blog/circuit-breaker-size-for-cable.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="What size breaker for a cable? Match the breaker to the cable (IEC 60364) | MintWave Studio Blog">
+<meta property="og:description" content="How to choose a circuit breaker for a cable: the Ib ≤ In ≤ Iz rule with worked examples for 2.5, 4 and 6 mm² copper, why a bigger breaker is dangerous, and when to size the cable up.">
+<meta property="og:url" content="https://www.mintwavestudio.com/blog/circuit-breaker-size-for-cable.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/blog/circuit-breaker-size-for-cable.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What size breaker for a cable? Match the breaker to the cable (IEC 60364) | MintWave Studio Blog">
+<meta name="twitter:description" content="How to choose a circuit breaker for a cable: the Ib ≤ In ≤ Iz rule with worked examples for 2.5, 4 and 6 mm² copper, why a bigger breaker is dangerous, and when to size the cable up.">
+<meta name="twitter:image" content="https://www.mintwavestudio.com/assets/blog/circuit-breaker-size-for-cable.png">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:section" content="Electrical &amp; cables">
+
+<link rel="icon" href="../assets/brand/logo-400.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261108a">
+<link rel="stylesheet" href="../pages.css?v=20261108a">
+<script src="../site-chrome.js?v=20261108a" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"What size breaker for a cable? Match the breaker to the cable (IEC 60364)","description":"How to choose a circuit breaker for a cable: the Ib ≤ In ≤ Iz rule with worked examples for 2.5, 4 and 6 mm² copper, why a bigger breaker is dangerous, and when to size the cable up.","datePublished":"2026-11-08","dateModified":"2026-11-08","inLanguage":"en","articleSection":"Electrical & cables","keywords":"what size breaker for cable, circuit breaker size, Ib In Iz rule, cable current rating, IEC 60364 overload protection, breaker and cable matching","wordCount":608,"mainEntityOfPage":"https://www.mintwavestudio.com/blog/circuit-breaker-size-for-cable.html","image":{"@type":"ImageObject","url":"https://www.mintwavestudio.com/assets/blog/circuit-breaker-size-for-cable.png","width":1200,"height":630,"caption":"A circuit breaker rated 25 A between a load of 20 A and a cable rated 27 A, showing Ib ≤ In ≤ Iz"},"author":{"@id":"https://www.mintwavestudio.com/#org"},"publisher":{"@id":"https://www.mintwavestudio.com/#org"},"about":{"@type":"SoftwareApplication","name":"Cable Calc","url":"https://www.mintwavestudio.com/cable-calc.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Android"},"isPartOf":{"@type":"Blog","url":"https://www.mintwavestudio.com/blog/"}},{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/","@id":"https://www.mintwavestudio.com/#org"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.mintwavestudio.com/blog/"},{"@type":"ListItem","position":3,"name":"Electrical & cables","item":"https://www.mintwavestudio.com/blog/electrical/"},{"@type":"ListItem","position":4,"name":"What size breaker for a cable? Match the breaker to the cable (IEC 60364)","item":"https://www.mintwavestudio.com/blog/circuit-breaker-size-for-cable.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What size breaker do I need for 2.5 mm² cable?","acceptedAnswer":{"@type":"Answer","text":"For two-conductor PVC copper cable clipped direct (installation method C), 2.5 mm² carries about 27 A, so a 20 A breaker is the usual choice for socket circuits. After derating for heat and grouping the usable current can be lower, so check it."}},{"@type":"Question","name":"Can I fit a bigger breaker than the cable rating?","acceptedAnswer":{"@type":"Answer","text":"No. The breaker must trip before the cable overheats, so its rating In must not exceed the cable's corrected current-carrying capacity Iz."}},{"@type":"Question","name":"What does Ib, In and Iz mean?","acceptedAnswer":{"@type":"Answer","text":"Ib is the design current of the load, In is the rated current of the protective device, and Iz is the current-carrying capacity of the cable after correction factors. The rule is Ib ≤ In ≤ Iz."}},{"@type":"Question","name":"Does voltage drop affect the breaker choice?","acceptedAnswer":{"@type":"Answer","text":"Not directly, but a long run can force a larger cable to keep voltage drop within limits. The breaker still must not exceed the cable's Iz, and short-circuit trip times matter on long runs."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › <a href="electrical/">Electrical &amp; cables</a> › What size breaker for a cable? Match the breaker to the cable (IEC 60364)</nav>
+<p class="post-meta"><a class="tag" href="electrical/">Electrical &amp; cables</a> · <time datetime="2026-11-08">8 November 2026</time></p>
+<h1>What size breaker for a cable? Match the breaker to the cable (IEC 60364)</h1>
+<figure class="post-hero"><img src="../assets/blog/circuit-breaker-size-for-cable.svg" alt="A circuit breaker rated 25 A between a load of 20 A and a cable rated 27 A, showing Ib ≤ In ≤ Iz" width="1200" height="630"></figure>
+<p class="lead"><strong>To choose a breaker for a cable, follow Ib ≤ In ≤ Iz: the breaker rating In must be at least the load current Ib and no higher than the cable's current-carrying capacity Iz.</strong> The breaker protects the cable, so a breaker bigger than the cable can carry lets the cable overheat before anything trips. This is the core overload rule in IEC 60364, and it is easy to apply once you have the corrected cable rating.</p>
+
+<h2>What Ib, In and Iz mean</h2>
+<ul>
+<li><strong>Ib</strong>: the design current of the circuit, the most the load will draw in normal use.</li>
+<li><strong>In</strong>: the rated current of the breaker or fuse, for example 16, 20 or 25 A.</li>
+<li><strong>Iz</strong>: the current the cable can carry continuously, <em>after</em> correction for ambient temperature, grouping and installation method.</li>
+</ul>
+<p>If a load draws 18 A, any breaker from 20 A up can carry it, but only if Iz is at least that breaker rating too. The best choice is the smallest standard breaker above Ib that the cable also covers.</p>
+
+<h2>Typical breaker sizes for copper PVC cable</h2>
+<p>Using tabulated currents for two loaded conductors, PVC insulation, installation method C (clipped direct) before any derating:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Cable</th><th>Tabulated Iz</th><th>Common maximum breaker</th><th>Typical use</th></tr></thead>
+<tbody>
+<tr><td>1.5 mm²</td><td>19.5 A</td><td>10 A</td><td>Lighting circuits</td></tr>
+<tr><td>2.5 mm²</td><td>27 A</td><td>20 A</td><td>Socket circuits</td></tr>
+<tr><td>4 mm²</td><td>36 A</td><td>32 A</td><td>Cookers, showers, EV chargers</td></tr>
+<tr><td>6 mm²</td><td>46 A</td><td>40 A</td><td>Larger showers, sub-mains</td></tr>
+<tr><td>10 mm²</td><td>63 A</td><td>50 A</td><td>Sub-mains, heat pumps</td></tr>
+</tbody></table></div>
+<p>The "common maximum" is lower than Iz on purpose: it leaves a margin for derating, and breakers come in fixed steps. Your national wiring rules may set different limits, so check them for the final design.</p>
+
+<h2>Worked example: an electric shower</h2>
+<p>An 8.5 kW shower on 230 V draws about 37 A, so Ib = 37 A.</p>
+<ol>
+<li>The next standard breaker above 37 A is 40 A, so In = 40 A.</li>
+<li>6 mm² has Iz = 46 A in method C. That is at least 40 A, so it passes. 4 mm² (36 A) does not.</li>
+<li>If the cable is buried in warm insulation, apply a correction factor. At 0.8, Iz drops from 46 A to 36.8 A and the 6 mm² no longer covers a 40 A breaker. You would move up to 10 mm².</li>
+</ol>
+<p>The check is simple, but the derating step is where many installs go wrong. The related guides on <a href="voltage-drop-cable-too-long.html">voltage drop on long cable runs</a> show the next check you need.</p>
+
+<h2>Why a bigger breaker is dangerous</h2>
+<p>A breaker rated above Iz can let a sustained overload run through the cable. The cable heats beyond its insulation limit, 70 °C for PVC, with no trip. The fix is never "a bigger breaker": it is a bigger cable, or a lower-rated breaker, or a smaller load.</p>
+
+<h2>Checklist before you pick a breaker</h2>
+<ul>
+<li>Work out the design current Ib from power and voltage.</li>
+<li>Choose the smallest standard In at or above Ib.</li>
+<li>Take Iz from the table for your cable, insulation and installation method.</li>
+<li>Apply correction factors for temperature and grouping to get the corrected Iz.</li>
+<li>Check In ≤ corrected Iz. If not, step the cable up a size.</li>
+<li>Check voltage drop and, where required, fault-loop impedance and trip time.</li>
+</ul>
+
+<h2>Check it in seconds</h2>
+<p><a href="../cable-calc.html">Cable Calc</a> runs all of these checks on one screen: cable size to IEC 60364, temperature and grouping derating, breaker rating and voltage drop. It works offline, so you can use it on site. If you prefer the browser, the free <a href="../cable-size-calculator.html">cable size calculator</a> does the same sums. More guides are in our <a href="electrical/">electrical and cables section</a>.</p>
+
+<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>
+<h3>What size breaker do I need for 2.5 mm² cable?</h3>
+<p>For two-conductor PVC copper cable clipped direct (installation method C), 2.5 mm² carries about 27 A, so a 20 A breaker is the usual choice for socket circuits. After derating for heat and grouping the usable current can be lower, so check it.</p>
+<h3>Can I fit a bigger breaker than the cable rating?</h3>
+<p>No. The breaker must trip before the cable overheats, so its rating In must not exceed the cable&#39;s corrected current-carrying capacity Iz.</p>
+<h3>What does Ib, In and Iz mean?</h3>
+<p>Ib is the design current of the load, In is the rated current of the protective device, and Iz is the current-carrying capacity of the cable after correction factors. The rule is Ib ≤ In ≤ Iz.</p>
+<h3>Does voltage drop affect the breaker choice?</h3>
+<p>Not directly, but a long run can force a larger cable to keep voltage drop within limits. The breaker still must not exceed the cable&#39;s Iz, and short-circuit trip times matter on long runs.</p>
+</section>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/cable-calc/icon-192.png" alt="Cable Calc app icon" width="72" height="72">
+  <div>
+    <h2>Size cables to IEC 60364 in seconds</h2>
+    <p>Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline. <a class="cta-link" href="../cable-calc.html">About Cable Calc</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.cablecalc&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3Dcircuit-breaker-size-for-cable"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Cable Calc on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<section class="related" aria-labelledby="related-h"><h2 id="related-h">Keep reading</h2>
+<div class="post-list">
+<article class="post-card">
+<a class="thumb" href="../blog/voltage-drop-cable-too-long.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/voltage-drop-cable-too-long.svg" alt="Illustration of a long cable run where the voltage falls from 230 V at the source to 214 V at the far end" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/electrical/">Electrical &amp; cables</a> <time datetime="2026-11-04">4 November 2026</time></p>
+<h3><a href="../blog/voltage-drop-cable-too-long.html">Voltage drop: why a cable that carries the current can still be too long</a></h3>
+<p>Choosing a cable by its current rating is only half the job. Over a long run, voltage drop usually decides the size.</p>
+<a class="read-more" href="../blog/voltage-drop-cable-too-long.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="post-card">
+<a class="thumb" href="../blog/how-much-can-i-spend-per-day.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/how-much-can-i-spend-per-day.svg" alt="A daily budget breakdown showing income minus bills and savings divided by days left, giving 28 euros per day" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/money-budgeting/">Money &amp; budgeting</a> <time datetime="2026-11-08">8 November 2026</time></p>
+<h3><a href="../blog/how-much-can-i-spend-per-day.html">How much can I spend per day? Work out a daily budget in 5 steps</a></h3>
+<p>A daily budget is what is left after bills and savings, divided by the days until payday. One number you can act on at the checkout, recalculated each morning.</p>
+<a class="read-more" href="../blog/how-much-can-i-spend-per-day.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="post-card">
+<a class="thumb" href="../blog/progesterone-timing-dog-breeding.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/progesterone-timing-dog-breeding.svg" alt="A progesterone curve rising from baseline through the LH surge to ovulation, with the fertile window shaded" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/dog-breeding/">Dog breeding</a> <time datetime="2026-11-08">8 November 2026</time></p>
+<h3><a href="../blog/progesterone-timing-dog-breeding.html">Progesterone timing for dog breeding: when to mate after the LH surge</a></h3>
+<p>Progesterone rises from under 1 ng/mL to about 5 ng/mL at ovulation. Test every one to two days and you can pin down the fertile days instead of guessing from the calendar.</p>
+<a class="read-more" href="../blog/progesterone-timing-dog-breeding.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div></section>
+<nav class="post-nav" aria-label="Previous and next articles">
+<a rel="prev" href="how-much-can-i-spend-per-day.html"><span>← Older</span>How much can I spend per day? Work out a daily budget in 5 steps</a>
+<span></span>
+</nav>
+<p class="note updated">Published: <time datetime="2026-11-08">8 November 2026</time>. More in <a href="electrical/">Electrical &amp; cables</a> or <a href="./">all articles</a>.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
