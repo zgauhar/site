@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resale Profit Calculator: Profit, Margin &amp; Break-Even</title>
+<meta name="description" content="Free resale profit calculator for Vinted, eBay and Depop sellers: enter cost, sale price, fees and postage to see profit, margin, ROI and the minimum price.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://www.mintwavestudio.com/resale-profit-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="Resale Profit Calculator: Profit, Margin &amp; Break-Even">
+<meta property="og:description" content="Free resale profit calculator for Vinted, eBay and Depop sellers: enter cost, sale price, fees and postage to see profit, margin, ROI and the minimum price.">
+<meta property="og:url" content="https://www.mintwavestudio.com/resale-profit-calculator.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/relisto/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/relisto/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261109c">
+<link rel="stylesheet" href="pages.css?v=20261109d">
+<script src="site-chrome.js?v=20261109c" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Resale profit calculator", "url": "https://www.mintwavestudio.com/resale-profit-calculator.html", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "publisher": {"@type": "Organization", "name": "MintWave Studio", "url": "https://www.mintwavestudio.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.mintwavestudio.com/resale-profit-calculator.html#webpage", "url": "https://www.mintwavestudio.com/resale-profit-calculator.html", "name": "Resale profit calculator", "dateModified": "2026-11-10", "inLanguage": "en", "isPartOf": {"@id": "https://www.mintwavestudio.com/#org"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate profit on a resale item?", "acceptedAnswer": {"@type": "Answer", "text": "Profit = sale price minus what you paid, platform fees, postage you paid and any other costs. Margin is profit divided by the sale price, and return on cost is profit divided by what you paid."}}, {"@type": "Question", "name": "What is the break-even price?", "acceptedAnswer": {"@type": "Answer", "text": "The lowest sale price at which you get back your cost, postage and other costs after the platform fee. Anything above it is profit."}}, {"@type": "Question", "name": "Does Vinted charge sellers a fee?", "acceptedAnswer": {"@type": "Answer", "text": "For private sellers on Vinted the buyer pays the buyer protection fee and the seller pays no selling fee at the time of writing, so enter 0%. Other marketplaces charge sellers a percentage and sometimes a fixed fee; enter the figures from your own account, because they vary by category and country."}}, {"@type": "Question", "name": "Should I include postage?", "acceptedAnswer": {"@type": "Answer", "text": "Include postage only if you pay it. If the buyer pays postage, enter 0. If you offer free postage, enter what it costs you."}}, {"@type": "Question", "name": "Is this calculator tax advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. It shows profit before any income tax. Tax rules for resellers depend on your country."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mintwavestudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Apps", "item": "https://www.mintwavestudio.com/apps.html"}, {"@type": "ListItem", "position": 3, "name": "Relisto", "item": "https://www.mintwavestudio.com/relisto.html"}, {"@type": "ListItem", "position": 4, "name": "Resale profit calculator", "item": "https://www.mintwavestudio.com/resale-profit-calculator.html"}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> › <a href="apps.html">Apps</a> › <a href="relisto.html">Relisto</a> › Resale profit calculator</nav>
+<h1>Resale profit calculator</h1>
+<p class="lead">Work out your real profit on a Vinted, eBay or Depop sale: enter what you paid, what it sold for, the platform fee and the postage you paid. You also get the margin, return on cost and the lowest price you can accept.</p>
+<form class="calc" id="pc" novalidate>
+  <div class="calc-fields">
+    <label class="field">Currency<select name="cur"><option>€</option><option>£</option><option>$</option><option>zł</option><option>Kč</option></select></label>
+    <label class="field">What you paid<input type="number" name="cost" min="0" step="0.01" value="4" inputmode="decimal"></label>
+    <label class="field">Sale price<input type="number" name="price" min="0" step="0.01" value="25" inputmode="decimal"></label>
+    <label class="field">Platform fee (%)<input type="number" name="fee" min="0" max="99" step="0.1" value="0" inputmode="decimal"></label>
+    <label class="field">Fixed fee per sale<input type="number" name="fixed" min="0" step="0.01" value="0" inputmode="decimal"></label>
+    <label class="field">Postage you pay<input type="number" name="post" min="0" step="0.01" value="0" inputmode="decimal"></label>
+    <label class="field">Other costs (packaging, etc.)<input type="number" name="other" min="0" step="0.01" value="0.5" inputmode="decimal"></label>
+    <label class="field">Profit you want<input type="number" name="want" min="0" step="0.01" value="5" inputmode="decimal"></label>
+  </div>
+  <div class="calc-result" aria-live="polite">
+    <div class="result-hero"><span class="label">Profit</span><span class="date" id="p-profit">–</span></div>
+    <p class="result-sub" id="p-sub"></p>
+    <div class="targets">
+      <div class="target"><div class="k">Margin (of sale price)</div><div class="v" id="p-margin">–</div></div>
+      <div class="target"><div class="k">Return on cost</div><div class="v" id="p-roi">–</div></div>
+      <div class="target"><div class="k">Break-even price</div><div class="v" id="p-be">–</div></div>
+      <div class="target"><div class="k">Price for the profit you want</div><div class="v" id="p-want">–</div></div>
+    </div>
+  </div>
+</form>
+<p class="note">Vinted charges private sellers no selling fee at the time of writing (the buyer pays a protection fee), so 0% is right there. For other marketplaces use the fees in your own account; they vary by category and country.</p>
+<h2>How the profit is worked out</h2>
+<ul>
+<li><strong>Profit</strong> = sale price − fees − what you paid − postage − other costs.</li>
+<li><strong>Fees</strong> = sale price × fee % + fixed fee.</li>
+<li><strong>Break-even price</strong> = (cost + postage + other + fixed fee) ÷ (1 − fee %).</li>
+<li><strong>Margin</strong> = profit ÷ sale price. <strong>Return on cost</strong> = profit ÷ what you paid.</li>
+</ul>
+<h2>Keep every sale in one place</h2>
+<p>This calculator does one item at a time. <a href="relisto.html">Relisto</a> keeps the profit of every item, month and year, counts your sales per platform for the <a href="vinted-dac7-limit.html">DAC7 limits</a>, and writes the listing from a photo.</p>
+<aside class="app-cta">
+  <img class="app-icon" src="assets/relisto/icon-192.png" alt="Relisto app icon" width="72" height="72">
+  <div>
+    <h2>Relisto: photo to listing, then profit and DAC7 tracking</h2>
+    <p>Snap an item and get a ready title and description in your language, log what sold and what you really made, and see how close you are to the DAC7 limits on each platform. Free to start, on Android and iOS. <a class="cta-link" href="relisto.html">About Relisto</a></p>
+    <p class="note">In review on Google Play and the App Store; launching soon.</p>
+  </div>
+</aside>
+<h2>Questions</h2>
+<h3>How do I calculate profit on a resale item?</h3>
+<p>Profit = sale price minus what you paid, platform fees, postage you paid and any other costs. Margin is profit divided by the sale price, and return on cost is profit divided by what you paid.</p>
+<h3>What is the break-even price?</h3>
+<p>The lowest sale price at which you get back your cost, postage and other costs after the platform fee. Anything above it is profit.</p>
+<h3>Does Vinted charge sellers a fee?</h3>
+<p>For private sellers on Vinted the buyer pays the buyer protection fee and the seller pays no selling fee at the time of writing, so enter 0%. Other marketplaces charge sellers a percentage and sometimes a fixed fee; enter the figures from your own account, because they vary by category and country.</p>
+<h3>Should I include postage?</h3>
+<p>Include postage only if you pay it. If the buyer pays postage, enter 0. If you offer free postage, enter what it costs you.</p>
+<h3>Is this calculator tax advice?</h3>
+<p>No. It shows profit before any income tax. Tax rules for resellers depend on your country.</p>
+<p class="note">Shows profit before income tax. Not tax advice. MintWave Studio is not affiliated with any marketplace.</p>
+<p class="note updated">Last updated: <time datetime="2026-11-10">November 10, 2026</time></p>
+</main>
+<script>
+(() => {
+  const f = document.getElementById("pc");
+  const $ = id => document.getElementById(id);
+  const v = n => Math.max(0, parseFloat(f.elements[n].value) || 0);
+  function update() {
+    const c = f.elements.cur.value, cost = v("cost"), price = v("price"), fee = Math.min(v("fee"), 99) / 100,
+      fixed = v("fixed"), post = v("post"), other = v("other"), want = v("want");
+    const m = x => (x < 0 ? "−" : "") + c + Math.abs(x).toFixed(2);
+    const fees = price * fee + fixed, profit = price - fees - cost - post - other;
+    const fixedCosts = cost + post + other + fixed;
+    $("p-profit").textContent = m(profit);
+    $("p-sub").textContent = "Fees " + m(fees) + " · total costs " + m(fixedCosts + price * fee) + ".";
+    $("p-margin").textContent = price > 0 ? (profit / price * 100).toFixed(1) + "%" : "–";
+    $("p-roi").textContent = cost > 0 ? (profit / cost * 100).toFixed(0) + "%" : "–";
+    $("p-be").textContent = m(fixedCosts / (1 - fee));
+    $("p-want").textContent = m((fixedCosts + want) / (1 - fee));
+  }
+  f.addEventListener("input", update);
+  f.addEventListener("submit", ev => ev.preventDefault());
+  update();
+})();
+</script>
+<div id="site-footer"></div>
+</body>
+</html>

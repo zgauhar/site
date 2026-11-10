@@ -18,6 +18,7 @@ FAQ: https://www.mintwavestudio.com/faq-ai.txt
 
 ## Money & budgeting
 
+- [Relisto](https://www.mintwavestudio.com/relisto.html): Resale listing helper for Vinted, eBay, Kleinanzeigen, Wallapop, Leboncoin and Depop sellers (Android and iOS, in store review, launching soon): photo to AI-written title, description, brand, size and condition in 10 languages, sales and profit log, DAC7 counter (30 sales or €2,000 per platform per year), bulk mode and CSV export. Never posts for you.
 - [Daily Budget](https://www.mintwavestudio.com/daily-budget.html): Private daily budget planner and expense tracker: shows a daily spending allowance from income minus bills, carries unspent money forward, monthly, weekly, every-2-weeks or twice-a-month pay cycles, a step-by-step breakdown of today's number, big expenses spread over several days or paid from savings, one-off income, editable expenses and bills, under-budget streak, upcoming bills, charts, home-screen widget, daily reminder, backup and CSV import. No bank connection, no ads, budget data stays on the phone. Pro adds multiple budgets with their own currency, category limits with alerts, savings goals, cycle insights, PIN/fingerprint lock and CSV export. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.dailybudget
 - [Endly](https://www.mintwavestudio.com/endly.html): Private endometriosis and adenomyosis symptom diary (on Google Play; iPhone version coming soon): pain map, five endometriosis pain scores, cycle, flare log, medication, PDF report for the doctor. No ads, no analytics, data stays on the phone. Not a medical device.
 <!-- blog -->
@@ -56,6 +57,8 @@ FAQ: https://www.mintwavestudio.com/faq-ai.txt
 
 - [Voltage drop calculator](https://www.mintwavestudio.com/voltage-drop-calculator.html): IEC 60364-5-52 Annex G voltage drop for single-phase, three-phase and DC copper circuits.
 - [Daily budget calculator](https://www.mintwavestudio.com/daily-budget-calculator.html): how much you can spend per day until payday.
+- [Vinted DAC7 limit](https://www.mintwavestudio.com/vinted-dac7-limit.html): DAC7 explained (30 sales or €2,000 a year per platform; UK about £1,700) with a limit checker.
+- [Resale profit calculator](https://www.mintwavestudio.com/resale-profit-calculator.html): profit, margin, return on cost and break-even price after fees and postage.
 - [Days until calculator](https://www.mintwavestudio.com/days-until-calculator.html): days, weeks and working days until a date.
 - [Stop the timer game](https://www.mintwavestudio.com/stop-the-timer-game.html): try to stop a stopwatch at exactly 1.000 seconds.
 - [Odd time signatures](https://www.mintwavestudio.com/odd-time-signatures.html): how to count 5/4, 7/4, 5/8, 6/8, 7/8 and 9/8, with a click track.
