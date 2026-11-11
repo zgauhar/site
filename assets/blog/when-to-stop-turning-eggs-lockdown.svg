@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Chicken incubation timeline: turning until day 18, then lockdown with higher humidity until hatch on day 21">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf1dc"/><stop offset="1" stop-color="#f2c98a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1110" cy="560" r="200" fill="#fff" opacity=".3"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<rect x="100" y="270" width="760" height="40" rx="20" fill="#236a63"/>
+<rect x="860" y="270" width="240" height="40" rx="20" fill="#b04a1c"/>
+<text x="480" y="298" font-size="24" fill="#fff" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Turn 3+ times a day</text>
+<text x="980" y="298" font-size="24" fill="#fff" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Lockdown</text>
+<g text-anchor="middle" font-size="30" fill="#172018"><text x="100" y="360">Day 0</text><text x="860" y="360">Day 18</text><text x="1100" y="360">Day 21</text></g>
+<g transform="translate(860 160)"><ellipse cx="0" cy="0" rx="54" ry="70" fill="#fff"/><path d="M-30 -10 l15 -15 l15 15 l15 -15 l15 15" fill="none" stroke="#b04a1c" stroke-width="6"/></g>
+<g transform="translate(1100 160)"><circle cx="0" cy="0" r="52" fill="#f6d28b"/><circle cx="-16" cy="-8" r="6" fill="#172018"/><circle cx="16" cy="-8" r="6" fill="#172018"/><path d="M-8 10 l8 14 l8 -14z" fill="#e08a2c"/></g>
+<rect x="100" y="420" width="1000" height="130" rx="26" fill="#fff"/>
+<text x="140" y="480" font-size="32" fill="#172018">Stop turning &#183; humidity 65&#8211;70 % &#183; lid shut</text>
+<text x="140" y="522" font-size="24" fill="#55604f" font-family="DM Sans,Arial,sans-serif" font-weight="500">Duck day 25 &#183; Coturnix quail day 14</text>
+</g></svg>
