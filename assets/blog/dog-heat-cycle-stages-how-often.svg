@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Dog heat cycle wheel with proestrus, estrus, diestrus and anestrus">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9f4ef"/><stop offset="1" stop-color="#a9d6c9"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="70" r="190" fill="#fff" opacity=".3"/><circle cx="80" cy="590" r="150" fill="#fff" opacity=".3"/>
+<rect x="120" y="90" width="960" height="450" rx="30" fill="#fff"/>
+<g transform="translate(400 315)" fill="none" stroke-width="64">
+<circle r="120" stroke="#e9857d" stroke-dasharray="53 701" stroke-dashoffset="0" transform="rotate(-90)"/>
+<circle r="120" stroke="#f2b33d" stroke-dasharray="53 701" stroke-dashoffset="-53" transform="rotate(-90)"/>
+<circle r="120" stroke="#174a45" stroke-dasharray="190 564" stroke-dashoffset="-106" transform="rotate(-90)"/>
+<circle r="120" stroke="#cfe3dc" stroke-dasharray="458 296" stroke-dashoffset="-296" transform="rotate(-90)"/>
+</g>
+<text x="400" y="312" text-anchor="middle" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="56" fill="#174a45">~6</text>
+<text x="400" y="352" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="26" fill="#55604f">months</text>
+<g font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="30" fill="#172018">
+<circle cx="660" cy="190" r="16" fill="#e9857d"/><text x="695" y="200">Proestrus  ~9 days</text>
+<circle cx="660" cy="270" r="16" fill="#f2b33d"/><text x="695" y="280">Estrus  ~9 days</text>
+<circle cx="660" cy="350" r="16" fill="#174a45"/><text x="695" y="360">Diestrus  ~60 days</text>
+<circle cx="660" cy="430" r="16" fill="#cfe3dc" stroke="#55604f" stroke-width="2"/><text x="695" y="440">Anestrus  3-5 months</text>
+</g>
+<text x="150" y="145" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="34" fill="#174a45">Dog heat cycle</text>
+</svg>
