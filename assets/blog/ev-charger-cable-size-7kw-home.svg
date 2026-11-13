@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A wall-mounted home EV charger with a 32 A, 6 mm² cable running to a car">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#174a45"/><stop offset="1" stop-color="#236a63"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g opacity=".08" stroke="#fff" stroke-width="2"><path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M0 600H1200M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630"/></g>
+<rect x="0" y="540" width="1200" height="90" fill="#0c2b28" opacity=".6"/>
+<g><rect x="110" y="110" width="230" height="340" rx="36" fill="#fff"/><rect x="140" y="145" width="170" height="90" rx="14" fill="#174a45"/><text x="225" y="206" text-anchor="middle" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="42" fill="#f2b33d">7.4 kW</text><circle cx="225" cy="305" r="34" fill="#eef1ea"/><path d="M235 280l-24 32h18l-8 26 28-36h-18z" fill="#e0703a"/><rect x="195" y="415" width="60" height="55" rx="10" fill="#cfd6cc"/></g>
+<path d="M225 470C225 560 420 560 520 500S700 420 800 470" fill="none" stroke="#0c2b28" stroke-width="30" stroke-linecap="round"/>
+<path d="M225 470C225 560 420 560 520 500S700 420 800 470" fill="none" stroke="#f2b33d" stroke-width="14" stroke-linecap="round"/>
+<g><path d="M780 420h230c40 0 70 40 90 40v70H760v-60c0-30 5-50 20-50z" fill="#fff"/><path d="M820 420l40-50h120l60 50z" fill="#fff" opacity=".85"/><circle cx="850" cy="540" r="42" fill="#0c2b28"/><circle cx="1030" cy="540" r="42" fill="#0c2b28"/><circle cx="850" cy="540" r="18" fill="#cfd6cc"/><circle cx="1030" cy="540" r="18" fill="#cfd6cc"/></g>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700" fill="#fff"><text x="400" y="150" font-size="96" fill="#f2b33d">32 A</text><text x="400" y="230" font-size="64">4 to 16 mm²</text></g>
+<text x="400" y="290" font-family="DM Sans,Arial,sans-serif" font-size="32" fill="#fff" opacity=".85">Cable size depends on run length and method</text>
+</svg>

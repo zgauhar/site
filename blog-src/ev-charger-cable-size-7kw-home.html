@@ -1,0 +1,40 @@
+<!--meta
+{"slug": "ev-charger-cable-size-7kw-home", "title": "What size cable for a 7.4 kW home EV charger?", "description": "A 7.4 kW EV charger is a 32 A load. See the copper cable size by run length and installation method, the breaker and RCD rules, and a checklist before you install.", "category": "electrical", "date": "2026-11-13", "app": "cable-calc", "excerpt": "A 7.4 kW home charger draws 32 A for hours. For a short run clipped to a wall that means 4 mm² copper; in an insulated wall or over 30 m it means 10 mm² or more.", "imageAlt": "A wall-mounted home EV charger connected to a car, with 32 A and 6 mm² cable size labels on the supply cable", "keywords": ["ev charger cable size", "7kw ev charger cable size", "cable size for 7.4 kW charger", "home ev charger cable", "ev charger breaker size", "ev charger voltage drop"], "faq": [{"q": "What size cable do I need for a 7 kW EV charger?", "a": "A 7.4 kW single-phase charger draws 32 A. On a 15 m run clipped direct to a wall (method C) 4 mm² copper PVC cable is enough for a 3% voltage drop; in an insulated wall (method A1) use 6 mm². At 30 m both rise to 10 mm², and at 50 m to 16 mm²."}, {"q": "What breaker does a 7.4 kW EV charger need?", "a": "A 32 A breaker, equal to the charger's rated current. The cable must carry at least 32 A after derating for temperature, grouping and installation method, so that Ib is not more than In and In is not more than Iz."}, {"q": "Is an EV charger a continuous load?", "a": "Yes. It draws its full rated current for hours, so IEC 60364-7-722 treats it as a continuous load. Size the circuit for the rated current with no diversity."}, {"q": "Do I need a separate circuit for an EV charger?", "a": "Yes, each charging point needs its own dedicated circuit and its own RCD protection. The charger or the RCD must also handle DC fault current, so check the installation manual for the type required."}], "seoTitle": "Cable Size for a 7.4 kW Home EV Charger (32 A)"}
+-->
+<p class="lead"><strong>A 7.4 kW home EV charger is a 32 A single-phase load, and on a short run clipped to a wall it needs a 4 mm² copper cable.</strong> Put the cable in an insulated wall and it goes up to 6 mm²; stretch the run to 30 m and it is 10 mm² either way. The rating of the cable, the breaker and the voltage drop all have to pass, and the biggest result sets the size.</p>
+
+<h2>Why you size for the rated current, not the power</h2>
+<p>A charger draws its full rated current for hours at a time. IEC 60364-7-722 therefore treats it as a continuous load: size the circuit for the charger's rated current, with no diversity allowed. A 7.4 kW charger on 230 V is 32 A (7,400 ÷ 230 ≈ 32). If the charger lets you set a lower limit such as 16 A, size for the setting you will really use, and remember someone may raise it later.</p>
+
+<h2>EV charger cable size by length and installation method</h2>
+<p>Copper PVC cable at 30 °C, not grouped with other circuits, sized for a 3% voltage drop on the charger circuit. The breaker equals the charger's rated current.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Charger</th><th>Installation</th><th>15 m</th><th>30 m</th><th>50 m</th></tr></thead>
+<tbody>
+<tr><td>7.4 kW (32 A, 1-phase 230 V)</td><td>C, clipped direct</td><td>4 mm²</td><td>10 mm²</td><td>16 mm²</td></tr>
+<tr><td>7.4 kW (32 A, 1-phase 230 V)</td><td>A1, insulated wall</td><td>6 mm²</td><td>10 mm²</td><td>16 mm²</td></tr>
+<tr><td>11 kW (16 A, 3-phase 400 V)</td><td>C, clipped direct</td><td>1.5 mm²</td><td>2.5 mm²</td><td>4 mm²</td></tr>
+<tr><td>11 kW (16 A, 3-phase 400 V)</td><td>A1, insulated wall</td><td>2.5 mm²</td><td>2.5 mm²</td><td>4 mm²</td></tr>
+<tr><td>22 kW (32 A, 3-phase 400 V)</td><td>C, clipped direct</td><td>4 mm²</td><td>4 mm²</td><td>6 mm²</td></tr>
+<tr><td>22 kW (32 A, 3-phase 400 V)</td><td>A1, insulated wall</td><td>10 mm²</td><td>10 mm²</td><td>10 mm²</td></tr>
+</tbody></table></div>
+<p>Three-phase chargers need far thinner cable for the same power because each conductor carries less current and the voltage-drop factor is lower. The numbers come from IEC 60364-5-52 Annex B capacities with temperature and grouping factors applied; a hot garage or several circuits in one conduit can push you up a size.</p>
+
+<h2>The three checks behind the table</h2>
+<ol>
+<li><strong>Current-carrying capacity.</strong> After derating, the cable must carry at least the breaker rating. Insulated walls (A1) shed heat badly, which is why the same 32 A needs 6 mm² there but only 4 mm² when clipped to a wall. See <a href="circuit-breaker-size-for-cable.html">how to choose a breaker size for a cable</a>.</li>
+<li><strong>Breaker.</strong> The smallest standard rating at or above 32 A is 32 A. The rule is I<sub>B</sub> ≤ I<sub>n</sub> ≤ I<sub>z</sub>.</li>
+<li><strong>Voltage drop.</strong> Long garden or driveway runs are where cable size jumps. 32 A over 30 m needs 10 mm² because of the drop, not the current. The maths is in <a href="voltage-drop-cable-too-long.html">voltage drop: what to do when the cable is too long</a>.</li>
+</ol>
+
+<h2>What else to check before installing</h2>
+<ul>
+<li><strong>A dedicated circuit</strong> for each charging point.</li>
+<li><strong>RCD protection</strong> for each charging point, with DC fault detection: often a type A RCD plus 6 mA DC detection in the charger, or a type B RCD. The charger's manual says which.</li>
+<li><strong>Buried or outdoor runs.</strong> Direct-buried cable (method D) and cable in direct sun use other factors than the table above.</li>
+<li><strong>Your supply.</strong> The main fuse and the rest of the house load need headroom, and many chargers can limit their current to protect the main fuse.</li>
+<li><strong>Local rules.</strong> National wiring rules may be stricter, and the installer remains responsible for the design.</li>
+</ul>
+
+<h2>Work out your own run</h2>
+<p>Use the free <a href="../ev-charger-cable-size.html">EV charger cable size calculator</a>, which starts with a 7.4 kW charger on a 20 m run, or the general <a href="../cable-size-calculator.html">cable size calculator</a> and <a href="../voltage-drop-calculator.html">voltage drop calculator</a>. <a href="../cable-calc.html">Cable Calc</a> on Android does the whole chain offline: derating, breaker, voltage drop and cable size, with every intermediate value shown so you can check the working and send a PDF report to the customer.</p>
