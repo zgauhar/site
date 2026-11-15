@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Hatching eggs stored pointed end down: best within 7 days at 13 to 16 degrees Celsius">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf1dc"/><stop offset="1" stop-color="#f2c98a"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1110" cy="560" r="200" fill="#fff" opacity=".3"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<rect x="100" y="90" width="1000" height="150" rx="24" fill="#fff"/>
+<g fill="#fdf6ea" stroke="#b04a1c" stroke-width="5" transform="translate(-180 0) rotate(180 600 170)"><path d="M180 215 C144 215 140 165 158 135 C166 122 194 122 202 135 C220 165 216 215 180 215z"/><path d="M300 215 C264 215 260 165 278 135 C286 122 314 122 322 135 C340 165 336 215 300 215z"/><path d="M420 215 C384 215 380 165 398 135 C406 122 434 122 442 135 C460 165 456 215 420 215z"/><path d="M540 215 C504 215 500 165 518 135 C526 122 554 122 562 135 C580 165 576 215 540 215z"/><path d="M660 215 C624 215 620 165 638 135 C646 122 674 122 682 135 C700 165 696 215 660 215z"/></g>
+<text x="100" y="330" font-size="30" fill="#172018">Best hatch</text>
+<rect x="100" y="350" width="500" height="40" rx="20" fill="#236a63"/>
+<rect x="600" y="350" width="140" height="40" rx="0" fill="#e0a43c"/>
+<rect x="740" y="350" width="360" height="40" rx="20" fill="#b04a1c"/>
+<text x="350" y="379" font-size="24" fill="#fff" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Days 0&#8211;7</text>
+<text x="670" y="379" font-size="24" fill="#172018" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">8&#8211;10</text>
+<text x="920" y="379" font-size="24" fill="#fff" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">Falling fast</text>
+<rect x="100" y="440" width="1000" height="130" rx="26" fill="#fff"/>
+<text x="140" y="500" font-size="32" fill="#172018">Pointed end down &#183; 13&#8211;16 &#176;C &#183; no washing</text>
+<text x="140" y="542" font-size="24" fill="#55604f" font-family="DM Sans,Arial,sans-serif" font-weight="500">Warm 6&#8211;8 hours at room temperature before setting</text>
+</g></svg>
