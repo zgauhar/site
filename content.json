@@ -77,6 +77,12 @@
           "rhythm-trainer.html"
         ],
         [
+          "Zip Quest",
+          "Number path puzzle",
+          "assets/zip-quest/icon-192.png",
+          "zip-quest.html"
+        ],
+        [
           "Shadow Match",
           "3D shadow puzzle",
           "assets/shadow-match/icon-192.png",
@@ -112,7 +118,7 @@
       "list": [
         "Calculators and trackers — Cable Calc, Hatch Day, Sire & Dam, Days Until, Daily Budget, MultiTimer",
         "Music practice — Rhythm Trainer for rhythm gamers and drummers",
-        "Quick games — Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand"
+        "Quick games — Zip Quest, Shadow Match, Trivia Showtime, ZeroMargin, Steady Hand"
       ]
     },
     {
