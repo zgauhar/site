@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A 45 minute countdown timer beside three tasks, each in its own time box">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3f1ef"/><stop offset="1" stop-color="#9fd0c8"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="560" r="200" fill="#fff" opacity=".25"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<rect x="100" y="90" width="430" height="450" rx="30" fill="#fff"/>
+<circle cx="315" cy="270" r="130" fill="none" stroke="#d7ebe7" stroke-width="30"/>
+<path d="M315 140 A130 130 0 1 1 223 361" fill="none" stroke="#236a63" stroke-width="30" stroke-linecap="round"/>
+<text x="315" y="290" font-size="68" fill="#172018" text-anchor="middle">45:00</text>
+<text x="315" y="470" font-size="32" fill="#236a63" text-anchor="middle">Write the intro</text>
+<rect x="580" y="90" width="520" height="130" rx="24" fill="#fff"/>
+<rect x="580" y="250" width="520" height="130" rx="24" fill="#fff"/>
+<rect x="580" y="410" width="520" height="130" rx="24" fill="#fff"/>
+<rect x="610" y="125" width="150" height="60" rx="16" fill="#236a63"/><rect x="610" y="285" width="150" height="60" rx="16" fill="#e0a43c"/><rect x="610" y="445" width="150" height="60" rx="16" fill="#b04a1c"/>
+<g font-size="30" fill="#fff" text-anchor="middle"><text x="685" y="166">45 min</text><text x="685" y="326" fill="#172018">20 min</text><text x="685" y="486">15 min</text></g>
+<g font-size="32" fill="#172018"><text x="790" y="168">Draft</text><text x="790" y="328">Review</text><text x="790" y="488">Inbox</text></g>
+</g></svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Appointment checklist: symptom summary, pain scores, medicines tried and questions to ask">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d9d4"/><stop offset="1" stop-color="#eaa99f"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1080" cy="80" r="190" fill="#fff" opacity=".18"/><circle cx="90" cy="600" r="150" fill="#fff" opacity=".18"/>
+<rect x="100" y="80" width="1000" height="470" rx="30" fill="#fff"/>
+<text x="150" y="155" font-family="Space Grotesk,Arial,sans-serif" font-weight="700" font-size="38" fill="#9b3d52">Bring to your appointment</text>
+<g font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="32" fill="#172018">
+<g fill="#9b3d52"><rect x="150" y="200" width="44" height="44" rx="10"/><rect x="150" y="276" width="44" height="44" rx="10"/><rect x="150" y="352" width="44" height="44" rx="10"/><rect x="150" y="428" width="44" height="44" rx="10"/></g>
+<g fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M160 223 l10 10 l16 -20"/><path d="M160 299 l10 10 l16 -20"/><path d="M160 375 l10 10 l16 -20"/><path d="M160 451 l10 10 l16 -20"/></g>
+<text x="220" y="234">One-page symptom summary</text>
+<text x="220" y="310">Pain scores, 0 to 10</text>
+<text x="220" y="386">Treatments tried and results</text>
+<text x="220" y="462">Your questions, written down</text>
+</g>
+<rect x="800" y="190" width="240" height="290" rx="18" fill="#f6e4e0"/>
+<g stroke="#9b3d52" stroke-width="8" stroke-linecap="round"><path d="M830 240h180M830 285h140M830 330h180M830 375h110M830 420h160"/></g>
+</svg>
