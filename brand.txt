@@ -11,6 +11,7 @@ App names (write exactly as shown):
 - Days Until
 - Daily Budget
 - Rhythm Trainer
+- Zip Quest
 - Shadow Match
 - Trivia Showtime (formerly Smart Quiz)
 - ZeroMargin (one word, capital M)
