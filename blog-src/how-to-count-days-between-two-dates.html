@@ -1,0 +1,54 @@
+<!--meta
+{"slug": "how-to-count-days-between-two-dates", "title": "How to count the days between two dates (and when to add 1)", "description": "Subtract the start date from the end date for the days between them, and add 1 to count both days. Worked examples, leap years and spreadsheet formulas.", "category": "home-organization", "date": "2026-11-17", "app": "days-until", "excerpt": "Most date mistakes are off by one. Here is when to add a day, how leap years and month lengths change the count, and the spreadsheet formulas that get it right.", "imageAlt": "A calendar with 17 November and 25 December circled and a countdown badge showing 38 days between them", "keywords": ["count days between two dates", "how many days until", "days between dates", "inclusive day count", "days until calculator", "excel days between dates"], "faq": [{"q": "How do I count the days between two dates?", "a": "Subtract the earlier date from the later one. From 17 November to 25 December 2026 that is 38 days: 13 days left in November plus 25 in December. This is the number of days you wait, and it does not count the start day."}, {"q": "Should I include the start and end date?", "a": "Add 1 when both days count, for example the length of a holiday, a hotel stay counted in days, or a course that runs from Monday to Friday inclusive. A countdown, a deadline or an age in days does not add 1."}, {"q": "How do leap years change the count?", "a": "A leap year adds 29 February, so any span that crosses it is one day longer. 2028 is the next leap year: 1 February to 1 March 2028 is 29 days, while in 2027 it is 28."}, {"q": "How do I count days between dates in Excel or Google Sheets?", "a": "Put the dates in two cells and use =B2-A2 or =DAYS(B2,A2). For working days use =NETWORKDAYS(A2,B2), which counts both ends and skips weekends, and add a holiday range as a third argument."}], "seoTitle": "How to Count Days Between Two Dates (and When to Add 1)"}
+-->
+<p class="lead"><strong>To count the days between two dates, subtract the start date from the end date.</strong> From 17 November to 25 December 2026 that is 38 days. If both the first and the last day should count, as with a holiday or a course, add 1. Nearly every date mistake is this one: being off by a single day.</p>
+
+<h2>Exclusive or inclusive: the off-by-one rule</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>You want</th><th>Count</th><th>17 Nov to 25 Dec 2026</th></tr></thead>
+<tbody>
+<tr><td>Days until an event (a countdown)</td><td>End − start</td><td>38 days</td></tr>
+<tr><td>Days left until a deadline or expiry</td><td>End − start</td><td>38 days</td></tr>
+<tr><td>Length of a stay, course or leave, both days included</td><td>End − start + 1</td><td>39 days</td></tr>
+<tr><td>Nights in a hotel</td><td>End − start</td><td>38 nights</td></tr>
+<tr><td>Working days, both days included</td><td>Weekdays only</td><td>29 days (28 if 25 Dec is a holiday)</td></tr>
+</tbody></table></div>
+<p>A simple check: from today to tomorrow is 1 day until, but "today and tomorrow" is 2 days. If your answer for that small case looks wrong, the method is wrong.</p>
+
+<h2>Counting by hand, step by step</h2>
+<ol>
+<li><strong>Days left in the start month.</strong> November has 30 days, so from 17 November there are 30 − 17 = 13 days to the end of the month.</li>
+<li><strong>Whole months in between.</strong> Add the full length of each month you pass through. Here there are none.</li>
+<li><strong>Days into the end month.</strong> Add the day number of the end date: 25.</li>
+<li><strong>Total.</strong> 13 + 25 = 38 days. Add 1 only if both ends count.</li>
+</ol>
+<p>The same method gives 45 days from 17 November 2026 to 1 January 2027. For anything longer than a couple of months, a calculator is quicker and less error-prone.</p>
+
+<h2>Month lengths and leap years</h2>
+<ul>
+<li><strong>30 days:</strong> April, June, September and November. <strong>31 days:</strong> all the others except February.</li>
+<li><strong>The knuckle trick:</strong> count months across your knuckles and the gaps between them. Knuckles are 31-day months, gaps are shorter.</li>
+<li><strong>February</strong> has 28 days, or 29 in a leap year. A year is a leap year if it divides by 4, except century years that do not divide by 400. 2028 is the next one; 2100 will not be.</li>
+<li><strong>Whole years:</strong> 365 days, or 366 when the span includes 29 February. 1 January 2026 to 1 January 2027 is 365 days; 2028 to 2029 is 366.</li>
+</ul>
+
+<h2>Weeks and days</h2>
+<p>Divide by 7 for weeks and keep the remainder as days: 38 days is 5 weeks and 3 days. "In 90 days" from Tuesday 17 November 2026 lands on Monday 15 February 2027, because 90 days is 12 weeks and 6 days, and six days on from a Tuesday is a Monday.</p>
+
+<h2>Spreadsheet formulas</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>What</th><th>Excel and Google Sheets</th></tr></thead>
+<tbody>
+<tr><td>Days between (exclusive)</td><td><code>=B2-A2</code> or <code>=DAYS(B2,A2)</code></td></tr>
+<tr><td>Days between, both ends counted</td><td><code>=B2-A2+1</code></td></tr>
+<tr><td>Days until a date from today</td><td><code>=B2-TODAY()</code></td></tr>
+<tr><td>Working days, both ends counted</td><td><code>=NETWORKDAYS(A2,B2,holidays)</code></td></tr>
+<tr><td>Date N days from now</td><td><code>=TODAY()+90</code></td></tr>
+</tbody></table></div>
+<p>Format the result cell as a number, not a date, or 38 shows up as a date in early 1900.</p>
+
+<h2>When the count really matters</h2>
+<p>The off-by-one mistake costs the most with expiry dates and renewals: a passport that has to be valid for 6 months after you arrive, a warranty that ends on a date, or food that is safe up to its use by date. See <a href="passport-licence-expiry-reminders.html">passport, ID and licence expiry reminders</a> and <a href="best-before-vs-use-by-dates.html">best before vs use by</a> for the rules behind those dates.</p>
+
+<h2>Let something else count for you</h2>
+<p>The free <a href="../days-until-calculator.html">days until calculator</a> gives the days, weeks and weekday for any date, with no maths. To keep a running countdown for things that run out, <a href="../days-until.html">Days Until</a> tracks expiry and renewal dates for food, medicine, documents and subscriptions and reminds you 30, 7 and 1 day before, so the count is always done for you. More guides are in the <a href="home-organization/">home and expiry tracking</a> section.</p>

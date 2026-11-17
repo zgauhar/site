@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Count Days Between Two Dates (and When to Add 1)</title>
+<meta name="description" content="Subtract the start date from the end date for the days between them, and add 1 to count both days. Worked examples, leap years and spreadsheet formulas.">
+<meta name="keywords" content="count days between two dates, how many days until, days between dates, inclusive day count, days until calculator, excel days between dates">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="alternate" type="application/rss+xml" title="MintWave Studio Blog" href="../blog/feed.xml">
+<link rel="canonical" href="https://www.mintwavestudio.com/blog/how-to-count-days-between-two-dates.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MintWave Studio">
+<meta property="og:title" content="How to Count Days Between Two Dates (and When to Add 1)">
+<meta property="og:description" content="Subtract the start date from the end date for the days between them, and add 1 to count both days. Worked examples, leap years and spreadsheet formulas.">
+<meta property="og:url" content="https://www.mintwavestudio.com/blog/how-to-count-days-between-two-dates.html">
+<meta property="og:image" content="https://www.mintwavestudio.com/assets/blog/how-to-count-days-between-two-dates.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Count Days Between Two Dates (and When to Add 1)">
+<meta name="twitter:description" content="Subtract the start date from the end date for the days between them, and add 1 to count both days. Worked examples, leap years and spreadsheet formulas.">
+<meta name="twitter:image" content="https://www.mintwavestudio.com/assets/blog/how-to-count-days-between-two-dates.png">
+<meta property="article:published_time" content="2026-11-17">
+<meta property="article:section" content="Home &amp; expiry tracking">
+
+<link rel="icon" href="../assets/brand/logo-400.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=20261109c">
+<link rel="stylesheet" href="../pages.css?v=20261109c">
+<script src="../site-chrome.js?v=20261109c" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","headline":"How to count the days between two dates (and when to add 1)","description":"Subtract the start date from the end date for the days between them, and add 1 to count both days. Worked examples, leap years and spreadsheet formulas.","datePublished":"2026-11-17","dateModified":"2026-11-17","inLanguage":"en","articleSection":"Home & expiry tracking","keywords":"count days between two dates, how many days until, days between dates, inclusive day count, days until calculator, excel days between dates","wordCount":635,"mainEntityOfPage":"https://www.mintwavestudio.com/blog/how-to-count-days-between-two-dates.html","image":{"@type":"ImageObject","url":"https://www.mintwavestudio.com/assets/blog/how-to-count-days-between-two-dates.png","width":1200,"height":630,"caption":"A calendar with 17 November and 25 December circled and a countdown badge showing 38 days between them"},"author":{"@id":"https://www.mintwavestudio.com/#org"},"publisher":{"@id":"https://www.mintwavestudio.com/#org"},"about":{"@type":"SoftwareApplication","name":"Days Until","url":"https://www.mintwavestudio.com/days-until.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Android"},"isPartOf":{"@type":"Blog","url":"https://www.mintwavestudio.com/blog/"}},{"@type":"Organization","name":"MintWave Studio","url":"https://www.mintwavestudio.com/","@id":"https://www.mintwavestudio.com/#org"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mintwavestudio.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.mintwavestudio.com/blog/"},{"@type":"ListItem","position":3,"name":"Home & expiry tracking","item":"https://www.mintwavestudio.com/blog/home-organization/"},{"@type":"ListItem","position":4,"name":"How to count the days between two dates (and when to add 1)","item":"https://www.mintwavestudio.com/blog/how-to-count-days-between-two-dates.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I count the days between two dates?","acceptedAnswer":{"@type":"Answer","text":"Subtract the earlier date from the later one. From 17 November to 25 December 2026 that is 38 days: 13 days left in November plus 25 in December. This is the number of days you wait, and it does not count the start day."}},{"@type":"Question","name":"Should I include the start and end date?","acceptedAnswer":{"@type":"Answer","text":"Add 1 when both days count, for example the length of a holiday, a hotel stay counted in days, or a course that runs from Monday to Friday inclusive. A countdown, a deadline or an age in days does not add 1."}},{"@type":"Question","name":"How do leap years change the count?","acceptedAnswer":{"@type":"Answer","text":"A leap year adds 29 February, so any span that crosses it is one day longer. 2028 is the next leap year: 1 February to 1 March 2028 is 29 days, while in 2027 it is 28."}},{"@type":"Question","name":"How do I count days between dates in Excel or Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Put the dates in two cells and use =B2-A2 or =DAYS(B2,A2). For working days use =NETWORKDAYS(A2,B2), which counts both ends and skips weekends, and add a holiday range as a third argument."}}]}]}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page narrow">
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a> › <a href="./">Blog</a> › <a href="home-organization/">Home &amp; expiry tracking</a> › How to count the days between two dates (and when to add 1)</nav>
+<p class="post-meta"><a class="tag" href="home-organization/">Home &amp; expiry tracking</a> · <time datetime="2026-11-17">17 November 2026</time></p>
+<h1>How to count the days between two dates (and when to add 1)</h1>
+<figure class="post-hero"><img src="../assets/blog/how-to-count-days-between-two-dates.svg" alt="A calendar with 17 November and 25 December circled and a countdown badge showing 38 days between them" width="1200" height="630"></figure>
+<p class="lead"><strong>To count the days between two dates, subtract the start date from the end date.</strong> From 17 November to 25 December 2026 that is 38 days. If both the first and the last day should count, as with a holiday or a course, add 1. Nearly every date mistake is this one: being off by a single day.</p>
+
+<h2>Exclusive or inclusive: the off-by-one rule</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>You want</th><th>Count</th><th>17 Nov to 25 Dec 2026</th></tr></thead>
+<tbody>
+<tr><td>Days until an event (a countdown)</td><td>End − start</td><td>38 days</td></tr>
+<tr><td>Days left until a deadline or expiry</td><td>End − start</td><td>38 days</td></tr>
+<tr><td>Length of a stay, course or leave, both days included</td><td>End − start + 1</td><td>39 days</td></tr>
+<tr><td>Nights in a hotel</td><td>End − start</td><td>38 nights</td></tr>
+<tr><td>Working days, both days included</td><td>Weekdays only</td><td>29 days (28 if 25 Dec is a holiday)</td></tr>
+</tbody></table></div>
+<p>A simple check: from today to tomorrow is 1 day until, but "today and tomorrow" is 2 days. If your answer for that small case looks wrong, the method is wrong.</p>
+
+<h2>Counting by hand, step by step</h2>
+<ol>
+<li><strong>Days left in the start month.</strong> November has 30 days, so from 17 November there are 30 − 17 = 13 days to the end of the month.</li>
+<li><strong>Whole months in between.</strong> Add the full length of each month you pass through. Here there are none.</li>
+<li><strong>Days into the end month.</strong> Add the day number of the end date: 25.</li>
+<li><strong>Total.</strong> 13 + 25 = 38 days. Add 1 only if both ends count.</li>
+</ol>
+<p>The same method gives 45 days from 17 November 2026 to 1 January 2027. For anything longer than a couple of months, a calculator is quicker and less error-prone.</p>
+
+<h2>Month lengths and leap years</h2>
+<ul>
+<li><strong>30 days:</strong> April, June, September and November. <strong>31 days:</strong> all the others except February.</li>
+<li><strong>The knuckle trick:</strong> count months across your knuckles and the gaps between them. Knuckles are 31-day months, gaps are shorter.</li>
+<li><strong>February</strong> has 28 days, or 29 in a leap year. A year is a leap year if it divides by 4, except century years that do not divide by 400. 2028 is the next one; 2100 will not be.</li>
+<li><strong>Whole years:</strong> 365 days, or 366 when the span includes 29 February. 1 January 2026 to 1 January 2027 is 365 days; 2028 to 2029 is 366.</li>
+</ul>
+
+<h2>Weeks and days</h2>
+<p>Divide by 7 for weeks and keep the remainder as days: 38 days is 5 weeks and 3 days. "In 90 days" from Tuesday 17 November 2026 lands on Monday 15 February 2027, because 90 days is 12 weeks and 6 days, and six days on from a Tuesday is a Monday.</p>
+
+<h2>Spreadsheet formulas</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>What</th><th>Excel and Google Sheets</th></tr></thead>
+<tbody>
+<tr><td>Days between (exclusive)</td><td><code>=B2-A2</code> or <code>=DAYS(B2,A2)</code></td></tr>
+<tr><td>Days between, both ends counted</td><td><code>=B2-A2+1</code></td></tr>
+<tr><td>Days until a date from today</td><td><code>=B2-TODAY()</code></td></tr>
+<tr><td>Working days, both ends counted</td><td><code>=NETWORKDAYS(A2,B2,holidays)</code></td></tr>
+<tr><td>Date N days from now</td><td><code>=TODAY()+90</code></td></tr>
+</tbody></table></div>
+<p>Format the result cell as a number, not a date, or 38 shows up as a date in early 1900.</p>
+
+<h2>When the count really matters</h2>
+<p>The off-by-one mistake costs the most with expiry dates and renewals: a passport that has to be valid for 6 months after you arrive, a warranty that ends on a date, or food that is safe up to its use by date. See <a href="passport-licence-expiry-reminders.html">passport, ID and licence expiry reminders</a> and <a href="best-before-vs-use-by-dates.html">best before vs use by</a> for the rules behind those dates.</p>
+
+<h2>Let something else count for you</h2>
+<p>The free <a href="../days-until-calculator.html">days until calculator</a> gives the days, weeks and weekday for any date, with no maths. To keep a running countdown for things that run out, <a href="../days-until.html">Days Until</a> tracks expiry and renewal dates for food, medicine, documents and subscriptions and reminds you 30, 7 and 1 day before, so the count is always done for you. More guides are in the <a href="home-organization/">home and expiry tracking</a> section.</p>
+
+<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>
+<h3>How do I count the days between two dates?</h3>
+<p>Subtract the earlier date from the later one. From 17 November to 25 December 2026 that is 38 days: 13 days left in November plus 25 in December. This is the number of days you wait, and it does not count the start day.</p>
+<h3>Should I include the start and end date?</h3>
+<p>Add 1 when both days count, for example the length of a holiday, a hotel stay counted in days, or a course that runs from Monday to Friday inclusive. A countdown, a deadline or an age in days does not add 1.</p>
+<h3>How do leap years change the count?</h3>
+<p>A leap year adds 29 February, so any span that crosses it is one day longer. 2028 is the next leap year: 1 February to 1 March 2028 is 29 days, while in 2027 it is 28.</p>
+<h3>How do I count days between dates in Excel or Google Sheets?</h3>
+<p>Put the dates in two cells and use =B2-A2 or =DAYS(B2,A2). For working days use =NETWORKDAYS(A2,B2), which counts both ends and skips weekends, and add a holiday range as a third argument.</p>
+</section>
+<aside class="app-cta">
+  <img class="app-icon" src="../assets/days-until/icon-192.png" alt="Days Until app icon" width="72" height="72">
+  <div>
+    <h2>Track expiry dates and get reminded in time</h2>
+    <p>Scan best-before dates, track food, medicine and documents with no item limit, and get reminders before they expire. Free on Android, no ads, no account. <a class="cta-link" href="../days-until.html">About Days Until</a></p>
+    <div class="badges"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.mintwave.daysuntil&amp;hl=en&amp;referrer=utm_source%3Dmintwavestudio%26utm_medium%3Dblog%26utm_campaign%3Dhow-to-count-days-between-two-dates"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Days Until on Google Play" width="180" height="70"></a><span class="soon">iPhone version coming soon.</span></div>
+  </div>
+</aside>
+<section class="related" aria-labelledby="related-h"><h2 id="related-h">Keep reading</h2>
+<div class="post-list">
+<article class="post-card">
+<a class="thumb" href="../blog/how-long-do-opened-foods-last-fridge.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/how-long-do-opened-foods-last-fridge.svg" alt="Illustration of an open fridge with jars, a cheese block and leftovers, each with a small countdown showing the days left after opening" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/home-organization/">Home &amp; expiry tracking</a> <time datetime="2026-11-14">14 November 2026</time></p>
+<h3><a href="../blog/how-long-do-opened-foods-last-fridge.html">How long do opened foods last in the fridge? A shelf-life chart</a></h3>
+<p>The date on the label is for an unopened pack. Once you open it the clock changes. Here is a chart of how long common foods keep in the fridge after opening.</p>
+<a class="read-more" href="../blog/how-long-do-opened-foods-last-fridge.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="post-card">
+<a class="thumb" href="../blog/passport-licence-expiry-reminders.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/passport-licence-expiry-reminders.svg" alt="Illustration of a passport, an ID card and a driving licence each with a countdown showing the days left until it expires" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/home-organization/">Home &amp; expiry tracking</a> <time datetime="2026-11-10">10 November 2026</time></p>
+<h3><a href="../blog/passport-licence-expiry-reminders.html">Passport, ID and licence expiry: when to renew and how to never miss it</a></h3>
+<p>An expired passport is not found out at home, it is found out at the airport. Here is when to renew each document and how to get a reminder long before it matters.</p>
+<a class="read-more" href="../blog/passport-licence-expiry-reminders.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+<article class="post-card">
+<a class="thumb" href="../blog/best-before-vs-use-by-dates.html" tabindex="-1" aria-hidden="true"><img src="../assets/blog/best-before-vs-use-by-dates.svg" alt="Two food labels side by side, one marked use by with a warning and one marked best before, with a days-left countdown" width="1200" height="630" loading="lazy"></a>
+<div class="post-body">
+<p class="post-meta"><a class="tag" href="../blog/home-organization/">Home &amp; expiry tracking</a> <time datetime="2026-11-05">5 November 2026</time></p>
+<h3><a href="../blog/best-before-vs-use-by-dates.html">Best before vs use by: what food date labels really mean</a></h3>
+<p>Use by is a safety date and best before is a quality date. Knowing which is which, and when a product is opened, saves food and money without taking risks.</p>
+<a class="read-more" href="../blog/best-before-vs-use-by-dates.html">Read article <span aria-hidden="true">→</span></a>
+</div>
+</article>
+</div></section>
+<nav class="post-nav" aria-label="Previous and next articles">
+<a rel="prev" href="dog-whelping-signs-temperature-drop.html"><span>← Older</span>Dog whelping signs: the temperature drop and what happens next</a>
+<a rel="next" href="electric-shower-cable-size.html"><span>Newer →</span>What size cable for an electric shower? 7.5 to 10.5 kW</a>
+</nav>
+<p class="note updated">Published: <time datetime="2026-11-17">17 November 2026</time>. More in <a href="home-organization/">Home &amp; expiry tracking</a> or <a href="./">all articles</a>.</p>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
