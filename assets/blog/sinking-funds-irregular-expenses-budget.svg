@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Three savings jars for Christmas, car and insurance filling up, adding up to 120 a month">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6f2ef"/><stop offset="1" stop-color="#a9d3cb"/></linearGradient>
+<clipPath id="j1"><path d="M150 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z"/></clipPath>
+<clipPath id="j2"><path d="M430 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z"/></clipPath>
+<clipPath id="j3"><path d="M710 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z"/></clipPath></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="560" r="200" fill="#fff" opacity=".35"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700" text-anchor="middle">
+<text x="600" y="110" font-size="44" fill="#174a45">A little each month, ready when it is due</text>
+<g>
+<rect x="130" y="195" width="240" height="40" rx="12" fill="#174a45"/>
+<path d="M150 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z" fill="#fff" opacity=".85"/>
+<rect x="130" y="300" width="240" height="230" fill="#e0703a" clip-path="url(#j1)"/>
+<text x="250" y="420" font-size="36" fill="#fff">Christmas</text><text x="250" y="470" font-size="30" fill="#fff">50 / mo</text>
+</g>
+<g>
+<rect x="410" y="195" width="240" height="40" rx="12" fill="#174a45"/>
+<path d="M430 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z" fill="#fff" opacity=".85"/>
+<rect x="410" y="360" width="240" height="170" fill="#f2b33d" clip-path="url(#j2)"/>
+<text x="540" y="430" font-size="36" fill="#172018">Car</text><text x="540" y="480" font-size="30" fill="#172018">60 / mo</text>
+</g>
+<g>
+<rect x="690" y="195" width="240" height="40" rx="12" fill="#174a45"/>
+<path d="M710 230 h200 a20 20 0 0 1 20 20 v240 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-240 a20 20 0 0 1 20 -20z" fill="#fff" opacity=".85"/>
+<rect x="690" y="420" width="240" height="110" fill="#236a63" clip-path="url(#j3)"/>
+<text x="810" y="380" font-size="32" fill="#174a45">Subscriptions</text><text x="810" y="480" font-size="30" fill="#fff">10 / mo</text>
+</g>
+<rect x="970" y="300" width="190" height="130" rx="65" fill="#174a45"/>
+<text x="1065" y="358" font-size="44" fill="#fff">120</text><text x="1065" y="398" font-size="26" fill="#a9d3cb">per month</text>
+</g></svg>
