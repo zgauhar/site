@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Newborn puppy weight chart: birth weight doubling by day 7 to 10, with a gram scale">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9f2ee"/><stop offset="1" stop-color="#a9cfc6"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="90" cy="560" r="170" fill="#fff" opacity=".3"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<rect x="100" y="70" width="680" height="350" rx="26" fill="#fff"/>
+<text x="140" y="120" font-size="26" fill="#55604f" font-family="DM Sans,Arial,sans-serif">Weight (g)</text>
+<line x1="150" y1="370" x2="740" y2="370" stroke="#cfd9d3" stroke-width="3"/>
+<line x1="150" y1="170" x2="740" y2="170" stroke="#b04a1c" stroke-width="3" stroke-dasharray="12 10"/>
+<text x="150" y="158" font-size="22" fill="#b04a1c" font-family="DM Sans,Arial,sans-serif">2 &#215; birth weight</text>
+<g fill="#7fb8ab">
+<rect x="165" y="270" width="40" height="100" rx="6"/><rect x="220" y="275" width="40" height="95" rx="6"/><rect x="275" y="262" width="40" height="108" rx="6"/>
+<rect x="330" y="248" width="40" height="122" rx="6"/><rect x="385" y="232" width="40" height="138" rx="6"/><rect x="440" y="217" width="40" height="153" rx="6"/>
+<rect x="495" y="201" width="40" height="169" rx="6"/></g>
+<g fill="#236a63"><rect x="550" y="186" width="40" height="184" rx="6"/><rect x="605" y="170" width="40" height="200" rx="6"/><rect x="660" y="154" width="40" height="216" rx="6"/></g>
+<text x="185" y="405" font-size="22" fill="#55604f" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">0</text>
+<text x="625" y="405" font-size="22" fill="#55604f" text-anchor="middle" font-family="DM Sans,Arial,sans-serif">day 8</text>
+<rect x="830" y="150" width="270" height="270" rx="26" fill="#fff"/>
+<rect x="870" y="300" width="190" height="80" rx="14" fill="#236a63"/>
+<rect x="895" y="318" width="140" height="44" rx="8" fill="#e9f2ee"/>
+<text x="965" y="350" font-size="30" fill="#172018" text-anchor="middle">312 g</text>
+<path d="M880 296 q85 -110 170 0 z" fill="#e8c9a0"/>
+<circle cx="935" cy="248" r="8" fill="#172018"/><circle cx="995" cy="248" r="8" fill="#172018"/>
+<rect x="100" y="460" width="1000" height="120" rx="26" fill="#fff"/>
+<text x="140" y="515" font-size="32" fill="#172018">5&#8211;10% a day &#183; doubled by day 7&#8211;10</text>
+<text x="140" y="556" font-size="24" fill="#55604f" font-family="DM Sans,Arial,sans-serif" font-weight="500">Weigh daily on a gram scale &#183; call the vet if a puppy keeps losing</text>
+</g></svg>
