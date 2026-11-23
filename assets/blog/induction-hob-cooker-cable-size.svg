@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="An induction hob with four cooking zones connected by a cable labelled 6 mm² to a 32 A breaker">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6f2ef"/><stop offset="1" stop-color="#a9d3cb"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="560" r="200" fill="#fff" opacity=".35"/>
+<circle cx="90" cy="70" r="140" fill="#fff" opacity=".25"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700" text-anchor="middle">
+<rect x="90" y="430" width="560" height="40" rx="10" fill="#c99a62"/>
+<rect x="110" y="470" width="520" height="110" fill="#e9d8bf"/>
+<g transform="translate(110 150)"><rect width="520" height="280" rx="28" fill="#172018"/>
+<g fill="none" stroke="#3d5a55" stroke-width="8"><circle cx="130" cy="90" r="62"/><circle cx="390" cy="90" r="50"/><circle cx="130" cy="210" r="44"/></g>
+<circle cx="390" cy="200" r="58" fill="none" stroke="#e0703a" stroke-width="10"/><circle cx="390" cy="200" r="36" fill="none" stroke="#f2b33d" stroke-width="6"/>
+<rect x="200" y="225" width="120" height="36" rx="10" fill="#26332f"/><text x="260" y="252" font-size="24" fill="#f2b33d">7.4 kW</text>
+</g>
+<text x="370" y="135" font-size="34" fill="#174a45">Induction hob · 32 A</text>
+<path d="M630 300 C 720 300 720 380 800 380" fill="none" stroke="#e0703a" stroke-width="22" stroke-linecap="round"/>
+<rect x="630" y="190" width="160" height="64" rx="32" fill="#f2b33d"/><text x="710" y="234" font-size="32" fill="#172018">6 mm²</text>
+<g transform="translate(800 160)"><rect width="290" height="370" rx="28" fill="#174a45"/><rect x="90" y="60" width="110" height="170" rx="18" fill="#fff"/><rect x="115" y="85" width="60" height="60" rx="10" fill="#236a63"/><text x="145" y="205" font-size="34" fill="#172018">ON</text><rect x="45" y="268" width="200" height="64" rx="32" fill="#f2b33d"/><text x="145" y="312" font-size="32" fill="#172018">32 A</text></g>
+</g></svg>
