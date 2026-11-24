@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Uneven monthly income bars flowing into a holding jar that pays out the same steady amount each month">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6f2ef"/><stop offset="1" stop-color="#a9d3cb"/></linearGradient>
+<clipPath id="jar"><path d="M520 200 h200 a20 20 0 0 1 20 20 v260 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-260 a20 20 0 0 1 20 -20z"/></clipPath></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="560" r="200" fill="#fff" opacity=".35"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700" text-anchor="middle">
+<text x="600" y="100" font-size="44" fill="#174a45">Uneven pay in, steady pay out</text>
+<g fill="#e0703a"><rect x="80" y="380" width="56" height="130" rx="8"/><rect x="150" y="250" width="56" height="260" rx="8"/><rect x="220" y="420" width="56" height="90" rx="8"/><rect x="290" y="200" width="56" height="310" rx="8"/><rect x="360" y="340" width="56" height="170" rx="8"/></g>
+<path d="M430 350 h60" stroke="#174a45" stroke-width="12" stroke-linecap="round"/><path d="M478 330 l24 20 l-24 20" fill="none" stroke="#174a45" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="500" y="165" width="240" height="40" rx="12" fill="#174a45"/>
+<path d="M520 200 h200 a20 20 0 0 1 20 20 v260 a30 30 0 0 1 -30 30 h-180 a30 30 0 0 1 -30 -30 v-260 a20 20 0 0 1 20 -20z" fill="#fff" opacity=".85"/>
+<rect x="500" y="300" width="240" height="220" fill="#f2b33d" clip-path="url(#jar)"/>
+<text x="620" y="400" font-size="34" fill="#172018">Holding</text><text x="620" y="444" font-size="34" fill="#172018">account</text>
+<path d="M760 350 h60" stroke="#174a45" stroke-width="12" stroke-linecap="round"/><path d="M808 330 l24 20 l-24 20" fill="none" stroke="#174a45" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#236a63"><rect x="850" y="330" width="56" height="180" rx="8"/><rect x="920" y="330" width="56" height="180" rx="8"/><rect x="990" y="330" width="56" height="180" rx="8"/><rect x="1060" y="330" width="56" height="180" rx="8"/></g>
+<text x="983" y="300" font-size="30" fill="#174a45">Same every month</text>
+<text x="248" y="560" font-size="30" fill="#174a45">What you earn</text>
+</g></svg>
