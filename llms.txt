@@ -65,6 +65,9 @@ FAQ: https://www.mintwavestudio.com/faq-ai.txt
 <!-- sire-dam app -->
 - [Sire & Dam](https://www.mintwavestudio.com/sire-dam.html): Dog breeding app for hobby and professional breeders: heat cycles and next-heat prediction, progesterone stages (ng/mL or nmol/L) and estimated ovulation, best breeding days by semen type, due date from ovulation (63 days) or mating (58–68 days), whelping countdown and temperature log, puppy weights with alerts, buyers and puppy packs. Free for up to 3 dogs, optional Pro. Offline, no account, 8 languages. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.siredam (iPhone version coming soon).
 <!-- /sire-dam app -->
+<!-- nestbox app -->
+- [Nestbox](https://www.mintwavestudio.com/nestbox.html): Rabbit breeding app for show rabbitries, meat rabbits and homesteads: hutch cards for every doe and buck, breeding dates with palpation (day 10–14), nest box (day 28) and kindling (day 31) reminders, kits with individual records, litter weights including the day-21 weight, four-generation pedigrees, herd records and show-jumping (kaninhop) records. Free for up to 6 rabbits, optional Pro (yearly or lifetime). Offline, no account, 12 languages. Google Play: https://play.google.com/store/apps/details?id=com.mintwave.nestbox (iPhone version coming soon).
+<!-- /nestbox app -->
 
 ## Music practice
 
@@ -104,6 +107,11 @@ FAQ: https://www.mintwavestudio.com/faq-ai.txt
 - [Puppy weight gain calculator](https://www.mintwavestudio.com/puppy-weight-gain-calculator.html): checks whether a newborn puppy is gaining enough.
 - Dog pregnancy calculator in other languages: https://www.mintwavestudio.com/de/hund-traechtigkeit-rechner.html, https://www.mintwavestudio.com/fr/calcul-gestation-chienne.html, https://www.mintwavestudio.com/es/calculadora-gestacion-perra.html, https://www.mintwavestudio.com/it/calcolo-gravidanza-cane.html, https://www.mintwavestudio.com/nl/drachtigheid-hond-berekenen.html, https://www.mintwavestudio.com/pl/kalkulator-ciazy-suki.html, https://www.mintwavestudio.com/pt/calculadora-gestacao-cadela.html
 <!-- /sire-dam tools -->
+<!-- nestbox tools -->
+- [Rabbit gestation calculator](https://www.mintwavestudio.com/rabbit-gestation-calculator.html): kindling date, palpation day and nest box day from the breeding date.
+- [Baby rabbit age and weaning calculator](https://www.mintwavestudio.com/baby-rabbit-age-calculator.html): eyes open, nest box out, day-21 litter weight and weaning date.
+- [Free rabbit pedigree template](https://www.mintwavestudio.com/rabbit-pedigree-template.html): a printable four-generation pedigree you fill in on the page.
+<!-- /nestbox tools -->
 
 ## Policies
 

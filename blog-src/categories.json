@@ -42,6 +42,13 @@
   "appUrl": "sire-dam.html"
  },
  {
+  "slug": "rabbit-breeding",
+  "name": "Rabbit breeding",
+  "blurb": "Kindling dates, nest boxes, kits, weaning and pedigrees for show and meat rabbitries.",
+  "app": "Nestbox",
+  "appUrl": "nestbox.html"
+ },
+ {
   "slug": "health-tracking",
   "name": "Health & symptom tracking",
   "blurb": "Keeping a useful, private symptom diary and getting more from medical appointments.",

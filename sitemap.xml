@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mintwavestudio.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/about.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/apps.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/cable-calc.html</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/hatch-day.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/hatch-date-calculator.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/privacy-policy.html</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/terms-and-conditions.html</loc>
@@ -247,6 +247,10 @@
   </url>
   <url>
     <loc>https://www.mintwavestudio.com/blog/dog-breeding/</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/blog/rabbit-breeding/</loc>
     <lastmod>2026-11-25</lastmod>
   </url>
   <url>
@@ -481,5 +485,21 @@
   <url>
     <loc>https://www.mintwavestudio.com/ebay-uk-hmrc-reporting.html</loc>
     <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/rabbit-gestation-calculator.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/baby-rabbit-age-calculator.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/rabbit-pedigree-template.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mintwavestudio.com/nestbox.html</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 </urlset>

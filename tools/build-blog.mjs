@@ -31,6 +31,8 @@ const APPS = {
     cta: "Track expiry dates and get reminded in time", text: "Scan best-before dates, track food, medicine and documents with no item limit, and get reminders before they expire. Free on Android, no ads, no account." },
   "sire-dam": { name: "Sire & Dam", page: "sire-dam.html", icon: "assets/sire-dam/icon-192.png", id: "com.mintwave.siredam",
     cta: "Track heats, progesterone and litters", text: "Heat and next-heat prediction, progesterone stages with an ovulation estimate, whelping countdown and puppy weights. Free on Android, works offline." },
+  nestbox: { name: "Nestbox", page: "nestbox.html", icon: "assets/nestbox/icon-192.png", id: "com.mintwave.nestbox",
+    cta: "Kindling dates, kits and pedigrees in one place", text: "Palpation, nest box and kindling reminders for every doe, a record for every kit and four-generation pedigrees. Free on Android, works offline." },
   "cable-calc": { name: "Cable Calc", page: "cable-calc.html", icon: "assets/cable-calc/icon-192.png", id: "com.mintwave.cablecalc",
     cta: "Size cables to IEC 60364 in seconds", text: "Cable size, derating, breaker and voltage drop on one screen. Free on Android and works offline." }
 };
