@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A fur-lined nest box with sleeping baby rabbits next to a first-day checklist: count, warm, fed, call the vet">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf3e2"/><stop offset="1" stop-color="#f0d9a8"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="120" cy="560" r="200" fill="#fff" opacity=".35"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<text x="600" y="96" font-size="46" fill="#6e2419" text-anchor="middle">She kindled! The first 24 hours</text>
+<g transform="translate(90 200)">
+<path d="M0 60 H440 V330 H0 Z" fill="#c98a52" stroke="#6e2419" stroke-width="8"/>
+<path d="M0 60 L60 0 H500 L440 60" fill="#dca46c" stroke="#6e2419" stroke-width="8"/>
+<path d="M440 60 L500 0 V270 L440 330" fill="#b5763f" stroke="#6e2419" stroke-width="8"/>
+<ellipse cx="220" cy="210" rx="180" ry="80" fill="#f6efe6" stroke="#6e2419" stroke-width="5"/>
+<g fill="#f2b8a8" stroke="#6e2419" stroke-width="4"><ellipse cx="150" cy="205" rx="44" ry="26"/><ellipse cx="225" cy="190" rx="44" ry="26"/><ellipse cx="300" cy="210" rx="44" ry="26"/><ellipse cx="200" cy="235" rx="44" ry="24"/><ellipse cx="270" cy="240" rx="40" ry="22"/></g>
+<path d="M60 170 q40 -30 80 -8 M320 168 q40 -20 80 6" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"/>
+</g>
+<g transform="translate(680 175)" font-size="34" fill="#6e2419">
+<rect x="0" y="0" width="430" height="360" rx="28" fill="#fff"/>
+<g><rect x="34" y="38" width="40" height="40" rx="8" fill="#e8c468" stroke="#6e2419" stroke-width="5"/><path d="M42 58 l10 10 l18 -22" stroke="#6e2419" stroke-width="6" fill="none"/><text x="96" y="72">Count the kits</text></g>
+<g><rect x="34" y="118" width="40" height="40" rx="8" fill="#e8c468" stroke="#6e2419" stroke-width="5"/><path d="M42 138 l10 10 l18 -22" stroke="#6e2419" stroke-width="6" fill="none"/><text x="96" y="152">Warm cold ones</text></g>
+<g><rect x="34" y="198" width="40" height="40" rx="8" fill="#e8c468" stroke="#6e2419" stroke-width="5"/><path d="M42 218 l10 10 l18 -22" stroke="#6e2419" stroke-width="6" fill="none"/><text x="96" y="232">Round bellies?</text></g>
+<g><rect x="34" y="278" width="40" height="40" rx="8" fill="#fff" stroke="#9e3b2c" stroke-width="5"/><text x="96" y="312" fill="#9e3b2c">Vet if unsure</text></g>
+</g>
+</g></svg>
