@@ -1,10 +1,10 @@
 {
   "hero": "assets/hero.jpg",
-  "ipad": "assets/ipad-mockup.jpg",
-  "tablet": "assets/tablet-cart.jpg",
-  "phone": "assets/phone-mockup.jpg",
-  "phoneCart": "assets/phone-mockup-cart.jpg",
+  "ipad": "assets/ipad-mockup.webp",
+  "tablet": "assets/tablet-cart.webp",
+  "phone": "assets/phone-mockup.webp",
+  "phoneCart": "assets/phone-mockup-cart.webp",
   "highlights": "assets/app-highlights.jpg",
-  "phone2": "assets/phone-mockup-2.jpg",
-  "phone3": "assets/phone-mockup-3.jpg"
+  "phone2": "assets/phone-mockup-2.webp",
+  "phone3": "assets/phone-mockup-3.webp"
 }

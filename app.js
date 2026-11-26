@@ -25,16 +25,21 @@
    *
    * are deliberately NOT rendered as <img> elements.
    */
+  /*
+   * eager: images in the first screen (the hero) load straight away;
+   * "high" also raises the fetch priority (the largest hero image, the LCP).
+   */
   const image = (
     name,
     className = "",
-    alt = ""
+    alt = "",
+    eager = false
   ) => `
     <img
       class="${className}"
       data-image="${esc(name)}"
       alt="${esc(alt)}"
-      loading="lazy"
+      ${eager ? `loading="eager"${eager === "high" ? ` fetchpriority="high"` : ""}` : `loading="lazy"`}
       decoding="async"
       draggable="false"
     >
@@ -97,7 +102,8 @@
               ${image(
                 "ipad",
                 "hero-device-image",
-                "iPad mockup"
+                "iPad mockup",
+                "high"
               )}
             </div>
 
@@ -105,7 +111,8 @@
               ${image(
                 "tablet",
                 "hero-device-image",
-                "Tablet mockup"
+                "Tablet mockup",
+                true
               )}
             </div>
 
@@ -113,7 +120,8 @@
               ${image(
                 "phone",
                 "hero-device-image",
-                "Phone mockup"
+                "Phone mockup",
+                true
               )}
             </div>
 
@@ -121,7 +129,8 @@
               ${image(
                 "phoneCart",
                 "hero-device-image",
-                "Phone cart mockup"
+                "Phone cart mockup",
+                true
               )}
             </div>
 
@@ -365,7 +374,7 @@
             ${(Array.isArray(s.items) ? s.items : [])
               .map(([name, sub, icon, link]) => `
                 <a class="apps-card" href="${esc(link)}">
-                  <img src="${esc(icon)}" alt="${esc(name)} app icon" width="56" height="56" loading="lazy">
+                  <img src="${esc(icon.replace(/icon-192\.png$/, "icon-112.webp"))}" alt="${esc(name)} app icon" width="56" height="56" loading="lazy" decoding="async">
                   <span>
                     <strong>${esc(name)}</strong>
                     <small>${esc(sub)}</small>
@@ -459,6 +468,11 @@
      ============================================================ */
 
   async function loadImages() {
+
+    /* The pre-rendered page already has every src baked in. */
+    if (root.hasAttribute("data-prerendered")) {
+      return;
+    }
 
     const manifestResponse = await fetch(
       "./image-manifest.json",
@@ -617,7 +631,7 @@
      * than the viewport, which makes future debugging
      * much easier.
      */
-    requestAnimationFrame(() => {
+    if (new URLSearchParams(location.search).has("debug")) requestAnimationFrame(() => {
 
       const viewportWidth =
         document.documentElement.clientWidth;

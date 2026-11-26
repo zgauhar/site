@@ -81,7 +81,8 @@ ${keywords ? `<meta name="keywords" content="${esc(keywords.join(", "))}">
 ${article ? `<meta property="article:published_time" content="${article.date}">
 <meta property="article:section" content="${esc(article.section)}">
 ` : ""}
-<link rel="icon" href="${up}assets/brand/logo-400.png">
+<link rel="icon" href="${up}assets/brand/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="${up}apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
