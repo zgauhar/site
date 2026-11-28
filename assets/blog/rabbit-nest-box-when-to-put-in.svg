@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="A wooden rabbit nest box filled with hay next to a calendar with day 28 after breeding circled">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf3e2"/><stop offset="1" stop-color="#f0d9a8"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1100" cy="80" r="180" fill="#fff" opacity=".35"/>
+<g font-family="Space Grotesk,Arial,sans-serif" font-weight="700">
+<text x="600" y="96" font-size="46" fill="#6e2419" text-anchor="middle">Nest box in: day 27–29</text>
+<g transform="translate(90 210)">
+<path d="M0 60 H440 V330 H0 Z" fill="#c98a52" stroke="#6e2419" stroke-width="8"/>
+<path d="M0 60 L60 0 H500 L440 60" fill="#dca46c" stroke="#6e2419" stroke-width="8"/>
+<path d="M440 60 L500 0 V270 L440 330" fill="#b5763f" stroke="#6e2419" stroke-width="8"/>
+<g stroke="#e8c468" stroke-width="10" stroke-linecap="round"><path d="M40 70 l40 -50"/><path d="M90 70 l20 -60"/><path d="M140 70 l50 -55"/><path d="M200 70 l10 -60"/><path d="M250 70 l45 -50"/><path d="M310 70 l15 -58"/><path d="M360 70 l40 -45"/></g>
+<rect x="30" y="250" width="380" height="60" rx="10" fill="#b5763f" opacity=".5"/>
+</g>
+<g transform="translate(700 170)">
+<rect x="0" y="0" width="400" height="380" rx="28" fill="#fff" stroke="#6e2419" stroke-width="6"/>
+<rect x="0" y="0" width="400" height="80" rx="28" fill="#9e3b2c"/><rect x="0" y="50" width="400" height="30" fill="#9e3b2c"/>
+<text x="200" y="55" font-size="34" fill="#fff" text-anchor="middle">Days after breeding</text>
+<g font-size="30" fill="#6e2419" text-anchor="middle">
+<text x="60" y="150">25</text><text x="140" y="150">26</text><text x="220" y="150">27</text><text x="300" y="150">28</text>
+<text x="60" y="240">29</text><text x="140" y="240">30</text><text x="220" y="240" fill="#9e3b2c">31</text><text x="300" y="240">32</text>
+<text x="60" y="330">33</text><text x="140" y="330">34</text><text x="220" y="330">35</text>
+</g>
+<circle cx="300" cy="140" r="34" fill="none" stroke="#e8c468" stroke-width="8"/>
+<text x="220" y="272" font-size="20" fill="#9e3b2c" text-anchor="middle">kits due</text>
+</g>
+</g></svg>
